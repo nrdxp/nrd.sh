@@ -1,0 +1,29 @@
+---
+import DefaultPageLayout from '$/layouts/default.astro'
+import PostPreviewList from '$/components/PostPreviewList.astro'
+
+export async function getStaticPaths({ }) {
+  const allPosts = await Astro.glob('../../blog/*.md')
+  const allTags = new Set()
+  allPosts.map(post => {
+      post.frontmatter.tags && post.frontmatter.tags.map(tag => allTags.add(tag.toLowerCase()))
+  })
+
+  return Array.from(allTags).map((tag) => {
+    const filteredPosts = allPosts.filter((post) => post.frontmatter.tags.includes(tag))
+    return {
+      params: { tag },
+      props: {
+          pages: filteredPosts
+      }
+    };
+  });
+}
+
+const { pages } = Astro.props
+const { tag } = Astro.params
+---
+
+<DefaultPageLayout content={{ title: `Posts by Tag: ${tag}`, description: `all of the articles we have posted and linked so far under the tag: ${tag}` }}>
+    <PostPreviewList posts={pages} />
+</DefaultPageLayout>

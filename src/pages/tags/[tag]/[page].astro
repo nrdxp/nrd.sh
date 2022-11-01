@@ -1,0 +1,33 @@
+---
+import { PAGE_SIZE } from '$/config'
+import DefaultPageLayout from '$/layouts/default.astro'
+import PostPreviewList from '$/components/PostPreviewList.astro'
+import Paginator from '$/components/Paginator.astro'
+
+let title = 'Posts By Tags'
+let description = 'All the articles posted so far...'
+
+export async function getStaticPaths({ paginate }) {
+  const allPosts = await Astro.glob('../../blog/*.md')
+  const allTags = new Set()
+  allPosts.map(post => {
+      post.frontmatter.tags && post.frontmatter.tags.map(tag => allTags.add(tag.toLowerCase()))
+  })
+
+  return Array.from(allTags).map((tag) => {
+    const filteredPosts = allPosts.filter((post) => post.frontmatter.tags.includes(tag))
+    return paginate(filteredPosts, {
+      params: { tag },
+      pageSize: PAGE_SIZE
+    });
+  });
+}
+
+const { page } = Astro.props
+const { tag } = Astro.params
+---
+
+<DefaultPageLayout content={{ title: `Posts by Tag: ${tag}`, description: `all of the articles we have posted and linked so far under the tag: ${tag}` }}>
+    <PostPreviewList posts={page.data} />
+    <Paginator page={page} />
+</DefaultPageLayout>
