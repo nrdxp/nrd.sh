@@ -146,11 +146,11 @@ module.exports = {
      */
     default: {
         colors: {
-            primary: colors.purple[700],
-            secondary: colors.purple[800],
+            primary: colors.amber[700],
+            secondary: colors.amber[800],
             dark: {
-                primary: colors.purple[300],
-                secondary: colors.purple[500]
+                primary: colors.amber[300],
+                secondary: colors.amber[500]
             },
             accent: {
                 gray: {
