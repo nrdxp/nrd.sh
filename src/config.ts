@@ -13,10 +13,10 @@ export const NAV_ITEMS: NavItems = {
         path: '/tags',
         title: 'tags'
     },
-    media: {
-        path: '/media',
-        title: 'media'
-    },
+    // media: {
+    //     path: '/media',
+    //     title: 'media'
+    // },
     about: {
         path: '/about',
         title: 'about'
@@ -24,11 +24,11 @@ export const NAV_ITEMS: NavItems = {
 }
 
 export const SITE = {
-    // Your site's detail?
-    name: 'nrdlog',
-    title: 'nrdxp - blog',
+    name: 'nrdlg',
+    title: 'nrdlg',
     description: 'Personal blog of Tim DeHerrera',
-    url: 'https://blg.nrd.sh',
+    url: 'https://nrd.sh',
+    ghUser: 'nrdxp',
     githubUrl: 'https://github.com/nrdxp',
     listDrafts: false
 }

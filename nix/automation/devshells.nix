@@ -6,7 +6,7 @@
   inherit (inputs.std) std;
 in {
   default = std.lib.mkShell {
-    name = "blg.nrd.sh";
+    name = "nrd.sh";
     imports = [std.devshellProfiles.default];
     commands = [
       {package = cell.packages.astro;}
@@ -14,7 +14,7 @@ in {
       {package = pkgs.nodePackages_latest.node2nix;}
       {package = pkgs.nodePackages_latest.svgo;}
       {package = pkgs.nodePackages_latest.yarn;}
-      {package = pkgs.pngout;}
+      {package = pkgs.pngcrush;}
       {package = pkgs.libwebp;}
     ];
   };

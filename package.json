@@ -25,10 +25,9 @@
     "globby": "^13.1.2",
     "gray-matter": "^4.0.3",
     "lunr": "^2.3.9",
-    "mdx": "^0.3.1",
+    "mdx": "^0.2.3",
     "svelte": "^3.50.0",
     "tailwindcss": "^3.0.24",
     "typescript": "^4.3.5"
-  },
-  "dependencies": {}
+  }
 }
