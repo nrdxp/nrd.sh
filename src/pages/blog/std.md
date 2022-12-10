@@ -11,15 +11,10 @@ authorGithub: nrdxp
 date: 2022-10-31
 ---
 
-## A Video is Worth 1000 Blogs
+## Update: A Video is Worth 1000 Blogs
 
-For those who would rather watch than read, my awesome colleague [Josh](https://github.com/jmgilman)
-has whipped up a great video series exploring Standard in depth, so I thought I'd leave them here:
-
-* [Introduction](https://www.loom.com/share/cf9d5d1a10514d65bf6b8287f7ddc7d6)
-* [Cell Blocks Deep Dive](https://www.loom.com/share/04fa1d578fd044059b02c9c052d87b77)
-* [Operables & OCI](https://www.loom.com/share/27d91aa1eac24bcaaaed18ea6d6d03ca)
-* [Nixago](https://www.loom.com/share/5c1badd77ab641d3b8e256ddbba69042)
+For those who would rather watch than read, a colleague of mine has whipped up a great video series
+exploring Standard in depth, so drop by the [media secition](../media) for links.
 
 ## Two years later...
 
