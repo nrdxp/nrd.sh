@@ -16,6 +16,7 @@ in {
       {package = pkgs.nodePackages_latest.yarn;}
       {package = pkgs.pngcrush;}
       {package = pkgs.libwebp;}
+      {package = pkgs.netlify-cli;}
     ];
   };
 }

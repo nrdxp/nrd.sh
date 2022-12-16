@@ -49,7 +49,7 @@ the logical units of code & configuration that generate them.
 
 ## A Departure from Tradition
 
-It is fair to say that nixpkgs module system as become the sort of "goto" means of managing
+It is fair to say that the nixpkgs module system has become the sort of "goto" means of managing
 configuration in the Nix community, and while this may be good at the top-level where a global
 namespace is sometimes desirable, it doesn't really give us a generic means of sectioning off our
 code to generate both configuration _and_ derivation outputs quickly.
@@ -69,11 +69,14 @@ Standard, in contrast, tries to take an alternative "breadth first" approach, ec
 organization closer to the project root. If true depth is called for, flakes using Standard can
 compose gracefully with other flakes, whether they use Standard or not.
 
-It is also entirely unopionated on what you output, there is nothing stopping you simply exporting
-NixOS modules themselves, for example, giving you a nice language level compartmentalization
-strategy to help manager your NixOS, Home Manager or Nix Darwin configurations.
+It is also entirely unopionated on what you output, there is nothing stopping you from simply
+exporting NixOS modules themselves, for example, giving you a nice language level
+compartmentalization strategy to help manager your NixOS, Home Manager or Nix Darwin configurations.
 
-In simple terms, why should we bother writing the same script logic over and over when we can be
+Advanced users may even write their own types, or even extend the officially supported ones. We
+will expand more on this in a later post.
+
+But in simple terms, why should we bother writing the same script logic over and over when we can be
 guaranteed to recieve an output of a specific type, which guarantees any actions we define for the
 type at large will work for us: be it deploying container images, publishing sites, running
 deployments, or invoking tests & builds.
@@ -84,7 +87,7 @@ but comprehensive, which is an important property to maintain when codebases gro
 size.
 
 There is also no fixed-point so, anecdotably, I have yet to hit an eval error in Standard based
-projects that I couldn't quickly track down, try saying that about the module system.
+projects that I couldn't quickly track down; try saying that about the module system.
 
 ## A CLI for productivity
 
@@ -99,32 +102,85 @@ you can do follows the same pattern: "std //$cell/$block/$target:$action". Here 
 highest level "unit", or collection of "blocks", which are well-typed attribute sets of "targets"
 sharing a colleciton of common "actions" which can be performed over them.
 
-## A New Challenger Approaches
+### At a Glance
 
-For a small project with a single package and maybe one Nix shell to develop it, "Standard" may
-not be entirely necessary, though hopefully not overly encumbering either. But for projects like
-even nixpkgs itself, that have branched off into hundreds or even thousands of project specifc
-derivations, Standard can be invaluable in keeping the complexitly of those interelated pieces
-maintainable over the long term.
+The TUI is invaluable for quickly getting up to speed with what's available:
 
-We have gotten plenty of feedback from the early adopters of Standard, and one main comment was its
-percieved monolithic takeover of the Nix code. This is largely more percention than reality, as
-Standard actually encourages you to generate additional outputs.
+```console
+┌────────────────────────────────────────────────────────────────────────────────┐┌───────────────────────────────────┐
+│|  Target                                                                       ││   Actions                         │
+│                                                                                ││                                   │
+│  176 items                                                                     │││ build                            │
+│                                                                                │││ build this target                │
+│  //automation/packages/retesteth                                               ││                                   │
+│  testeth via RPC. Test run, generation by t8ntool protocol                     ││  run                              │
+│                                                                                ││  exec this target                 │
+││ //automation/jobs/cardano-db-sync                                             ││                                   │
+││ Run a local cardano-db-sync against our testnet                               ││                                   │
+│                                                                                ││                                   │
+│  //automation/jobs/cardano-node                                                ││                                   │
+│  Run a local cardano-node against our testnet                                  ││                                   │
+│                                                                                ││                                   │
 
-In fact, you can write as many output sets as you like; the [growOn][grow] function which is
-typically your entrypoint into a Standardized codebase is a varaidic function taking any number of
-attribute sets as arguments, where only the first set is specific to Standard. The rest are merged
-together, taking the same schema as a regular flake; giving you another mechanism for organizing
-your flake outputs cleanly. Use one set to ["harvest"][harvest] Standard outputs to their
-corresponding expected flake paths for compatibility, use another to use other flake frameworks
-independantly (flake-parts, dream2nix, etc).
+```
 
-Despite this, there are pieces that work well on their own, and defining them into their own
-independantly useful libraries is helpful for everyone, not just Standard users. One good example is
-[nosys][nosys] which was recently derived from Standard. It can be used independantly to make flake
-system handling dead simple, or it can be paired up for use on these additional attribututes passed
-to growOn to get the same simplified system management that Standard supplies for all your flakes
-outputs!
+## A Concise Show & Tell
+
+The central component of Standard is the cell block API. The heirarchy is "cell"→"block", where
+we defined the individual block types and names directly in the flake.nix.
+
+The function calls in the "cellBlocks" list below are the way in which we determine which "actions"
+can be run over the contents of the given block.
+
+```nix
+# flake.nix
+{
+  inputs.std.url = "github:divnix/std";
+  outputs = inputs: inputs.std.growOn {
+    inherit inputs;
+    systems = ["x86_64-linux"];
+    # Every file in here should be a directory, that's your "cell"
+    cellsFrom = ./nix;
+    # block API declaration
+    cellBlocks = [
+      (std.functions "lib")
+      (std.installables "packages")
+      (std.devshells "devshells")
+    ];
+  };
+}
+
+# ./nix/dev/packages.nix
+# nix build .#$system.dev.packages.project
+# std //dev/packages/project:build
+{
+  inputs, # flake inputs with the `system` abstracted, but still exposed when required
+  cell # reference to access other blocks in this cell
+}: let
+  inherit (inputs.nixpkgs) pkgs;
+in
+{
+  project = pkgs.stdenv.mkDerivation {
+    # ...
+  };
+}
+
+# ./nix/automation/devshells/default.nix
+# nix develop .#$system.dev.devshells.dev
+# std //automation/devshells/dev:enter
+{
+  inputs,
+  cell
+}: let
+  inherit (inputs) nixpkgs std;
+  inherit (nixpkgs) pkgs;
+  # a reference to other cells in the project
+  inherit (inputs.cells) packages;
+in
+{
+  dev = std.mkShell { packages = [packages.project]; };
+}
+```
 
 ## Encouraging Cooperation
 
@@ -148,10 +204,7 @@ Instead of making this a mega post, I'll just leave this as a bit of a teaser fo
 which will explore our recent efforts to bring the benefits Standard to GitHub Actions _a la_
 [std-action][action]. The target is a Nix CI system that avoids ever doing the same work more than
 once, whether its evaluating or building, and versatile enough to work from a single user project
-all the way up to a large organization's monorepo.
-
-All in parallel and with automatic coverage for any Standard blocks specified to run in CI in the
-flake.nix. Stay tuned...
+all the way up to a large organization's monorepo. Stay tuned...
 
 [digga]: https://github.com/divnix/digga
 [nosys]: https://github.com/divnix/nosys
