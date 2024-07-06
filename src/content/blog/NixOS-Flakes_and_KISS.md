@@ -1,12 +1,14 @@
 ---
-layout: $/layouts/post.astro
 title: NixOS, Flakes and KISS
 description: A simpler way to manage the OS Layer
 tags:
   - nix
 author: Tim D
 authorGithub: nrdxp
-date: 2020-12-19
+authorImage: https://avatars.githubusercontent.com/u/34083928?v=4
+authorTwitter: nrdxp52262
+date: "2020-12-19"
+category: dev
 ---
 
 ## Introduction

@@ -1,35 +1,34 @@
 [
-
-    {
-        "title": "Standard — Introduction",
-        "description": "A first principles introduction to Standard.",
-        "url": "https://www.loom.com/share/cf9d5d1a10514d65bf6b8287f7ddc7d6",
-        "host": "Joshua Gilman",
-        "participants": [],
-        "date": "2022-11-22"
-    },
-    {
-        "title": "Standard — Cell Blocks: Deep Dive",
-        "description": "Going in depth on Standard's key abstraction.",
-        "url": "https://www.loom.com/share/04fa1d578fd044059b02c9c052d87b77",
-        "host": "Joshua Gilman",
-        "participants": [],
-        "date": "2022-11-22"
-    },
-    {
-        "title": "Standard — Operables & OCI",
-        "description": "An entrypoint into building reproducible containers with Standard; batteries included.",
-        "url": "https://www.loom.com/share/27d91aa1eac24bcaaaed18ea6d6d03ca",
-        "host": "Joshua Gilman",
-        "participants": [],
-        "date": "2022-11-22"
-    },
-    {
-        "title": "Standard — Nixago",
-        "description": "Generating configuration files dynamically at shell load time & more.",
-        "url": "https://www.loom.com/share/5c1badd77ab641d3b8e256ddbba69042",
-        "host": "Joshua Gilman",
-        "participants": [],
-        "date": "2022-11-22"
-    }
+  {
+    "title": "Standard — Introduction",
+    "description": "A first principles introduction to Standard.",
+    "url": "https://www.loom.com/share/cf9d5d1a10514d65bf6b8287f7ddc7d6",
+    "host": "Joshua Gilman",
+    "participants": [],
+    "date": "2022-11-22"
+  },
+  {
+    "title": "Standard — Cell Blocks: Deep Dive",
+    "description": "Going in depth on Standard's key abstraction.",
+    "url": "https://www.loom.com/share/04fa1d578fd044059b02c9c052d87b77",
+    "host": "Joshua Gilman",
+    "participants": [],
+    "date": "2022-11-22"
+  },
+  {
+    "title": "Standard — Operables & OCI",
+    "description": "An entrypoint into building reproducible containers with Standard; batteries included.",
+    "url": "https://www.loom.com/share/27d91aa1eac24bcaaaed18ea6d6d03ca",
+    "host": "Joshua Gilman",
+    "participants": [],
+    "date": "2022-11-22"
+  },
+  {
+    "title": "Standard — Nixago",
+    "description": "Generating configuration files dynamically at shell load time & more.",
+    "url": "https://www.loom.com/share/5c1badd77ab641d3b8e256ddbba69042",
+    "host": "Joshua Gilman",
+    "participants": [],
+    "date": "2022-11-22"
+  }
 ]

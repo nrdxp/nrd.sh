@@ -3,11 +3,11 @@
   cell,
 }: let
   inherit (inputs.nixpkgs) pkgs;
-  inherit (inputs.std) std;
+  inherit (inputs) std;
 in {
-  default = std.lib.mkShell {
+  default = std.lib.dev.mkShell {
     name = "nrd.sh";
-    imports = [std.devshellProfiles.default];
+    imports = [std.std.devshellProfiles.default];
     commands = [
       {package = cell.packages.astro;}
       {package = pkgs.nodejs_latest;}

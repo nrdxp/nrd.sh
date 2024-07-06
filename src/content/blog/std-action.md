@@ -1,16 +1,17 @@
 ---
-layout: $/layouts/post.astro
 title: Standard Action
 description: Do it once, do it right.
 tags:
   - std
   - nix
   - devops
-  - GitHub
-  - actions
+  - github actions
 author: Tim D
 authorGithub: nrdxp
-date: 2022-12-09
+authorImage: https://avatars.githubusercontent.com/u/34083928?v=4
+authorTwitter: nrdxp52262
+date: "2022-12-09"
+category: dev
 ---
 
 ## CI Should be Simple
@@ -69,6 +70,9 @@ Notice in this particular example that CI exited in 2 minutes. That's because ev
 represented by these builds is already cached in the specified action input `cache`, so no work is
 required, we simply report that the artifacts already exist and exit quickly.
 
+There is a run phase that typically starts after this build step which runs the Standard action,
+but since the "build" actions only duty is building, it is also skipped here.
+
 This is partially enabled by use of the GH action cache. The cache key is set using the following
 format: [divnix/std-action/discover/action.yml#key][key]. Coupled with the guarantees nix already
 gives us, this is enough to ensure the evaluation will only be used on runners using a matching OS,
@@ -82,7 +86,7 @@ on their target derivation file instead of doing any more evaluation.
 
 Caching is also a first class citizen, and even in the event that a given task fails (even
 discovery itself), any of its nix dependencies built during the process leading up to that failure
-will be cached making sure no nix build _or_ evaluation is ever repeated. The user doesn't have
+will be cached, making sure no nix build _or_ evaluation is ever repeated. The user doesn't have
 to set a cache, but if they do, they can be rest assured their results will be well cached, we
 make a point to cache the entire build time closure, and not just the runtime closure, which is
 important for active developement in projects using a shared cache.

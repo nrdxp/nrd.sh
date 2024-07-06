@@ -21,5 +21,10 @@ yarn-error.log*
 .netlify
 netlify
 
-# Nix
+.astro
+.idea
+.vercel
+
+# nix
+result
 .std

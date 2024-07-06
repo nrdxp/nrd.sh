@@ -1,5 +1,4 @@
 ---
-layout: $/layouts/post.astro
 title: "Political Bikeshedding: NixOS Edition"
 description: On Social Dynamics and Leadership
 tags:
@@ -7,7 +6,10 @@ tags:
   - politics
 author: Tim D
 authorGithub: nrdxp
-date: 2024-07-02
+authorImage: https://avatars.githubusercontent.com/u/34083928?v=4
+authorTwitter: nrdxp52262
+date: "2024-07-02"
+category: politics
 ---
 
 This piece offers a perspective on recent NixOS project challenges from
