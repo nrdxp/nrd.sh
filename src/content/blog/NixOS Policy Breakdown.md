@@ -75,7 +75,7 @@ may not be accurate or relevant.
 In essence, marginalization is a temporary state, not a fixed identity.
 It's fluid and can shift with changing situations and contexts,
 highlighting the importance of diverse perspectives and the danger of
-assuming any one group always holds a privileged viewpoint or unique
+assuming any *one* group always holds a privileged viewpoint or unique
 insight in all settings.
 
 The misuse of marginalization claims has serious consequences.
@@ -137,7 +137,7 @@ cultivate an environment that rewards respectful disagreement and
 collaborative problem-solving irrespective of personal or political
 differences.
 
-The alternative and apparent status quo seems to be a perpetual
+The alternative and apparent *status quo* seems to be a perpetual
 witch-hunt for an ever-growing list of "wrong" opinions. Surely it is
 clear which strategy is more sustainable?
 
@@ -161,9 +161,9 @@ long-standing contributor and public figure. Recent controversies have
 portrayed Jon as an instigator and "mean offensive person." However, a
 more balanced view reveals him as a scapegoat for broader project
 tensions. Crucially, Jon was permanently banned from the project, while
-many who openly degraded him and made ad hominem attacks on his character
-faced no consequences. This stark contrast highlights the uneven
-application of moderation standards.
+many who openly degraded him and made *ad hominem* attacks on his
+character faced no consequences. This stark contrast highlights the
+uneven application of moderation standards.
 
 While Jon, like anyone, may have had imperfect moments under extreme
 pressure, these pale in comparison to the systematic narrative
@@ -276,6 +276,8 @@ It's time for those who value professionalism, open collaboration, and
 technical excellence to stand up and be counted. The alternative - an
 ecosystem stifled by ideological cleansing - is too high a price to pay
 for our silence.
+
+## Preserving the Future of Open Source
 
 While this piece has focused on Nix, the issues discussed are
 symptomatic of a growing and worrying trend across the open-source
