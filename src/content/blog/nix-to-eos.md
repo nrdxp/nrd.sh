@@ -80,5 +80,4 @@ However, it is critical to note Eos as the very motivation that inspired the ent
 
 But let's digress to the *status quo*, for a moment, and expand on some other critical design issues surrounding Nix today, and introduce the components in the works meant to address them.
 
-
-
+## Unbounded Hell
