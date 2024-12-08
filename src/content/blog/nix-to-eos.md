@@ -10,7 +10,7 @@ tags:
 author: Tim D
 authorGithub: nrdxp
 authorImage: https://avatars.githubusercontent.com/u/34083928?v=4
-authorTwitter: nrdxp52262
+authorTwitter: nrdexp
 date: "2024-12-04"
 category: dev
 ---
@@ -61,7 +61,7 @@ Technically, an atom in Git is an orphaned snapshot containing only its contents
 
 Verification is straightforward: compute the atom's tree-object and compare it with the claimed source commit's tree for that directory. If they match, the atom is authentic, and because its commit is reproducible, it remains inherently trustworthy indefinitely. In scenarios where full history access is unavailable, signed tags can be attributed. Trust the key, and you trust the atom. And keep in mind, re-verification from source is always available, when in doubt.
 
-A Git ref in a custom prefix at refs/atoms/<unicode-name>/1.0.0 then points to this "atomic commit", allowing us to query all available versions using Git's efficient ref querying facilities. Importantly, the query process does not require moving object data from client to server, ensuring efficiency and scalability.
+A Git ref in a custom prefix at refs/atoms/unicode-atom-id/1.0.0 then points to this "atomic commit", allowing us to query all available versions using Git's efficient ref querying facilities. Importantly, the query process does not require moving object data from client to server, ensuring efficiency and scalability.
 
 This format gives us a decentralized code registry akin to those used by modern package managers, but one that fits perfectly into Nix's source-centric paradigm while providing a useful abstraction to minimize network code transfers and needless evaluations at runtime.
 
