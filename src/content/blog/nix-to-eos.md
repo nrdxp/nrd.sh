@@ -117,7 +117,7 @@ At its core, `eka` serves as an atomic frontend to a backend service that handle
 
 3. Improved addressing: While flakes introduced useful URI shorthand, we've expanded this concept with Atom URIs. Unlike flakes' hard-coded shortcuts, Atom URIs are configurable, allowing patterns like `work:repo::my-atom@^1`. Crucially, these always expand to full URLs in the final output, ensuring universal understanding while maintaining convenience.
 
-To support this ambitious scope, we plan to implement a language-agnostic plugin system for `eka`. While the core remains focused on efficient atomic operations and basic backend communication, plugins will extend functionality through a well-defined API surface. This extensibility will become increasingly important as `eka` evolves, and to help avoid bloat and complexity in the core codebase.
+To support this ambitious scope, we plan to implement a language-agnostic plugin system for `eka`. While the core remains focused on efficient atomic operations and basic backend communication, plugins will extend functionality through a well-defined API surface. This extensibility will become increasingly important as `eka` evolves to help avoid bloat and complexity in the core codebase.
 
 The ultimate vision for `eka` users is efficient querying of packages, deployment manifests, and configurations across their organization and the open-source landscape—all without upfront Nix evaluation. It should optimize away unnecessary evaluations and builds when artifacts exist in cache, in concert with the backend, proceeding directly to fetching. If `eka` ever needs to perform evaluation for value generation, we've strayed from our design goals.
 
