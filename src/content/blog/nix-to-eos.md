@@ -17,6 +17,8 @@ category: dev
 
 This piece explores the evolution of store-based systems and our vision for their future. While I've aimed to make it accessible to those not intimately familiar with Nix, I assume some technical foundation—particularly an interest in software distribution at scale. If terms like "reproducible builds" or "supply chain security" don't pique your curiosity, what follows might feel rather academic. However, if you're intrigued by how we might tackle the growing complexity of software distribution while maintaining security and sanity, read on.
 
+It's important to note that this post specifically outlines my personal plans and intended contributions to Ekala. There are several other significant [related efforts](https://github.com/ekala-project/ekapkgs-roadmap) already in progress, driven by our other founders and contributors, which complement and extend beyond what's discussed here.
+
 ## Reflections 
 
 I recently decided to take an extended vacation—a choice that might seem odd right after a major public announcement and development push. But this time was vital for introspection. During this pause, I stumbled upon a concept that, while humbling, is proving invaluable: "Thought Driven Development." The rule is simple yet profound: if you don’t have the answer, don’t rush to write the code. This approach has illuminated my path, emphasizing that realizing Ekala’s potential requires a deep understanding of our origins and intentions, without drowning in unnecessary details.
