@@ -105,8 +105,6 @@ Fortunately, no such boilerplate exists. All of these scopes are simply availabl
 
 While these features are available today with some effort (see the [README](https://github.com/ekala-project/atom?tab=readme-ov-file)), our ultimate goal is to provide a cohesive system that's intuitively familiar to developers, regardless of their Nix experience. To bridge the gap between our higher-level Atomic module system and the lower-level atom format, we turn to our gateway into the Ekala ecosystem: the `eka` CLI.
 
-The overall structure is good, but I can suggest some refinements to tighten up the flow and clarity while maintaining the technical depth:
-
 ## The Proper Level of Abstraction
 
 Eka, our CLI frontend, predates even the Atom format it now implements. Rather than following flakes' path of bolting a higher-level interface onto Nix, we approached the problem from first principles: what should a proper interface into a Nix-centric universe look like? This exploration led us to both the Atom format's innovations and several other concepts still in development.
