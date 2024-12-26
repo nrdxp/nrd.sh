@@ -4,15 +4,10 @@ description: A Call for Freedom
 tags:
   - psychology
   - personality
-  - big-5-personality
-  - disagreeable-personality
   - freedom
   - nonconformity
-  - individualism
   - open-source
   - philosophy
-  - dostoevsky
-  - self-acceptance
   - critical-thinking
 author: Tim D
 authorGithub: nrdxp
