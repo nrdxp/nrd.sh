@@ -103,7 +103,7 @@ As much as we delude ourselves into thinking we live in an enlightened age, we r
 
 This is precisely why individuals like ourselves are necessary, perhaps now more than ever. Society needs us to contend with the uncomfortable, because most simply refuse. We must speak our minds, even to that charismatic demagogue, even to that possessed acolyte of the "one true" religion, even at the cost of our own livelihood. The world needs this from us precisely because the majority will not, because they refuse, and while they dare not ask - indeed have no right to ask - they need us all the same.
 
-And you will do it too, not because you want to, not because you particularly enjoy the constant difficulty it poses in your life, but because it is who you are. We just need you to live true to your nature, for all our sakes.
+And you will do it too, not because you want to, not because you particularly enjoy the constant difficulty it poses in your life, but because it is who you are. We just need you, my fellow disagreeable types out there, to understand more deeply and live more truly to your nature, for all our sakes.
 
 ## A Prayer for the Defenders
 
