@@ -1,2 +1,6 @@
-[functions]
-    external_node_modules = ["astro", "vscode-oniguruma"]
+[build]
+publish = "public"
+command = "zola build"
+
+[build.environment]
+ZOLA_VERSION = "0.19.2"

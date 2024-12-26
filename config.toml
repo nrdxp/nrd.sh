@@ -1,0 +1,40 @@
+theme = "apollo"
+taxonomies = [{ name = "tags" }]
+title = "nrdxp"
+generate_feeds = true
+minify_html = true
+
+# The URL the site will be built for
+base_url = "/"
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = false
+
+[markdown]
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = true
+highlight_theme = "ayu-light"
+
+[extra]
+theme = "auto"
+socials = [
+  { name = "rss", url = "/atom.xml", icon = "rss" },
+  { name = "github", url = "https://github.com/nrdxp", icon = "github" },
+  { name = "twitter", url = "https://x.com/nrdexp", icon = "x-twitter" },
+  { name = "discord", url = "https://discord.com/users/672485325683032094", icon = "discord" },
+  { name = "matrix", url = "https://matrix.to/#/@timdeh:matrix.org", icon = "matrix" },
+  { name = "email", url = "mailto:tim@nrd.sh", icon = "email" },
+]
+menu = [
+  { name = "/blog", url = "/blog", weight = 1 },
+  { name = "/tags", url = "/tags", weight = 2 },
+  { name = "/projects", url = "/projects", weight = 3 },
+  { name = "/about", url = "/about", weight = 4 },
+]
+repo_view = true
+repo_url = "https://github.com/nrdxp/nrd.sh/tree/main/content"
+favicon = "/icon/favicon.png"
