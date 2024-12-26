@@ -92,7 +92,7 @@ What's the point of this self-reflective journey? To illustrate the vital import
 
 It wasn't until I came to realize the purpose of being me, and others like me: Someone must occupy this uncomfortable space in between, precisely because the majority of humanity simply will not. This isn't about maintaining perfect centrism - rather, it's about the willingness to lean one direction today, explore another camp tomorrow, and perhaps abandon the whole enterprise entirely in the future.
 
-Some might call this wishy-washy or lacking discipline. And yes, there's some truth to that. But then again, I also possess the will to run 20+ miles or completely reimagine software deployment from its foundations. I must give myself some credit where the existing system - one that requires we exist in predetermined boxes - refuses to do so.
+Some might call this wishy-washy or lacking discipline. And yes, there's some truth to that. But then again, I also possess the will to run 20+ miles or completely reimagine software deployment from its foundations, so it's not *just* that. I must give myself some credit where the existing system - one that requires we exist in predetermined boxes - refuses to do so.
 
 I don't write this for myself. As a fairly private individual, sharing this is quite unnerving. But I choose to face this discomfort for one simple reason: others like me exist, and they exist for good reason. Judging by my own unlikely journey to self-acceptance, they are likely suffering, confused, perhaps self-loathing, maybe even considering a way out. To them, I simply say: we need you!
 
