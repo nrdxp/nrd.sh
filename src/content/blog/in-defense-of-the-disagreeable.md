@@ -95,7 +95,7 @@ Painful as it is, as much as the world would rather have you jump into this camp
 
 As much as we delude ourselves into thinking we live in an enlightened age, we remain, like all humans before us, desperately uncomfortable with lingering doubts, hell-bent on jumping into the first camp that alleviates ambiguity. Whether it's vaccines, political ideology, or faith doesn't matter - just please, oh please, let us take a side so we don't have to live with not knowing.
 
-This is precisely why individuals like myself are necessary, perhaps now more than ever. We need you to contend with the uncomfortable, because others simply refuse. We need you to speak your mind, even to that charismatic demagogue, even to that possessed acolyte of the "one true" religion, even at the cost of your own livelihood. We need you to do this precisely because we will not, because we refuse, and while we dare not ask - indeed have no right to ask - we need you all the same.
+This is precisely why individuals like ourselves are necessary, perhaps now more than ever. Society needs us to contend with the uncomfortable, because most simply refuse. We must speak our minds, even to that charismatic demagogue, even to that possessed acolyte of the "one true" religion, even at the cost of our own livelihood. The world needs this from us precisely because the majority will not, because they refuse, and while they dare not ask - indeed have no right to ask - they need us all the same.
 
 And you will do it too, not because you want to, not because you particularly enjoy the constant difficulty it poses in your life, but because it is who you are. We just need you to live true to your nature, for all our sakes.
 
