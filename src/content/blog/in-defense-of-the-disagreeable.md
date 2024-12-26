@@ -19,7 +19,7 @@ category: personal
 
 This blog typically focuses on technical matters - software architecture, deployment strategies, and the occasional deep dive into systems design. While I've shared personal musings before, I've never ventured quite this deep into the waters of self-reflection and social commentary.
 
-What follows is perhaps the most personal piece I've written to date. It emerged, almost unbidden, from a long-standing tension between my nature and the prevailing winds of our time. While it may seem far removed from my usual technical discussions, I've come to realize that the philosophy underlying software freedom - particularly in the open-source world - is inextricably linked to the broader questions of personal freedom and the vital role of disagreeable personalities in defending it.
+What follows is perhaps the most personal piece I've written to date. It emerged, almost unbidden, from a long-standing tension between my nature and the prevailing winds of our time. While it may seem far removed from my usual technical discussions, I've come to realize that the philosophy underlying software freedom - particularly in the open-source world - is inextricably linked to the broader questions of personal freedom and the vital role of disagreeable personalities (my unhappy burden) in defending it.
 
 Consider this both a warning and an invitation: we're about to venture far from the comfortable waters of technical discourse, into the depths of personality, purpose, and the preservation of freedom itself.
 
@@ -113,7 +113,7 @@ We may not like it, we may even mostly despise it, but we are all needed. It's j
 
 But if the disagreeable do not defend us now, that is precisely where we are heading - of that I am deathly certain, as much as I wish I weren't. My journey from self-loathing to self-understanding has taught me this: what seems like a curse - this inability to conform, this compulsion to question everything - may be society's last defense against the crushing weight of conformity that continues to slowly tighten its grip. The very traits that make us difficult, that make us challenge and resist, are the traits that keep the doors of freedom propped open.
 
-Don't be fooled into thinking this a partisan issue, either. History shows us the truth - the very same loyalists who assisted Stalin were the _first_ to be lined up and shot when the "revolution" was finally accomplished. This isn't about left or right; it's about the fundamental nature of human freedom and those rare few willing to defend on either side.
+Don't be fooled into thinking this a partisan issue, either. History shows us the truth - the very same loyalists who assisted Stalin were the _first_ to be lined up and shot when the "revolution" was finally accomplished. This isn't about left or right; it's about the fundamental nature of human freedom and those rare few willing to defend it.
 
 And I'll be clear - I am pessimistic. The most probable outcome is that we will, yet again, descend into utter enslavement - not just of body, but of mind. Perhaps more deeply and fully than at any time in the past, perhaps never to return again. Yet still I myself, even if it is in vain, choose to remain true to my being, if just for once, in all my strengths and flaws, and I ask you - rather out of character for my usual way - to do the same. Even if the worst comes to pass, there is far less shame in remaining true to yourself and your convictions, in my estimation, at least.
 
