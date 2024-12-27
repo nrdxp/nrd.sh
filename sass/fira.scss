@@ -1,0 +1,15 @@
+@import url('https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/fira-sans.min.css');
+@import url('https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/fira-mono.min.css');
+
+:root {
+    --text-font: 'Fira Sans', sans-serif;
+    --code-font: 'Fira Mono', monospace;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--code-font) !important;
+}
+
+header {
+    font-family: var(--code-font) !important;
+}

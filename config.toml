@@ -38,3 +38,6 @@ menu = [
 repo_view = true
 repo_url = "https://github.com/nrdxp/nrd.sh/tree/main/content/"
 favicon = "/icon/favicon.png"
+stylesheets = [
+  "fira.css"
+]
