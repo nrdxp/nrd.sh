@@ -20,7 +20,7 @@ highlight_code = true
 highlight_theme = "ayu-light"
 
 [extra]
-theme = "auto"
+theme = "toggle"
 socials = [
   { name = "rss", url = "/atom.xml", icon = "rss" },
   { name = "github", url = "https://github.com/nrdxp", icon = "github" },
@@ -39,5 +39,6 @@ repo_view = true
 repo_url = "https://github.com/nrdxp/nrd.sh/tree/main/content/"
 favicon = "/icon/favicon.png"
 stylesheets = [
-  "fira.css"
+  "fira.css",
+  "colors.css"
 ]
