@@ -12,6 +12,9 @@ authorImage: "https://avatars.githubusercontent.com/u/34083928?v=4"
 authorTwitter: "nrdexp"
 date: "2024-10-11"
 category: "personal"
+extra:
+  read_time: true
+  repo_view: true
 ---
 
 **Reader Advisory:** This post is sarcastic, and a bit raw. Those without a sense of humor, or an aversion to hard facts, venture no further. Also, these opinions are my own; subject to change, etc, etc.

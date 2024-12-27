@@ -13,6 +13,9 @@ authorImage: https://avatars.githubusercontent.com/u/34083928?v=4
 authorTwitter: nrdxp52262
 date: "2022-12-09"
 category: dev
+extra:
+  read_time: true
+  repo_view: true
 ---
 
 ## CI Should be Simple

@@ -12,6 +12,9 @@ authorImage: https://avatars.githubusercontent.com/u/34083928?v=4
 authorTwitter: nrdxp52262
 date: "2022-10-31"
 category: dev
+extra:
+  read_time: true
+  repo_view: true
 ---
 
 ## Update: A Video is Worth 1000 Blogs

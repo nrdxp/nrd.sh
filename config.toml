@@ -36,5 +36,5 @@ menu = [
   { name = "/about", url = "/about", weight = 4 },
 ]
 repo_view = true
-repo_url = "https://github.com/nrdxp/nrd.sh/tree/main/content"
+repo_url = "https://github.com/nrdxp/nrd.sh/tree/main/content/"
 favicon = "/icon/favicon.png"

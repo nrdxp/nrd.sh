@@ -11,6 +11,9 @@ authorImage: https://avatars.githubusercontent.com/u/34083928?v=4
 authorTwitter: nrdxp52262
 date: "2024-07-02"
 category: politics
+extra:
+  read_time: true
+  repo_view: true
 ---
 
 This piece offers a perspective on recent NixOS project challenges from

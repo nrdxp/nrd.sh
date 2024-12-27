@@ -10,6 +10,9 @@ authorImage: https://avatars.githubusercontent.com/u/34083928?v=4
 authorTwitter: nrdxp52262
 date: "2020-12-19"
 category: dev
+extra:
+  read_time: true
+  repo_view: true
 ---
 
 ## Introduction
