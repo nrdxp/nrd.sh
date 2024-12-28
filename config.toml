@@ -1,6 +1,7 @@
 theme = "apollo"
 taxonomies = [{ name = "tags" }]
 title = "nrdxp"
+description = "nrdxp's personal site & blog"
 generate_feeds = true
 minify_html = true
 
