@@ -6,7 +6,7 @@ generate_feeds = true
 minify_html = true
 
 # The URL the site will be built for
-base_url = "/"
+base_url = "https://nrd.sh/"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
