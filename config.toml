@@ -41,5 +41,6 @@ repo_url = "https://github.com/nrdxp/nrd.sh/tree/main/content/"
 favicon = "/icon/favicon.png"
 stylesheets = [
   "fira.css",
-  "colors.css"
+  "colors.css",
+  "custom.css"
 ]
