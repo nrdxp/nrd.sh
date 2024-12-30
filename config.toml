@@ -44,3 +44,9 @@ stylesheets = [
   "colors.css",
   "custom.css"
 ]
+
+[extra.analytics]
+enabled = true
+
+[extra.analytics.goatcounter]
+user = "nrd"
