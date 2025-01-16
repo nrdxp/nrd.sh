@@ -32,9 +32,10 @@ socials = [
 ]
 menu = [
   { name = "/blog", url = "/blog", weight = 1 },
-  { name = "/tags", url = "/tags", weight = 2 },
-  { name = "/projects", url = "/projects", weight = 3 },
+  { name = "/projects", url = "/projects", weight = 2 },
+  { name = "/hire", url = "/hire", weight = 3 },
   { name = "/about", url = "/about", weight = 4 },
+  { name = "/tags", url = "/tags", weight = 5 },
 ]
 repo_view = true
 repo_url = "https://github.com/nrdxp/nrd.sh/tree/main/content/"
