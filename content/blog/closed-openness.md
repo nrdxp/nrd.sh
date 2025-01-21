@@ -48,7 +48,7 @@ Whatever the case, the real connections I've made are valuable, but my original 
 
 My experience on 𝕏 has highlighted a particularly troubling pattern: the replacement of meaningful discourse with performance. Where social media could be a powerful tool for knowledge sharing and mentorship, it instead rewards degredation into a arena of posturing and point-scoring. I've now watched countless opportunities for genuine learning transform into gladiatorial spectacles of utterly unfulfilling "dunks" & "ratios".
 
-While there is some real social utility in well placed [ridicule](https://nrd.sh/blog/12-years/#the-forgotten-utility-of-ridicule), that is decidedly *not* what happens in a majority of cases, sadly. But this isn't just about social media behavior — it's symptomatic of a deeper cultural shift in how we approach knowledge transfer and personal growth all together.
+While there is some real social utility in well placed [ridicule](https://nrd.sh/blog/12-years/#the-forgotten-utility-of-ridicule), the majority of cases seem to boil down to crude gamification, sadly. But this isn't just about social media behavior — it's symptomatic of a deeper cultural shift in how we approach knowledge transfer and personal growth all together.
 
 ## From Mentor to Memelord & (Hopefully) Back Again
 
