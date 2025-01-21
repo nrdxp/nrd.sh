@@ -1,6 +1,6 @@
 ---
 title: The Closing of Open Source
-description: A Developer's Warning from 2025
+description: Against the Dying of the Light
 taxonomies:
   tags:
     - opensource
@@ -132,15 +132,15 @@ The pace itself is dizzying enough to be utterly demoralizing. In just a few sho
 
 ## Finding North in a Digital Storm
 
-So where does that leave us? I'd be lying if I said I was optimistic. The last few months have pushed me into perhaps the most pressing existential crisis of my life — both from events I've described and personal challenges I'm not yet ready to discuss publicly. Yet through this difficult soul searching, I've found insights that may prove useful in mounting an effective resistance.
+So where does that leave us? I'd be lying if I said I was optimistic. The last few months have pushed me into perhaps the most pressing existential crisis of my life — both from events I've described and personal challenges in my own life. Yet through this difficult soul searching, I've found insights that may prove useful in mounting an effective resistance.
 
-The battle for open source's soul may already be lost. But the very intensity of efforts to stamp out free software's founding principles suggests their enduring power. Open standards like the OSI model and ecosystems like C still form the bedrock of our modern world. What happens when these resources fall under centralized control? We may find out sooner than we'd like.
+The battle for open source's soul may already be lost, on many fronts. But the very intensity of efforts to stamp out free software's founding principles suggests their enduring power, and the war may not be over, just yet. Open standards like the OSI model and ecosystems like C still form the bedrock of our modern world. Will we really allow the rest of these precious resources to fall under the intoxicating sway of centralized control, one by one?
 
 ### A Return to Fundamentals
 
 Ideas matter. While trendy ideologies might seem harmless, their long-term consequences can be devastating. Prioritizing superficial "social justice" over genuine freedom and measurable outcomes has led us precisely where many predicted — to a landscape where coordinated efforts ruthlessly resist all perceived threats to narrative control.
 
-The response must be unapologetic: a return to well-reasoned, provably sound principles. Not through compromise that dilutes our ideals, but through coordinated resistance across disparate groups who understand what's at stake.
+The response must be equally unapologetic: a return to well-reasoned, provably sound principles. Not through compromise that dilutes our ideals, but through coordinated resistance across disparate groups who understand what's at stake.
 
 ### Practical Resistance: The Ekala Way
 
@@ -154,9 +154,9 @@ This approach isn't easy, even for me. Nobody wants an `eka` prototype more than
 
 #### A Foundational Ethic
 
-Before writing any code for Ekala, I addressed what I saw as a fundamental challenge: the ideological capture of open source projects through carefully crafted governance documents. Rather than adopt traditional Codes of Conduct, we developed the Hackers' Ethic, centered on **_primum nullum cogitatum impedire: first, hinder no thought_**.
+Before writing any code for Ekala, I addressed what I saw as a fundamental challenge: the ideological capture of open source projects through carefully crafted governance documents. Facing this hydra head-on, we developed the [Hackers' Ethic](https://ethics.codes), centered on the maxim: **_primum nullum cogitatum impedire: first, hinder no thought_**.
 
-This isn't about rejecting all structure — it's about building ethical frameworks that promote innovation rather than distortion and ossification of the _status quo_. While the Hackers' Ethic will evolve, it already provides an antidote to the vague, manipulative governance documents that have become all too common.
+This isn't about rejecting structure or responsibility — it's about building ethical frameworks that promote innovation rather than control and ossification of the _status quo_. While the Hackers' Ethic will evolve, it already provides an antidote to the vague, manipulative governance documents that have become all too common, serving as a powerful spring board for our efforts, ensuring they remain true to their original intent.
 
 #### Building Resilience
 
@@ -182,7 +182,7 @@ While Ekala represents one approach to resistance, there are immediate steps any
 
 ### Just Be a Mentor
 
-The solution lies in courage — both individual and collective. A mentor isn't necessarily a role model; I certainly don't recommend anyone follow my difficult path. But I can share what I've learned, assist where I can, and contribute to rebuilding a culture of genuine mentorship.
+The solution lies in courage — both individual and collective. A mentor isn't necessarily a role model; I certainly don't recommend anyone follow my difficult path. But I can share what I've learned, assist where I can, learn from the best, and contribute to rebuilding a culture of genuine mentorship.
 
 This isn't about transactions or authority. It's about recognizing our dual nature as both teachers and students, experts and beginners. True mentorship requires giving and receiving, understanding that our existence is endlessly dynamic — sometimes growing, sometimes shrinking, always changing.
 
@@ -192,8 +192,8 @@ I don't have all the answers. But I know that taking action aligned with genuine
 
 As 2025 unfolds with unprecedented global instability, the battle for open source's soul might seem insignificant. Yet the principles we're fighting for — freedom of thought, genuine collaboration, merit-based development — matter now more than ever. In a world where AI threatens to centralize power and corporate interests steadily erode developer independence, maintaining truly open spaces for innovation isn't just idealistic — it's essential for our collective future.
 
-What we're witnessing isn't just another tech industry trend. It's a coordinated effort to replace merit-based governance with political control, systematically dismantling the mentorship culture that built our community. The pattern is clear: corporate capture follows a predictable path, using governance changes and political pressure to silence technical voices. Each silenced voice, each compromised project, brings us closer to a tipping point from which recovery becomes increasingly difficult.
+What we're witnessing isn't just another tech industry trend. It's almost certainly a coordinated effort to replace merit-based governance with political control, systematically dismantling the mentorship culture that built our community. The pattern is clear: corporate capture follows a predictable path, using governance changes and political pressure to silence technical voices. Each silenced voice, each compromised project, brings us closer to a tipping point from which recovery becomes increasingly difficult.
 
-The solution won't come from grand manifestos or corporate initiatives. It will come from individuals willing to stand firm, to mentor rather than dictate, to build rather than control. Whether through contributing to projects like Ekala, maintaining independent open source efforts, or simply speaking up when governance goes astray, each of us has more power than we realize. Every small act of resistance matters — every time we choose merit over politics, every time we help another developer grow.
+The solution won't come from grand manifestos or corporate initiatives. It will come from individuals willing to stand firm, to mentor rather than dictate, to build rather than control. Whether through contributing to projects like Ekala, maintaining independent open source efforts, or simply speaking up when governance goes astray, each of us has more power than we realize. Every small act of resistance matters — every time we choose merit over politics, every time we help another developer grow, not just in skill, but in understanding.
 
 **The time for comfortable silence has passed.** If you value the principles that made open source revolutionary — if you believe in the power of shared knowledge and genuine collaboration — then stand up. Mentor someone. Build something real. The tools of resistance are in your hands.
