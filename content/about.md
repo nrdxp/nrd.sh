@@ -11,7 +11,7 @@ As co-founder of the [Ekala Project](https://github.com/ekala-project), I'm buil
 
 With a decade of experience in distributed systems, build infrastructure, and network optimization, I craft tools that emphasize reproducibility and determinism. My engineering approach leverages expressive type systems and functional programming paradigms, with current focus on the Rust and Nix ecosystems.
 
-If you're interested in working together or supporting my open source contributions, consider [collaborating](/collab) with me or reaching out through any of the social links above. I'm always happy to chat!
+If you're interested in working together, supporting open source, or just want to discuss something interesting, consider [collaborating](/collab) with me or reaching out through any of the social links above.
 
 ## Sigs
 
