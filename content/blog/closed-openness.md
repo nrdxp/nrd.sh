@@ -26,9 +26,9 @@ What a year 2025 has been already... While I'd planned for my next post to be te
 
 If you've read any of my previous posts or know me personally, you know I've often avoided politics like the plague. Not out of fear so much as utter shame at what politics has become — a realm of rabid dishonesty, posturing, and self-destructive tendencies masquerading as "special interests".
 
-However, as I get older, I've been compelled to reassess this position, as I'm forced to reconsider virtually all of my internal assumptions, just to survive. Successful or no, I wish to make an earnest attempt to drive the conversation in a more reasoned, deliberate, and hopefully productive direction. Though I may be setting myself up for failure — after all, I'm just one developer trying to navigate the treacherous waters of modern political discourse.
+However, as I get older, I've been compelled to reassess this position, as I'm forced to reconsider virtually all of my internal assumptions as I make my way through life. Successful or no, I wish to make an earnest attempt to drive the conversation in a more reasoned, deliberate, and hopefully productive direction. Though I may be setting myself up for failure — after all, I'm just one nerd trying to navigate the treacherous waters of modern political discourse. By all means, decide for yourselves.
 
-As part of coming to terms with how politics affects both my personal and professional life, you might remember from one of my [previous posts](../12-years) that I recently ended my decade-long exile from social media. I wanted to start this piece with a summary of my experience so far, to hopefully give the reader some context around my ramblings, we'll see if I succeed...
+But I digress, as part of coming to terms with how politics affects both my personal and professional life, you might remember from one of my [previous posts](../12-years) that I recently ended my decade-long exile from social media. I wanted to start this piece with a summary of my experience so far, to hopefully give the reader some context around my ramblings, we'll see if I succeed...
 
 ## 𝕏 Marks the Spot
 
