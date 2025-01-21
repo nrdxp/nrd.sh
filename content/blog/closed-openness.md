@@ -138,7 +138,7 @@ The pace itself is dizzying enough to be utterly demoralizing. In just a few sho
 
 So where does that leave us? I'd be lying if I said I was optimistic. The last few months have pushed me into perhaps the most pressing existential crisis of my life — both from events I've described and personal challenges in my own life. Yet through this difficult soul searching, I've found insights that may prove useful in mounting an effective resistance.
 
-The battle for open source's soul may already be lost, on many fronts. But the very intensity of efforts to stamp out free software's founding principles suggests their enduring power, and the war may not be over, just yet. Open standards like the OSI model and ecosystems like C still form the bedrock of our modern world. Will we really allow the rest of these precious resources to fall under the intoxicating sway of centralized control, one by one?
+The battle for open source's soul may already be lost, on many fronts, yet the very intensity of efforts to stamp out free software's founding principles suggests their enduring power. The war may not be over just yet. Open implementations of protocols like TCP/IP and ecosystems like C still form much of the bedrock of our modern world. Will we really allow the rest of these precious resources to fall under the intoxicating sway of centralized control, one by one?
 
 ### A Return to Fundamentals
 
