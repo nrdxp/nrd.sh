@@ -16,6 +16,10 @@ extra:
   repo_view: true
 ---
 
+> "The line separating good and evil passes not through states, nor between classes, nor between political parties either -- but right through every human heart."
+>
+> — Aleksandr Solzhenitsyn
+
 What a year 2025 has been already... While I'd planned for my next post to be technical, plans rarely survive first contact with reality. In a [previous piece](../in-defense-of-the-disagreeable/#the-misunderstood-guardians), I promised to delve deeper into what I consider an existential threat to open source – a claim that might have seemed alarmist just weeks ago, before chaos became our new normal. On the eve of the US presidential inauguration, it feels fitting to explore this topic, as the incoming administration will inevitably reshape our digital landscape, for better or worse. If you can bear with me for one more politically charged post, I promise to follow up with a series focused on Ekala's progress and design. So without further ado, let's dive in.
 
 # The Personal is Political
