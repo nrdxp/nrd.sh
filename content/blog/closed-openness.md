@@ -20,7 +20,7 @@ What a year 2025 has been already... While I'd planned for my next post to be te
 
 # The Personal is Political
 
-If you have read any of my previous blog posts or happen to know me personally, you know I've never been much of a fan of politics. If I'm being honest, I've deliberately gone out of my way to avoid the topic, not so much out of fear, as of utter shame. The political realm, to me, is one of rabid dishonesty, posturing, demagoguery and morose, self-destructive tendencies disguised as "special interests".
+If you've read any of my previous posts or know me personally, you know I've often avoided politics like the plague. Not out of fear so much as utter shame at what politics has become - a realm of rabid dishonesty, posturing, and self-destructive tendencies masquerading as "special interests".
 
 However, as I get older, I've been compelled to reassess this position, as I'm forced to reconsider virtually all of my internal assumptions, just to survive. Successful or no, I wish to make an earnest attempt to drive the conversation in a more reasoned, deliberate, and hopefully productive direction. Though I may be setting myself up for failure - after all, I'm just one developer trying to navigate the treacherous waters of modern political discourse.
 
