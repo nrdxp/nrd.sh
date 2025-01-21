@@ -116,7 +116,7 @@ This transplant is more devastating than it might appear on the surface. Open so
 
 > "Open source doesn't operate like the corporate world. Contributions flow from need and community sustenance, not expectation of return."
 
-This corporate takeover particularly threatens the mentorship culture that built open source. Corporate structures favor quick results over deep understanding, metrics over mastery. When projects prioritize political compliance over technical merit, experienced developers who could mentor others either leave or stay silent. The result? A self-reinforcing cycle where corporate control grows stronger as the community's capacity for self-guidance diminishes.
+This corporate takeover particularly threatens the mentorship culture that built open source. Corporate structures favor quick results over deep understanding, and metrics over mastery. When projects prioritize political compliance over technical merit, experienced developers who could mentor others either leave or stay silent. The result? A self-reinforcing cycle where corporate control grows stronger as the community's capacity for self-guidance diminishes.
 
 **The deadly nature of this shift cannot be overstated.** Mimicking corporate political theater - fundamentally based in capitalistic mindsets - is antithetical to an ecosystem that, in principle, exists entirely outside that economic framework. These aren't just theoretical concerns.
 
