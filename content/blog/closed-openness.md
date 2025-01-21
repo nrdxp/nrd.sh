@@ -40,11 +40,11 @@ But the platform's darker side is impossible to ignore. There's this growing exi
 
 And it's not just me. In a year that's already seen unprecedented attacks in the Red Sea, devastating floods in California, and mounting global tensions, our collective ability to process and respond to crisis seems more important than ever. Yet social media's constant doom cycle paradoxically numbs us to real issues while amplifying manufactured ones. As if this cascade of global crises wasn't enough - from supply chain disruptions to AI regulation battles - the tech community seems to be fracturing right when we need collaboration most.
 
-All of this has me reconsidering my approach. What started as an experiment in engagement has become an unwitting study in human nature and power dynamics. I'm now considered hiring a social media manager just to maintain the connections while protecting my own mental bandwidth.
+All of this has me reconsidering my approach. What started as an experiment in engagement has become an unwitting study in human nature and power dynamics. It's also, frankly, an exercise in self control, even for someone who is quite used to physical exertion, by now. Perhaps I need to take planned hiatus periodically, or hire an account amanager?
 
 > "What started as an experiment in engagement has become an unwitting study in human nature and power dynamics."
 
-The real connections I've made are valuable, but my original criticisms of social media haven't just persisted - they've been validated more strongly than ever. For our purposes, though, there is one particular aspect that I have been thinking about a lot lately that ties into the topics I'd like to discuss in the rest of this post.
+Whatever the case, the real connections I've made are valuable, but my original criticisms of social media haven't just persisted - they've been validated more strongly than ever. For our purposes, though, there is one particular aspect that I have been thinking about a lot lately that ties into the topics I'd like to discuss in the rest of this post.
 
 My experience on 𝕏 has highlighted a particularly troubling pattern: the replacement of meaningful discourse with performance. Where social media could be a powerful tool for knowledge sharing and mentorship, it instead rewards degredation into a arena of posturing and point-scoring. I've now watched countless opportunities for genuine learning transform into gladiatorial spectacles of dunking and ratio-ing. This isn't just about social media behavior - it's symptomatic of a deeper cultural shift in how we approach knowledge transfer and personal growth.
 
