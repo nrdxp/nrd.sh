@@ -80,13 +80,9 @@ During my tenure in the NixOS ecosystem, I operated under the assumption that pe
 
 I take pride in maintaining professional discourse, critiquing ideas rather than identities, regardless of how aggressive others' politics became. This isn't virtue signaling — I genuinely wish I could have had more meaningful conversations with those I supposedly "opposed" to get to the bottom of our differences. That mentoring instinct runs deep, and it cuts to the heart of this entire post. In the end, though, sometimes the greatest service you can offer is simply maintaining your principles when others abandon theirs.
 
-> "Sometimes the greatest service you can offer is simply maintaining your principles when others abandon theirs."
-
 Earlier, I touched on how the bully-pushover dynamic leaves no room for true leadership qualities like mentorship and guidance. What we witnessed and thoroughly documented in [RFC 175](https://github.com/nrdxp/rfcs/blob/rfc-175/rfcs/0175-appeals-council.md) demonstrates this perfectly: power so entrenched it had become casually, almost lazily tyrannical. The greatest threat to such entrenched power isn't opposition — it's genuine leadership. Those who take initiative to solve real problems, who demonstrate authentic mentorship, who build rather than control — these are the people who must be eliminated first.
 
 Understanding this dynamic is crucial for defending against future political attacks. The systematic resistance to actual leadership isn't accidental — it's a deliberate strategy, whether driven by instinctual self-preservation or calculated power maintenance. Those who hold power through manipulation cannot allow genuine merit-based leadership to flourish.
-
-> "The systematic resistance to actual leadership isn't accidental — it's a deliberate strategy."
 
 Our approach to RFC 175 revealed this dynamic in action. We maintained professionalism throughout our documentation, limiting ourselves to public information despite having access to more damning private evidence. We chose cooperation over confrontation, building our case solely from public discourse. The response? Immediate banning, while critics were free to mischaracterize our motivations in a proposal aimed at addressing demonstrably broken governance.
 
@@ -120,8 +116,6 @@ In the corporate realm, politics revolves around image. Considerable behind-the-
 
 This transplant is more devastating than it might appear on the surface. Open source doesn't operate like the corporate world. Corporations function within capitalism, while open source, at its core, resembles the ancient gift economies of tribal communities. Contributions flow from need and community sustenance, not expectation of return.
 
-> "Open source doesn't operate like the corporate world. Contributions flow from need and community sustenance, not expectation of return."
-
 This corporate takeover particularly threatens the mentorship culture that built open source. Corporate structures favor quick results over deep understanding, and metrics over mastery. When projects prioritize political compliance over technical merit, experienced developers who could mentor others either leave or stay silent. The result? A self-reinforcing cycle where corporate control grows stronger as the community's capacity for self-guidance diminishes.
 
 **The deadly nature of this shift cannot be overstated.** Mimicking corporate political theater — fundamentally based in capitalistic mindsets — is antithetical to an ecosystem that, in principle, exists entirely outside that economic framework, but these aren't just theoretical concerns.
@@ -149,8 +143,6 @@ The battle for open source's soul may already be lost. But the very intensity of
 ### A Return to Fundamentals
 
 Ideas matter. While trendy ideologies might seem harmless, their long-term consequences can be devastating. Prioritizing superficial "social justice" over genuine freedom and measurable outcomes has led us precisely where many predicted — to a landscape where coordinated efforts ruthlessly resist all perceived threats to narrative control.
-
-> "Ideas matter. While trendy ideologies might seem harmless, their long-term consequences can be devastating."
 
 The response must be unapologetic: a return to well-reasoned, provably sound principles. Not through compromise that dilutes our ideals, but through coordinated resistance across disparate groups who understand what's at stake.
 
@@ -197,8 +189,6 @@ While Ekala represents one approach to resistance, there are immediate steps any
 The solution lies in courage — both individual and collective. A mentor isn't necessarily a role model; I certainly don't recommend anyone follow my difficult path. But I can share what I've learned, assist where I can, and contribute to rebuilding a culture of genuine mentorship.
 
 This isn't about transactions or authority. It's about recognizing our dual nature as both teachers and students, experts and beginners. True mentorship requires giving and receiving, understanding that our existence is endlessly dynamic — sometimes growing, sometimes shrinking, always changing.
-
-> "True mentorship requires giving and receiving, understanding that our existence is endlessly dynamic — sometimes growing, sometimes shrinking, always changing."
 
 I don't have all the answers. But I know that taking action aligned with genuine principles, however flawed our execution, matters more than comfortable silence. Whether Ekala succeeds or fails, at least I'll know I stood for something I consider to be real.
 
