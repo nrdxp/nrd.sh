@@ -40,7 +40,7 @@ But the platform's darker side is impossible to ignore. There's this growing exi
 
 And it's not just me. In a year that's already seen unprecedented attacks in the Red Sea, devastating floods in California, and mounting global tensions, our collective ability to process and respond to crisis seems more important than ever. Yet social media's constant doom cycle paradoxically numbs us to real issues while amplifying manufactured ones. As if this cascade of global crises wasn't enough — from supply chain disruptions to AI regulation battles — the tech community seems to be fracturing right when we need collaboration most.
 
-All of this has me reconsidering my approach. What started as an experiment in engagement has become an unwitting study in human nature and power dynamics. It's also, frankly, an exercise in self control, even for someone attempts to retain their discipline. Perhaps I need to take planned hiatus periodically, or hire an account amanager? Not yet sure...
+All of this has me reconsidering my approach. What started as an experiment in engagement has become an unwitting study in human nature and power dynamics. It's also, frankly, an exercise in self control, even for someone who has grown to rely on their own ability to remain disciplined. Perhaps I need to take planned hiatus periodically, or hire an account manager? Not yet sure...
 
 Whatever the case, the real connections I've made are valuable, but my original criticisms of social media haven't just persisted — they've been validated more strongly than ever. For our purposes, though, there is one particular aspect that I have been thinking about a lot lately that ties into the topics I'd like to discuss in the rest of this post.
 
