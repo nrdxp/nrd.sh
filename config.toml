@@ -23,19 +23,19 @@ highlight_theme = "ayu-light"
 [extra]
 theme = "toggle"
 socials = [
-  { name = "rss", url = "/atom.xml", icon = "rss" },
-  { name = "github", url = "https://github.com/nrdxp", icon = "github" },
-  { name = "twitter", url = "https://x.com/nrdexp", icon = "x-twitter" },
-  { name = "discord", url = "https://discord.com/users/672485325683032094", icon = "discord" },
-  { name = "matrix", url = "https://matrix.to/#/@timdeh:matrix.org", icon = "matrix" },
-  { name = "email", url = "mailto:tim@nrd.sh", icon = "email" },
+  # { name = "rss", url = "/atom.xml", icon = "rss" },
+  # { name = "github", url = "https://github.com/nrdxp", icon = "github" },
+  # { name = "twitter", url = "https://x.com/nrdexp", icon = "x-twitter" },
+  # { name = "discord", url = "https://discord.com/users/672485325683032094", icon = "discord" },
+  # { name = "matrix", url = "https://matrix.to/#/@timdeh:matrix.org", icon = "matrix" },
+  # { name = "email", url = "mailto:tim@nrd.sh", icon = "email" },
 ]
 menu = [
-  { name = "/blog", url = "/blog", weight = 1 },
-  { name = "/projects", url = "/projects", weight = 2 },
-  { name = "/collab", url = "/collab", weight = 3 },
-  { name = "/about", url = "/about", weight = 4 },
-  { name = "/tags", url = "/tags", weight = 5 },
+  { name = "", url = "/blog", weight = 1 },
+  # { name = "/projects", url = "/projects", weight = 2 },
+  # { name = "/collab", url = "/collab", weight = 3 },
+  # { name = "/about", url = "/about", weight = 4 },
+  # { name = "/tags", url = "/tags", weight = 5 },
 ]
 repo_view = true
 repo_url = "https://github.com/nrdxp/nrd.sh/tree/main/content/"

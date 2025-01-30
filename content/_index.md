@@ -1,4 +1,4 @@
 +++
 [extra]
-section_path = "blog/_index.md"
+section_path = "maintenance/_index.md"
 +++
