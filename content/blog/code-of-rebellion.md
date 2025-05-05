@@ -18,7 +18,7 @@ Through this crucible of introspection, I've reached two profound realizations. 
 
 The particulars are unimportant for the time being, what matters is that these revelations have spurred me to begin drafting a manuscript, an allegorical account of my experiences, which I hope to publish in time. For now, I return to the question that has gnawed at me since my last post: why & exactly how has open-source culture been hollowed out?
 
-Believing societal shifts originate in the minds of individuals, I’ve attempted to traced the philosophical roots of this decay from first principles. It became apparent that I'd have to dig far deeper into the messy underbelly of the subconscious impulses and assumptions running amuck in today's society, directly or indirectly affecting the philosophy and mission of FOSS & beyond.
+Believing societal shifts originate in the minds of individuals, I’ve attempted to trace the philosophical roots of this decay from first principles. It became apparent that I'd have to dig far deeper into the messy underbelly of the subconscious impulses and assumptions running amuck in today's society, directly or indirectly affecting the philosophy and mission of FOSS & beyond.
 
 It turns out that I had to drill all the way to the very bottom, to the very foundations of human institutions, themselves, to describe an order which, to my knowledge, has not been previously articulated, though it seems to have been subconsciously expressed throughout time. What follows is a (hopefully) logically consistent framework which, if embraced, could provide a solid foundation from which to restore the free software movement and, ultimately, safeguard human institutions from corruption, in general.
 
