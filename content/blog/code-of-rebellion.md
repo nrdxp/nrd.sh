@@ -48,7 +48,7 @@ For those who have abandoned logical consistency entirely, consider this your of
 
 What I’m attempting here is nothing less than a logically consistent philosophical framework to model a Just State; defining our terms precisely as we go.
 
-By the end, we’ll arrive at a conclusion that positions Free Software as a vital force in the functioning of such a State. In other words, not just nice way to access source code, or an efficient way of managing development, but of absolutely crucial necessity as a pillar of Justice itself.
+By the end, we’ll arrive at a conclusion that positions Free Software as a vital force in the functioning of such a State. In other words, not just a nice way to access source code, or an efficient way of managing development, but of absolutely crucial necessity as a pillar of Justice itself.
 
 We begin with a single axiom:
 
