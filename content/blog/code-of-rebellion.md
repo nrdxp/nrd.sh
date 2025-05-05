@@ -12,7 +12,7 @@ extra:
   repo_view: true
 ---
 
-Since my [last post](./closed-openness.md) on the erosion of open-source values, personal upheavals have forced me to pause and reflect. Longstanding unresolved tensions—within myself and in close relationships—have left me burnt out, wrestling with questions and conflicts that have shadowed much of my adult life; as some of my X followers may have noticed in some of my recent, admittedly unhinged, posts there.
+Since my [last post](../closed-openness) on the erosion of open-source values, personal upheavals have forced me to pause and reflect. Longstanding unresolved tensions—within myself and in close relationships—have left me burnt out, wrestling with questions and conflicts that have shadowed much of my adult life; as some of my X followers may have noticed in some of my recent, admittedly unhinged, posts there.
 
 Through this crucible of introspection, I've reached two profound realizations. First, I've consciously defined my stance on the [question of God](https://x.com/nrdexp/status/1918716742601457740) in relation to morality, though that's not relevant to this piece. Second, despite my achievements, I remain bound as a [Slave](https://x.com/nrdexp/status/1918282816078659871), subject to the whims of a particularly egregious State Courruption.
 
