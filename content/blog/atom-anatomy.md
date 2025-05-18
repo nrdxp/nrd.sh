@@ -19,7 +19,9 @@ In the spirit of honesty, I see the growing complexity in the Nix ecosystem, bot
 
 Let me be clear: this isn’t an indictment of any specific person or faction caught up in the drama. I admire the resolve to chase one’s convictions, even if I find their foundations flimsier than my own.
 
-Still, by now I hope my readers see that I view the push for political alignment in open-source—however well-intentioned—as unhealthy and utterly at odds with its founding ideals. I’ve explored this [intimately](../closed-openness) and [technically](../code-of-rebellion) elsewhere, so I’ll keep it brief: I see the hijacking of community goodwill for extreme political agendas that undermine our technical goals—whether in Ekala, Nix, or open-source broadly—as a direct assault on our ethos. I’ve reached a difficult but reasoned conclusion: we must not support, let alone empower, individuals or institutions that promote or passively tolerate such agendas if open-source is to remain a vibrant force, not a hollow shell of its former self. If my firm stance feels unacceptable, dear reader, feel free to step away—I’ll think no less of you.
+Still, by now I hope my readers see that I view the push for political alignment in open-source—however well-intentioned—as unhealthy and utterly at odds with its founding ideals. I’ve explored this [intimately](../closed-openness) and [technically](../code-of-rebellion) elsewhere, so I’ll keep it brief: I see the hijacking of community goodwill for extreme political agendas that undermine our technical goals—whether in Ekala, Nix, or open-source broadly—as a direct assault on our ethos.
+
+In all this, I’ve reached a difficult but reasoned conclusion: we must not support, let alone empower, individuals or institutions that promote or passively tolerate such agendas if open-source is to remain a vibrant force, not a hollow shell of its former self. If my firm stance feels unacceptable, dear reader, feel free to step away—I’ll think no less of you.
 
 And if this seems off-topic, I ask your forgiveness, but I feel compelled to restate my position briefly given the current landscape. Curious why? My linked pieces and earlier writings justify my growing resolve. With that said, I’m grateful for the patience of those who’ve stuck with me. Life has taught me that sometimes the only path forward is one you carve yourself. As I’ve noted, personal and social upheaval over the past year has pushed me down an unexpected road. Though my reserved nature makes me hesitant to share too many personal details, and despite the stress it’s caused, I’ve laid the groundwork for what lies ahead, and I’ll gladly walk this path—twists and all—as long as I’m able.
 
@@ -35,7 +37,7 @@ Conventional wisdom in tech projects says that once you hit a certain scale, fou
 
 I’ve spent nearly a decade with Nix, half of that in professional gigs, and I’ve watched the same problems rear their heads as organizations scale up their Nix usage. I won’t bore you with the gory details; anyone who’s made a non-trivial contribution to [nixpkgs](https://github.com/nixos/nixpkgs) knows the pain all too well, and if you are really curious, there is plenty of evidence all over the internet, by now. The real kicker? These issues don’t seem fixable without rethinking the core idioms we use to write and, especially, organize Nix code.
 
-As projects like nixpkgs balloon to massive scale, the cracks only get worse. Long-standing social drama has some folks burying their heads in the sand, or dipping out entirely. Others might lack the experience to see the train wreck coming. Some are too tied to the status quo to budge, while others, like the teams behind [snix](https://snix.dev/blog/announcing-snix/) and the promising early-stage [cab language](https://github.com/cull-os/carcass?tab=readme-ov-file), and our own [ekapkgs](https://github.com/ekala-project/ekapkgs-roadmap), are stepping up with bold efforts to tackle the mess.
+As projects like nixpkgs balloon to massive scale, the cracks only get worse. Long-standing social drama has some folks burying their heads in the sand, or dipping out entirely. Others might lack the experience to see the train wreck coming. Some are too tied to the status quo to budge, while others, like the teams behind [snix](https://snix.dev/blog/announcing-snix/), the promising early-stage [cab language](https://github.com/cull-os/carcass?tab=readme-ov-file), and our own [ekapkgs](https://github.com/ekala-project/ekapkgs-roadmap), are stepping up with bold efforts to tackle the mess.
 
 I’m rooting for those projects to succeed; their technical vision lines up closely with my own take on the challenges. My original plan was to pitch in and support them, aiming to complement their work rather than reinvent the wheel. But along the way, I stumbled onto what I now see as a glaring gap in the ecosystem: one that _has_ to be filled if we’re going to solve these scaling issues at their root.
 
@@ -127,7 +129,7 @@ These, combined with the commit’s reproducibility, yield powerful properties:
 
 We’ve built a solid foundation for publishing and referencing Nix code (and potentially other languages) with the Atom Git Store. But one critical piece, which I’ve stressed before, deserves its own spotlight: versioning. It’s the linchpin of the atom scheme and warrants a dedicated section.
 
-Every atom must be versioned, currently using semantic versioning, though we could support other schemes later to accommodate diverse software naturally. As shown earlier, each atom’s Git reference lives at `refs/atoms/<atom-id>/<atom-version>`. This structure is key for efficient discovery. Querying references from a Git server is lightweight, with filtering done on the server side—no heavy object fetching required. A single request made using simple glob patterns can list all atoms and their versions in a repository. Try that with nixpkgs today—it’s a slog, requiring costly history traversal and git log parsing, with no guarantee of accuracy if the log format hiccups; not to mention you'll have to have the whole history available locally to be exhaustive.
+Every atom must be versioned, currently using semantic versioning, though we could support other schemes later to accommodate diverse software naturally. As shown earlier, each atom’s Git reference lives at `refs/atoms/<atom-id>/<atom-version>`. This structure is key for efficient discovery. Querying references from a Git server is lightweight, with filtering done on the server side—no heavy object fetching required. A single request made with a simple glob pattern can list all atoms and their versions in a repository. Try that with nixpkgs today—it’s a slog, requiring costly history traversal and git log parsing, with no guarantee of accuracy if the log format hiccups; not to mention you'll have to have the whole history available locally to be exhaustive.
 
 By contrast, the atom format is standardized (though evolving), efficient, and well-typed. When published using the official atom crate library, atoms are guaranteed to conform to spec. We even embed the format version in the atom’s Git commit header, ensuring tools can easily handle future backward-incompatible changes by identifying the format version upfront.
 
@@ -147,7 +149,7 @@ So, how do we pull this off? We need to disambiguate atoms with the same Unicode
 
 From there, we derive the atom’s machine ID using a [keyed BLAKE3 hash](https://github.com/ekala-project/eka/blob/b3b62913ae04318bb34ed50d31004e8b9463ff0b/crates/atom/src/id/mod.rs#L93) over the repository’s initial commit hash, a constant for key derivation, and the atom’s Unicode ID. BLAKE3’s speed and vast collision space let us index trillions of atoms with negligible risk of collisions. This hash then becomes our bridge, linking the gritty world of derivations to the human world of versions, pulling software distribution idioms cleanly into Nix’s rigorous realm of closures.
 
-And what’s it good for? A ton. It powers optimizations like bulletproof evaluation and build caches. Picture a [backend](../nix-to-eos#a-new-dawn) that spots a user’s requested atom and version, verifies its pinned commit, and checks the organization’s work history. Been built before? Boom—it skips the work and hands over the artifact. That’s not just faster; it splits concerns cleanly. A user’s client doesn’t need to touch a Nix evaluator—just parse the atom API and ping the backend. If evaluation or building’s needed, the backend handles it quietly; if not, you get results instantly.
+And what’s it good for? A ton. It can power optimizations like bulletproof evaluation and build caches. Picture a [backend](../nix-to-eos#a-new-dawn) that spots a user’s requested atom and version, verifies its pinned commit, and checks the organization’s work history. Been built before? Boom—it skips the work and hands over the artifact. That’s not just faster; it splits concerns cleanly. A user’s client doesn’t need to touch a Nix evaluator—just parse the atom API and ping the backend. If evaluation or building’s needed, the backend handles it quietly; if not, you get results instantly.
 
 This opens up a lot of possibilities. Beyond speed, the machine ID boosts provenance tracking, record-keeping—everything a big outfit might need to manage its atoms or meet compliance standards. And it's important to note: the source identity (that initial commit hash) is an abstraction, so future storage backends can pick their own hash keys, keeping Atom flexible for the future.
 
@@ -163,55 +165,13 @@ Enter subatomics, the working title for these lightweight “lenses” into a mo
 
 We’ll explore how users define subatomics when we move up the abstraction chain, but it’s worth noting that they’re created only when atoms reference other repository segments (e.g. a source tree for a build) as dependencies, ensuring their existence during the atom publishing phase.
 
-<!-- ## User Entry URIs -->
-
-<!-- We've done a fairly good job of exhaustively covering the Ekala Git store, our Atom format's inaugural storage backend, tailor designed to carefully solve many of Nix's common scaling problems in a way that remains reasonably intuitive to new and old folks alike, relying on the most uncontraversial abstraction in all of software: the version. Before we move onto the higher level Atom Nix language API, however, we should probably take a brief aside to talk about user interface. -->
-
-<!-- After all, even the most well designed of tooling can suffer tremendously under the weight of poor UX. While the [`eka`](https://github.com/ekala-project/eka?tab=readme-ov-file) cli is still under heavily development, and not all of its features relate directly to atoms, there is one component which has already been [implemented](https://github.com/ekala-project/eka/blob/b3b62913ae04318bb34ed50d31004e8b9463ff0b/crates/atom/src/uri/mod.rs) that is definitely worth exploring briefly, as it ties directly to how we refer to and address atoms: the atom URI. -->
-
-<!-- In my tenure with flakes I went from raving evangelist to someone who laments their design nearly every time I am forced to interact with it, but there is one thing that I always thought was pretty convenient. The flake URI. However, there are few things about it that I don't like. For one, the shortcuts aren't that short. I don't have to type github.com, but I still have to type 70% of it. For another, these shortcodes are harded into the Nix binary. If your favorite git hosts isn't in the list, tough luck. -->
-
-<!-- A bigger problem though, in my estimation, is how flake URIs are encoded directly into the source of a `flake.nix`, perhaps not being immediately obvious to newcomers, and obsfucating clickability in editors and IDEs. I figured we could keep what works, while addressing these issues and expanding the syntax just a touch to allow for requesting explicit atom versions. Thus the [Atom URI](https://github.com/ekala-project/eka?tab=readme-ov-file#the-atom-uri) was born, and after a vigorous weekend or two of hacking, it is more or less feature complete. -->
-
-<!-- The syntax is purposefully straight-forward, and here is a hopefully concise schematic: -->
-<!-- ``` -->
-<!-- [scheme://][[user[:pass]@][url-alias:][url-fragment::]atom-id[@version] -->
-<!-- ``` -->
-
-<!-- The idea here is that the scheme should almost always be elided, and sane defaults are attempted using hopefully intelligible hueristics to decide if it should be `ssh://`, `https://`, etc. -->
-
-<!-- `user:pass` is supported for completeness sake, but should likely never be used much in practice. The real magic happens at the user defined aliases, which essentially act as url shorteners for commonly used paths: -->
-<!-- ```toml -->
-<!-- # eka.toml: client config file -->
-<!-- [aliases] -->
-<!-- # predefined for convenience, but shown here for demonstration -->
-<!-- gh = "github.com" -->
-<!-- # can reference a previously defined alias -->
-<!-- work = "gh:my-verbose-work-org" -->
-<!-- cool = "work:our-cool-project" -->
-<!-- org = "gitlab.com/some-org" -->
-<!-- ``` -->
-
-<!-- And now we can simply type things like: -->
-<!-- ``` -->
-<!-- ❯ eka do org:project::the-atom@^1 -->
-<!-- ❯ eka get work:repo::a-pkg@0.2 -->
-<!-- ❯ eka add cool::cool-atom@^3 -->
-<!-- ``` -->
-
-<!-- In the case of that last command, adding an atom as a dependency, it's important to note that what is actually added in the static manifest is the full expanded url, that is: `https://github.com/my-verbose-work-org/our-cool-project`, making it trivially readable and clickable. This is actually necessary, as well, for user defined aliases to remain sane, since embedding them in the manifest wouldn't make sense if downstream users didn't have the same aliases defined. -->
-
-<!-- And that's pretty much it. As a core library component, any tooling that wishes to interact with atoms can easily leverage this library to trivially support this format to allow their plugin or program to trivially reference atoms in this convenient form. -->
-
-<!-- Now, it is that time, to continue forward into the realm of Atom Nix, and what we need from such a tool to work sanely and maintain the discipline required to work properly with our carefully constructed storage format. -->
-
 ## User Entry URIs
 
 We’ve thoroughly covered the Ekala Git store, the atom format’s first storage backend, crafted to tackle Nix’s scaling woes while staying intuitive for newcomers and veterans alike. It leans on, perhaps, the most uncontroversial abstraction in software: the version. With subatomics now in the mix to handle non-package content, we’re ready to shift gears toward the Atom Nix language API—but first, let’s talk about user interface, specifically how we reference atoms.
 
 Even the slickest tooling can flop with clunky UX. The [`eka` CLI](https://github.com/ekala-project/eka?tab=readme-ov-file) is still a work in progress, and not all its features tie directly to atoms, but one piece, the [atom URI](https://github.com/ekala-project/eka?tab=readme-ov-file#the-atom-uri), is already [implemented](https://github.com/ekala-project/eka/blob/b3b62913ae04318bb34ed50d31004e8b9463ff0b/crates/atom/src/uri/mod.rs) and worth a look. It’s how we address atoms, and it’s a game-changer for usability.
 
-I’ve had a love-hate relationship with flakes. I went from preaching their gospel in the early days, to groaning every time I deal with them. Yet one thing I always liked was the flake URI. It’s handy, but not without its flaws. The “shortcuts” aren’t short enough—I’m still typing most of `github.com`. Worse, those shortcodes are hardwired into the Nix binary, so if your favorite Git host isn’t listed, you’re out of luck. And don’t get me started on how flake URIs, embedded in `flake.nix`, can confuse newcomers and break clickability in editors or IDEs. I wanted to keep what works, fix what doesn’t, and add support for explicit atom versions. After a couple of intense hacking weekends, the atom URI was born, and it’s pretty much feature-complete.
+Now, I’ve had a love-hate relationship with flakes. I went from preaching their gospel in the early days, to groaning every time I deal with them. Yet one thing I always liked was the flake URI. It’s handy, but not without its flaws. The “shortcuts” aren’t short enough—I’m still typing most of `github.com`. Worse, those shortcodes are hardwired into the Nix binary, so if your favorite Git host isn’t listed, you’re out of luck. And don’t get me started on how flake URIs, embedded in `flake.nix`, can confuse newcomers and break clickability in editors or IDEs. I wanted to keep what works, fix what doesn’t, and add support for explicit atom versions. After a couple of intense hacking weekends, the atom URI was born, and it’s pretty much feature-complete.
 
 The syntax is dead simple. Here’s the schematic:
 
@@ -244,6 +204,6 @@ When adding an atom as a dependency (like that last command), the manifest store
 
 Additionally, as a core library component, any tool interacting with atoms can tap this URI format to reference them effortlessly. It’s a small but mighty piece of the puzzle, making atoms as easy to use as they are powerful.
 
-Now, let’s dive into the Atom Nix language API and explore how it harnesses this foundation to deliver a disciplined, scalable Nix experience.
+Now, let’s dive into the Atom Nix language API and explore how it harnesses this foundation to help deliver a more disciplined, scalable Nix experience.
 
 ## Atomic Nix
