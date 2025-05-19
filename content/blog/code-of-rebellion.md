@@ -270,7 +270,7 @@ As a father and a human who’s endured immense adversity to reach this point, I
 
 The enemy has advanced further than we dared admit, but a growing number of eyes are opening to the staggering scale of State Corruption, and its deep tendrils into every aspect of our lives. The war isn’t lost, there’s a path forward if we’re thoughtful and courageous enough to forge it. Don't get caught up in the hype, or hate cycles. Cultivate Mastery in all you do, and remain vigilant, skeptical of the Royal class and their empty promises, which inevitably end in betrayal. Live in the light of Mastery, and inspire it in others.
 
-Know that the winding coils of Corruption and deception can be unwound, with effort and focus this is a war that, we didn't start, but can and shall be won. If not, I want my children to know that at least I died fighting.
+Know that the winding coils of Corruption and deception can be unwound, with effort and focus this is a war that we didn't start, but can and shall be won. If not, I want my children to know that at least I died fighting.
 
 This is an official Declaration of Rebellion. The Royals wage war not just on our bodies but on our minds, our understanding of art, history, beauty, and science. If they want a fight, I say: bring it on!
 

@@ -207,7 +207,7 @@ Now, let’s dive into the Atom Nix language API and explore how it harnesses th
 
 ## Atomic Nix
 
-With the atom URI paving the way for user-friendly access, we’re ready to explore the high-level Atom Nix language frontend. As I’ve said, atom is fundamentally a packaging API. We’ve dissected the Ekala Git store as a storage backend; now it’s time to unpack what a language frontend needs to mesh with the atom protocol. This depends heavily on the language’s built-in facilities—or lack thereof. Take Rust: integrating Cargo crates with atom would be a breeze, since Cargo already provides a slick, consistent frontend. It’d likely just need atom as a dependency in the `cargo` binary and some glue code to tie it together.
+With the atom URI paving the way for user-friendly access, we’re ready to explore the high-level Atom Nix language frontend. As I’ve said, Atom is fundamentally a packaging API. We’ve dissected the Ekala Git store as a storage backend; now it’s time to unpack what a language frontend needs to mesh with the atom protocol. This depends heavily on the language’s built-in facilities—or lack thereof. Take Rust: integrating Cargo crates with atom would be a breeze, since Cargo already provides a slick, consistent frontend. It’d likely just need atom as a dependency in the `cargo` binary and some glue code to tie it together.
 
 We’re not rushing to support existing formats like Cargo while atom’s still young, but I bring it up to contrast with Nix. Unlike Rust, Nix has almost no native tools for neatly packaging or isolating its code. Building an atom frontend for Nix means crafting core pieces from scratch to make it work.
 
