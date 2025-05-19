@@ -25,7 +25,7 @@ In all this, I’ve reached a difficult but reasoned conclusion: we must not sup
 
 And if this seems off-topic, forgive me, but I feel compelled to restate my position briefly given the current landscape. Curious why? My linked pieces and earlier writings justify my growing resolve. With that said, I’m grateful for the patience of those who’ve stuck with me. Life has taught me that sometimes the only path forward is one you carve yourself. As I’ve noted, personal and social upheaval over the past year has pushed me down an unexpected road. Though my reserved nature makes me hesitant to share too many personal details, and despite the stress it’s caused, I’ve laid the groundwork for what lies ahead, and I’ll gladly walk this path—twists and all—as long as I’m able.
 
-To the point: with my philosophical footing now secure and my conscience clear, I’m ready to unpack the technical details unencumbered. I may have been overly optimistic about timelines at first, blindsided by one of the toughest years I’ve faced. Now though, with a clearer perspective, I’m aiming for a 6-to-12-month horizon for Atom as I recharge and press on. Since Atom, itself, is the foundational component of my overall vision within Ekala, let's begin this new technical blog series with a thorough exposition of it, shall we?
+To the point: with my philosophical footing now secure and my conscience clear, I’m ready to unpack the technical details unencumbered. I may have been overly optimistic about timelines at first, blindsided by one of the toughest years I’ve faced. Now though, with a clearer perspective, I’m aiming for a 6-to-12-month horizon for Atom as I recharge and press on. Since Atom, itself, is the foundational component of my overall vision within Ekala, let's begin this new technical blog series with a thorough exposition of it, shall we? Fair warning, this is a long one...
 
 # Atom: A Review
 
@@ -207,3 +207,252 @@ Additionally, as a core library component, any tool interacting with atoms can t
 Now, let’s dive into the Atom Nix language API and explore how it harnesses this foundation to help deliver a more disciplined, scalable Nix experience.
 
 ## Atomic Nix
+
+With the atom URI paving the way for user-friendly access, we’re ready to explore the high-level Atom Nix language frontend. As I’ve said, atom is fundamentally a packaging API. We’ve dissected the Ekala Git store as a storage backend; now it’s time to unpack what a language frontend needs to mesh with the atom protocol. This depends heavily on the language’s built-in facilities—or lack thereof. Take Rust: integrating Cargo crates with atom would be a breeze, since Cargo already provides a slick, consistent frontend. It’d likely just need atom as a dependency in the `cargo` binary and some glue code to tie it together.
+
+We’re not rushing to support existing formats like Cargo while atom’s still young, but I bring it up to contrast with Nix. Unlike Rust, Nix has almost no native tools for neatly packaging or isolating its code. Building an atom frontend for Nix means crafting core pieces from scratch to make it work.
+
+Here’s the rub: pairing the atom’s storage format with Nix’s current idioms reveals a glaring issue—Nix’s total lack of enforceable code boundaries. If you tried bundling raw nixpkgs code into atoms as-is, you’d get a mess. It’d be near impossible to untangle, let alone fix.
+
+Why? Nix code can reference anything, anywhere in a repository—or even outside it in impure setups. If we naively carve out subdirectories to isolate as atoms, we’d end up with a tangle of broken references and unusable code. It’s a challenge, but also a chance to tame some of Nix’s wilder complexities. Done right, we could craft an API for Nix that’s leagues better than the patchwork mess of flakes, _et al_. Let’s start with the Atom Nix library, the heart of this frontend.
+
+### Actual Encapsulation: What a Concept 🤯
+
+[Atom Nix](https://github.com/ekala-project/atom/tree/master/atom-nix) is, at its core, a lean Nix library with a clean API for injecting values into a pure Nix evaluation in a type-safe way. That purity piece deserves its own deep dive, so we’ll save it for later and focus on the library’s heart: actual encapsulation.
+
+The meat of Atom Nix lives in a [single function](https://github.com/ekala-project/atom/blob/affbdc7be5ca615c27a54cd19e5e080de2cbb153/atom-nix/core/compose.nix) that delivers what Nix folks toss around loosely: a “module system.” But let’s be real—Nix’s so-called “module system” is a far cry from what that term means in any other language. As I’ve [ranted before](../nix-to-eos.md#unbounded-hell-reducing-complexity-in-order-to-ascend), the NixOS module system falls flat on delivering the containment and consistency you’d expect. Our `compose` function fixes that, offering true module boundaries with zero bloat, spitting in the face of Nix’s sprawling complexity.
+
+If you’re steeped in Nix’s quirks, you might be clutching your pearls, brainwashed by years of overengineered anti-patterns. No shame—Stockholm syndrome’s real. Newcomers, you’ve got the edge, unburdened by Nix’s baggage. To my friends who love those idioms: I get it. When you’re dying of thirst, even rancid water looks tempting. But Atom Nix isn’t here to coddle complexity—it’s the antidote, ruthlessly focused on delivering real boundaries and isolation, like any decent module system should. Fear not, though—beyond that, it stays out of your way, letting you revel in as much complexity as you like.
+
+How’s it done? Simple in principle: stop letting Nix reference code willy-nilly. Instead, enforce strict rules on how modules access other code. The secret sauce? A little-known, often-slammed Nix feature: `builtins.scopedImport`. I’ll nod to the haters—careless use of `scopedImport` is a nightmare, making code untraceable. But we use it internally, and here’s the kicker: we rig it so it’s [literally impossible](https://github.com/ekala-project/atom/blob/affbdc7be5ca615c27a54cd19e5e080de2cbb153/atom-nix/core/compose.nix#L113) to call from an Atom Nix module. Take that, chaos.
+
+Here’s how it works. `scopedImport` lets us import a Nix file with a custom context injected. We leverage that, plus its ability to override Nix’s default prelude, to make rogue calls to `import` or `scopedImport` trigger hard evaluation errors. That means modules can _only_ reference code from our controlled global context. Nix veterans hooked on its prototypical style—functions churning out results—might squirm. But ditching prototypes for an implicit global context, where modules are defined in their final form, is a game-changer.
+
+Why? For one, it makes code introspectable. Prototypes hide their guts until evaluated—function, set, list? Who knows without running it, maybe at a steep cost. With Atom Nix, you see what you get upfront. Plus, rigid boundaries unlock tooling superpowers. A language server could pinpoint code locations and types—yours or upstream atoms—without touching a Nix evaluator. Good luck doing that with Nix’s free-for-all status quo.
+
+### Atomic Scopes
+
+Though Atom Nix is pre-stable and its scope may evolve, the [current pieces](https://github.com/ekala-project/atom/tree/master/atom-nix#a-modules-scope) are likley here to stay. Every Atom module’s evaluation context includes a top-level `atom` reference, exposing your atom’s public API. The `mod` scope offers a recursive reference to the current module, including private members.
+
+And yes, Atom modules feature public and private members—because this is, again, a real module system. Access rules mirror Rust: child modules can tap their parent’s private members via the `pre` scope, which links to the parent module (and its `pre.pre` for the grandparent, and so on). Public members are declared with a capitalized first letter but accessed externally in lowercase to nod to Nix idioms. We might ditch this convention and fully break from Nix’s norms—stay tuned.
+
+External dependencies split into two scopes. The `from` scope holds evaluation-time (Nix code) dependencies listed in the manifest. The `get` scope, kept separate, covers build-time dependencies (like source trees), fetched only during the build phase to avoid blocking evaluation. Unlike flakes, which carelessly fetch everything at eval time—needed or not—Atom Nix enforces this split to keep things sane.
+
+Lastly, the `std` scope holds a built-in standard library of functions, itself an atom, always available in any context—no need to haul in heavy dependencies like nixpkgs just for basic utilities.
+
+```nix
+# A concise example of a module nested a few levels deep in an atom
+let
+  inherit (from) pkgs;
+in
+{
+  PublicFunc = std.fix (x: { inherit x; });
+  privateFunc = x: x + 2;
+  Six = mod.privateFunc 4;
+  accessParent = pre.pre.privateValue + atom.path.to.this.module.Six;
+  Package = pkgs.stdenv.mkDerivation {
+    inherit (get.package) src;
+    # ...
+  };
+}
+```
+
+### Lazy Purity
+
+Atom Nix salutes the purity goals flakes introduced years ago, but let’s be real: Nix’s approach is absurdly heavy-handed when the language’s core features already hand us nearly everything we need on a silver platter.
+
+Take the [PR](https://determinate.systems/posts/changelog-determinate-nix-352) to make flakes fetch inputs lazily. Three years to slap a VFS layer onto the evaluation context? Cool. Atom Nix does it right now though, leaning on Nix’s built-in laziness. 🤯
+
+Flakes also love copying everything—pre-lazy trees VFS, at least—straight into the `/nix/store` like eager beavers. Kudos to the upstream fix (coming… someday), but it’s wild that nobody paused to say, “Uh, guys, this language is _already_ lazy.” Atom Nix imports expressions into the store for isolation and boundary enforcement, sure, but we do it with the [inherent laziness](https://github.com/ekala-project/atom/blob/affbdc7be5ca615c27a54cd19e5e080de2cbb153/atom-nix/core/compose.nix#L158) of Nix. No bloat, no wait... Try to hold on. 🤯
+
+Each module and expression lands in the store only when accessed, blocking sneaky filesystem references. But sometimes, Nix packaging or config legit needs a local file. Atom Nix has a clean API for that. Relative paths (`./.`)? Hard no—they fail, since each lazily imported Nix file’s working directory is the `/nix/store` root. Want a file like `my-config.toml` in your module for a NixOS service? Just use string interpolation: `"${mod}/my-config.toml"`. It’s lazily imported, disciplined, and keeps your scope tight.
+
+This setup ensures we only touch files in our own module, never rummaging through parents’ or children’s directories. Filtering out parents and children makes lazy store copying dirt cheap—we copy only the current module’s files, lazily, skipping duplicates. No redundant store bloat here.
+
+Now, runtime purity. Nix, outside flakes’ pure eval or a `nix.conf` toggle, can’t fully lock down impurities like absolute path access using just language tricks. We could cave, enable pure eval, and drown in the copying and complexity we’ve dodged. Or—hear me out—we sandbox the evaluation runtime like Nix does for builds. What?! 🤯
+
+We start by [disabling](https://github.com/ekala-project/atom/blob/affbdc7be5ca615c27a54cd19e5e080de2cbb153/atom-nix/core/compose.nix#L115-L116) impure builtins with our `scopedImport` tactic, the same one that bans random imports. For absolute paths, early tests with a cross-platform [sandbox library](https://github.com/ekala-project/eka/blob/master/crates/nixec/src/main.rs) look promising. The `eka` CLI or other tools can easily tap this, ensuring the eval runtime sandbox sees _nothing_ but the atom itself. No disk, no nonsense.
+
+And there it is: flake-level purity, no VFS, no three-year wait. Using only the features we already have, and the isolation principles Nix is literally built on 🤯💥🤯
+
+### Atomic Files
+
+Got any brains left? 😏
+
+I’ll cop to it: the last segment was dripping with sarcasm. I’ve [ranted before](../12-years#the-forgotten-utility-of-ridicule) about how a well-aimed jab can vaccinate against half-baked ideas—all in good fun, of course. Now, let’s wrap up our tour of the Atom Nix module system with the dead-simple file structure of a Nix atom.
+
+The rules are straightforward: a top-level module is marked by a `mod.nix` file, and any directory with its own `mod.nix` is a submodule. For consistency, there’s no skipping layers—each module must be a direct child of its parent in the filesystem.
+
+As a bonus, any `*.nix` file in your module’s root (besides `mod.nix`) gets auto-imported as a member. This keeps long or complex Nix expressions tidy in their own files with zero boilerplate fuss.
+
+```
+# Example: structure of the WIP `std` atom
+atom-nix/std
+├── file
+│   ├── mod.nix
+│   └── parse.nix
+├── fix.nix
+├── list
+│   ├── imap.nix
+│   ├── mod.nix
+│   └── sublist.nix
+├── mod.nix
+├── path
+│   ├── make.nix
+│   └── mod.nix
+├── set
+│   ├── filterMap.nix
+│   ├── inject.nix
+│   ├── merge.nix
+│   ├── mergeUntil.nix
+│   ├── mod.nix
+│   └── when.nix
+└── string
+    ├── mod.nix
+    └── toLowerCase.nix
+```
+
+```nix
+# file/mod.nix
+{
+  # Re-export the auto-imported private member from `parse.nix` as public
+  Parse = mod.parse;
+}
+```
+
+Easy enough, right? Now let’s dive into the pulsing _core_ of an atom—the manifest format—a make-or-break piece for long-term success, as users will either wrestle or rejoice with it daily.
+
+## Static Configuration: An Antidote to Complexity
+
+We’re wrapping up this piece by digging into the manifest format and lock file—the heart of atom’s design. Most of what we’ve covered so far (barring the explicitly future stuff) is already implemented or proto-typed, but I’ve deliberately held off on the manifest for months. Why? To avoid painting myself into a corner like flakes did. I’ve [ranted before](../nix-to-eos#the-proper-level-of-abstraction) about keeping crucial metadata static for better separation of concerns and performance, but this is the deep dive you’ve been waiting for—so let’s go all in.
+
+The manifest splits into three clear categories: **dependencies**, **configuration**, and **metadata**. Here are the high-level goals I’m chasing:
+
+- **Totally static, human-editable format**: TOML, hands down.
+- **Intuitive, exhaustive system handling**: No weird parsing or Nix code tricks—just a clear, upfront list of supported systems and cross-configurations.
+- **Distinct dependency groups**: Eval-time vs. build-time dependencies should be crystal-clear, both for performance and sanity.
+- **Exhaustive package variations**: Static vs. dynamic linking, musl vs. glibc, etc., declared upfront to keep Nix code lean and mean.
+- **Type-checked configuration**: After minimal frontend processing, the config gets injected into Nix, purity intact.
+
+Hitting these goals unlocks a ton of goodness:
+
+- Static queries for package variations, systems, and defaults.
+- Static schema validation for Nix inputs.
+- Static access to metadata without spinning up Nix.
+- Static build matrices for CI and caching.
+
+See the theme? We want an _exhaustive_ high-level view of our package—systems, variants, metadata—without touching Nix evaluation. Clients can serve up package info fast, even without a local Nix install. Users get quicker feedback, fewer “why is this so slow?” moments, and a cleaner experience. It’s a smarter way to tame the chaos of package permutations in nixpkgs—like `pkgsCross` or `pkgsStatic`—which are neither obvious nor newbie-friendly. Plus, it beats the shotgun approach of generating every possible variant, whether it works or not. Let’s track what _actually_ builds and make it dead simple for users and CI to grok.
+
+The payoff? Less Nix code complexity, a snappier user-facing API, and smarter build scheduling. Who knew [searching the problem space](../closed-openness/#practical-resistance-the-ekala-way) before charging in could work so well?
+
+I’m hammering out an [Ekala Enhancement Proposal](https://github.com/ekala-project/eeps) (EEP) to lock in a release candidate—check the rough draft at [ekala-project/atom#51](https://github.com/ekala-project/atom/issues/51). For completeness sake, let's just take a quick peek at the TOML and lock format in the next segment.
+
+### Atomic Manifest: A Sketch
+
+Let’s riff off the draft in aforementioned issue. This will, therefore, be the latest snapshot until the Ekala Enhancement Proposal is finalized. This is the manifest’s current vibe, and it’s shaping up to be the user-friendly core of atom.
+
+```toml
+# Package identity and metadata
+[atom]
+id = "mine"
+version = "0.1.0"
+# Type determines the configuration schema
+type = "nix:package"  # Or nix:config, nix:deployment, etc.
+
+[atom.meta]
+# Similar to pkg.meta in current Nix packages
+description = "A cool package doing cool things"
+license = "MIT"
+maintainers = ["alice <aliceiscool@duh.io", "bob <bobsalright@fine.com>"]
+
+## Dependencies: eval-time (Nix code) and build-time (sources, tools)
+
+### Eval-time Atom dependencies
+[deps.atom]  # Available at `from.atom`
+url = "https://github.com/ekala-project/atom"
+version = "^1"
+
+[deps.my-lib]  # e.g., eka add work:mono@^2
+url = "https://github.com/org/mono"
+version = "^2"
+
+[deps.local]  # Local atom in the same repo
+path = "../../path/to/other/atom" # locked in lock file
+
+### Eval-time legacy Nix libraries
+[pins.pkgs]  # Available at `from.pkgs`
+git = "https://github.com/NixOS/nixpkgs"
+ref = "nixos-25.05"
+# Expression to import, since we can’t do it ourselves
+entry = "pkgs/top-level/impure.nix"
+
+## Build-time sources: tarballs, git repos, subatomics, lock files
+
+### Tarball source
+[srcs.src]  # Available at `get.src`
+url = "https://example.com/v${major}/${version}/pkg.src.tar.xz"
+# Version for URL string interpolation
+version = "${atom.version}"
+
+### Git source
+[srcs.repo]
+git = "https://github.com/owner/repo"
+ref = "v1"
+
+### Subatomic reference
+[srcs.pkg]  # Locked as git tree-id in lock file
+path = "../../my/source/tree"
+# No URL; assumed to be in the same repo
+
+### Lock file for builders
+[srcs.cargo]  # For builder libs or plugins
+path = "../Cargo.lock"
+
+## Build configuration: platforms, variants, and distribution formats
+
+### Supported/tested/cached cross-compilation matrix
+[platform]
+# BUILD:HOST:TARGET, with shell-style expansion (< = previous value)
+supported = [
+  "riscv64-linux",
+  "x86_64-linux:{<,aarch64-linux}",
+  "{aarch64-darwin,x86_64-darwin}:{<,aarch64-linux,x86_64-linux}"
+]
+
+### Abstract packages for variants
+[provide]  # e.g., eka do --cc=clang --host=aarch64-linux <uri>
+ld = ["binutils", "mold"]  # From deps, default: first
+cc = ["gcc", "clang"]
+libc = ["glibc", "musl"]
+
+### Dependency-free build variations
+[support]
+# Flags injected into build command if requested; off by default
+my-feature-flag = ["MY_FEATURE=1"]
+# Boolean toggle, overridable by client
+static = false
+
+### Distribution formats, e.g., `eka get --oci` for OCI container
+[dist]
+fmts = ["deb", "oci"]
+```
+
+The lock file’s a snooze compared to the manifest—just a list of hashes to lock in reproducibility. Its schema’s still in flux, so we’ll skip the details for now, but here’s the key bit: local path dependencies (like `[deps.local]` or `[srcs.pkg]`) get pinned in the lock file with both their git tree IDs and reproducible “atomic” commit hashes for sanity. Before publishing, the `publish` logic double-checks the lock’s accuracy—messed up? It bails.
+
+The `[provide]` and `[support]` keys both define build configurations, but here’s the difference: `[provide]` expects extra dependencies from `nix:package`-type atoms (e.g., picking `clang` or `gcc`), while `[support]` handles dependency-free tweaks like flags or toggles (e.g., `static = true`). This keeps variants clear and Nix code lean.
+
+Future backends, like the proposed Eos API, will cryptographically track built variant combinations to skip redundant builds and turbocharge caching—as we alluded to earlier.
+
+With that, we’ve unpacked every major piece of the atom format in gritty detail. The brave can dive into the [code](https://github.com/ekala-project/atom) or contribute, but for now, let’s wrap it all up.
+
+## Forging the Future: A Call to Rethink Nix
+
+Wow, props to you for slogging through this beast of a piece, dense with technical grit. I wouldn’t blame you if it took a few sittings to digest—I’ve spent a year wrestling words to explain it half-decently. Atom’s design tackles Nix’s scaling woes head-on: a Git store for lightweight versioning, URIs for snappy user access, lazy purity to ditch flakes’ bloat, module boundaries to tame code chaos, and a static manifest to make daily use a breeze. Let’s revisit our core motivation with this full picture in hand.
+
+The atom format is bold, aiming to be a long-term packaging API and a rock-solid replacement for Nix idioms buckling under scale. But is it worth it? I’m no zealot—I’ll admit defeat if it’s time. Yet, from my years in the Nix trenches, I’m convinced it’s a thundering _yes_. Skeptics might cling to flakes’ familiarity, but atom’s rigor, built on 20 years of Nix lessons, offers stability, not chaos. We could keep patching flakes’ half-baked API or stretch nixpkgs’ creaky architecture until it snaps. Or we can honor the grind that got us here and see this as a new beginning.
+
+Many Nix abstractions will stick around, atom or no atom—I’m sure of it. But their shape could shift dramatically. I respect the magic that’s carried Nix for 20 years, but we’ve mostly been tweaking old idioms. With two decades of global-scale lessons, we’ve got the perspective to ask, “What’s next?” Imagine a Nix ecosystem where builds are fast, configs are intuitive, and scale’s no issue—Atom just might be the spark to get us there.
+
+Look, if you’ve read this far, you care about Nix and its innovative approach, more generally. I’ve got strong opinions—my [ramblings](../closed-openness) prove it—but they’re forged from questioning my own assumptions and ditching what doesn’t work. Atom’s not my pet project; it’s a community effort, and your ideas will shape its path. So, join us on [Discord](https://discord.gg/DgC9Snxmg7) and share your take. Be brutally honest or wildly supportive—just bring your real thoughts. Whatever comes next, thanks for diving deep into my ideas. Catch you soon! And...
+
+Viva [_Rebellion_](../code-of-rebellion)!
