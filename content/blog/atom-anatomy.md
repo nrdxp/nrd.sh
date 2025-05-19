@@ -10,7 +10,6 @@ date: "2025-05-16"
 extra:
   read_time: true
   repo_view: true
-draft: true
 ---
 
 At last, I’m diving into the technical nitty-gritty of my own contributions to the Ekala project, a vision I’ve long teased but, regrettably, delayed. I’ve already shared a [high-level overview](../nix-to-eos) of its ambitious vision, but to bring any grand idea to life, it must be broken down into manageable pieces. Ekala started as a thought experiment; an exploration of how an ideal architecture for a Nix-like build system might be structured. What emerged convinced me to pursue a path I feel compelled to follow, despite efforts to steer me otherwise.
@@ -23,9 +22,9 @@ Still, by now I hope my readers see that I view the push for political alignment
 
 In all this, I’ve reached a difficult but reasoned conclusion: we must not support, let alone empower, individuals or institutions that promote or passively tolerate such agendas if open-source is to remain a vibrant force, not a hollow shell of its former self. If my firm stance feels unacceptable, dear reader, feel free to step away—I’ll think no less of you.
 
-And if this seems off-topic, forgive me, but I feel compelled to restate my position briefly given the current landscape. Curious why? My linked pieces and earlier writings justify my growing resolve. With that said, I’m grateful for the patience of those who’ve stuck with me. Life has taught me that sometimes the only path forward is one you carve yourself. As I’ve noted, personal and social upheaval over the past year has pushed me down an unexpected road. Though my reserved nature makes me hesitant to share too many personal details, and despite the stress it’s caused, I’ve laid the groundwork for what lies ahead, and I’ll gladly walk this path—twists and all—as long as I’m able.
+And if this seems off-topic, forgive me, but I feel compelled to restate my position briefly given the current landscape. Curious why? My linked pieces and earlier writings justify my growing resolve. This clarity fuels my drive to continue building Atom—a technical rebellion against complexity. With that, I’m grateful for the patience of those who’ve stuck with me. Life has taught me that sometimes the only path forward is one you carve yourself. As I’ve noted, personal and social upheaval over the past year has pushed me down an unexpected road. Though my reserved nature makes me hesitant to share too many personal details, and despite the stress it’s caused, I’ve laid the groundwork for what lies ahead, and I’ll gladly walk this path—twists and all—as long as I’m able.
 
-To the point: with my philosophical footing now secure and my conscience clear, I’m ready to unpack the technical details unencumbered. I may have been overly optimistic about timelines at first, blindsided by one of the toughest years I’ve faced. Now though, with a clearer perspective, I’m aiming for a 6-to-12-month horizon for Atom as I recharge and press on. Since Atom, itself, is the foundational component of my overall vision within Ekala, let's begin this new technical blog series with a thorough exposition of it, shall we? Fair warning, this is a long one...
+To the point: with my philosophical footing now secure and my conscience clear, I’m ready to unpack the technical details unencumbered. I may have been overly optimistic about timelines at first, blindsided by one of the toughest years I’ve faced. Now though, with a clearer perspective, I’m aiming for a 6-to-12-month horizon for Atom as I recharge and press on. Since Atom is the foundational component of my overall vision within Ekala, let's begin this new technical blog series with a thorough exposition of it, shall we? Fair warning, this is a long one...
 
 # Atom: A Review
 
@@ -43,9 +42,9 @@ I’m rooting for those projects to succeed; their technical vision lines up clo
 
 ## The Missing Link: Language-Level Packages
 
-There’s an irony in Nix. It’s a domain-specific language (DSL) meticulously crafted to deliver binary software packages with precision and discipline, yet it barely considers packaging its own expressions in a similar way. To avoid confusion—since “package” is quite an overloaded term—we're referring here to _source code distribution packages_. Think `package.json` or `Cargo.toml`: formats that bundle source code into clean, discrete units for easy distribution and downstream use.
+There’s an irony in Nix. It’s a domain-specific language (DSL) meticulously crafted to deliver binary software packages with precision and discipline, yet it barely considers packaging its own expressions in a similar way. To avoid confusion—since “package” is a heavily overloaded term—we're referring here to _source code distribution packages_. Think `package.json` or `Cargo.toml`: formats that bundle source code into clean, discrete units for easy distribution and downstream use.
 
-Since I’m a Rust enthusiast, let’s use it to illustrate. In Rust, a repository might house a workspace with dozens, maybe even hundreds, of _crates_: self-contained package units. When it’s time to publish, each crate gets neatly bundled and shipped to a central registry. If I need crate _a_ from a larger workspace _P_, I can grab just _a_ from this registry, no extra baggage from _P_ included. Later, if I need a newer version of _a_, it’s a simply another pull from the registry; only the files for _a_, nothing more.
+Since I’m a Rust enthusiast, let’s use it to illustrate. In Rust, a repository might house a workspace with dozens, maybe even hundreds, of _crates_: self-contained package units. When it’s time to publish, each crate gets neatly bundled and shipped to a central registry. If I need crate _a_ from a larger workspace _P_, I can grab just _a_ from this registry, no extra baggage from _P_ included. Later, if I need a newer version of _a_, it’s simply another pull from the registry; only the files for _a_, nothing more.
 
 Now contrast that with nixpkgs. Want package _a_? You’re stuck pulling the _entire_ repository just to evaluate it. Sure, _a_’s dependencies get fetched in the process, but most of the code you’re downloading has nothing to do with _a_. Need a different version of _a_ down the line? You’re fetching another full nixpkgs checkout, with another chunk of totally irrelevant code. It’s not hard to see how this spirals out of control. It’s not sustainable.
 
@@ -75,7 +74,7 @@ After years with my hands deep in the code, stepping back to explain the big pic
 
 ## A Packaging API
 
-The atom API is deliberately generic, unbound to any specific language, ecosystem, or storage system. Think of it as a source code packaging API: a frontend defines how to package code for a given language, and a backend, termed an Ekala store, specifies where and how those atoms are stored. This flexibility isn’t just elegant design—it’s practical, letting atom adapt to the diverse needs of different organizations.
+The Atom API is deliberately generic, unbound from any specific language, ecosystem, or storage system. Think of it as a source code packaging API: a frontend defines how to package code for a given language, and a backend, termed an Ekala store, specifies where and how those atoms are stored. This flexibility isn’t just elegant design—it’s practical, letting atom adapt to the diverse needs of different organizations.
 
 Why such an open approach? A clear, high-level API for the atomic universe is good design, but it’s also about real-world utility. The Git storage backend, which I’ll cover soon, aligns perfectly with the open-source ethos of transparency and redistribution. Yet some organizations prioritize privacy and security over source availability—an S3 backend, for example, could offer a centralized solution to meet those needs. This versatility ensures atom supports varied use cases while maintaining a unified user-facing API, without locking anyone into a single mold.
 
@@ -87,7 +86,7 @@ To ground things, let’s dive into the Atom Nix frontend and Git storage backen
 
 As I’ve outlined earlier, Nix’s current code distribution mechanism has a glaring flaw. To reference a package at a specific version, you must first identify the nixpkgs checkout containing that version—a process that’s neither obvious nor trivial. Need another version? Find another nixpkgs checkout. Need both simultaneously? You’re stuck fetching all of nixpkgs’ unrelated code twice. Anyone who’s wrestled with a bloated `flake.lock` file has felt this pain, as I’ve [previously noted](../nix-to-eos#the-brick-wall), so I won’t belabor it here.
 
-If you’re familiar with Git’s internal object format, though, you might wonder why this is even necessary. Every file and directory in Git is a content-addressed object, which, in theory, should be independently referenceable and fetchable. The issue isn’t that Git can’t handle this—it’s that Git’s conventional use as a linear chain of history obscures a more elegant solution.
+If you’re familiar with Git’s internal object format, though, you might wonder why this is even necessary. Every file and directory in Git is a content-addressed object, which, in theory, should be independently referenceable and fetchable. The issue isn’t that Git can’t handle this—it’s that Git’s conventional linear history model obscures a more elegant solution.
 
 As mentioned, this led me to explore tools like josh proxy, hoping to filter nixpkgs’ history and extract specific package definitions without fetching the entire monorepo. But nixpkgs’ massive history overwhelmed even josh’s impressive speed, and it required a non-standard Git proxy that’d need ongoing maintenance. Worse, Nix code lacks inherent boundaries, so fetched objects might reference unrelated code from elsewhere in the repo, breaking the isolation we need.
 
@@ -112,7 +111,7 @@ The Atom Git Store, as described, uses references to isolate specific repository
 
 Git treats tree and blob objects as low-level implementation details, with no high-level “porcelain” commands to fetch or manipulate them. Most user-facing tools, including Nix, only understand commit or tag objects. For example, passing a tree object reference to Nix’s `builtins.fetchGit` function will fail, as it expects a commit, not a tree.
 
-To bridge this gap, we wrap atomic Git trees in standalone, orphaned commit objects—detached from history, carrying no baggage on fetch. This lets Git-aware tools, like the Git CLI, treat atoms like branches or tags (e.g., for checkout). This detachment, however, risks breaking our requirement to preserve the cryptographic tie between Nix expressions and their source. Fortunately, we can leverage cryptographic primitives to link the atom to its original history rigorously.
+To bridge this gap, we wrap atomic Git trees in orphaned commit objects—detached from history, carrying no baggage on fetch. This lets Git-aware tools, like the Git CLI, treat atoms like branches or tags (e.g., for checkout). This detachment, however, risks breaking our requirement to preserve the cryptographic tie between Nix expressions and their source. Fortunately, we can leverage cryptographic primitives to link the atom to its original history rigorously.
 
 How? The [implementation](https://github.com/ekala-project/eka/blob/b3b62913ae04318bb34ed50d31004e8b9463ff0b/crates/atom/src/publish/git/inner.rs#L171-L202) offers a peek, but here’s the gist: we ensure the orphaned commit’s hash is fully reproducible for sanity and hygiene, using a fixed author and timestamp (Unix epoch). To tie it to the source, we embed metadata in the commit object’s header, which influences its final hash. Specifically, we include:
 
@@ -232,7 +231,7 @@ Why? For one, it makes code introspectable. Prototypes hide their guts until eva
 
 ### Atomic Scopes
 
-Though Atom Nix is pre-stable and its scope may evolve, the [current pieces](https://github.com/ekala-project/atom/tree/master/atom-nix#a-modules-scope) are likley here to stay. Every Atom module’s evaluation context includes a top-level `atom` reference, exposing your atom’s public API. The `mod` scope offers a recursive reference to the current module, including private members.
+Though Atom Nix is pre-stable and its scope may evolve, the [current pieces](https://github.com/ekala-project/atom/tree/master/atom-nix#a-modules-scope) are likely here to stay. Every Atom module’s evaluation context includes a top-level `atom` reference, exposing your atom’s public API. The `mod` scope offers a recursive reference to the current module, including private members.
 
 And yes, Atom modules feature public and private members—because this is, again, a real module system. Access rules mirror Rust: child modules can tap their parent’s private members via the `pre` scope, which links to the parent module (and its `pre.pre` for the grandparent, and so on). Public members are declared with a capitalized first letter but accessed externally in lowercase to nod to Nix idioms. We might ditch this convention and fully break from Nix’s norms—stay tuned.
 
@@ -345,11 +344,11 @@ See the theme? We want an _exhaustive_ high-level view of our package—systems,
 
 The payoff? Less Nix code complexity, a snappier user-facing API, and smarter build scheduling. Who knew [searching the problem space](../closed-openness/#practical-resistance-the-ekala-way) before charging in could work so well?
 
-I’m hammering out an [Ekala Enhancement Proposal](https://github.com/ekala-project/eeps) (EEP) to lock in a release candidate—check the rough draft at [ekala-project/atom#51](https://github.com/ekala-project/atom/issues/51). For completeness sake, let's just take a quick peek at the TOML and lock format in the next segment.
+I’m hammering out an [Ekala Enhancement Proposal](https://github.com/ekala-project/eeps) (EEP) to lock in a release candidate—check the rough draft at [ekala-project/atom#51](https://github.com/ekala-project/atom/issues/51). For completeness's sake, let's just take a quick peek at the TOML and lock format in the next segment.
 
 ### Atomic Manifest: A Sketch
 
-Let’s riff off the draft in aforementioned issue. This will, therefore, be the latest snapshot until the Ekala Enhancement Proposal is finalized. This is the manifest’s current vibe, and it’s shaping up to be the user-friendly core of atom.
+Let’s riff off the draft in [ekala-project/atom#51](https://github.com/ekala-project/atom/issues/51). This will, therefore, be the latest snapshot until the Ekala Enhancement Proposal is finalized. This is the manifest’s current vibe, and it’s shaping up to be the user-friendly core of atom.
 
 ```toml
 # Package identity and metadata
@@ -363,7 +362,7 @@ type = "nix:package"  # Or nix:config, nix:deployment, etc.
 # Similar to pkg.meta in current Nix packages
 description = "A cool package doing cool things"
 license = "MIT"
-maintainers = ["alice <aliceiscool@duh.io", "bob <bobsalright@fine.com>"]
+maintainers = ["alice <aliceiscool@duh.io>", "bob <bobsalright@fine.com>"]
 
 ## Dependencies: eval-time (Nix code) and build-time (sources, tools)
 
@@ -434,7 +433,7 @@ static = false
 
 ### Distribution formats, e.g., `eka get --oci` for OCI container
 [dist]
-fmts = ["deb", "oci"]
+formats = ["deb", "oci"]
 ```
 
 The lock file’s a snooze compared to the manifest—just a list of hashes to lock in reproducibility. Its schema’s still in flux, so we’ll skip the details for now, but here’s the key bit: local path dependencies (like `[deps.local]` or `[srcs.pkg]`) get pinned in the lock file with both their git tree IDs and reproducible “atomic” commit hashes for sanity. Before publishing, the `publish` logic double-checks the lock’s accuracy—messed up? It bails.
@@ -453,6 +452,6 @@ The atom format is bold, aiming to be a long-term packaging API and a rock-solid
 
 Many Nix abstractions will stick around, atom or no atom—I’m sure of it. But their shape could shift dramatically. I respect the magic that’s carried Nix for 20 years, but we’ve mostly been tweaking old idioms. With two decades of global-scale lessons, we’ve got the perspective to ask, “What’s next?” Imagine a Nix ecosystem where builds are fast, configs are intuitive, and scale’s no issue—Atom just might be the spark to get us there.
 
-Look, if you’ve read this far, you care about Nix and its innovative approach, more generally. I’ve got strong opinions—my [ramblings](../closed-openness) prove it—but they’re forged from questioning my own assumptions and ditching what doesn’t work. Atom’s not my pet project; it’s a community effort, and your ideas will shape its path. So, join us on [Discord](https://discord.gg/DgC9Snxmg7) and share your take. Be brutally honest or wildly supportive—just bring your real thoughts. Whatever comes next, thanks for diving deep into my ideas. Catch you soon! And...
+Look, if you’ve read this far, you clearly care about Nix and its innovation. You've also seen that I’ve got strong opinions—my [ramblings](../closed-openness) prove it—but they've been forged iteratively, over a long timespan, from questioning my own assumptions and ditching what doesn’t work. Atom’s not my pet project; it’s a community effort, and your ideas will shape its path. So, join us on [Discord](https://discord.gg/DgC9Snxmg7) and share your take. Be brutally honest or wildly supportive—just bring your real thoughts. Whatever comes next, thanks for diving deep into my ideas. Catch you soon! And...
 
 Viva [_Rebellion_](../code-of-rebellion)!
