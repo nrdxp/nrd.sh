@@ -32,8 +32,6 @@ On a cheerful note, before we begin, I’m pleased to share that I’ve recently
 
 > Pertinent disclaimer: any arguments presented here are not necessarily endorsed by my employer or any of its representatives, partners, etc, etc.
 
-so without further ado...
-
 ## What's All this Talk of "The State"?
 
 The decline of free software ideals is deeply tied to the machinations of the State, specifically: State Corruption, and the spirit that counters it: Rebellion, which we will define later.
