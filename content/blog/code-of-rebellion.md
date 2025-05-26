@@ -122,23 +122,23 @@ Royals favor espionage and intrigue over direct domination. They often pass seem
 
 A Master, one who is both meaningful Responsible to the State, and who has some non-trivial Authority in the State, whether directly or indirectly through relations, office, holdings, commerce, etc, is the aim of every Citizen in a Just State.
 
-The Master wishes to uphold the Justice in the State as a priority in all dealings. They are, invariably, Masters of self. They have solid impulse control, and a healthy sense of balance. The burden of the Master is foresight. They often take it as their Responsibility to protect the State, and their circle, from Corruption in advance, sensing it before it happens.
+The Master wishes to uphold the Justice in the State as a priority in all dealings. They are, invariably, Masters of self. They have solid impulse control, and a healthy sense of balance. The burden of the Master is foresight. They may often take it as their Responsibility to protect the State from Corruption in advance, cultivating a foresight. However, more generally, a Just Master is simply one who expresses his Authority to uphold some Just Responsibility.
 
-This is why Royals and Masters often clash, as Royals are often the ones brewing the Corruption behind the scenes. The Royal has the advantage in this conflict, since they actively attempt to enslave the Master while the Master, knowing presumption to be Unjust, tolerates the Royal until Corruption or a plot thereof is uncovered.
+This is why Royals and Masters often clash, as Royals are often the ones brewing the Corruption in some form. The Royal has the advantage in this conflict, since they could actively attempt to enslave the Master while the Master, knowing presumption to be potentially Unjust, may tolerate the Royal until Corruption or a plot thereof is uncovered.
 
-For this reason, the Just State reserves all official office exclusively to the Master class. Even a Slave would typically serve as a better officer than a Royal, since their naivete often makes them far more pure, and naturally tend toward Justice.
+For this reason, the Just State reserves all official office exclusively to the Master class, though even a Slave might serve as a better officer than a Royal, since their naivete often makes them far more pure when led by a Master.
 
-Masters also love to cultivate Mastery in others, and often choose Slaves to delegate responsibility to, so as to raise them up in Mastery. Masters have the opposite impulse of Royals, they love to make more Masters, freeing Slaves from the burden of toil without Authority for the sake of the strength and protection of the State.
+And this is crucial. Masters preserve their craft, cultivating Mastery in others; often choosing Slaves to delegate Responsibility to, raising them up in Mastery as an apprentice. Masters have the opposite pre-disposition of Royals, tending to make more Masters, freeing Slaves from the burden of toil without Authority for the sake of the strength and protection of the State.
 
-It can be difficult to distinguish a Master from a Royal, and herein lies one of the chief struggles of any State. However, to the well informed, the sign of Mastery is unmistakable, as it often accompanies good counsel, abundance with little to no pretense, and a humble but powerful demeanor.
+It can be difficult to distinguish a Master from a Royal at times, and herein lies one of the chief struggles of any State. However, to the well informed, the sign of Mastery is unmistakable, as it often accompanies good counsel, extraordinary skill, unpretentious abundance, or a humble but powerful demeanor.
 
-In a totally Corrupt State, there are almost no Masters, and it is discouraged, maligned or even said to be non-existent or idealistic. The path to Mastery in these States is frought with barriers and distractions, or encumbered beauracracy, making it difficult for Slaves to rise in status. Royals, being typically jealous of power, leave no viable path open for Slaves to advance.
+In a totally Corrupt State, there are almost no Masters, and can even be discouraged, maligned or even said to be non-existent or idealistic. The path to Mastery in these States is frought with barriers and distractions, or encumbered with beauracracy, making it difficult for Slaves to rise in status. Royals, being typically jealous of power, may leave no viable path open for Slaves to advance.
 
 The opposite is true of a Just State. Mastery is abound, and Royalty is despised and kept in check. The path to Mastery from Slavery is cheap and free of encumberances. Any Slave with dedication should have a viable path to Mastery in a Just State.
 
-There is, however, the thankfully somewhat rare, Corrupt Master. This is someone who has likely been a Master of good standing for some time, but who has, for some reason or another, grown to despise his State whether through Royal influence, or Enemy bribes. This, being far more capable than your typical Royal, can be one of the greatest enemies of the State, if encountered, as they have both the rhetorical cunning of a Royal and the raw discipline and skill of a Master.
+There is, however, the thankfully somewhat rare, Corrupt Master. This is someone who has likely been a Master of good standing for some time, but who has, for some reason or another, grown to despise his State whether through Royal influence, or Enemy bribes. This, being far more capable than your typical Royal, can be one of the greatest enemies of the State, if encountered, as they may leverage both the rhetorical cunning of a Royal and the raw discipline and skill of a Master.
 
-Corruption in a State can lead a previously Just Master to Corrupt himself, which is another crucial reason to, at all times, keep Corruption of the State in check, as a Corrupt Master could fairly quickly, and with relative ease take complete control of a State with little to no resistance.
+The devastation of festering Corruption in a State can lead a previously Just Master to Corrupt himself, which is another crucial reason to, at all times, keep Corruption of the State in check, as a Corrupt Master could execute a successful coup for power in the State.
 
 ### Mark of a Slave
 
