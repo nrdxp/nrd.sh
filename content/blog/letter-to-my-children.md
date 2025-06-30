@@ -72,7 +72,7 @@ Also know that you always have a father out there that believes in you. I know y
 
 ## Lesson 3: Your Breath and Your Time
 
-The next lesson is one that I had a very difficult time learning myself, in my own estimation at least. I will just say it outright and then try to help you understand it as best I can, as I am, myself, still only just now coming to understand the important of this truth: Your breath (your words) are the most important thing you can offer to another human being. And since speaking and writing invariably cost you time, the next most important thing you can give someone is your time.
+The next lesson is one that I had a very difficult time learning myself, in my own estimation at least. I will just say it outright and then try to help you understand it as best I can, as I am, myself, still only just now coming to understand the importance of this truth: Your breath (your words) are the most important thing you can offer to another human being. And since speaking and writing invariably cost you time, the next most important thing you can give someone is your time.
 
 What does this mean? Well, you have a limited time here on this earth. There will be many battles and struggles that come your way. You will not have the time nor the energy to face them all. Thus it will become absolutely critical for you, my children, to understand when it is worth your breath to offer, and when it simply is not. Nobody can decide this for you, it is always something you must consider yourself.
 
