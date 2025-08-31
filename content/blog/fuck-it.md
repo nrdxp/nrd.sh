@@ -5,7 +5,7 @@ taxonomies:
   tags:
     - personal
 date: "2025-06-25"
-draft: true
+draft: false
 extra:
   read_time: true
   repo_view: true
