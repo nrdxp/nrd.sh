@@ -110,26 +110,26 @@ a breakdown of depth
 
   <table style="max-width: 320px; margin: 0 auto;">
     <tr>
+      <th>Affinity</th>
       <th>Layer</th>
-      <th>Color</th>
       <th>Characteristics</th>
       <th>Friction</th>
     </tr>
     <tr>
       <td>Politics</td>
-      <td>Blue</td>
+      <td>Top, Blue</td>
       <td>Rhetoric, cultural norms</td>
       <td>Low (easiest to shift)</td>
     </tr>
     <tr>
       <td>Law</td>
-      <td>Yellow</td>
+      <td>Middle, Yellow</td>
       <td>Grammar, procedure (bridge)</td>
       <td>Medium</td>
     </tr>
     <tr>
       <td>Morality</td>
-      <td>Red</td>
+      <td>Bedrock, Red</td>
       <td>Logic, introspective truth</td>
       <td>High (resists change)</td>
     </tr>
@@ -138,9 +138,11 @@ a breakdown of depth
 
 <div style="text-align: center; font-style: italic;">
 
-imagine the four red dots representing the four pinnacles of our 2-d chart
+imagine the four red dots on the rim representing the four pinnacles of our 2-d chart
 
-our z-axis moves downward toward a fifth dot: Truth
+the traditional one or two dimensional political models barely scratch the surface
+
+our z-axis moves downward from the rim, approaching a fifth dot: Truth
 
   <img src="/prism.gif" alt="Axiosophic Prism Spins like a vortex" style="display: inline-block;">
 </div>
