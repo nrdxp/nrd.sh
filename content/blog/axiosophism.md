@@ -67,7 +67,7 @@ Let us review, building hierarchically, starting from our [axiom](../code-of-reb
 
 10. **Royalty** denotes the elite who sustain Corruption through lies, hoarding power at others' expense: authority without accountability.
 
-These hierarchical definitions offer a rigorous framework, directly countering moral relativism by grounding ethical evaluation in observable reality (i.e. measuring entropy). Axiosophism posits that morality is not subjective, but intrinsically tied to empirical outcomes: actions and policies are judged by real outcomes, determining whether they effectively reduce entropy and foster lasting stability.
+These hierarchical definitions offer a rigorous framework, directly countering moral relativism by grounding ethical evaluation in observable reality (i.e. measuring entropy). Axiosophism posits that morality is not subjective, but intrinsically tied to empirical outcomes: whether they effectively reduce entropy and foster lasting stability.
 
 To test this: Observe outcomes—does Corruption spike polarization? Yes, measurably so, via social indices such as dispersion or the Esteban-Ray polarization index[^9]. This framework asserts that a true world exists beyond perception, as evidenced by what empirically sustains coherence against entropy, thereby providing objective criteria for discerning truth and demanding coherent action. These concepts, expanded in my [Code of Rebellion](../code-of-rebellion), tie entropy to ethics.
 
