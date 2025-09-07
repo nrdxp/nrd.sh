@@ -149,9 +149,9 @@ our z-axis moves downward toward a fifth dot: Truth
 
 Axiosophism derives realism from its axioms: a true world exists beyond perception, as evidenced by what empirically sustains coherence against entropy. Deeper inquiry converges us toward it, optimistically suggesting that challenging assumptions leads to greater unity in a Just society.
 
-This is a crucial obeservation, as it flies in the face of modern conventions of "position posturing", where vehemently denouncing your enemy's position is assumed a great moral "virtue". It is therefore, demonstrably, precisely the opposite: *inquiry*, not denunciation, is what cultivates Coherence and, in the proper Spirit, Justice.
+This is a crucial obeservation, as it flies in the face of modern conventions of "position posturing", where vehemently denouncing your enemy's position is assumed a great moral "virtue". Worse still are the technologies that *automate* this purity spiral, systematically censoring dissent, when it is demonstrably *inquiry*, not denunciation, which cultivates Coherence and, in the proper Spirit, Justice. Axiosophy demands we address these "engines" of Corruption, redoubling a sense of urgency in decisive, coherent action.
 
-Our new z-axis gauges viewpoint depth, exposing extremism's often shallow perspective. Policies are judged by real outcomes, not relativistic "inclusion".
+Still further, our new z-axis gauges viewpoint depth, exposing extremism's often shallow perspective. Policies are judged by real outcomes, not relativistic "inclusion" or affiliatory appeals.
 
 Thus, the Axiosophic imperative emerges: delve beyond conflicting rhetoric to discern empirical truth, demarcate and defend the Sacred, and thereby uphold Justice through coherent action.
 
