@@ -142,7 +142,7 @@ imagine the four red dots on the rim representing the four pinnacles of our 2-d 
 
 the traditional one or two dimensional political models barely scratch the surface
 
-our z-axis moves downward from the rim, approaching a fifth dot: Truth
+our z-axis moves downward from the rim, approaching a fifth dot: Justice
 
   <img src="/prism.gif" alt="Axiosophic Prism Spins like a vortex" style="display: inline-block;">
 </div>
