@@ -13,7 +13,7 @@ extra:
   repo_view: true
 ---
 
-### An Axiomatic Morality Toward Justice and Truth
+### An Axiomatic Morality Toward Justice
 
 **Preamble**
 
