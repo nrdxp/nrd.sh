@@ -34,11 +34,11 @@ On a cheerful note, before we begin, I’m pleased to share that I’ve recently
 
 ## What's All this Talk of "The State"?
 
-The decline of free software ideals is deeply tied to the machinations of the State, specifically: State Corruption, and the spirit that counters it: Rebellion, which we will define later.
+The decline of free software ideals is deeply tied to the machinations of the State, specifically: State Corruption, and the spirit that counters it, Rebellion: an unapologetic resistance to Corruption.
 
 For the skeptical reader, consider the growing political warfare engulfing open-source communities as a clue that my assertion might hold truth. I ask you to bear with me as I lay out what I believe to be a logically consistent framework, one that could help to reorient our understanding of the current situation in tech and the broader socio-political landscape.
 
-These are bold claims, I admit. But for me, this framework has brought clarity and purpose, illuminating a path forward where I once saw none. It has reshaped my understanding of the present crisis, giving me direction and meaning. My aim here is to share that clarity with those who still burn with passion for the core ideals of FOSS. In my forthcoming manuscript, where I’ll detail the personal struggles that led me to this point, I’ll expand on these logical foundations in far greater depth, so consider this a preview of that work.
+These are bold claims, I admit, but the principle is simple. For me, this framework has brought clarity and purpose, illuminating a path forward where I once saw none. It has reshaped my understanding of the present crisis, giving me direction and meaning. My aim here is to share that clarity with those who still burn with passion for the core ideals of FOSS, or more broading, a thirst for Justice. In my forthcoming manuscript, where I’ll detail the personal struggles that led me to this point, I’ll expand on these logical foundations in far greater depth, so consider this a preview of that work.
 
 For those who have abandoned logical consistency entirely, consider this your off ramp. For the rest of you, lets dig in...
 
@@ -47,6 +47,8 @@ For those who have abandoned logical consistency entirely, consider this your of
 What I’m attempting here is nothing less than a logically consistent philosophical framework to model a Just State; defining our terms precisely as we go.
 
 By the end, we’ll arrive at a conclusion that positions Free Software as a vital force in the functioning of such a State. In other words, not just a nice way to access source code, or an efficient way of managing development, but of absolutely crucial necessity as a pillar of Justice itself.
+
+#### An Axiomatic Foundation
 
 We begin with a single axiom:
 
