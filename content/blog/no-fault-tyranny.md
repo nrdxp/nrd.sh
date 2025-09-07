@@ -17,6 +17,8 @@ extra:
   repo_view: true
 ---
 
+> ⚠️ You probably want to wait for the legalese-english translation of this in an upcoming post.
+
 # Preamble
 
 What follows is the current draft of my formal civil rights complaint against the State of Colorado, its judicial and prosecutorial entities, and the U.S. Department of Health and Human Services (including the Office of Child Support Enforcement and its Secretary, Robert F. Kennedy Jr.). Due to a relentless pattern of obstructions—the latest being a federal judge in Colorado ordering me to refile, demanding dry procedural compliance to non-existent rules in willful ignorance of the escalating emergency nature of the circumstances and the substantive nature of the constitional claims which cannot be ignored (Haines v. Kerner, 404 U.S. 519 [1972])—I have not yet submitted this updated version to the courts. For this very reason, I intend to pursue a change of venue based on the systemic bias and conflicts detailed herein, which will require navigating the existing case, updating it, and transferring jurisdiction to a more neutral locale, such as the District of Tennessee.
