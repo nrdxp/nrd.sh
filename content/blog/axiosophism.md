@@ -45,7 +45,7 @@ Does this apply beyond physics? Yes—think of societies as living systems, as I
 
 #### **From Entropy to Justice: Core Definitions**
 
-Let us review, building hierarchically, starting from our [axiom](../code-of-rebellion#An-Axiomatic-Foundation): **Entropy** is the relentless spread of coherence into chaos. From here:
+Let us review, building hierarchically, starting from our [axiom](../code-of-rebellion#an-axiomatic-foundation): **Entropy** is the relentless spread of coherence into chaos. From here:
 
 1.  A **State** is any naturally organized entity—a nation, family, or code—that actively resists this pull toward disarray.
 
@@ -61,7 +61,7 @@ Let us review, building hierarchically, starting from our [axiom](../code-of-reb
 
 7.  The **Master** is one who develops both Responsibility and Authority in the State, cultivating **Rebellion**: an unapologetic resistance to Corruption.
 
-8.  The **Spirit** is the animating energy behind coherence, expressed as **Mastery**: free pursuit of excellence through skill and discipline, unhindered. Consequently, the inevitability of Injustice and Corruption in a State fosters a collective [Spirit of Rebellion](../code-of-rebellion#A-State-of-Rebellion) of its Master class.
+8.  The **Spirit** is the animating energy behind coherence, expressed as **Mastery**: free pursuit of excellence through skill and discipline, unhindered. Consequently, the inevitability of Injustice and Corruption in a State fosters a collective [Spirit of Rebellion](../code-of-rebellion#a-state-of-rebellion) of its Master class.
 
 9.  Opposed is **Slavery**: forced disorder, robbing autonomy and compelling roles that hasten chaos: responsibility without power.
 
