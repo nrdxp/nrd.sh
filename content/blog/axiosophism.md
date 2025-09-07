@@ -81,7 +81,7 @@ From this emerges the **Sacred**: those truths that have been rigorously battle-
 
 #### **The Axiosophic Universe: A New Model of Social Coherence**
 
-Our world defies simple left-right lines. How could we envision a third-dimensional? The x-axis spans the well known liberal to conservative ideologies; our slightly less famous y-axis measures from anarchy to oligarchy; What if our z-axis delves into depth, from what is superficial to what is deeply understood and well supported?
+Our world defies simple left-right lines. How might we envision a third-dimension? The x-axis spans the well known liberal to conservative ideologies; our slightly less famous y-axis measures from anarchy to oligarchy; What if our z-axis delves into depth, from what is superficial to what is deeply understood and well supported?
 
 We can formalize it: Think of viewpoints as points in a space—(ideology, power structure, depth)—converging downward, like a funnel, through [Bayesian reasoning](https://en.wikipedia.org/wiki/Bayesian_inference) (updating beliefs with evidence) toward what sustains coherence.
 
