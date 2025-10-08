@@ -12,6 +12,7 @@ authorImage: "https://avatars.githubusercontent.com/u/34083928?v=4"
 authorTwitter: "nrdexp"
 date: "2025-08-19"
 category: "legal"
+draft: true
 extra:
   read_time: true
   repo_view: true
