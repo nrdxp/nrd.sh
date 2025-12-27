@@ -193,7 +193,7 @@ And God? If unprovable, Spirit serves as bridge—practical, uniting all in exam
 
 #### **The Primacy of Family: A Sacred Foundation for the State**
 
-To illustrate, consider the family—Locke's "first society," basic units linking into civilization.[^26] Without strong families, what remains? Logic and history say slavery, as state overreach unravels the covalent bonds of society's atom. Defending family, therefore, combats entropy; undermining it is Corruption. Thus, family is Sacred, its erosion fueling modern woes.
+To illustrate, consider the family—Locke's "first society," basic units linking into civilization.[^26] Without strong families, what remains? Logic and history say slavery, as state overreach unravels the covalent bonds of society's atom. Defending family, therefore, combats entropy; undermining it is Corruption. Thus, it could be argued that family is Sacred, its erosion fueling modern woes.
 
 #### **Evolution of Marital Laws: The Root of Our Evils**
 
