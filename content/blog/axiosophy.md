@@ -131,7 +131,7 @@ Here the hierarchy branches.
 
 **Corruption** is something else entirely. Where Injustice is entropy through _neglect_, Corruption is entropy through _agency_: the deliberate acceleration of disorder for private ends. The guardian who plunders the treasury. The bureaucrat who discovers that a broken process serves their career and perpetuates it. This is the crucial distinction: an institution may begin its drift through mere Injustice (inattention, structural rot, well-meaning incompetence) but the moment its actors _recognize_ the dysfunction's utility and choose to sustain it, Injustice crystallizes into Corruption. The line is crossed not at the point of harm, but at the point of knowing complicity.
 
-These three (Justice, Injustice, Corruption) form an **antichain**: they branch independently from Coherence, each defined by its own relationship to the preservation or destruction of order.
+These three (Justice, Injustice, Corruption) form an **antichain**[^ac]: they branch independently from Coherence, each defined by its own relationship to the preservation or destruction of order.
 
 ### The Quadrad
 
@@ -496,6 +496,7 @@ _References:_
 [^69]: [Exploring the role of large language models in the scientific method](https://www.nature.com/articles/s44387-025-00019-5).
 [^71]: [Nietzsche's Views on God and Morality](https://digitalcommons.gardner-webb.edu/cgi/viewcontent.cgi?article=1046&context=undergrad-honors).
 [^ra]: Susan Rose-Ackerman, _Corruption and Government: Causes, Consequences, and Reform_ (Cambridge University Press, 1999). See also: Mark Philp, "Defining Political Corruption," _Political Studies_ 45, no. 3 (1997).
+[^ac]: In order theory, an [antichain](https://en.wikipedia.org/wiki/Antichain) is a subset of a partially ordered set where no element is derivable from any other; i.e., the concepts are structurally independent peers.
 [^lessig]: Lawrence Lessig, _Republic, Lost: How Money Corrupts Congress—and a Plan to Stop It_ (Twelve, 2011). See also: Lessig's Berlin Family Lectures (2014-15), University of Chicago.
 [^gk]: Ruth W. Grant and Robert O. Keohane, "Accountability and Abuses of Power in World Politics," _American Political Science Review_ 99, no. 1 (2005): 29-43.
 [^andrews]: Helen Andrews, "The Great Feminization," _Compact Magazine_ (2025). Based on J. Stone, _The Great Feminization_ (pseudonymous essay/book).
