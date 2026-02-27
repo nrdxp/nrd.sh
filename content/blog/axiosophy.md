@@ -257,7 +257,7 @@ Nietzsche's deeper error was dispensing with the Sacred itself. His proclamation
 
 ## Part V: Applied Axiosophism
 
-We now apply the framework. The case studies that follow are ordered by structural scale, from civilization's biological foundation to its existential frontier, to demonstrate that axiosophic constraints operate at every order of magnitude. Each example reduces a bitterly contested contemporary debate to a structural diagnosis in a few paragraphs.
+We now apply the framework. The case studies that follow are ordered by structural scale, from civilization's biological foundation to its existential frontier, to demonstrate that axiosophic constraints operate at every order of magnitude. They are neither an exhaustive survey of the framework's applications nor a comprehensive treatment of any single topic; they are _demonstrations_ of how quickly axiosophic tools can drill down to structural truth in domains where conventional discourse typically stalls. Each example reduces a bitterly contested contemporary debate to a structural diagnosis in a few paragraphs.
 
 ### The Primacy of Family
 
