@@ -1,6 +1,6 @@
 +++
-title = "Axiosophism"
-description = "An Axiomatic Philosophy Toward Justice and Truth"
+title = "Axiosophy"
+description = "On the Structural Derivation of Ethics from Natural Constraint"
 date = "2025-08-31"
 draft = false
 
