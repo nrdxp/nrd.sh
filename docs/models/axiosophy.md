@@ -48,6 +48,8 @@ The system rests on a single physical constraint, expressed through Information 
 **Axiom 0:** Continuous increase in Shannon Entropy ($H$) is the default state of all social systems left to natural forces.
 $$ \frac{dH}{dt} > 0 $$
 
+**Scoping note:** $H$ in this model measures the *structural disorder of the system's capacity to maintain coherence*, not the behavioral predictability of individual actors. A totalitarian state may appear superficially predictable (low behavioral entropy) while harboring catastrophic structural fragility (high structural entropy). The key variable is *time horizon*: compressed adaptive capacity produces brittleness that accelerates entropy over sustained periods, even when surface-level order appears stable.
+
 ### Layer 2: The Derivation Spine (Preorder Category)
 
 The core definitions form a **Directed Acyclic Graph (DAG)** formalized as a **Preorder Category**, where an arrow $A \to B$ means "$B$ is logically derived from / depends upon the prior definition of $A$." 
@@ -75,15 +77,16 @@ graph TD
     A1 --> M
     K --> M
     
-    M --> Sp["8. Spirit / Mastery"]
-    
-    R1 --> Sl["9. Slavery"]
+    R1 --> Sl["8. Slavery"]
     K --> Sl
     
-    A1 --> Ro["10. Royalty"]
+    A1 --> Ro["9. Royalty"]
     K --> Ro
     
+    K --> N["10. Null Agent"]
+    
     %% Derived meta-concepts
+    M --> Sp["Spirit"]
     J --> T["Truth"]
     T --> Sc["The Sacred"]
     
@@ -97,9 +100,9 @@ graph TD
     class E axiom
     class S,P,C spine
     class J,I,K triad
-    class M,Sp,Sl,Ro actors
+    class M,Sl,Ro,N actors
     class R1,A1 derived
-    class T,Sc meta
+    class Sp,T,Sc meta
 ```
 
 **Structural notes:**
@@ -108,11 +111,13 @@ graph TD
 
 2. Concepts at the same structural depth form **antichain partitions** — no derivation arrow exists between peers (e.g., Justice, Injustice, Corruption are independently derived from the layer above).
 
-3. **Justice** is the *product* of Responsibility and Authority applied toward Purpose: $Justice \cong \text{Responsibility} \times \text{Authority} \xrightarrow{\text{toward}} \text{Purpose}$.
+3. **Justice** is the *morphism* mapping the product of Responsibility and Authority toward Purpose: $Justice: (\text{Responsibility} \times \text{Authority}) \to \text{Purpose}$. Master is something you *are* (the object); Justice is something you *do* (the mapping of capacity to teleology).
 
-4. **Master** is the *product* of Responsibility and Authority *in the context of Corruption*: $Master \cong \text{Responsibility} \times \text{Authority} \times \text{Corruption}_{\text{context}}$. Slavery and Royalty represent **broken projections** of this product (missing one factor each).
+4. **Master** is the *product* of Responsibility and Authority *in the context of Corruption*: $Master \cong \text{Responsibility} \times \text{Authority} \times \text{Corruption}_{\text{context}}$. The remaining Quadrad members are **projections** of this product: Slavery and Royalty are *broken projections* (each missing one factor); the **Null Agent** is the *null projection* ($\neg R \times \neg A$ in Corruption context) — the actor with neither duty nor power, whose structural inertness constitutes passive collaboration with entropy.
 
-5. **Truth** and **The Sacred** are *meta-definitions* derived from the hierarchy: Truth = that which empirically sustains Purpose; The Sacred = Truth battle-tested across eras. They sit atop the DAG as derived conclusions, not axioms.
+5. **Spirit** is a *derived meta-concept* from Mastery ($M \to Sp$): the animating force that emerges from disciplined exercise of Responsibility and Authority. It is not a structural position in the Quadrad but the *energy* that makes a Master more than a functionary. Spirit operates on a different categorical plane than the Quadrad's Authority×Responsibility configurations.
+
+6. **Truth** and **The Sacred** are *meta-definitions* derived from the hierarchy: Truth = that which empirically sustains Purpose; The Sacred = Truth battle-tested across eras. They sit atop the DAG as derived conclusions, not axioms. Spirit, Truth, and The Sacred together form the model's derived meta-concept tier.
 
 ### Layer 3: Ethical Constraints (Structural Implication Graph)
 
@@ -125,8 +130,8 @@ Let $C$ denote Coherence (the State maintaining its Purpose against entropy). Th
 1. **The Necessity of Justice:** $\Box(\neg Justice \to \neg C)$
    *The absence of Justice necessarily leads to the failure of Coherence.*
 
-2. **The Inevitability of Rebellion:** $\Box(Corruption \to \diamondsuit Rebellion)$
-   *The presence of Corruption eventually necessitates the emergence of Rebellion among Masters, or the State collapses.*
+2. **The Inevitability of Rebellion or Collapse:** $\Box(Corruption \to \diamondsuit(Rebellion \lor Collapse))$
+   *The presence of Corruption eventually forces a bifurcation: either the Master class mounts a Rebellion (an immune response to restore Coherence), or the dissipative structure dies. Rebellion is specifically a Master-produced phenomenon — the Spirit of Rebellion — not a spontaneous event.*
 
 3. **The Entropy of Slavery:** $\Box(Slavery \to \frac{dH}{dt} \gg 0)$
    *Slavery (forced responsibility without authority) actively accelerates entropy — it is not merely unjust but structurally destabilizing.*
@@ -185,13 +190,14 @@ If the concept lattice derived from empirical data matches the stipulated hierar
 | :---- | :----- | :----- |
 | **Acyclic Strictness** | PASS | The Preorder DAG contains no circular definitions. Master, Royalty, and The Sacred all trace cleanly back to Entropy without self-reference. |
 | **Is/Ought Separation** | PASS | Definitional morphisms (Layer 2) are formally isolated from structural implications (Layer 3). The model does not commit the naturalistic fallacy — it bridges "is" and "ought" via hypothetical imperatives grounded in thermodynamic constraint. |
-| **Product Consistency** | PASS | Master = Responsibility × Authority × Corruption-context. Slavery = Responsibility × Corruption-context (missing Authority). Royalty = Authority × Corruption-context (missing Responsibility). The broken projections are structurally symmetric. |
+| **Product Consistency** | PASS | Master = Responsibility × Authority × Corruption-context (full product). Slavery = Responsibility × Corruption-context (broken projection, missing Authority). Royalty = Authority × Corruption-context (broken projection, missing Responsibility). Null Agent = Corruption-context only (null projection, missing both). The Quadrad is the structurally complete set of all four projections. |
+| **Morphism Typing** | PASS | Justice is typed as a morphism $Justice: (R \times A) \to Purpose$, not as an object. Master is something you *are*; Justice is something you *do*. |
 | **Duality Well-Formedness** | PASS | FCA's Galois connection cleanly bridges the deductive hierarchy (axiosophy) to empirical observation (axiosophism). The Sacred emerges as a derived formal concept. |
-| **Completeness** | PARTIAL | The meta-concepts Truth and The Sacred are now explicitly represented but were absent from the original numbered hierarchy (they appear in subsequent prose, not in definitions 1–10). The model recommends the rewrite promote them to formal status. |
+| **Completeness** | PASS | Truth, The Sacred, and Spirit are explicitly represented as derived meta-concepts. The hierarchy is complete from Entropy through the Quadrad to the derived tier. |
 
 ## Implications
 
-1. **The hierarchy is a DAG, not a chain.** The blog post's presentation as a "linear hierarchy" (numbered list 1–10) obscures the true structure. The rewrite should make the branching points explicit: Coherence spawns a **triad** (Justice/Injustice/Corruption); Corruption-as-context spawns a **quadrad** (Master/Spirit/Slavery/Royalty).
+1. **The hierarchy is a DAG, not a chain.** The blog post's presentation as a "linear hierarchy" (numbered list 1–10) obscures the true structure. The rewrite should make the branching points explicit: Coherence spawns a **triad** (Justice/Injustice/Corruption); Corruption-as-context spawns a **quadrad** (Master/Slavery/Royalty/Null Agent). Spirit is a derived meta-concept from Mastery, not a Quadrad member.
 
 2. **Responsibility and Authority are intermediate concepts.** They emerge from Definition 3 (the State's obligation to act Coherently), not from Justice. The blog post's current phrasing conflates their introduction with Definition 4. The rewrite should introduce them after Coherence and before Justice.
 
