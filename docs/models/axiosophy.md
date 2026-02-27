@@ -131,7 +131,7 @@ Let $C$ denote Coherence (the State maintaining its Purpose against entropy). Th
    *The absence of Justice necessarily leads to the failure of Coherence.*
 
 2. **The Inevitability of Rebellion or Collapse:** $\Box(Corruption \to \diamondsuit(Rebellion \lor Collapse))$
-   *The presence of Corruption eventually forces a bifurcation: either the Master class mounts a Rebellion (an immune response to restore Coherence), or the dissipative structure dies. Rebellion is specifically a Master-produced phenomenon — the Spirit of Rebellion — not a spontaneous event.*
+   *The presence of Corruption eventually forces a bifurcation. These are not symmetric outcomes. Rebellion is the active immune response: the Master class, animated by the Spirit of Rebellion, enacts principled resistance to restore Coherence. Collapse is the passive default when that response fails or is suppressed. Rebellion is to Collapse what the immune system is to disease — not a peer outcome but its structural antithesis. A State that suppresses Rebellion does not prevent bifurcation; it merely eliminates the survival branch.*
 
 3. **The Entropy of Slavery:** $\Box(Slavery \to \frac{dH}{dt} \gg 0)$
    *Slavery (forced responsibility without authority) actively accelerates entropy — it is not merely unjust but structurally destabilizing.*
