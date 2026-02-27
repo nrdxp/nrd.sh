@@ -201,11 +201,11 @@ The Axiosophic Prism adds a third dimension: **depth**.
 graph TD
     subgraph "The Axiosophic Prism"
         direction TB
-        P1["🔵 Political Layer<br/><small>Rhetoric · Opinion · Culture</small><br/><small><i>High variance · Low friction</i></small>"]
-        P2["🟡 Legal Layer<br/><small>Procedure · Grammar · Due Process</small><br/><small><i>Constrained variance · Medium friction</i></small>"]
-        P3["🔴 Moral Layer<br/><small>Logic · Truth · Structural Bedrock</small><br/><small><i>Minimal variance · High friction</i></small>"]
+        P1["Political — Rhetoric, Opinion"]
+        P2["Legal — Procedure, Due Process"]
+        P3["Moral — Logic, Structural Bedrock"]
         P1 --> P2 --> P3
-        P3 -.-> A["⚖️ Justice<br/><small>Attractor</small>"]
+        P3 -.-> A["Justice Attractor"]
     end
 ```
 
