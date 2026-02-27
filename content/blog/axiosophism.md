@@ -18,7 +18,7 @@ We watch this pattern repeat in real time. Courts built to protect families prof
 
 *Is there a single principle that explains why all of these failures look the same?*
 
-There is. It is called **entropy**. And the philosophy that takes it seriously is called **Axiosophy**.
+There is. It is called **entropy**, the single most experimentally confirmed law in all of physics. And the framework that takes it seriously enough to build a formal ethics on top of it, to *derive* morality from thermodynamics the way an engineer derives load limits from gravity, is called **Axiosophy**.
 
 ---
 
@@ -141,15 +141,15 @@ Four classes of actor emerge:
 
 The **Master** is the person who develops *both* Responsibility and Authority within the context of Corruption. The Master does not merely follow rules. The Master cultivates **Rebellion**: an unapologetic, principled resistance to entropy's agents. Formally, the Master is the complete product: $Master \cong \text{Responsibility} \times \text{Authority} \times \text{Corruption}_{\text{context}}$.
 
-The **Spirit** is the animating energy behind Mastery, the drive toward excellence, discipline, and coherence that enables a person or institution to resist entropy *from within*. It is what makes a Master more than a functionary.
-
 Now consider what happens when the product breaks:
 
 **Slavery** is Responsibility without Authority: the burden of duty stripped of the power to act. The single parent drowning in obligations imposed by a court that denies them agency. The employee bound by rules they had no part in making. Slavery does not merely harm individuals. It *accelerates entropy system-wide*: $\Box(Slavery \to \frac{dH}{dt} \gg 0)$.
 
 **Royalty** is Authority without Responsibility: power without accountability. The executive who faces no consequences. The hereditary elite who commands without competence. The institution that regulates without being regulated.
 
-These two (Slavery and Royalty) are **structurally symmetric mirror images**, each missing exactly one leg of the product that constitutes Mastery. The framework diagnoses both with equal severity. Neither left nor right has a monopoly on either pathology.
+These three (Master, Slavery, Royalty) are defined entirely by their relationship to Authority and Responsibility. They form a structurally complete set: the full product (Master), and two **broken projections**, each missing exactly one factor. The framework diagnoses both pathologies with equal severity. Neither left nor right has a monopoly on either.
+
+But the Quadrad has a fourth member that operates on a different plane entirely. The **Spirit** is not another configuration of Authority and Responsibility. It is the animating force that *emerges from* Mastery: the drive toward excellence, discipline, and coherence that enables a person or institution to resist entropy *from within*. Where Master, Slavery, and Royalty describe structural *positions*, Spirit describes an *energy*. It is what makes a Master more than a functionary, what transforms mere competence into purposeful resistance. In the formal hierarchy, Spirit derives *from* Mastery ($M \to Sp$), not alongside it. Its inclusion in the Quadrad reflects a structural truth: you cannot fully characterize the landscape of actors without accounting for the force that animates the best of them.
 
 ### The Capstone: Truth and the Sacred
 
