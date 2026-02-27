@@ -126,7 +126,7 @@ From Coherence, two intermediate concepts emerge: **Responsibility** (the obliga
 
 Here the hierarchy branches.
 
-**Justice** is the mapping of Responsibility and Authority toward Purpose: the consistent application of unambiguous rules that sustain coherence. Not "fairness" in the colloquial sense. Not "equality." Justice is _structural_, and more precisely, it is something you _do_ rather than something you _are_: $Justice: (\text{Responsibility} \times \text{Authority}) \to \text{Purpose}$.
+**Justice** is not a state of affairs but an act: the mapping of Responsibility and Authority toward Purpose, the consistent application of unambiguous rules that sustain coherence. Not "fairness" in the colloquial sense. Not "equality." $Justice: (\text{Responsibility} \times \text{Authority}) \to \text{Purpose}$.
 
 **Injustice** is the natural consequence of Justice's absence: the return of entropy when the State fails to maintain coherent rules. Injustice is not an agent. It is a default condition, what happens when the garden is not tended. Ignorance, inaction, incompetence: these produce Injustice. They aid entropy, but without design.
 
@@ -148,17 +148,17 @@ Now consider what happens when the product breaks:
 
 **Royalty** is Authority without Responsibility: power without accountability. The executive who faces no consequences. The hereditary elite who commands without competence. The institution that regulates without being regulated.
 
-These three (Master, Slavery, Royalty) are defined entirely by their relationship to Authority and Responsibility. They form three corners of a structurally complete set: the full product (Master), and two **broken projections**, each missing exactly one factor. The framework diagnoses both pathologies with equal severity. Neither left nor right has a monopoly on either.
+These three are defined entirely by their relationship to Authority and Responsibility: the full product (Master), and two **broken projections**, each missing exactly one factor. The framework diagnoses both pathologies with equal severity. Neither left nor right has a monopoly on either.
 
-The fourth corner completes the grid. The **Null Agent** is the actor with _neither_ Responsibility nor Authority: no duty, no power, no structural footprint. This is not a marginal category. In any sufficiently complex society, enormous populations occupy this state, passive consumers of coherence with no stake in its maintenance. Their structural inertness makes them, at best, dead weight for the system to carry and, at worst, a resource pool for Royals to weaponize. This is why welfare systems, however well-intentioned, tend to breed Corruption when they multiply the Null Agent class: they expand the population _without_ structural agency while concentrating the Authority to distribute resources in Royal hands.
+The fourth completes the grid. The **Null Agent** has _neither_ Responsibility nor Authority: no duty, no power, no structural footprint. In any sufficiently complex society, enormous populations occupy this state, passive consumers of coherence with no stake in its maintenance. At best, they are dead weight; at worst, a resource pool for Royals to weaponize. Welfare systems that multiply the Null Agent class without granting structural agency tend to concentrate Authority in Royal hands and breed the very Corruption they claim to remedy.
 
-But what _animates_ the Master? The Quadrad describes structural positions, but positions alone do not move. The **Spirit** is the force that emerges _from_ Mastery ($M \to Sp$): the drive toward excellence, discipline, and coherence that enables a person or institution to resist entropy from within. Where the Quadrad's four states describe _where_ actors sit in the Authority×Responsibility grid, Spirit describes the _energy_ that makes a Master more than a functionary, what transforms mere competence into purposeful resistance. It is not a fifth structural position; it is the animating force behind the one that works.
+But what _animates_ the Master? The Quadrad describes structural positions, but positions alone do not move. The **Spirit** is the force that emerges _from_ Mastery ($M \to Sp$): the drive toward excellence, discipline, and coherence that enables a person or institution to resist entropy from within. It is not a fifth structural position; it is the energy that makes a Master more than a functionary.
 
 ### The Capstone: Truth and the Sacred
 
-The hierarchy does not end with the Quadrad. Three more concepts emerge, not as additional definitions but as _derived conclusions_ from the entire structure.
+The hierarchy does not end with the Quadrad. From it, three further concepts are derived, not as definitions but as _conclusions_.
 
-From Mastery, as we have seen, comes the **Spirit**: the animating force behind coherent action.
+The **Spirit**, as we have seen, emerges from Mastery: the animating force behind coherent action.
 
 From Justice comes **Truth**. Truth is not opinion. It is not consensus. It is that which has been empirically demonstrated to sustain a State's Purpose: to preserve coherence against entropy. The principle of equal justice under law is _true_ because societies that embrace it endure; those that abandon it collapse.
 
@@ -257,7 +257,7 @@ Nietzsche's deeper error was dispensing with the Sacred itself. His proclamation
 
 ## Part V: Applied Axiosophism
 
-We now apply the framework. The case studies that follow are ordered by structural scale, from civilization's biological foundation to its existential frontier, to demonstrate that axiosophic constraints operate at every order of magnitude. They are neither an exhaustive survey of the framework's applications nor a comprehensive treatment of any single topic; they are _demonstrations_ of how quickly axiosophic tools can drill down to structural truth in domains where conventional discourse typically stalls. Each example reduces a bitterly contested contemporary debate to a structural diagnosis in a few paragraphs.
+We now apply the framework. The case studies that follow are not exhaustive, either of the framework's reach or of any single topic. They are _demonstrations_: proof that axiosophic tools can cut to structural bedrock in domains where conventional discourse typically stalls. Each example, ordered by structural scale from civilization's biological foundation to its existential frontier, reduces a bitterly contested contemporary debate to a structural diagnosis in a few paragraphs.
 
 ### The Primacy of Family
 
