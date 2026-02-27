@@ -85,7 +85,7 @@ Societies that have ignored this constraint, treating entropy as irrelevant to g
 
 ## Part II: Axiosophy — The Deductive Framework
 
-We now build the formal hierarchy. Everything that follows is _derived_; each definition depends logically on the one before it. The structure is not a simple numbered list but a **directed acyclic graph**: a branching tree where some concepts depend on multiple predecessors.
+We now build the formal hierarchy. Everything that follows is _derived_: each definition depends logically on those before it, branching where one concept requires multiple predecessors, never circling back. The resulting structure is a derivation graph (a directed acyclic graph, for the mathematically inclined) rooted in a single axiom.
 
 ```mermaid
 graph TD
