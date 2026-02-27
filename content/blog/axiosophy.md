@@ -426,7 +426,7 @@ This war, not one we started, but one entropy ensures will always be fought, can
 
 Axiosophy demands swift Justice.
 
-**_Give me Justice or Give me Death! Viva Rebellion!_**
+**_Give me Justice or Give me Death![^ph] Viva Rebellion!_**
 
 ---
 
@@ -515,3 +515,4 @@ _References:_
 [^gilded]: U.S. Census Bureau, via "Gilded Age" article, Wikipedia. Average industrial worker wage 1890: $564. CPI-adjusted to 2024: $19,431.
 [^entropy-choice]: A careful reader may object that conservation of energy (the First Law) or Leibniz's Principle of Sufficient Reason is more metaphysically fundamental. This is true. But fundamentality and generativity are distinct criteria. Conservation of energy tells you the budget is constant; it cannot distinguish a thriving civilization from heat death, and therefore generates no ethical constraints. Entropy increase is chosen deliberately: it is the principle that explains why things get worse without active effort, and that directional pressure is what makes the entire derivation chain possible.
 [^cm]: In mathematics, a [contraction mapping](https://en.wikipedia.org/wiki/Contraction_mapping) is a function that brings points closer together with each application, guaranteeing convergence to a unique fixed point (the Banach fixed-point theorem). Here the metaphor is epistemological: deeper understanding contracts the space of defensible positions toward a single attractor (Justice).
+[^ph]: After Patrick Henry, "Give me liberty, or give me death!" (1775). The American revolutionary spirit that produced the Constitution was no small part of this framework's inspiration.
