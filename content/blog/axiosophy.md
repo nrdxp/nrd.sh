@@ -1,7 +1,7 @@
 +++
 title = "Axiosophy"
 description = "On the Structural Derivation of Ethics from Natural Constraint"
-date = "2025-08-31"
+date = "2026-02-26"
 draft = false
 
 [taxonomies]
