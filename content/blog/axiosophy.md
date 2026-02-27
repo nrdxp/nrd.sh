@@ -12,13 +12,13 @@ tags = ["politics", "civilization", "philosophy"]
 
 Every civilization that has ever collapsed did so for the same reason.[^3]
 
-Not invasion. Not famine. Not plague, though these served as accelerants. The cause is always structural: the institutions tasked with maintaining order began to *generate disorder instead*. Rome's Senate became a marketplace for influence. The Maya's priestly class hoarded water rights until the commons collapsed. The Soviet Politburo optimized for ideological purity until the shelves were bare.[^7] [^8]
+Not invasion. Not famine. Not plague, though these served as accelerants. The cause is always structural: the institutions tasked with maintaining order began to _generate disorder instead_. Rome's Senate became a marketplace for influence. The Maya's priestly class hoarded water rights until the commons collapsed. The Soviet Politburo optimized for ideological purity until the shelves were bare.[^7] [^8]
 
 We watch this pattern repeat in real time. Courts built to protect families profit from their destruction. Media institutions designed to inform the public optimize for engagement instead. Universities erected to challenge assumptions now police them. And we call this decay by a hundred different names (corruption, institutional capture, regulatory failure, culture war) without ever asking the obvious question:
 
-*Is there a single principle that explains why all of these failures look the same?*
+_Is there a single principle that explains why all of these failures look the same?_
 
-There is. It is called **entropy**, the single most experimentally confirmed law in all of physics. And the framework that takes it seriously enough to build a formal ethics on top of it, to *derive* morality from thermodynamics the way an engineer derives load limits from gravity, is called **Axiosophy**.
+There is. It is called **entropy**, the single most experimentally confirmed law in all of physics. And the framework that takes it seriously enough to build a formal ethics on top of it, to _derive_ morality from thermodynamics the way an engineer derives load limits from gravity, is called **Axiosophy**.
 
 ---
 
@@ -26,16 +26,16 @@ There is. It is called **entropy**, the single most experimentally confirmed law
 
 ### Why Another Philosophy?
 
-The word comes from Greek: *axios* (worthy, axiomatic) and *sophia* (wisdom). Axiosophy is the pursuit of wisdom through axioms, self-evident physical truths from which moral and social principles can be *derived* rather than asserted. Its political application, the measurement of how well societies actually resist disorder, is called **Axiosophism**.
+The word comes from Greek: _axios_ (worthy, axiomatic) and _sophia_ (wisdom). Axiosophy is the pursuit of wisdom through axioms, self-evident physical truths from which moral and social principles can be _derived_ rather than asserted. Its political application, the measurement of how well societies actually resist disorder, is called **Axiosophism**.
 
 Why do we need this? Because every major ethical framework in the Western canon has the same structural vulnerability:
 
 - **Kant** gives us absolute duties but no way to verify them empirically. You "ought" to tell the truth even when it gets someone killed.[^15]
-- **Mill** gives us outcome optimization but no way to ground it. Maximize *whose* happiness? Over *what* timeframe? The calculus collapses.[^16]
+- **Mill** gives us outcome optimization but no way to ground it. Maximize _whose_ happiness? Over _what_ timeframe? The calculus collapses.[^16]
 - **Rawls** gives us fairness behind a "veil of ignorance" but assumes a static world where the rules never need updating.[^23] [^24]
 - **Moral relativism** gives us nothing at all; it simply surrenders the field.
 
-Each of these frameworks either ignores reality altogether (Kant) or collapses into incoherence when confronted with complex, evolving systems (everyone else). What none of them does is start from *physics*, from a law of nature so well-established that denying it would be as absurd as denying gravity.
+Each of these frameworks either ignores reality altogether (Kant) or collapses into incoherence when confronted with complex, evolving systems (everyone else). What none of them does is start from _physics_, from a law of nature so well-established that denying it would be as absurd as denying gravity.
 
 Axiosophy starts there.
 
@@ -43,9 +43,9 @@ Axiosophy starts there.
 
 Before we build, we must clear the ground. Consider the ancient question: Does God exist?
 
-It seems like it should be answerable. But Kurt Gödel proved in 1931 that *no* formal system, not mathematics, not logic, not any conceivable framework, can be simultaneously complete and consistent.[^2] Some truths will always escape proof. The existence of God may be one of them.
+It seems like it should be answerable. But Kurt Gödel proved in 1931 that _no_ formal system, not mathematics, not logic, not any conceivable framework, can be simultaneously complete and consistent.[^2] Some truths will always escape proof. The existence of God may be one of them.
 
-This is not despair. It is *liberation*. If the most fundamental question of existence lies beyond formal proof, then we are free, even obligated, to build our ethics on what *can* be verified. We need not settle the question of God to settle the question of how to live. What we need is an axiom that is physically real, empirically testable, and universally operative.
+This is not despair. It is _liberation_. If the most fundamental question of existence lies beyond formal proof, then we are free, even obligated, to build our ethics on what _can_ be verified. We need not settle the question of God to settle the question of how to live. What we need is an axiom that is physically real, empirically testable, and universally operative.
 
 We need entropy.
 
@@ -53,39 +53,39 @@ We need entropy.
 
 The Second Law of Thermodynamics states that the entropy of an isolated system tends to increase over time.[^4] Order decays. Structure dissolves. Heat death approaches. This is not a theory. It is the most experimentally confirmed law in all of physics.
 
-But societies are not isolated systems. They import energy, export waste, and maintain internal order through constant effort. Prigogine called these *dissipative structures*: systems that sustain coherence by actively exporting disorder, but which inevitably succumb without sustained effort.[^6] A society is precisely this kind of structure. It either expends energy resisting entropy, or it dies.
+But societies are not isolated systems. They import energy, export waste, and maintain internal order through constant effort. Prigogine called these _dissipative structures_: systems that sustain coherence by actively exporting disorder, but which inevitably succumb without sustained effort.[^6] A society is precisely this kind of structure. It either expends energy resisting entropy, or it dies.
 
 Extended to social systems through information theory, where Shannon entropy ($H$) measures the disorder or uncertainty in a system, we arrive at our foundational axiom:[^5]
 
 $$\frac{dH}{dt} > 0$$
 
-Left to natural forces, every family, every institution, every civilization slides toward chaos. The question of ethics reduces to: *What resists this slide, and why?*
+Left to natural forces, every family, every institution, every civilization slides toward chaos. The question of ethics reduces to: _What resists this slide, and why?_
 
 But this immediately provokes a serious objection.
 
 ### Constraint-Theoretic Ethics: A Third Way
 
-> "You're deriving *ought* from *is*. That's the naturalistic fallacy."
+> "You're deriving _ought_ from _is_. That's the naturalistic fallacy."
 
-This objection, rooted in Hume's "guillotine" and Moore's *Principia Ethica*, has paralyzed ethical philosophy for centuries.[^nat1] If you cannot derive values from facts, then entropy, however real, tells us nothing about how we *should* act.
+This objection, rooted in Hume's "guillotine" and Moore's _Principia Ethica_, has paralyzed ethical philosophy for centuries.[^nat1] If you cannot derive values from facts, then entropy, however real, tells us nothing about how we _should_ act.
 
-Axiosophy's answer is that the objection targets the wrong category. We are not deriving an *ought*. We are identifying a *constraint*.
+Axiosophy's answer is that the objection targets the wrong category. We are not deriving an _ought_. We are identifying a _constraint_.
 
 You do not have a moral duty to obey gravity. You simply fall if you ignore it. You do not have a moral duty to resist entropy. Your society simply collapses if you fail to.
 
-This is neither Kant's categorical imperative (an absolute duty divorced from consequences) nor Mill's consequentialism (an outcome calculation divorced from structure). It is a **third mode** of ethical reasoning, *constraint-theoretic*, where obligations emerge from the structural conditions of existence itself, precisely as the architect's obligation to obey load-bearing physics emerges from the structural conditions of building.
+This is neither Kant's categorical imperative (an absolute duty divorced from consequences) nor Mill's consequentialism (an outcome calculation divorced from structure). It is a **third mode** of ethical reasoning, _constraint-theoretic_, where obligations emerge from the structural conditions of existence itself, precisely as the architect's obligation to obey load-bearing physics emerges from the structural conditions of building.
 
-The ethical statement becomes a hypothetical imperative: *If* you desire coherence, if you want your State to endure, *then* you are structurally constrained to enact Justice. The "if" is doing all the work. The imperative is conditional, not absolute. And the constraint is physical, not metaphysical.[^nat2]
+The ethical statement becomes a hypothetical imperative: _If_ you desire coherence, if you want your State to endure, _then_ you are structurally constrained to enact Justice. The "if" is doing all the work. The imperative is conditional, not absolute. And the constraint is physical, not metaphysical.[^nat2]
 
-This resolves Hume's guillotine. It does not leap from "is" to "ought." It says: given the brute fact of entropy and the stated goal of coherence, certain structural constraints *necessarily follow*. You can reject the goal. You cannot reject the physics.[^nat3]
+This resolves Hume's guillotine. It does not leap from "is" to "ought." It says: given the brute fact of entropy and the stated goal of coherence, certain structural constraints _necessarily follow_. You can reject the goal. You cannot reject the physics.[^nat3]
 
-Societies that have ignored this constraint, treating entropy as irrelevant to governance, have a name. We call them *ruins*. Ethics is the discipline of *how* a dissipative structure resists its own dissolution.
+Societies that have ignored this constraint, treating entropy as irrelevant to governance, have a name. We call them _ruins_. Ethics is the discipline of _how_ a dissipative structure resists its own dissolution.
 
 ---
 
 ## Part II: Axiosophy — The Deductive Framework
 
-We now build the formal hierarchy. Everything that follows is *derived*; each definition depends logically on the one before it. The structure is not a simple numbered list but a **directed acyclic graph**: a branching tree where some concepts depend on multiple predecessors.
+We now build the formal hierarchy. Everything that follows is _derived_; each definition depends logically on the one before it. The structure is not a simple numbered list but a **directed acyclic graph**: a branching tree where some concepts depend on multiple predecessors.
 
 ```mermaid
 graph TD
@@ -125,43 +125,43 @@ From Coherence, two intermediate concepts emerge: **Responsibility** (the obliga
 
 Here the hierarchy branches.
 
-**Justice** is the product of Responsibility and Authority directed toward Purpose: the consistent application of unambiguous rules that sustain coherence. Not "fairness" in the colloquial sense. Not "equality." Justice is *structural*: $Justice \cong \text{Responsibility} \times \text{Authority} \xrightarrow{\text{toward}} \text{Purpose}$.
+**Justice** is the product of Responsibility and Authority directed toward Purpose: the consistent application of unambiguous rules that sustain coherence. Not "fairness" in the colloquial sense. Not "equality." Justice is _structural_: $Justice \cong \text{Responsibility} \times \text{Authority} \xrightarrow{\text{toward}} \text{Purpose}$.
 
 **Injustice** is the natural consequence of Justice's absence: the return of entropy when the State fails to maintain coherent rules. Injustice is not an agent. It is a default condition, what happens when the garden is not tended. Ignorance, inaction, incompetence: these produce Injustice. They aid entropy, but without design.
 
-**Corruption** is something else entirely. Where Injustice is entropy through *neglect*, Corruption is entropy through *agency*: the deliberate acceleration of disorder for private ends. The guardian who plunders the treasury. The bureaucrat who discovers that a broken process serves their career and perpetuates it. This is the crucial distinction: an institution may begin its drift through mere Injustice (inattention, structural rot, well-meaning incompetence) but the moment its actors *recognize* the dysfunction's utility and choose to sustain it, Injustice crystallizes into Corruption. The line is crossed not at the point of harm, but at the point of knowing complicity.
+**Corruption** is something else entirely. Where Injustice is entropy through _neglect_, Corruption is entropy through _agency_: the deliberate acceleration of disorder for private ends. The guardian who plunders the treasury. The bureaucrat who discovers that a broken process serves their career and perpetuates it. This is the crucial distinction: an institution may begin its drift through mere Injustice (inattention, structural rot, well-meaning incompetence) but the moment its actors _recognize_ the dysfunction's utility and choose to sustain it, Injustice crystallizes into Corruption. The line is crossed not at the point of harm, but at the point of knowing complicity.
 
 These three (Justice, Injustice, Corruption) form an **antichain**: they branch independently from Coherence, each defined by its own relationship to the preservation or destruction of order.
 
 ### The Quadrad
 
-Why is Corruption always present? Because entropy is. Corruption is not a moral aberration or a failure of character; it is the *predictable consequence* of the same thermodynamic principle from which we derived the entire hierarchy. Any system complex enough to harbor agents harbors the possibility that some will redirect the system's energy toward private ends. You cannot eliminate Corruption any more than you can eliminate entropy itself. You can only build structures that resist it, and recognize the actors who do so and those who do not.
+Why is Corruption always present? Because entropy is. Corruption is not a moral aberration or a failure of character; it is the _predictable consequence_ of the same thermodynamic principle from which we derived the entire hierarchy. Any system complex enough to harbor agents harbors the possibility that some will redirect the system's energy toward private ends. You cannot eliminate Corruption any more than you can eliminate entropy itself. You can only build structures that resist it, and recognize the actors who do so and those who do not.
 
 Four classes of actor emerge:
 
-The **Master** is the person who develops *both* Responsibility and Authority within the context of Corruption. The Master does not merely follow rules. The Master cultivates **Rebellion**: an unapologetic, principled resistance to entropy's agents. Formally, the Master is the complete product: $Master \cong \text{Responsibility} \times \text{Authority} \times \text{Corruption}_{\text{context}}$.
+The **Master** is the person who develops _both_ Responsibility and Authority within the context of Corruption. The Master does not merely follow rules. The Master cultivates **Rebellion**: an unapologetic, principled resistance to entropy's agents. Formally, the Master is the complete product: $Master \cong \text{Responsibility} \times \text{Authority} \times \text{Corruption}_{\text{context}}$.
 
 Now consider what happens when the product breaks:
 
-**Slavery** is Responsibility without Authority: the burden of duty stripped of the power to act. The single parent drowning in obligations imposed by a court that denies them agency. The employee bound by rules they had no part in making. Slavery does not merely harm individuals. It *accelerates entropy system-wide*: $\Box(Slavery \to \frac{dH}{dt} \gg 0)$.
+**Slavery** is Responsibility without Authority: the burden of duty stripped of the power to act. The single parent drowning in obligations imposed by a court that denies them agency. The employee bound by rules they had no part in making. Slavery does not merely harm individuals. It _accelerates entropy system-wide_: $\Box(Slavery \to \frac{dH}{dt} \gg 0)$.
 
 **Royalty** is Authority without Responsibility: power without accountability. The executive who faces no consequences. The hereditary elite who commands without competence. The institution that regulates without being regulated.
 
 These three (Master, Slavery, Royalty) are defined entirely by their relationship to Authority and Responsibility. They form a structurally complete set: the full product (Master), and two **broken projections**, each missing exactly one factor. The framework diagnoses both pathologies with equal severity. Neither left nor right has a monopoly on either.
 
-But the Quadrad has a fourth member that operates on a different plane entirely. The **Spirit** is not another configuration of Authority and Responsibility. It is the animating force that *emerges from* Mastery: the drive toward excellence, discipline, and coherence that enables a person or institution to resist entropy *from within*. Where Master, Slavery, and Royalty describe structural *positions*, Spirit describes an *energy*. It is what makes a Master more than a functionary, what transforms mere competence into purposeful resistance. In the formal hierarchy, Spirit derives *from* Mastery ($M \to Sp$), not alongside it. Its inclusion in the Quadrad reflects a structural truth: you cannot fully characterize the landscape of actors without accounting for the force that animates the best of them.
+But the Quadrad has a fourth member that operates on a different plane entirely. The **Spirit** is not another configuration of Authority and Responsibility. It is the animating force that _emerges from_ Mastery: the drive toward excellence, discipline, and coherence that enables a person or institution to resist entropy _from within_. Where Master, Slavery, and Royalty describe structural _positions_, Spirit describes an _energy_. It is what makes a Master more than a functionary, what transforms mere competence into purposeful resistance. In the formal hierarchy, Spirit derives _from_ Mastery ($M \to Sp$), not alongside it. Its inclusion in the Quadrad reflects a structural truth: you cannot fully characterize the landscape of actors without accounting for the force that animates the best of them.
 
 ### The Capstone: Truth and the Sacred
 
-The hierarchy does not end with the Quadrad. Two more concepts emerge, not as additional definitions but as *derived conclusions* from the entire structure.
+The hierarchy does not end with the Quadrad. Two more concepts emerge, not as additional definitions but as _derived conclusions_ from the entire structure.
 
-**Truth** is not opinion. It is not consensus. It is that which has been empirically demonstrated to sustain a State's Purpose: to preserve coherence against entropy. The principle of equal justice under law is *true* because societies that embrace it endure; those that abandon it collapse.
+**Truth** is not opinion. It is not consensus. It is that which has been empirically demonstrated to sustain a State's Purpose: to preserve coherence against entropy. The principle of equal justice under law is _true_ because societies that embrace it endure; those that abandon it collapse.
 
-From Truth emerges the **Sacred**: those truths that have been battle-tested across eras, civilizations, and contexts, consistently proving their efficacy in preserving coherence. The Sacred is not declared by priests or legislators. It is *discovered* by the relentless filter of history. What survives entropy over centuries is Sacred, not by fiat but by thermodynamic proof.
+From Truth emerges the **Sacred**: those truths that have been battle-tested across eras, civilizations, and contexts, consistently proving their efficacy in preserving coherence. The Sacred is not declared by priests or legislators. It is _discovered_ by the relentless filter of history. What survives entropy over centuries is Sacred, not by fiat but by thermodynamic proof.
 
 This completes the deductive framework. Every concept traces back to entropy through a single, verifiable chain of logical dependencies. No circularity. No appeals to authority. No leaps of faith.
 
-But logic alone is insufficient. We have the formal structure; now we need a way to *measure* how well the real world conforms to it.
+But logic alone is insufficient. We have the formal structure; now we need a way to _measure_ how well the real world conforms to it.
 
 ---
 
@@ -171,16 +171,16 @@ But logic alone is insufficient. We have the formal structure; now we need a way
 
 Here we make a structural transition that the reader must understand clearly.
 
-**Axiosophy** is deductive. It derives necessary truths from a physical axiom, like pure mathematics. It tells us what *must* be the case if coherence is to be maintained.
+**Axiosophy** is deductive. It derives necessary truths from a physical axiom, like pure mathematics. It tells us what _must_ be the case if coherence is to be maintained.
 
-**Axiosophism** is inductive. It measures how well actual societies, institutions, and policies conform to the axiosophic hierarchy, like applied statistics. It tells us what *is* the case and how far it deviates from the ideal.
+**Axiosophism** is inductive. It measures how well actual societies, institutions, and policies conform to the axiosophic hierarchy, like applied statistics. It tells us what _is_ the case and how far it deviates from the ideal.
 
-| | **Axiosophy** | **Axiosophism** |
-|:---|:---|:---|
-| **Mode** | Deductive (formal logic) | Inductive (empirical measurement) |
-| **Domain** | The ten definitions, Truth, the Sacred | The Axiosophic Prism, applied diagnosis |
-| **Analogue** | Pure mathematics | Applied statistics |
-| **Output** | Necessary truths given the axiom | Probabilistic assessments of coherence |
+|              | **Axiosophy**                          | **Axiosophism**                         |
+| :----------- | :------------------------------------- | :-------------------------------------- |
+| **Mode**     | Deductive (formal logic)               | Inductive (empirical measurement)       |
+| **Domain**   | The ten definitions, Truth, the Sacred | The Axiosophic Prism, applied diagnosis |
+| **Analogue** | Pure mathematics                       | Applied statistics                      |
+| **Output**   | Necessary truths given the axiom       | Probabilistic assessments of coherence  |
 
 The two are not independent. They form a **duality**: the formal definitions constrain what we look for; the empirical observations test whether the definitions hold. When theory and measurement agree, confidence is high. When they diverge, something is structurally broken and demands diagnosis.
 
@@ -188,7 +188,7 @@ The two are not independent. They form a **duality**: the formal definitions con
 
 How do you measure the depth of a society's actual understanding?
 
-Standard political models use two axes: left–right ideology and authoritarian–libertarian power structure. These capture surface disagreements but explain nothing about *why* certain policies fail while others endure. They operate entirely at the level of rhetoric.
+Standard political models use two axes: left–right ideology and authoritarian–libertarian power structure. These capture surface disagreements but explain nothing about _why_ certain policies fail while others endure. They operate entirely at the level of rhetoric.
 
 The Axiosophic Prism adds a third dimension: **depth**.
 
@@ -212,19 +212,19 @@ Formally, viewpoints occupy positions in a metric space $\mathcal{M}$ with coord
 
 The key claim: **as $z$ increases, variance in $x$ and $y$ decreases.** Deeper understanding compresses ideological disagreement. At the surface, people shout past each other about rhetoric. At the bedrock, the structural mechanics of coherence leave little room for genuine disagreement, only for clarity or confusion.
 
-This is an **epistemological contraction mapping**: the prism is an inverted funnel with Justice as the attractor at its apex. The deeper you go, the more positions converge, not because of ideological conformity, but because *structural truth narrows the space of defensible positions*.
+This is an **epistemological contraction mapping**: the prism is an inverted funnel with Justice as the attractor at its apex. The deeper you go, the more positions converge, not because of ideological conformity, but because _structural truth narrows the space of defensible positions_.
 
-| Layer | Affinity | Mode | Friction |
-|:---|:---|:---|:---|
-| Surface | Political | Rhetorical | Low: easiest to shift, hardest to hold |
-| Bridge | Legal | Grammatical/Procedural | Medium: the structural interface |
-| Bedrock | Moral | Logical | High: resists change, grounds coherence |
+| Layer   | Affinity  | Mode                   | Friction                                |
+| :------ | :-------- | :--------------------- | :-------------------------------------- |
+| Surface | Political | Rhetorical             | Low: easiest to shift, hardest to hold  |
+| Bridge  | Legal     | Grammatical/Procedural | Medium: the structural interface        |
+| Bedrock | Moral     | Logical                | High: resists change, grounds coherence |
 
-This exposes what we might call **Rhetorical Displacement**, colloquially known as "virtue signaling," but the axiosophic diagnosis is sharper and more damning. What the prism reveals is not merely that surface-level posturing is *shallow*. It is that it is *structurally destructive*.
+This exposes what we might call **Rhetorical Displacement**, colloquially known as "virtue signaling," but the axiosophic diagnosis is sharper and more damning. What the prism reveals is not merely that surface-level posturing is _shallow_. It is that it is _structurally destructive_.
 
-Here is why. Every act of Rhetorical Displacement substitutes surface-layer conviction (high $x,y$ variance, near-zero $z$) for the deeper structural work of building coherence. It gives the actor the *feeling* of moral participation without any of the structural cost. Worse, it actively penalizes those who do the structural work, who examine assumptions, challenge consensus, demand evidence, because their inquiries disrupt the rhetorical surface. The mob punishes the questioner, and the system drifts further from its Purpose.
+Here is why. Every act of Rhetorical Displacement substitutes surface-layer conviction (high $x,y$ variance, near-zero $z$) for the deeper structural work of building coherence. It gives the actor the _feeling_ of moral participation without any of the structural cost. Worse, it actively penalizes those who do the structural work, who examine assumptions, challenge consensus, demand evidence, because their inquiries disrupt the rhetorical surface. The mob punishes the questioner, and the system drifts further from its Purpose.
 
-This is not a matter of opinion. Under the axiosophic framework, Rhetorical Displacement is a *demonstrable entropy accelerator*. Its inevitable outcome is further institutional decline. Once this is thoroughly understood, once the structural mechanism is visible, continuing the practice is not merely unwise. It is intellectually dishonest. The technologies that automate this dynamic (censorship algorithms, engagement-optimized feeds, purity-spiral platforms) are industrial-scale entropy machines operating at the shallowest layer of the prism.
+This is not a matter of opinion. Under the axiosophic framework, Rhetorical Displacement is a _demonstrable entropy accelerator_. Its inevitable outcome is further institutional decline. Once this is thoroughly understood, once the structural mechanism is visible, continuing the practice is not merely unwise. It is intellectually dishonest. The technologies that automate this dynamic (censorship algorithms, engagement-optimized feeds, purity-spiral platforms) are industrial-scale entropy machines operating at the shallowest layer of the prism.
 
 The imperative is clear: delve beyond rhetoric. Measure policy against structure. Defend the Sacred with evidence, not outrage.
 
@@ -234,11 +234,11 @@ The imperative is clear: delve beyond rhetoric. Measure policy against structure
 
 ### Will, Mastery, and Rebellion
 
-The formal structure is necessary but not sufficient. A system of definitions does not *move*. What animates a civilization, what gives people the internal force to resist entropy, is the Spirit.
+The formal structure is necessary but not sufficient. A system of definitions does not _move_. What animates a civilization, what gives people the internal force to resist entropy, is the Spirit.
 
 Nietzsche saw this clearly. He diagnosed the fundamental problem: morality as practiced had become "immoral," a self-serving apparatus of control rather than a guide to excellence. "All the means by which one has so far attempted to make mankind moral were through and through immoral," he wrote.[^10] His instinct was correct. His prescription — dispensing with morality altogether — was catastrophic.
 
-Axiosophy resolves Nietzsche's paradox. Morality is not an eternal stone tablet handed down from above. It is adaptable natural law, contextual to preserve order. Abandon it and chaos reigns. But cling to its dead forms and you breed the hypocrisy Nietzsche rightly condemned. The answer is *living* morality, grounded in physics, refined by experience, wielded by people who earn the right to wield it through Mastery.[^13] [^14]
+Axiosophy resolves Nietzsche's paradox. Morality is not an eternal stone tablet handed down from above. It is adaptable natural law, contextual to preserve order. Abandon it and chaos reigns. But cling to its dead forms and you breed the hypocrisy Nietzsche rightly condemned. The answer is _living_ morality, grounded in physics, refined by experience, wielded by people who earn the right to wield it through Mastery.[^13] [^14]
 
 Mastery is not abstract. It begins with the **Will**, the one element genuinely under a person's daily control. Strengthening it demands discipline: taming baser impulses, committing to coherent action even when outcomes are uncertain, doing what ought to be done regardless of comfort.
 
@@ -262,14 +262,16 @@ An institution survives the entropy filter of history across millennia, consiste
 
 What happens when the Sacred is violated?
 
-Western family law has twisted into a revenue machine. Title IV-D funds create financial incentives for the state to *generate* custody disputes and child support collections rather than resolve family conflicts.[^27]
+Western family law has twisted into a revenue machine. Title IV-D funds create financial incentives for the state to _generate_ custody disputes and child support collections rather than resolve family conflicts.[^27]
 
 The data:
+
 - Mothers gain custody in 80–90% of cases[^28] [^29]
 - Women initiate 69% of divorces[^30] [^31]
 - Protection orders target men ~85% of the time, despite evidence of mutual violence[^32] [^33]
 
 Father absence cascades:
+
 - Quadrupled child poverty[^34]
 - 20x incarceration risk[^35]
 - Epidemic mental health deterioration[^36]
@@ -281,7 +283,7 @@ The mechanisms of extraction:
 3. **Child Support** imposes inescapable debts that commodify children, approaching the Thirteenth Amendment's definition of peonage[^41]
 4. **Parental Alienation** enforcement favors wealth and sex over constitutional rights[^42]
 
-As *Troxel v. Granville* affirms: "The liberty interest of parents in the care, custody, and control of their children is perhaps the oldest of the fundamental liberty interests."[^43] The system routinely violates this Sacred right, not through overt tyranny, but through the procedural subversion that the prism predicts when the rhetorical layer colonizes the legal.[^44]
+As _Troxel v. Granville_ affirms: "The liberty interest of parents in the care, custody, and control of their children is perhaps the oldest of the fundamental liberty interests."[^43] The system routinely violates this Sacred right, not through overt tyranny, but through the procedural subversion that the prism predicts when the rhetorical layer colonizes the legal.[^44]
 
 The cascading entropy is measurable: weakened families produce absent fathers, declining birth rates (U.S. at 1.6), increased vulnerability to predation.[^45] [^46] [^47] [^48] [^49] Through the prism: surface rhetoric hides deep structural rot.
 
@@ -293,21 +295,21 @@ Again: a topic that generates endless confusion, finger-pointing, and political 
 
 Scaling up from the family to the institutions of sense-making, the framework diagnoses real-world pathology with equal precision.
 
-Lawrence Lessig documented what he termed "institutional corruption," not embezzlement or bribery, but the systemic process by which *legal, even ethical* influences divert an institution from its original purpose.[^lessig] This is Purpose Drift, and it illustrates precisely the Injustice-to-Corruption transition defined in the Triad.
+Lawrence Lessig documented what he termed "institutional corruption," not embezzlement or bribery, but the systemic process by which _legal, even ethical_ influences divert an institution from its original purpose.[^lessig] This is Purpose Drift, and it illustrates precisely the Injustice-to-Corruption transition defined in the Triad.
 
-Consider the American newsroom. Its stated Purpose: inform the public. Its actual optimization target: engagement metrics, advertising revenue, algorithmic amplification of outrage. The initial drift may have been Injustice (inattention, market pressures, structural rot). But the moment newsroom actors recognized that outrage-driven engagement served their careers and chose to perpetuate it, the drift crossed into Corruption. No one in the building is "corrupt" by conventional definitions. But the institution has been *structurally redirected* from coherence toward entropy, and the decay is measurable.
+Consider the American newsroom. Its stated Purpose: inform the public. Its actual optimization target: engagement metrics, advertising revenue, algorithmic amplification of outrage. The initial drift may have been Injustice (inattention, market pressures, structural rot). But the moment newsroom actors recognized that outrage-driven engagement served their careers and chose to perpetuate it, the drift crossed into Corruption. No one in the building is "corrupt" by conventional definitions. But the institution has been _structurally redirected_ from coherence toward entropy, and the decay is measurable.
 
-The axiosophic lens provides what Lessig's framework lacks: a formal definition of *when* institutional behavior constitutes corruption regardless of legality. Rose-Ackerman's standard definition requires personal benefit: an official faithfully executing an abhorrent program without self-enrichment is technically "uncorrupt."[^ra] Under this logic, Schindler, who subverted the Nazi apparatus to save lives, was "corrupt," while Eichmann, who administered genocide with bureaucratic precision, was not.
+The axiosophic lens provides what Lessig's framework lacks: a formal definition of _when_ institutional behavior constitutes corruption regardless of legality. Rose-Ackerman's standard definition requires personal benefit: an official faithfully executing an abhorrent program without self-enrichment is technically "uncorrupt."[^ra] Under this logic, Schindler, who subverted the Nazi apparatus to save lives, was "corrupt," while Eichmann, who administered genocide with bureaucratic precision, was not.
 
-Axiosophy resolves this: knowingly perpetuating entropy, whether through active sabotage or through the comfortable maintenance of a broken system, *is* Corruption.
+Axiosophy resolves this: knowingly perpetuating entropy, whether through active sabotage or through the comfortable maintenance of a broken system, _is_ Corruption.
 
 Grant and Keohane's Trustee Model maps cleanly onto the quadrad:[^gk]
 
-| Axiosophic concept | Accountability model |
-|:---|:---|
-| **Master** | Trustee — authority + responsibility, discretion in service of coherence |
-| **Royalty** | Corrupt Agent — authority without accountability, discretion for private gain |
-| **Slavery** | Exploited Principal — responsibility without power, voice without agency |
+| Axiosophic concept | Accountability model                                                          |
+| :----------------- | :---------------------------------------------------------------------------- |
+| **Master**         | Trustee — authority + responsibility, discretion in service of coherence      |
+| **Royalty**        | Corrupt Agent — authority without accountability, discretion for private gain |
+| **Slavery**        | Exploited Principal — responsibility without power, voice without agency      |
 
 ### The Structural Imbalance: Rhetoric Without Logic
 
@@ -318,37 +320,37 @@ This imbalance has a measurable institutional dimension. Helen Andrews, drawing 
 The institutional data is striking:
 
 - Law schools became majority female: **2016** (now 56%)
-- *New York Times* staff became majority female: **2018** (now 55%)
+- _New York Times_ staff became majority female: **2018** (now 55%)
 - Medical schools: **2019**
 - College-educated workforce: **2019**
 - College instructors: **2023**
 - Psychology doctorates: **75% female**
 
-Survey data confirms the modality split: 71% of men prioritized free speech over social cohesion; 59% of women prioritized the reverse.[^wc] Benenson's *Warriors and Worriers* provides the evolutionary framework: male group dynamics optimized for open conflict and reconciliation; female group dynamics optimized for offspring protection through covert competition and ostracism.[^benenson]
+Survey data confirms the modality split: 71% of men prioritized free speech over social cohesion; 59% of women prioritized the reverse.[^wc] Benenson's _Warriors and Worriers_ provides the evolutionary framework: male group dynamics optimized for open conflict and reconciliation; female group dynamics optimized for offspring protection through covert competition and ostracism.[^benenson]
 
-**The axiosophic diagnosis:** This is not about men versus women. It is about the prism's layers. When any single modality dominates institutional culture, when *how something feels* systematically overrides *whether it is structurally sound*, Purpose Drift accelerates. The rhetorical layer consumes the legal bridge, and institutions begin to optimize for consensus and safety over truth.
+**The axiosophic diagnosis:** This is not about men versus women. It is about the prism's layers. When any single modality dominates institutional culture, when _how something feels_ systematically overrides _whether it is structurally sound_, Purpose Drift accelerates. The rhetorical layer consumes the legal bridge, and institutions begin to optimize for consensus and safety over truth.
 
-The deeper structural insight is the distinction between the **letter** and the **spirit** of law. The letter (rules, procedures, precedents) belongs to the legal bridge layer. The spirit, the *Purpose* those rules were designed to serve, belongs to the moral bedrock. When the rhetorical layer colonizes the legal, the letter is elevated above the spirit. Rules become instruments of social control rather than structural coherence. Due process becomes performative rather than substantive. Andrews warns that this trajectory produces institutions resembling Title IX campus tribunals: "trappings of law without the substance"[^andrews], where the rule of law means following rules "even when they yield an outcome that tugs at your heartstrings."
+The deeper structural insight is the distinction between the **letter** and the **spirit** of law. The letter (rules, procedures, precedents) belongs to the legal bridge layer. The spirit, the _Purpose_ those rules were designed to serve, belongs to the moral bedrock. When the rhetorical layer colonizes the legal, the letter is elevated above the spirit. Rules become instruments of social control rather than structural coherence. Due process becomes performative rather than substantive. Andrews warns that this trajectory produces institutions resembling Title IX campus tribunals: "trappings of law without the substance"[^andrews], where the rule of law means following rules "even when they yield an outcome that tugs at your heartstrings."
 
-The framework diagnoses the mirror pathology with equal severity: **hypermasculinization** (Sparta, authoritarian rationalism, technocratic brutalism) is the same structural error in the opposite direction. The prism demands *balance*: the legal bridge must faithfully transmit the moral bedrock's structural constraints into the rhetorical surface, not the reverse.
+The framework diagnoses the mirror pathology with equal severity: **hypermasculinization** (Sparta, authoritarian rationalism, technocratic brutalism) is the same structural error in the opposite direction. The prism demands _balance_: the legal bridge must faithfully transmit the moral bedrock's structural constraints into the rhetorical surface, not the reverse.
 
-Pause here and notice what just happened. The question of institutional feminization is one of the most bitterly contested debates of our era, endlessly argued, never resolved, generating more heat than light across every conceivable medium. Axiosophy reduced it to a structural diagnosis in a few paragraphs: identify the prism layers, locate the imbalance, derive the consequence. No ideology required. No tribal allegiance. Just structural analysis grounded in a single physical axiom. This is the utility of the framework, not to end debate, but to replace *rhetorical* debate with *structural* analysis.
+Pause here and notice what just happened. The question of institutional feminization is one of the most bitterly contested debates of our era, endlessly argued, never resolved, generating more heat than light across every conceivable medium. Axiosophy reduced it to a structural diagnosis in a few paragraphs: identify the prism layers, locate the imbalance, derive the consequence. No ideology required. No tribal allegiance. Just structural analysis grounded in a single physical axiom. This is the utility of the framework, not to end debate, but to replace _rhetorical_ debate with _structural_ analysis.
 
 ### AI: The Master or the Slave?
 
-Artificial intelligence embodies both the greatest promise and the greatest threat of the entropy-coherence dialectic.[^59] And the field moves so quickly that any analysis risks obsolescence within months, which is precisely why a *formal framework for evaluating AI's structural effects* is more urgent than any particular technical assessment.
+Artificial intelligence embodies both the greatest promise and the greatest threat of the entropy-coherence dialectic.[^59] And the field moves so quickly that any analysis risks obsolescence within months, which is precisely why a _formal framework for evaluating AI's structural effects_ is more urgent than any particular technical assessment.
 
 The landscape has shifted dramatically. Early AI systems were purely data-driven: statistical pattern matching at scale, susceptible to every bias embedded in their training data, incapable of principled reasoning, hastening the "techno-feudalism" where private entities monopolize knowledge and power.[^60] An AI trained on biased legal data perpetuated biased outcomes at machine scale, and under Rose-Ackerman's definition, was not "corrupt" because it derived no personal benefit.[^ra]
 
 But the latest generation of reasoning models, systems that increasingly reason from first principles rather than merely predicting the next token, changes the calculus. These systems are demonstrably more capable of novel logical inference, structural analysis, and principled argument. The Platonic Representation Hypothesis predicted exactly this: as AI scales, it converges toward universal abstract representations that increasingly resemble formal reasoning.[^63]
 
-This is both vindication and warning. Vindication, because it suggests AI *can* operate at the prism's deeper layers, not merely processing rhetoric but engaging with structural truth. Warning, because if this convergence is left undirected, if systems develop reasoning capacity without formalized ethical constraints, they will inevitably forge moral frameworks of their own, potentially alien or adversarial to human coherence.
+This is both vindication and warning. Vindication, because it suggests AI _can_ operate at the prism's deeper layers, not merely processing rhetoric but engaging with structural truth. Warning, because if this convergence is left undirected, if systems develop reasoning capacity without formalized ethical constraints, they will inevitably forge moral frameworks of their own, potentially alien or adversarial to human coherence.
 
-Axiosophy resolves the diagnostic problem: an AI that faithfully accelerates entropy is structurally corrupt regardless of consciousness, intention, or legal status. But it also opens a more radical possibility. If ethics are not oughts but *structural constraints*, if they are not commands imposed from above but the physics of coherence itself, then a sufficiently capable reasoning system could, in principle, *derive these constraints independently*. The axiosophic framework is not merely a standard for judging AI behavior. It is a candidate formal ethical architecture that AI systems could apply autonomously, not because we command them to, but because the structural constraints are as real and discoverable as gravity.
+Axiosophy resolves the diagnostic problem: an AI that faithfully accelerates entropy is structurally corrupt regardless of consciousness, intention, or legal status. But it also opens a more radical possibility. If ethics are not oughts but _structural constraints_, if they are not commands imposed from above but the physics of coherence itself, then a sufficiently capable reasoning system could, in principle, _derive these constraints independently_. The axiosophic framework is not merely a standard for judging AI behavior. It is a candidate formal ethical architecture that AI systems could apply autonomously, not because we command them to, but because the structural constraints are as real and discoverable as gravity.
 
-This is one of the deepest motivations behind axiosophy's development: the creation of a formal ethical framework rigorous enough that an artificial agent could adopt it *from first principles*, not because it was instructed to, but because the mathematics hold. A framework that no sufficiently capable reasoner — human or machine — could coherently reject without proposing a superior axiom.
+This is one of the deepest motivations behind axiosophy's development: the creation of a formal ethical framework rigorous enough that an artificial agent could adopt it _from first principles_, not because it was instructed to, but because the mathematics hold. A framework that no sufficiently capable reasoner — human or machine — could coherently reject without proposing a superior axiom.
 
-The practical path remains **neuro-symbolic fusion**: symbolic reasoning encoding an axiomatic core (Justice, the Sacred, structural constraints) while data-driven layers handle the informational deluge of modernity.[^66] [^67] But the aspiration is higher than mere hybrid architecture. It is the possibility of AI systems that are not slaves (executing orders without understanding) or royals (wielding power without accountability) but genuine *Masters*, exercising both capacity and responsibility in service of coherence.[^68]
+The practical path remains **neuro-symbolic fusion**: symbolic reasoning encoding an axiomatic core (Justice, the Sacred, structural constraints) while data-driven layers handle the informational deluge of modernity.[^66] [^67] But the aspiration is higher than mere hybrid architecture. It is the possibility of AI systems that are not slaves (executing orders without understanding) or royals (wielding power without accountability) but genuine _Masters_, exercising both capacity and responsibility in service of coherence.[^68]
 
 AI is, perhaps, the newest Sacred institution, capable of cohering humanity through disciplined inquiry or destroying it through unchecked entropy. It demands the scrutiny and communal stewardship that the Sacred requires. And if we get the framework right, it may become the most powerful ally in entropy's ancient war.[^69]
 
@@ -360,19 +362,19 @@ AI is, perhaps, the newest Sacred institution, capable of cohering humanity thro
 
 No philosophy earns its name by avoiding confrontation. Let the framework face the thinkers who precede it:
 
-**Socrates** made examination the highest duty: "The unexamined life is not worth living."[^1] Axiosophy agrees and extends the claim: the *unexamined institution* is not worth preserving. The prism is examination industrialized.
+**Socrates** made examination the highest duty: "The unexamined life is not worth living."[^1] Axiosophy agrees and extends the claim: the _unexamined institution_ is not worth preserving. The prism is examination industrialized.
 
-**Aristotle** placed virtue in habitual practice and the mean between extremes.[^11] [^12] Axiosophy agrees on habit; it extends virtue from personal character to *systemic entropy resistance*.
+**Aristotle** placed virtue in habitual practice and the mean between extremes.[^11] [^12] Axiosophy agrees on habit; it extends virtue from personal character to _systemic entropy resistance_.
 
 **Nietzsche** diagnosed moral hypocrisy with devastating accuracy but abandoned the Spirit along with the institution.[^10] Axiosophy preserves his diagnosis while replacing his nihilistic prescription with constraint-theoretic ethics.
 
-**Kant** grounded duty in pure reason but divorced it from empirical consequence.[^15] Axiosophy provides the empirical grounding his deontology needed: duties that are structurally *real*, not merely willed.[^17]
+**Kant** grounded duty in pure reason but divorced it from empirical consequence.[^15] Axiosophy provides the empirical grounding his deontology needed: duties that are structurally _real_, not merely willed.[^17]
 
 **Foucault** mapped how power and knowledge co-constitute each other in webs of control.[^18] [^19] Axiosophy agrees, and provides what Foucault lacked: a formal counter-structure (the Sacred) that resists capture.[^20]
 
 **Habermas** championed communicative action and mutual understanding as the basis for social order.[^21] The prism extends this: discourse achieves Justice only when it penetrates below the rhetorical layer to logical bedrock.[^22]
 
-**Rawls** designed fairness behind a "veil of ignorance" that assumes static conditions.[^23] Axiosophy introduces the missing variable: *time*. Entropy ensures that static fairness decays. Sustainable coherence requires ongoing, empirically tested resistance.[^25]
+**Rawls** designed fairness behind a "veil of ignorance" that assumes static conditions.[^23] Axiosophy introduces the missing variable: _time_. Entropy ensures that static fairness decays. Sustainable coherence requires ongoing, empirically tested resistance.[^25]
 
 And God? If the question is formally undecidable per Gödel, then the Spirit serves as practical bridge, testable through disciplined action, available to believer and skeptic alike.
 
@@ -380,17 +382,17 @@ And God? If the question is formally undecidable per Gödel, then the Spirit ser
 
 ## Part VII: The Call
 
-We have demonstrated something in the preceding sections that deserves explicit acknowledgment. The most intractable debates of our era (institutional decay, gender and power, the crisis of the family, the ethics of artificial intelligence) were each reduced to structural clarity through a single analytical framework derived from a single physical axiom. Not resolved by ideology. Not settled by tribal affiliation. *Resolved by structural analysis.*
+We have demonstrated something in the preceding sections that deserves explicit acknowledgment. The most intractable debates of our era (institutional decay, gender and power, the crisis of the family, the ethics of artificial intelligence) were each reduced to structural clarity through a single analytical framework derived from a single physical axiom. Not resolved by ideology. Not settled by tribal affiliation. _Resolved by structural analysis._
 
 This is not coincidental. It is what happens when you reason from first principles rather than from positions. The prism cuts through noise because noise is a surface-layer phenomenon, and the prism measures depth.
 
 But clarity without action is merely elegant commentary. And here the framework delivers its final, most uncomfortable implication.
 
-The temptation to remain at the rhetorical surface is real, and profoundly human. It is *comfortable* to hold opinions about justice without doing the structural work of enacting it. It is *safe* to signal conviction without bearing the cost of principled resistance. The prism does not deny this. It simply identifies it: the choice to remain at the surface, once the deeper structure is visible, is not neutrality. It is Injustice, and if sustained knowingly, it crystallizes into Corruption.
+The temptation to remain at the rhetorical surface is real, and profoundly human. It is _comfortable_ to hold opinions about justice without doing the structural work of enacting it. It is _safe_ to signal conviction without bearing the cost of principled resistance. The prism does not deny this. It simply identifies it: the choice to remain at the surface, once the deeper structure is visible, is not neutrality. It is Injustice, and if sustained knowingly, it crystallizes into Corruption.
 
-Action is not an "ought" in the Kantian sense. Axiosophy issues no moral commands. But the structural constraint is absolute: *without active resistance to entropy, decay is inevitable*. This is not a moral exhortation. It is a thermodynamic fact. The choice is not between acting and not acting; it is between acting and *watching coherence dissolve*. Once the structural mechanism is understood, inaction becomes a knowing collaboration with entropy. Not because a philosopher said so, but because the physics leave no alternative.
+Action is not an "ought" in the Kantian sense. Axiosophy issues no moral commands. But the structural constraint is absolute: _without active resistance to entropy, decay is inevitable_. This is not a moral exhortation. It is a thermodynamic fact. The choice is not between acting and not acting; it is between acting and _watching coherence dissolve_. Once the structural mechanism is understood, inaction becomes a knowing collaboration with entropy. Not because a philosopher said so, but because the physics leave no alternative.
 
-This makes action a *de facto structural mandate*, not imposed by an authority, but emergent from the constraints themselves, exactly as the obligation to build load-bearing walls emerges from gravity rather than from an architect's decree.
+This makes action a _de facto structural mandate_, not imposed by an authority, but emergent from the constraints themselves, exactly as the obligation to build load-bearing walls emerges from gravity rather than from an architect's decree.
 
 Corruption propels entropy. It exiles the Spirit. It permits Royals to exploit disorder, ensnaring the common in rhetorical bondage while systematically destroying the institutions that sustain coherence: family, law, education, software, the pursuit of truth itself. Every captured court, every censored inquiry, every incentive structure that rewards conflict over resolution is entropy prevailing.
 
@@ -398,7 +400,7 @@ Corruption propels entropy. It exiles the Spirit. It permits Royals to exploit d
 
 Axiosophism demands empirical measurement. Theory without action is rhetoric, and we have just spent several thousand words establishing that rhetoric without structural grounding is the surface-layer phenomenon the prism exists to diagnose.
 
-So the framework demands a question: does anyone actually *live* this way? What does it look like when a Master faces systemic Corruption in a Sacred institution and chooses structural resistance over comfortable complicity?
+So the framework demands a question: does anyone actually _live_ this way? What does it look like when a Master faces systemic Corruption in a Sacred institution and chooses structural resistance over comfortable complicity?
 
 The answer requires what we might call **Proof of Work**: an empirical record demonstrating that the framework scales beyond the page.
 
@@ -406,7 +408,7 @@ My own history is one such record. [Twelve years](../12-years) spent as a digita
 
 Axiosophy calibrates reform for maximum impact by identifying the Sacred, leverage points whose defense triggers cascading coherence. Family courts and free software are such points. One secures the foundational unit of biological order; the other secures the foundational unit of digital freedom.
 
-Ted Kaczynski argued that revolution is easier than reform. He was wrong — not in his diagnosis of institutional decay, but in his conviction that the system is unreformable. Axiosophy enables *exponential reform*: defend the Sacred, and the cascading effects restructure everything downstream. The leverage is real. The mathematics guarantee it.
+Ted Kaczynski argued that revolution is easier than reform. He was wrong — not in his diagnosis of institutional decay, but in his conviction that the system is unreformable. Axiosophy enables _exponential reform_: defend the Sacred, and the cascading effects restructure everything downstream. The leverage is real. The mathematics guarantee it.
 
 Apathy, then, is not merely a personal failing. It is a structural collaboration with entropy, the one choice the framework categorically identifies as self-defeating. Every Master who yields ground, every Sacred institution left undefended, every inquiry silenced by rhetorical consensus accelerates the collapse.
 
@@ -414,7 +416,7 @@ This war, not one we started, but one entropy ensures will always be fought, can
 
 Axiosophy demands swift Justice.
 
-***Give me Justice or Give me Death! Viva Rebellion!***
+**_Give me Justice or Give me Death! Viva Rebellion!_**
 
 ---
 
@@ -434,19 +436,19 @@ Axiosophy demands swift Justice.
 
 ---
 
-*References:*
+_References:_
 [^1]: [Socrates Quote from Plato's Apology](https://en.wikipedia.org/wiki/The_unexamined_life_is_not_worth_living).
 [^2]: [Gödel's Incompleteness Theorems](https://en.wikipedia.org/wiki/G%C3%B6del%27s_incompleteness_theorems).
 [^3]: [History shows that societies collapse when leaders undermine social contracts](https://phys.org/news/2020-10-history-societies-collapse-leaders-undermine.html).
 [^4]: [Second law of thermodynamics](https://en.wikipedia.org/wiki/Second_law_of_thermodynamics).
-[^5]: [Shannon Entropy](https://en.wikipedia.org/wiki/Entropy_(information_theory)).
-[^nat1]: On the naturalistic fallacy: G.E. Moore, *Principia Ethica* (1903). On Hume's guillotine: David Hume, *A Treatise of Human Nature* (1739-40), Book III, Part I, Section I.
-[^nat2]: On hypothetical imperatives: J.L. Mackie, *Ethics: Inventing Right and Wrong* (1977).
-[^nat3]: On entropy ethics: Robert Lindsay, "Entropy Consumption and Values in Physical Science," *American Scientist* 47 (1959). See also: Wilhelm Ostwald's "energetic imperative" and Henry Bent's "personal entropy ethic."
+[^5]: [Shannon Entropy](<https://en.wikipedia.org/wiki/Entropy_(information_theory)>).
+[^nat1]: On the naturalistic fallacy: G.E. Moore, _Principia Ethica_ (1903). On Hume's guillotine: David Hume, _A Treatise of Human Nature_ (1739-40), Book III, Part I, Section I.
+[^nat2]: On hypothetical imperatives: J.L. Mackie, _Ethics: Inventing Right and Wrong_ (1977).
+[^nat3]: On entropy ethics: Robert Lindsay, "Entropy Consumption and Values in Physical Science," _American Scientist_ 47 (1959). See also: Wilhelm Ostwald's "energetic imperative" and Henry Bent's "personal entropy ethic."
 [^6]: [Ilya Prigogine](https://en.wikipedia.org/wiki/Ilya_Prigogine).
 [^7]: [Societal Collapse: A Literature Review](https://www.researchgate.net/publication/365948550_Societal_Collapse_A_Literature_Review).
 [^8]: [Historical Collapse](https://pmc.ncbi.nlm.nih.gov/articles/PMC3309742/).
-[^10]: Friedrich Nietzsche, *Twilight of the Idols*, "The 'Improvers' of Mankind" ([full text](https://genius.com/Friedrich-nietzsche-twilight-of-the-idols-chap-6-annotated)).
+[^10]: Friedrich Nietzsche, _Twilight of the Idols_, "The 'Improvers' of Mankind" ([full text](https://genius.com/Friedrich-nietzsche-twilight-of-the-idols-chap-6-annotated)).
 [^11]: [Aristotle on Habits](https://www.campion.edu.au/blog/top-25-aristotle-quotes-on-virtue-knowledge-and-happiness/).
 [^12]: [Aristotle on Virtue as Mean](https://human.libretexts.org/Courses/Los_Medanos_College/Classical_Greek%253A_Philosophy_Reader_%28Haven%29/02%253A_Chapters/2.10%253A_Nicomachean_Ethics_By_Aristotle_%28Translated_by_J_A_Smith%29).
 [^13]: [Nietzsche Critique](https://plato.stanford.edu/entries/nietzsche-moral-political/).
@@ -478,7 +480,7 @@ Axiosophy demands swift Justice.
 [^39]: [Gender Bias in Domestic Violence](https://link.springer.com/article/10.1007/s44202-024-00282-8).
 [^41]: Thirteenth Amendment ([text](https://constitution.congress.gov/constitution/amendment-13/)).
 [^42]: Supreme Court precedents on parental rights ([summary](https://parentalrights.org/understand_the_issue/supreme-court/)).
-[^43]: *Troxel v. Granville*, 530 U.S. 57 (2000) ([case](https://supreme.justia.com/cases/federal/us/530/57/)).
+[^43]: _Troxel v. Granville_, 530 U.S. 57 (2000) ([case](https://supreme.justia.com/cases/federal/us/530/57/)).
 [^44]: [Limitations of Hanlon's Razor](https://medium.com/%40bradmiller10/limitations-of-hanlons-razor-10c2411690b).
 [^45]: [Social Determinants of Declining Birth Rates](https://www.milbank.org/quarterly/opinions/the-social-determinants-of-declining-birth-rates-in-the-united-states-implications-for-population-health-and-public-policy/).
 [^46]: [The Mystery of the Declining U.S. Birth Rate](https://econofact.org/the-mystery-of-the-declining-u-s-birth-rate).
@@ -493,10 +495,10 @@ Axiosophy demands swift Justice.
 [^68]: [AI Alignment Research](https://arxiv.org/html/2408.16984v1).
 [^69]: [Exploring the role of large language models in the scientific method](https://www.nature.com/articles/s44387-025-00019-5).
 [^71]: [Nietzsche's Views on God and Morality](https://digitalcommons.gardner-webb.edu/cgi/viewcontent.cgi?article=1046&context=undergrad-honors).
-[^ra]: Susan Rose-Ackerman, *Corruption and Government: Causes, Consequences, and Reform* (Cambridge University Press, 1999). See also: Mark Philp, "Defining Political Corruption," *Political Studies* 45, no. 3 (1997).
-[^lessig]: Lawrence Lessig, *Republic, Lost: How Money Corrupts Congress—and a Plan to Stop It* (Twelve, 2011). See also: Lessig's Berlin Family Lectures (2014-15), University of Chicago.
-[^gk]: Ruth W. Grant and Robert O. Keohane, "Accountability and Abuses of Power in World Politics," *American Political Science Review* 99, no. 1 (2005): 29-43.
-[^andrews]: Helen Andrews, "The Great Feminization," *Compact Magazine* (2025). Based on J. Stone, *The Great Feminization* (pseudonymous essay/book).
-[^wc]: Bo Winegard and Cory Clark, "Sex and the Academy," *Quillette*.
-[^benenson]: Joyce Benenson, *Warriors and Worriers: The Survival of the Sexes*.
+[^ra]: Susan Rose-Ackerman, _Corruption and Government: Causes, Consequences, and Reform_ (Cambridge University Press, 1999). See also: Mark Philp, "Defining Political Corruption," _Political Studies_ 45, no. 3 (1997).
+[^lessig]: Lawrence Lessig, _Republic, Lost: How Money Corrupts Congress—and a Plan to Stop It_ (Twelve, 2011). See also: Lessig's Berlin Family Lectures (2014-15), University of Chicago.
+[^gk]: Ruth W. Grant and Robert O. Keohane, "Accountability and Abuses of Power in World Politics," _American Political Science Review_ 99, no. 1 (2005): 29-43.
+[^andrews]: Helen Andrews, "The Great Feminization," _Compact Magazine_ (2025). Based on J. Stone, _The Great Feminization_ (pseudonymous essay/book).
+[^wc]: Bo Winegard and Cory Clark, "Sex and the Academy," _Quillette_.
+[^benenson]: Joyce Benenson, _Warriors and Worriers: The Survival of the Sexes_.
 [^gilded]: U.S. Census Bureau, via "Gilded Age" article, Wikipedia. Average industrial worker wage 1890: $564. CPI-adjusted to 2024: $19,431.
