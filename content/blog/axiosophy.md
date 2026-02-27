@@ -392,7 +392,7 @@ And God? If the question is formally undecidable per Gödel, then the Spirit ser
 
 ## Part VII: The Call
 
-We have demonstrated something in the preceding sections that deserves explicit acknowledgment. The most intractable debates of our era (institutional decay, gender and power, the crisis of the family, the ethics of artificial intelligence) were each reduced to structural clarity through a single analytical framework derived from a single physical axiom. Not resolved by ideology. Not settled by tribal affiliation. _Resolved by structural analysis._
+We have demonstrated something in the preceding sections that deserves explicit acknowledgment. Some of the most intractable debates of our era (institutional decay, gender and power, the crisis of the family, the ethics of artificial intelligence) were each reduced to structural clarity through a single analytical framework derived from a single physical axiom. Not resolved by ideology. Not settled by tribal affiliation. _Resolved by structural analysis._
 
 This is not coincidental. It is what happens when you reason from first principles rather than from positions. The prism cuts through noise because noise is a surface-layer phenomenon, and the prism measures depth.
 
