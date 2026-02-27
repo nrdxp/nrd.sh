@@ -418,7 +418,7 @@ My own history is one such record. [Twelve years](../12-years) spent as a digita
 
 Axiosophy calibrates reform for maximum impact by identifying the Sacred, leverage points whose defense triggers cascading coherence. Family courts and free software are such points. One secures the foundational unit of biological order; the other secures the foundational unit of digital freedom.
 
-Ted Kaczynski argued that revolution is easier than reform. He was wrong, not in his diagnosis of institutional decay, but in his conviction that the system is unreformable. Axiosophy enables _exponential reform_: defend the Sacred, and the cascading effects restructure everything downstream. The leverage is real. The mathematics guarantee it.
+Ted Kaczynski argued that revolution is easier than reform. Perhaps. But revolution plays on terrain that Royalty already controls: the lines of communication, the instruments of force, the public narrative. A frontal assault on entrenched power is the one move the entrenched are most prepared to absorb, and may even be provoked precisely to justify the tightening of control. Axiosophic reform offers a different calculus: identify the Sacred, the structural leverage points whose defense triggers cascading coherence, and fortify them. The effects compound downstream. The mathematics guarantee it.
 
 Apathy, then, is not merely a personal failing. It is a structural collaboration with entropy, the one choice the framework categorically identifies as self-defeating. Every Master who yields ground, every Sacred institution left undefended, every inquiry silenced by rhetorical consensus accelerates the collapse.
 
