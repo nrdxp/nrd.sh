@@ -260,7 +260,7 @@ And from Mastery directed toward the defense of Justice comes **Rebellion**: the
 
 The American founders synthesized all three. The Bill of Rights is Rebellion institutionalized: codified mechanisms to combat Corruption, elevated above ordinary law, enforced by the Spirit of a citizenry that refuses to surrender its stake in Justice. Rebellion in the axiosophic sense is not an extraordinary event. It is a permanent structural function of a Just State, the immune system that detects and resists the Corruption that entropy guarantees will arise. A State that cripples this function, whether by suppressing dissent, concentrating power, or making the cost of resistance untenable, is, by definition, Corrupt.
 
-But Rebellion requires Spirit, and Spirit requires something worth defending. This brings us back to the error that opened this section.
+But Rebellion requires Spirit, and Spirit requires something worth defending. This brings us back to where we started in this section.
 
 Nietzsche's deeper error was dispensing with the Sacred itself. His proclamation of God's "death" was prophetic as diagnosis but fatal as prescription; it abandoned the Spirit along with the institution, neutering the very impulse that drives purposeful action.[^71] Axiosophy restores the Sacred on empirical rather than dogmatic grounds, and with it, restores the Spirit as the animating force of coherence and Rebellion as its structural expression.
 
