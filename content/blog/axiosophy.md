@@ -51,7 +51,7 @@ We need entropy.
 
 ### The Axiom
 
-The Second Law of Thermodynamics states that the entropy of an isolated system tends to increase over time.[^4] Order decays. Structure dissolves. Heat death approaches. This is not a theory. It is the most experimentally confirmed law in all of physics.
+The Second Law of Thermodynamics states that the entropy of an isolated system tends to increase over time.[^4] Order decays. Structure dissolves. Heat death approaches. This is not a theory. It is the most experimentally confirmed law in all of physics.[^entropy-choice]
 
 But societies are not isolated systems. They import energy, export waste, and maintain internal order through constant effort. Prigogine called these _dissipative structures_: systems that sustain coherence by actively exporting disorder, but which inevitably succumb without sustained effort.[^6] A society is precisely this kind of structure. It either expends energy resisting entropy, or it dies.
 
@@ -508,3 +508,4 @@ _References:_
 [^wc]: Bo Winegard and Cory Clark, "Sex and the Academy," _Quillette_.
 [^benenson]: Joyce Benenson, _Warriors and Worriers: The Survival of the Sexes_.
 [^gilded]: U.S. Census Bureau, via "Gilded Age" article, Wikipedia. Average industrial worker wage 1890: $564. CPI-adjusted to 2024: $19,431.
+[^entropy-choice]: A careful reader may object that conservation of energy (the First Law) or Leibniz's Principle of Sufficient Reason is more metaphysically fundamental. This is true. But fundamentality and generativity are distinct criteria. Conservation of energy tells you the budget is constant; it cannot distinguish a thriving civilization from heat death, and therefore generates no ethical constraints. Entropy increase is chosen deliberately: it is the principle that explains why things get worse without active effort, and that directional pressure is what makes the entire derivation chain possible.
