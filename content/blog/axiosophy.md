@@ -10,7 +10,7 @@ tags = ["politics", "civilization", "philosophy"]
 
 ## The Problem
 
-Every civilization that has ever collapsed did so for the same reason.
+Every civilization that has ever collapsed did so for the same reason.[^3]
 
 Not invasion. Not famine. Not plague, though these served as accelerants. The cause is always structural: the institutions tasked with maintaining order began to *generate disorder instead*. Rome's Senate became a marketplace for influence. The Maya's priestly class hoarded water rights until the commons collapsed. The Soviet Politburo optimized for ideological purity until the shelves were bare.[^7] [^8]
 
@@ -446,7 +446,6 @@ Axiosophy demands swift Justice.
 [^6]: [Ilya Prigogine](https://en.wikipedia.org/wiki/Ilya_Prigogine).
 [^7]: [Societal Collapse: A Literature Review](https://www.researchgate.net/publication/365948550_Societal_Collapse_A_Literature_Review).
 [^8]: [Historical Collapse](https://pmc.ncbi.nlm.nih.gov/articles/PMC3309742/).
-[^9]: [On the Measurement of Polarization](https://pages.nyu.edu/debraj/Courses/Readings/Esteban%20Ray94.pdf).
 [^10]: Friedrich Nietzsche, *Twilight of the Idols*, "The 'Improvers' of Mankind" ([full text](https://genius.com/Friedrich-nietzsche-twilight-of-the-idols-chap-6-annotated)).
 [^11]: [Aristotle on Habits](https://www.campion.edu.au/blog/top-25-aristotle-quotes-on-virtue-knowledge-and-happiness/).
 [^12]: [Aristotle on Virtue as Mean](https://human.libretexts.org/Courses/Los_Medanos_College/Classical_Greek%253A_Philosophy_Reader_%28Haven%29/02%253A_Chapters/2.10%253A_Nicomachean_Ethics_By_Aristotle_%28Translated_by_J_A_Smith%29).
@@ -477,7 +476,6 @@ Axiosophy demands swift Justice.
 [^37]: U.S. Constitution, Article I, Section 10 ([text](https://constitution.congress.gov/browse/article-1/section-10/)).
 [^38]: [Department of Justice Guidance on Gender-Biased Policing](https://www.justice.gov/archives/opa/pr/justice-department-announces-updated-guidance-improving-law-enforcement-response-sexual).
 [^39]: [Gender Bias in Domestic Violence](https://link.springer.com/article/10.1007/s44202-024-00282-8).
-[^40]: [Considering the Male Disposability Hypothesis](https://quillette.com/2019/06/03/considering-the-male-disposability-hypothesis/).
 [^41]: Thirteenth Amendment ([text](https://constitution.congress.gov/constitution/amendment-13/)).
 [^42]: Supreme Court precedents on parental rights ([summary](https://parentalrights.org/understand_the_issue/supreme-court/)).
 [^43]: *Troxel v. Granville*, 530 U.S. 57 (2000) ([case](https://supreme.justia.com/cases/federal/us/530/57/)).
