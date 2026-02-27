@@ -12,13 +12,13 @@
 ## Domain Classification
 
 **Problem Statement:**
-Axiosophy is a philosophical framework that seeks to ground objective ethics in thermodynamic reality (entropy) rather than subjective morality or categorical imperatives. The associated political disposition, Axiosophism, maps ideologies and power structures against this objective depth. The domain requires formal modeling to rigorously verify its internal consistency, reveal implicit dependencies between concepts, prevent structural contradictions (e.g., the naturalistic fallacy), and mathematically define the relationship between its deductive axioms and its empirical applications.
+Axiosophy is a philosophical framework grounding objective ethics in thermodynamic reality (entropy) rather than subjective morality or categorical imperatives. Its companion political disposition, Axiosophism, maps ideologies and power structures against this objective depth via the Axiosophic Prism. Formal modeling is required to verify internal consistency, reveal implicit dependencies, prevent structural contradictions (especially the naturalistic fallacy), and mathematically define the relationship between deductive axioms and empirical applications.
 
 **Domain Characteristics:**
-- **Axiomatic Foundation:** A single, physically verifiable axiom (the Law of Entropy).
-- **Hierarchical Ontology:** Ten core interrelated concepts built sequentially from the axiom.
-- **Epistemological Measurement:** A three-dimensional "Prism" model mapping political/legal/moral convergence.
-- **Constraints over Commands:** Ethics are treated as structural requirements for coherence, not deontological duties.
+- **Axiomatic Foundation:** A single, physically verifiable axiom (the Second Law of Thermodynamics, expressed via Shannon entropy).
+- **Hierarchical Ontology:** Ten numbered definitions plus two derived meta-concepts (Truth, The Sacred), built from the axiom.
+- **Constraint-Theoretic Ethics:** A *third mode* of ethical reasoning — neither categorical (Kant) nor consequentialist (Mill) — where obligations are structural constraints analogous to physical laws.
+- **Epistemological Measurement:** A three-dimensional Prism model with Bayesian convergence toward an attractor.
 
 ## Formalism Selection
 
@@ -50,68 +50,88 @@ $$ \frac{dH}{dt} > 0 $$
 
 ### Layer 2: The Derivation Spine (Preorder Category)
 
-The ten core definitions form a **Directed Acyclic Graph (DAG)** formalized as a **Preorder Category**, where an arrow $A \to B$ means "$B$ is logically derived from / depends upon the existence of $A$." 
-
-This acts as the definitional spine of the philosophy.
+The core definitions form a **Directed Acyclic Graph (DAG)** formalized as a **Preorder Category**, where an arrow $A \to B$ means "$B$ is logically derived from / depends upon the prior definition of $A$." 
 
 ```mermaid
 graph TD
     %% Core Spine
-    E((Entropy)) --> S[1. State<br/><small>entity resisting entropy</small>]
-    S --> P[2. Purpose<br/><small>preserving coherence</small>]
-    P --> C[3. Coherence<br/><small>effective entropy reduction</small>]
+    E((Entropy)) --> S["1. State"]
+    S --> P["2. Purpose"]
+    P --> C["3. Coherence"]
+    
+    %% Responsibility and Authority emerge from def 3
+    C -.-> R1["Responsibility"]
+    C -.-> A1["Authority"]
     
     %% The Triad
-    C --> J[4. Justice<br/><small>consistent rules toward purpose</small>]
-    C --> I[5. Injustice<br/><small>entropy from justice failure</small>]
-    C --> K[6. Corruption<br/><small>intentional entropy acceleration</small>]
-    
-    %% Intermediate Product Nodes
-    J -.-> R1[Responsibility]
-    J -.-> A1[Authority]
-    K --> Cx((Corruption as Context))
+    R1 --> J["4. Justice"]
+    A1 --> J
+    C --> I["5. Injustice"]
+    J --> I
+    C --> K["6. Corruption"]
     
     %% The Quadrad Actors
-    R1 --> M
+    R1 --> M["7. Master"]
     A1 --> M
-    Cx --> M[7. Master<br/><small>Responsibility × Authority</small>]
+    K --> M
     
-    M --> Sp[8. Spirit / Mastery<br/><small>animating energy</small>]
+    M --> Sp["8. Spirit / Mastery"]
     
-    R1 --> Sl
-    Cx --> Sl[9. Slavery<br/><small>Responsibility without Power</small>]
+    R1 --> Sl["9. Slavery"]
+    K --> Sl
     
-    A1 --> Ro
-    Cx --> Ro[10. Royalty<br/><small>Authority without Accountability</small>]
+    A1 --> Ro["10. Royalty"]
+    K --> Ro
     
-    classDef axiom fill:#f9f,stroke:#333,stroke-width:2px;
-    classDef spine fill:#dfd,stroke:#333,stroke-width:2px;
-    classDef triad fill:#ddf,stroke:#333,stroke-width:2px;
-    classDef context fill:#eee,stroke:#999,stroke-width:1px,stroke-dasharray: 5 5;
-    classDef actors fill:#fdd,stroke:#333,stroke-width:2px;
+    %% Derived meta-concepts
+    J --> T["Truth"]
+    T --> Sc["The Sacred"]
     
-    class E axiom;
-    class S,P,C spine;
-    class J,I,K triad;
-    class M,Sp,Sl,Ro actors;
-    class R1,A1,Cx context;
+    classDef axiom fill:#f9f,stroke:#333,stroke-width:2px
+    classDef spine fill:#dfd,stroke:#333,stroke-width:2px
+    classDef triad fill:#ddf,stroke:#333,stroke-width:2px
+    classDef derived fill:#eee,stroke:#999,stroke-width:1px,stroke-dasharray: 5 5
+    classDef actors fill:#fdd,stroke:#333,stroke-width:2px
+    classDef meta fill:#ffd,stroke:#333,stroke-width:2px
+    
+    class E axiom
+    class S,P,C spine
+    class J,I,K triad
+    class M,Sp,Sl,Ro actors
+    class R1,A1 derived
+    class T,Sc meta
 ```
 
-*Formal Note:* Concepts at the same structural depth (e.g., the triad of J, I, K) form an **antichain partition**. There is no derivation arrow between them; they are parallel derivations from the layer above. 
-*Composition:* The model defines the Master via categorical product: $Master \cong Responsibility \times Authority$, whereas Slavery and Royalty represent broken projections of that product.
+**Structural notes:**
+
+1. **Responsibility** and **Authority** are *intermediate concepts* that emerge from Definition 3 (the State is Responsible to act Coherently, exercising Authority). They are not standalone numbered definitions but are compositional prerequisites for Justice and the Quadrad.
+
+2. Concepts at the same structural depth form **antichain partitions** — no derivation arrow exists between peers (e.g., Justice, Injustice, Corruption are independently derived from the layer above).
+
+3. **Justice** is the *product* of Responsibility and Authority applied toward Purpose: $Justice \cong \text{Responsibility} \times \text{Authority} \xrightarrow{\text{toward}} \text{Purpose}$.
+
+4. **Master** is the *product* of Responsibility and Authority *in the context of Corruption*: $Master \cong \text{Responsibility} \times \text{Authority} \times \text{Corruption}_{\text{context}}$. Slavery and Royalty represent **broken projections** of this product (missing one factor each).
+
+5. **Truth** and **The Sacred** are *meta-definitions* derived from the hierarchy: Truth = that which empirically sustains Purpose; The Sacred = Truth battle-tested across eras. They sit atop the DAG as derived conclusions, not axioms.
 
 ### Layer 3: Ethical Constraints (Structural Implication Graph)
 
-This layer resolves the Is/Ought boundary (the naturalistic fallacy). Axiosophy does not map "oughts" as moral commands, but as **Structural Implications** ($\to$). 
+This layer resolves the Is/Ought boundary. Axiosophy does not model "oughts" as moral commands but as **Structural Implications** — consequences that follow from thermodynamic necessity, not from a primitive obligation operator.
 
-If $C$ is Coherence (survival) and $\neg C$ is Collapse, the ethics are modeled as strict temporal necessities ($\Box$):
+The key analogy: you don't have a *moral duty* to obey gravity; you simply fall if you ignore it. Axiosophy frames ethical constraints identically.
+
+Let $C$ denote Coherence (the State maintaining its Purpose against entropy). The constraints are modeled as temporal necessities ($\Box$) and eventualities ($\diamondsuit$):
 
 1. **The Necessity of Justice:** $\Box(\neg Justice \to \neg C)$
-   *(The absence of Justice necessarily implies the failure of Coherence.)*
-2. **The Inevitability of Rebellion:** $\Box(Corruption \to \diamondsuit Rebellion)$
-   *(The presence of Corruption eventually ($\diamondsuit$) necessitates the emergence of Rebellion among Masters, or the State collapses.)*
+   *The absence of Justice necessarily leads to the failure of Coherence.*
 
-Here, "ought" translates to: "If the State desires $C$, it is structurally constrained to enact Justice."
+2. **The Inevitability of Rebellion:** $\Box(Corruption \to \diamondsuit Rebellion)$
+   *The presence of Corruption eventually necessitates the emergence of Rebellion among Masters, or the State collapses.*
+
+3. **The Entropy of Slavery:** $\Box(Slavery \to \frac{dH}{dt} \gg 0)$
+   *Slavery (forced responsibility without authority) actively accelerates entropy — it is not merely unjust but structurally destabilizing.*
+
+**The constraint-theoretic mode:** "Ought" translates to a hypothetical imperative: "If the State desires $C$, then it is structurally constrained to enact Justice." This is neither categorical (Kant's unconditional duty) nor consequentialist (Mill's outcome optimization) — it is a *structural constraint* that emerges from the physics of coherence.
 
 ### Layer 4: Measurement (Metric Space and Attractor)
 
@@ -131,27 +151,52 @@ The three strata are qualitative bands of the $z$-axis:
 
 ### Layer 5: The Duality (Formal Concept Analysis)
 
-The final layer mathematically bridges empirical observation (How societies actually behave) with deductive theory (The 10 definitions). We use **Formal Concept Analysis (FCA)**.
+The final layer bridges empirical observation (how societies actually behave) with deductive theory (the definitions). **Formal Concept Analysis** (Wille, 1982) derives concept hierarchies from data using Galois connections.
 
 Let $(G, M, I)$ be a formal context where:
-- $G$ (Objects): Existing and historical institutions/states/norms.
-- $M$ (Attributes): Structural properties (e.g., "resists entropy", "distributes authority cleanly", "aligns responsibility with power").
-- $I$: The incidence relation (which societies possessed which attributes).
+- $G$ (Objects): Historical and existing institutions, states, and norms.
+- $M$ (Attributes): Axiosophic structural properties.
+- $I \subseteq G \times M$: The incidence relation (which entities exhibit which properties).
 
-A **Galois Connection** links the subset of societies to the subsets of attributes. The resulting **Concept Lattice** derives the definition hierarchy organically.
+**Illustrative Formal Context (simplified):**
 
-**The Sacred:** In FCA, the "Sacred" emerges elegantly as the *supreme formal concept* (the formal intent) shared by the *maximal enduring extent* of objects over long spans of time. It is not declared; it is derived backwards through the entropy filter of history.
+| | Resists entropy | Aligns R with A | Distributes authority | Endures across eras | Accelerates entropy |
+|:---|:---:|:---:|:---:|:---:|:---:|
+| Roman Republic (early) | ✓ | ✓ | ✓ | | |
+| Roman Empire (late) | | | | | ✓ |
+| Nuclear family | ✓ | ✓ | | ✓ | |
+| Common law tradition | ✓ | ✓ | ✓ | ✓ | |
+| Feudal aristocracy | | | | | ✓ |
+| Open-source software | ✓ | ✓ | ✓ | | |
+
+A **Galois Connection** establishes two order-reversing maps between the powerset of $G$ and the powerset of $M$. The resulting **Concept Lattice** organizes formal concepts (pairs of extent and intent) into a hierarchy.
+
+**Deriving the Sacred:** In FCA, "The Sacred" is not declared — it *emerges* as the formal concept whose intent (attribute set) is shared by the maximal enduring extent (the entities that have persisted longest against entropy). The family, common law, and similar institutions survive the entropy filter not because they are ideologically conservative but because they structurally satisfy the axiosophic attributes.
+
+**The Axiosophy↔Axiosophism Duality:** FCA formalizes the Galois connection between:
+- **Axiosophy** (deductive): The stipulated definitions (intension)
+- **Axiosophism** (inductive): The observed entities and their properties (extension)
+
+If the concept lattice derived from empirical data matches the stipulated hierarchy, the philosophy's internal consistency is externally validated.
 
 ## Validation
 
 | Check | Result | Detail |
 | :---- | :----- | :----- |
-| **Acyclic Strictness** | PASS | The Preorder DAG demonstrates no circular definitions. The most advanced concepts (Master, Royalty) trace cleanly back to Entropy without self-reference. |
-| **Is/Ought Separation** | PASS | By stripping out deontic logic and formally isolating *Definitional Morphisms* (Layer 2) from *Structural Implications* (Layer 3), the model mathematically proves it does not commit the naturalistic fallacy. It bridges "is" and "ought" purely via systemic constraints. |
-| **Duality Well-Formedness** | PASS | The gap between the deductive definitions and the empirical Prism is cleanly resolved by FCA, providing a mathematical justification for how observation maps to theory. |
+| **Acyclic Strictness** | PASS | The Preorder DAG contains no circular definitions. Master, Royalty, and The Sacred all trace cleanly back to Entropy without self-reference. |
+| **Is/Ought Separation** | PASS | Definitional morphisms (Layer 2) are formally isolated from structural implications (Layer 3). The model does not commit the naturalistic fallacy — it bridges "is" and "ought" via hypothetical imperatives grounded in thermodynamic constraint. |
+| **Product Consistency** | PASS | Master = Responsibility × Authority × Corruption-context. Slavery = Responsibility × Corruption-context (missing Authority). Royalty = Authority × Corruption-context (missing Responsibility). The broken projections are structurally symmetric. |
+| **Duality Well-Formedness** | PASS | FCA's Galois connection cleanly bridges the deductive hierarchy (axiosophy) to empirical observation (axiosophism). The Sacred emerges as a derived formal concept. |
+| **Completeness** | PARTIAL | The meta-concepts Truth and The Sacred are now explicitly represented but were absent from the original numbered hierarchy (they appear in subsequent prose, not in definitions 1–10). The model recommends the rewrite promote them to formal status. |
 
 ## Implications
 
-1. **For the Blog Post Rewrite:** The visual "DAG" reveals that the author's previous characterization of the philosophy as a "linear hierarchy" was structurally inaccurate. The rewrite should adopt the DAG's branching structure — explicitly calling out the "triad" (Justice/Injustice/Corruption) and the "quadrad" (Master/Spirit/Slavery/Royalty) as parallel nodes extending from Coherence and Context, respectively.
-2. **The Product of Mastery:** By formally defining "Master" as the product of $Responsibility \times Authority$, the rewrite can more fiercely attack the broken projections (Slavery as responsibility without authority; Royalty as authority without responsibility).
-3. **Empirical Defensibility:** The formalization of "The Sacred" via FCA allows the author to defend traditional institutions (like the family) not via conservative ideology (which is vulnerable to attack at the surface $z$-layer), but as a derived mathematical truth filtered by the relentless force of thermodynamic entropy over time.
+1. **The hierarchy is a DAG, not a chain.** The blog post's presentation as a "linear hierarchy" (numbered list 1–10) obscures the true structure. The rewrite should make the branching points explicit: Coherence spawns a **triad** (Justice/Injustice/Corruption); Corruption-as-context spawns a **quadrad** (Master/Spirit/Slavery/Royalty).
+
+2. **Responsibility and Authority are intermediate concepts.** They emerge from Definition 3 (the State's obligation to act Coherently), not from Justice. The blog post's current phrasing conflates their introduction with Definition 4. The rewrite should introduce them after Coherence and before Justice.
+
+3. **The broken projections are the philosophy's sharpest weapon.** Slavery (responsibility without authority) and Royalty (authority without accountability) are *structurally symmetric mirror images* — each missing one leg of the product that constitutes Mastery. This is more powerful than merely naming them as moral categories.
+
+4. **The Sacred must be promoted to a formal derivation.** Currently it appears in prose after the numbered list. The model reveals it is a *derived meta-concept* (Truth → Sacred) that concludes the hierarchy. The rewrite should present it as the capstone.
+
+5. **Constraint-theoretic ethics is the central philosophical innovation.** The deontic logic rejection revealed that axiosophy operates in a genuinely novel *third mode* of ethical reasoning (neither Kantian nor Millian). The rewrite should name this explicitly and defend it as the framework's primary contribution to moral philosophy.
