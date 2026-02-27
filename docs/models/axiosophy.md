@@ -16,13 +16,13 @@ Axiosophy is a philosophical framework grounding objective ethics in thermodynam
 
 **Domain Characteristics:**
 - **Axiomatic Foundation:** A single, physically verifiable axiom (the Second Law of Thermodynamics, expressed via Shannon entropy).
-- **Hierarchical Ontology:** Ten numbered definitions plus two derived meta-concepts (Truth, The Sacred), built from the axiom.
+- **Hierarchical Ontology:** Ten numbered definitions plus three derived meta-concepts (Spirit, Truth, The Sacred), built from the axiom.
 - **Constraint-Theoretic Ethics:** A *third mode* of ethical reasoning — neither categorical (Kant) nor consequentialist (Mill) — where obligations are structural constraints analogous to physical laws.
 - **Epistemological Measurement:** A three-dimensional Prism model with Bayesian convergence toward an attractor.
 
 ## Formalism Selection
 
-The formalism selection underwent a rigorous dialectical scrutiny process involving multiple AI reasoning models to prevent overfitting and ensure minimal abstraction. The result is a 5-layer stack that privileges structural domain accuracy over standard computer science paradigms.
+The formalism selection prioritizes structural domain accuracy over standard computer science paradigms. A single formalism cannot capture both the rigorous deductive derivation (Axiosophy) and the epistemological measurement of it (Axiosophism); the result is a 5-layer stack where each mathematical structure does exactly one job.
 
 | Aspect                  | Detail |
 | :---------------------- | :----- |
@@ -117,7 +117,7 @@ graph TD
 
 5. **Spirit** is a *derived meta-concept* from Mastery ($M \to Sp$): the animating force that emerges from disciplined exercise of Responsibility and Authority. It is not a structural position in the Quadrad but the *energy* that makes a Master more than a functionary. Spirit operates on a different categorical plane than the Quadrad's Authority×Responsibility configurations.
 
-6. **Truth** and **The Sacred** are *meta-definitions* derived from the hierarchy: Truth = that which empirically sustains Purpose; The Sacred = Truth battle-tested across eras. They sit atop the DAG as derived conclusions, not axioms. Spirit, Truth, and The Sacred together form the model's derived meta-concept tier.
+6. **Truth** is a *derived meta-concept* from Justice ($J \to T$): the structural conclusion that follows logically from the derivation chain when applied to a specific context. Truth in this model is not absolute or metaphysical; it is what is *structurally entailed* by the axiom system, analogous to a theorem within Euclid's postulates. **The Sacred** is Truth independently validated by the empirical filter of history across extended time ($T \to Sc$): the convergence of the deductive (axiosophic) and inductive (axiosophist) modes. Spirit, Truth, and The Sacred together form the model's derived meta-concept tier.
 
 ### Layer 3: Ethical Constraints (Structural Implication Graph)
 
@@ -197,12 +197,12 @@ If the concept lattice derived from empirical data matches the stipulated hierar
 
 ## Implications
 
-1. **The hierarchy is a DAG, not a chain.** The blog post's presentation as a "linear hierarchy" (numbered list 1–10) obscures the true structure. The rewrite should make the branching points explicit: Coherence spawns a **triad** (Justice/Injustice/Corruption); Corruption-as-context spawns a **quadrad** (Master/Slavery/Royalty/Null Agent). Spirit is a derived meta-concept from Mastery, not a Quadrad member.
+1. **The hierarchy is a DAG, not a chain.** The numbered definitions (1–10) form a branching structure, not a linear sequence. Coherence spawns a **triad** (Justice/Injustice/Corruption); Corruption-as-context spawns a **quadrad** (Master/Slavery/Royalty/Null Agent). Any presentation that flattens this structure into a simple numbered list obscures the true derivation topology.
 
-2. **Responsibility and Authority are intermediate concepts.** They emerge from Definition 3 (the State's obligation to act Coherently), not from Justice. The blog post's current phrasing conflates their introduction with Definition 4. The rewrite should introduce them after Coherence and before Justice.
+2. **Responsibility and Authority are intermediate concepts.** They emerge from Definition 3 (the State's obligation to act Coherently), not from Justice. They are compositional prerequisites that must be introduced after Coherence and before the Triad.
 
-3. **The broken projections are the philosophy's sharpest weapon.** Slavery (responsibility without authority) and Royalty (authority without accountability) are *structurally symmetric mirror images* — each missing one leg of the product that constitutes Mastery. This is more powerful than merely naming them as moral categories.
+3. **The broken projections are the model's sharpest diagnostic tool.** Slavery (responsibility without authority) and Royalty (authority without accountability) are *structurally symmetric mirror images*, each missing one leg of the product that constitutes Mastery. This is more powerful than naming them as moral categories: it provides a formal test for pathological institutional configurations.
 
-4. **The Sacred must be promoted to a formal derivation.** Currently it appears in prose after the numbered list. The model reveals it is a *derived meta-concept* (Truth → Sacred) that concludes the hierarchy. The rewrite should present it as the capstone.
+4. **Truth and The Sacred occupy distinct epistemic modes.** Truth is axiosophic (deductive): what follows structurally from the derivation chain. The Sacred is axiosophic + axiosophist (deductive + inductive): Truth confirmed by historical observation across extended time. Conflating the two collapses the model's central duality.
 
-5. **Constraint-theoretic ethics is the central philosophical innovation.** The deontic logic rejection revealed that axiosophy operates in a genuinely novel *third mode* of ethical reasoning (neither Kantian nor Millian). The rewrite should name this explicitly and defend it as the framework's primary contribution to moral philosophy.
+5. **Constraint-theoretic ethics is the central philosophical innovation.** The rejection of deontic logic reveals that this model operates in a genuinely novel *third mode* of ethical reasoning (neither Kantian nor Millian). The hypothetical imperative form ("if the State desires Coherence, then it is structurally constrained to enact Justice") grounds obligation in thermodynamic necessity rather than in a primitive moral operator.
