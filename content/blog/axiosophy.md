@@ -178,7 +178,7 @@ But logic alone is insufficient. We have the formal structure; now we need a way
 
 ### The Duality
 
-The duality between deductive and inductive reasoning, previewed in the Capstone through Truth and the Sacred, now receives its full formal treatment.
+The distinction between Truth and the Sacred, previewed in the Capstone, points to something deeper: the framework requires _both_ deductive proof and empirical confirmation to function. A formal derivation without empirical backing risks misalignment with reality. Empirical patterns without formal structure leave room for arbitrary interpretation. It is in their convergence, like a scientific theory that is both mathematically sound and experimentally confirmed, that one finds solid ground.
 
 **Axiosophy** is deductive. It derives necessary truths from a physical axiom, like pure mathematics. It tells us what _must_ be the case if coherence is to be maintained.
 
