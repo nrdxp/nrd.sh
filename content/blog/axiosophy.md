@@ -126,7 +126,11 @@ From Coherence, two intermediate concepts emerge: **Responsibility** (the obliga
 
 Here the hierarchy branches.
 
-**Justice** is not a state of affairs but an act: the mapping of Responsibility and Authority toward Purpose, the consistent application of unambiguous rules that sustain coherence. Not "fairness" in the colloquial sense. Not "equality." $Justice: (\text{Responsibility} \times \text{Authority}) \to \text{Purpose}$.
+**Justice** is not a state of affairs but an act: the mapping of Responsibility and Authority toward Purpose, the consistent application of unambiguous rules that sustain coherence. Not "fairness" in the colloquial sense. Not "equality."
+
+$$Justice: (\text{Responsibility} \times \text{Authority}) \to \text{Purpose}$$
+
+In plain english: Justice is what happens when Responsibility and Authority are combined and directed toward Purpose.
 
 **Injustice** is the natural consequence of Justice's absence: the return of entropy when the State fails to maintain coherent rules. Injustice is not an agent. It is a default condition, what happens when the garden is not tended. Ignorance, inaction, incompetence: these produce Injustice. They aid entropy, but without design.
 
