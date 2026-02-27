@@ -241,13 +241,13 @@ The imperative is clear: delve beyond rhetoric. Measure policy against structure
 
 The formal structure is necessary but not sufficient. A system of definitions does not _move_. What animates a civilization, what gives people the internal force to resist entropy, is the Spirit.
 
-Nietzsche saw this clearly. He diagnosed the fundamental problem: morality as practiced had become "immoral," a self-serving apparatus of control rather than a guide to excellence. "All the means by which one has so far attempted to make mankind moral were through and through immoral," he wrote.[^10] His instinct was correct. His prescription — dispensing with morality altogether — was catastrophic.
+Nietzsche saw this clearly. He diagnosed the fundamental problem: morality as practiced had become "immoral," a self-serving apparatus of control rather than a guide to excellence. "All the means by which one has so far attempted to make mankind moral were through and through immoral," he wrote.[^10] His instinct was correct. His prescription, dispensing with morality altogether, was catastrophic.
 
 Axiosophy resolves Nietzsche's paradox. Morality is not an eternal stone tablet handed down from above. It is adaptable natural law, contextual to preserve order. Abandon it and chaos reigns. But cling to its dead forms and you breed the hypocrisy Nietzsche rightly condemned. The answer is _living_ morality, grounded in physics, refined by experience, wielded by people who earn the right to wield it through Mastery.[^13] [^14]
 
 Mastery is not abstract. It begins with the **Will**, the one element genuinely under a person's daily control. Strengthening it demands discipline: taming baser impulses, committing to coherent action even when outcomes are uncertain, doing what ought to be done regardless of comfort.
 
-The pursuit of Will cultivates the **Spirit** — a force that, once activated, presents paths and alignments that discipline alone could not have predicted. This is not mysticism. It is the cumulative fruit of consistent, principled action over time. The athlete who trains daily does not "will" the perfect game into existence — but the training creates the conditions for excellence to emerge.
+The pursuit of Will cultivates the **Spirit**: a force that, once activated, presents paths and alignments that discipline alone could not have predicted. This is not mysticism. It is the cumulative fruit of consistent, principled action over time. The athlete who trains daily does not "will" the perfect game into existence, but the training creates the conditions for excellence to emerge.
 
 This leads directly to Mastery: the balanced exercise of Responsibility and Authority in the service of Purpose. The Master is not a ruler. The Master is anyone (parent, builder, teacher, programmer) who shoulders both the burden and the power, and deploys them against entropy.
 
@@ -292,7 +292,7 @@ As _Troxel v. Granville_ affirms: "The liberty interest of parents in the care, 
 
 The cascading entropy is measurable: weakened families produce absent fathers, declining birth rates (U.S. at 1.6), increased vulnerability to predation.[^45] [^46] [^47] [^48] [^49] Through the prism: surface rhetoric hides deep structural rot.
 
-The pattern is not new. In 1890, industrial workers earned $564/year ($19,431 in 2024 dollars), working 60-hour weeks while elites accumulated unprecedented wealth.[^gilded] Today's algorithmically managed workers face eerily similar conditions under gentler aesthetics. This is the Royalty-over-Slavery structure recurring across centuries: authority without accountability extracting from responsibility without power. The surface changes — from factory floor to family court to gig platform. The structural pattern does not.
+The pattern is not new. In 1890, industrial workers earned $564/year ($19,431 in 2024 dollars), working 60-hour weeks while elites accumulated unprecedented wealth.[^gilded] Today's algorithmically managed workers face eerily similar conditions under gentler aesthetics. This is the Royalty-over-Slavery structure recurring across centuries: authority without accountability extracting from responsibility without power. The surface changes, from factory floor to family court to gig platform. The structural pattern does not.
 
 Again: a topic that generates endless confusion, finger-pointing, and political posturing (the decline of the family, the crisis of fatherlessness, the perverse incentives of family law) resolves to a clear structural diagnosis once viewed through the axiosophic prism. The family is Sacred because it survives the entropy filter. The system that destroys it is Corrupt because it accelerates entropy. The consequences are measurable. The solution is structural, not ideological. This is what rigorous first-principles reasoning buys you: clarity where rhetoric produces only noise.
 
@@ -409,11 +409,11 @@ So the framework demands a question: does anyone actually _live_ this way? What 
 
 The answer requires what we might call **Proof of Work**: an empirical record demonstrating that the framework scales beyond the page.
 
-My own history is one such record. [Twelve years](../12-years) spent as a digital hermit — building, reasoning from first principles, defending principled disagreement against consensus-enforcing machinery in free software and beyond. A [letter to my children](../letter-to-my-children) that is not a grievance but an aspiration: a testament to what it looks like when one person, armed with first principles and the courage to apply them, refuses to surrender coherence to entropy. The axiosophic framework was forged in this crucible — not in an armchair, but in direct confrontation with the structural patterns it describes.
+My own history is one such record. [Twelve years](../12-years) spent as a digital hermit, building, reasoning from first principles, defending principled disagreement against consensus-enforcing machinery in free software and beyond. A [letter to my children](../letter-to-my-children) that is not a grievance but an aspiration: proof of what it looks like when one person, armed with first principles and the courage to apply them, refuses to surrender coherence to entropy. The axiosophic framework was forged in this crucible, not in an armchair, but in direct confrontation with the structural patterns it describes.
 
 Axiosophy calibrates reform for maximum impact by identifying the Sacred, leverage points whose defense triggers cascading coherence. Family courts and free software are such points. One secures the foundational unit of biological order; the other secures the foundational unit of digital freedom.
 
-Ted Kaczynski argued that revolution is easier than reform. He was wrong — not in his diagnosis of institutional decay, but in his conviction that the system is unreformable. Axiosophy enables _exponential reform_: defend the Sacred, and the cascading effects restructure everything downstream. The leverage is real. The mathematics guarantee it.
+Ted Kaczynski argued that revolution is easier than reform. He was wrong, not in his diagnosis of institutional decay, but in his conviction that the system is unreformable. Axiosophy enables _exponential reform_: defend the Sacred, and the cascading effects restructure everything downstream. The leverage is real. The mathematics guarantee it.
 
 Apathy, then, is not merely a personal failing. It is a structural collaboration with entropy, the one choice the framework categorically identifies as self-defeating. Every Master who yields ground, every Sacred institution left undefended, every inquiry silenced by rhetorical consensus accelerates the collapse.
 
