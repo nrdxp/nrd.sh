@@ -262,7 +262,7 @@ The American founders synthesized all three. The Bill of Rights is Rebellion ins
 
 But Rebellion requires Spirit, and Spirit requires something worth defending. This brings us back to the error that opened this section.
 
-Nietzsche's deeper error was dispensing with the Sacred itself. His proclamation of God's "death" was prophetic as diagnosis but fatal as prescription; it abandoned the Spirit along with the institution, neutering the very impulse that drives purposeful action.[^71] Axiosophy restores the Sacred on empirical rather than dogmatic grounds, and with it, restores the Spirit as the animating force of coherence.
+Nietzsche's deeper error was dispensing with the Sacred itself. His proclamation of God's "death" was prophetic as diagnosis but fatal as prescription; it abandoned the Spirit along with the institution, neutering the very impulse that drives purposeful action.[^71] Axiosophy restores the Sacred on empirical rather than dogmatic grounds, and with it, restores the Spirit as the animating force of coherence and Rebellion as its structural expression.
 
 ---
 
