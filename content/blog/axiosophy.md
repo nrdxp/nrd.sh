@@ -222,7 +222,7 @@ Formally, viewpoints occupy positions in a metric space $\mathcal{M}$ with coord
 
 The key claim: **as $z$ increases, variance in $x$ and $y$ decreases.** Deeper understanding compresses ideological disagreement. At the surface, people shout past each other about rhetoric. At the bedrock, the structural mechanics of coherence leave little room for genuine disagreement, only for clarity or confusion.
 
-This is an **epistemological contraction mapping**: the prism is an inverted funnel with Justice as the attractor at its apex. The deeper you go, the more positions converge, not because of ideological conformity, but because _structural truth narrows the space of defensible positions_.
+This is an **epistemological contraction mapping**[^cm]: the prism is an inverted funnel with Justice as the attractor at its apex. The deeper you go, the more positions converge, not because of ideological conformity, but because _structural truth narrows the space of defensible positions_.
 
 | Layer   | Affinity  | Mode                   | Friction                                |
 | :------ | :-------- | :--------------------- | :-------------------------------------- |
@@ -514,3 +514,4 @@ _References:_
 [^benenson]: Joyce Benenson, _Warriors and Worriers: The Survival of the Sexes_.
 [^gilded]: U.S. Census Bureau, via "Gilded Age" article, Wikipedia. Average industrial worker wage 1890: $564. CPI-adjusted to 2024: $19,431.
 [^entropy-choice]: A careful reader may object that conservation of energy (the First Law) or Leibniz's Principle of Sufficient Reason is more metaphysically fundamental. This is true. But fundamentality and generativity are distinct criteria. Conservation of energy tells you the budget is constant; it cannot distinguish a thriving civilization from heat death, and therefore generates no ethical constraints. Entropy increase is chosen deliberately: it is the principle that explains why things get worse without active effort, and that directional pressure is what makes the entire derivation chain possible.
+[^cm]: In mathematics, a [contraction mapping](https://en.wikipedia.org/wiki/Contraction_mapping) is a function that brings points closer together with each application, guaranteeing convergence to a unique fixed point (the Banach fixed-point theorem). Here the metaphor is epistemological: deeper understanding contracts the space of defensible positions toward a single attractor (Justice).
