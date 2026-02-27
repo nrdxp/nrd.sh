@@ -178,18 +178,19 @@ But logic alone is insufficient. We have the formal structure; now we need a way
 
 ### The Duality
 
-Here we make a structural transition that the reader must understand clearly.
+The duality between deductive and inductive reasoning, previewed in the Capstone through Truth and the Sacred, now receives its full formal treatment.
 
 **Axiosophy** is deductive. It derives necessary truths from a physical axiom, like pure mathematics. It tells us what _must_ be the case if coherence is to be maintained.
 
 **Axiosophism** is inductive. It measures how well actual societies, institutions, and policies conform to the axiosophic hierarchy, like applied statistics. It tells us what _is_ the case and how far it deviates from the ideal.
 
-|              | **Axiosophy**                          | **Axiosophism**                         |
-| :----------- | :------------------------------------- | :-------------------------------------- |
-| **Mode**     | Deductive (formal logic)               | Inductive (empirical measurement)       |
-| **Domain**   | The ten definitions, Truth, the Sacred | The Axiosophic Prism, applied diagnosis |
-| **Analogue** | Pure mathematics                       | Applied statistics                      |
-| **Output**   | Necessary truths given the axiom       | Probabilistic assessments of coherence  |
+|              | **Axiosophy**                       | **Axiosophism**                         |
+| :----------- | :---------------------------------- | :-------------------------------------- |
+| **Mode**     | Deductive (formal logic)            | Inductive (empirical measurement)       |
+| **Domain**   | The ten definitions and Truth       | The Axiosophic Prism, applied diagnosis |
+| **Bridge**   | The Sacred: derivation (axiosophic) | The Sacred: validation (axiosophist)    |
+| **Analogue** | Pure mathematics                    | Applied statistics                      |
+| **Output**   | Necessary truths given the axiom    | Probabilistic assessments of coherence  |
 
 The two are not independent. They form a **duality**: the formal definitions constrain what we look for; the empirical observations test whether the definitions hold. When theory and measurement agree, confidence is high. When they diverge, something is structurally broken and demands diagnosis.
 
