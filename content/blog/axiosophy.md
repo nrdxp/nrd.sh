@@ -43,7 +43,7 @@ Axiosophy starts there.
 
 Before we build, we must clear the ground. Consider the ancient question: Does God exist?
 
-It seems like it should be answerable. But Kurt Gödel proved in 1931 that _no_ formal system, not mathematics, not logic, not any conceivable framework, can be simultaneously complete and consistent.[^2] Some truths will always escape proof. The existence of God may be one of them.
+It seems like it should be answerable. But Kurt Gödel proved in 1931 that no sufficiently expressive formal system can be simultaneously complete and consistent.[^2] Any framework powerful enough to encode basic arithmetic will contain truths it cannot prove from within. The existence of God may be one such truth: real, perhaps, but formally undecidable.
 
 This is not despair. It is _liberation_. If the most fundamental question of existence lies beyond formal proof, then we are free, even obligated, to build our ethics on what _can_ be verified. We need not settle the question of God to settle the question of how to live. What we need is an axiom that is physically real, empirically testable, and universally operative.
 
