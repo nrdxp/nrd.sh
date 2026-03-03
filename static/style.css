@@ -11,14 +11,14 @@
 
 /* ── Palette ─────────────────────────────────────────────── */
 :root {
-  --bg: #0d1117;
-  --bg-raised: #161b22;
-  --fg: #e6edf3;
-  --fg-muted: #9198a1;
-  --accent: #8cb4b0;
-  --accent-hover: #a8cdc9;
-  --rule: #1b2029;
-  --rule-visible: #2d333b;
+  --bg: #1c1c1c;
+  --bg-raised: #262626;
+  --fg: #d4d4d4;
+  --fg-muted: #888888;
+  --accent: #c4aa78;
+  --accent-hover: #d6c098;
+  --rule: #2a2a2a;
+  --rule-visible: #363636;
   --code-bg: #282a36;
   --mono:
     "SF Mono", "Cascadia Mono", "Fira Code", "Consolas", "Liberation Mono",
