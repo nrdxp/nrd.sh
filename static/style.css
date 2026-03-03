@@ -895,17 +895,12 @@ img {
 }
 
 /* ── Responsive ──────────────────────────────────────────── */
-@media (max-width: 1200px) {
-
-  /* Hide the sidebar TOC, use the header-based one */
-  .toc-sidebar {
-    display: none;
-  }
-
-  /* Collapse audio player inline */
+/* Collapse audio player inline on narrower screens */
+@media (max-width: 1400px) {
   .listen {
     position: static;
     width: auto;
+    height: auto;
     margin: 0 0 2rem 0;
     border-left: 3px solid var(--accent);
     padding: 0.75rem 1rem;
@@ -913,6 +908,14 @@ img {
 
   .listen-inner {
     position: static;
+  }
+}
+
+@media (max-width: 1200px) {
+
+  /* Hide the sidebar TOC, use the header-based one */
+  .toc-sidebar {
+    display: none;
   }
 
   /* Show mobile TOC trigger — unpositioned so children reference header */
