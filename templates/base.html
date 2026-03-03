@@ -9,6 +9,24 @@
   {% endif %}
   <title>{% block title %}{{ title }} | {{ config.title }}{% endblock title %}</title>
   <link rel="canonical" href="{{ config.base_url }}{{ page_path }}" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{ title }}" />
+  <meta property="og:url" content="{{ config.base_url }}{{ page_path }}" />
+  <meta property="og:site_name" content="{{ config.title }}" />
+  <meta property="og:type" content="{% if page.date %}article{% else %}website{% endif %}" />
+  {% if page.description %}
+  <meta property="og:description" content="{{ page.description }}" />
+  <meta name="twitter:description" content="{{ page.description }}" />
+  {% elif config.description %}
+  <meta property="og:description" content="{{ config.description }}" />
+  <meta name="twitter:description" content="{{ config.description }}" />
+  {% endif %}
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{{ title }}" />
+  <!-- Preview image -->
+  <meta property="og:image" content="{{ config.base_url }}/logo.png" />
+  <meta name="twitter:image" content="{{ config.base_url }}/logo.png" />
   <link rel="stylesheet" href="{{ prefix }}/style.css" />
   <link rel="alternate" type="application/atom+xml" title="{{ config.title }} Feed" href="{{ prefix }}/feed.xml" />
   <link rel="icon" type="image/png" href="{{ prefix }}/icon/favicon.png" />
