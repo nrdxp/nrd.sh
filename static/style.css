@@ -783,53 +783,117 @@ img {
   }
 }
 
+/* ── Mobile TOC (in header) ──────────────────────────────── */
+.mobile-toc {
+  display: none;
+}
+
 /* ── Responsive ──────────────────────────────────────────── */
 @media (max-width: 1200px) {
 
-  /* Reflow: TOC above article */
-  .post-with-toc {
+  /* Hide the sidebar TOC, use the header-based one */
+  .toc-sidebar {
+    display: none;
+  }
+
+  /* Show mobile TOC trigger — unpositioned so children reference header */
+  .mobile-toc {
+    display: contents;
+  }
+
+  /* Hamburger button — far right of header */
+  .mobile-toc-btn {
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    width: 20px;
+    height: 14px;
+    cursor: pointer;
+    user-select: none;
   }
 
-  .toc-sidebar {
-    position: static;
-    width: auto;
-    height: auto;
-    margin-left: 0;
-    margin-bottom: 1.5rem;
-    order: -1;
+  .mobile-toc-btn span {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    width: 100%;
+    height: 3px;
+    background: none;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-origin: center;
   }
 
-  .toc-nav {
-    position: sticky;
-    top: 3.5rem;
-    z-index: 50;
-    border-left: none;
-    border: 1px solid var(--rule-visible);
-    border-radius: 4px;
-    padding: 0.75rem 1rem;
-    background: var(--bg-raised);
+  .mobile-toc-btn span::before {
+    content: "";
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: var(--fg-muted);
+    flex-shrink: 0;
+    transition: opacity 0.3s ease;
   }
 
-  /* Invert toggle: checked=collapsed on narrow screens
-     (HTML has checked by default, so TOC starts collapsed) */
-  .toc-toggle:checked~.toc-list {
-    max-height: 0;
+  .mobile-toc-btn span::after {
+    content: "";
+    flex: 1;
+    height: 2px;
+    background: var(--fg-muted);
+    border-radius: 1px;
+  }
+
+  .mobile-toc-btn:hover span::before,
+  .mobile-toc-btn:hover span::after {
+    background: var(--accent);
+  }
+
+  /* TOC icon → X morph */
+  .toc-toggle:checked~.mobile-toc-btn span {
+    gap: 0;
+  }
+
+  .toc-toggle:checked~.mobile-toc-btn span::before {
+    opacity: 0;
+    width: 0;
+  }
+
+  .toc-toggle:checked~.mobile-toc-btn span:nth-child(1) {
+    transform: translateY(5.5px) rotate(45deg);
+  }
+
+  .toc-toggle:checked~.mobile-toc-btn span:nth-child(2) {
     opacity: 0;
   }
 
-  .toc-toggle:not(:checked)~.toc-list {
-    max-height: 80rem;
+  .toc-toggle:checked~.mobile-toc-btn span:nth-child(3) {
+    transform: translateY(-5.5px) rotate(-45deg);
+  }
+
+  /* Dropdown panel — absolute relative to header */
+  .mobile-toc-panel {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    background: var(--bg);
+    border-top: 1px solid var(--rule-visible);
+    padding: 0 2rem;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+    z-index: 200;
+  }
+
+  .toc-toggle:checked~.mobile-toc-panel {
+    max-height: calc(100vh - 5rem);
+    overflow-y: auto;
     opacity: 1;
-  }
-
-  .toc-toggle:checked~.toc-label::before {
-    content: "▸ ";
-  }
-
-  .toc-toggle:not(:checked)~.toc-label::before {
-    content: "▾ ";
+    padding: 1rem 2rem;
+    border-bottom: 1px solid var(--rule-visible);
   }
 }
 
@@ -855,7 +919,6 @@ img {
   .post-list li {
     padding: 0.75rem 0;
   }
-
 
   /* Let diagrams render at native size and scroll horizontally */
   .mermaid-diagram svg {

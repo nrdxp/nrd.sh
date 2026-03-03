@@ -45,6 +45,7 @@
       <a href="{{ prefix }}/blog/index.html" {% if page_path is starting_with("/blog") %}class="active" {% endif
         %}>blog</a>
       <a href="{{ prefix }}/about.html" {% if page_path=="/about.html" %}class="active" {% endif %}>about</a>
+      {% block header_extra %}{% endblock header_extra %}
     </nav>
   </header>
   <main>{% block content %}{% endblock content %}</main>
