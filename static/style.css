@@ -727,27 +727,59 @@ img {
 
 .motd p {
   font-family: var(--mono);
-  font-size: 0.95rem;
+  font-size: clamp(0.7rem, 2.5vw, 0.95rem);
   line-height: 1;
   color: var(--fg-muted);
   overflow: hidden;
   white-space: nowrap;
   max-width: 0;
-  border-right: 0.6em solid var(--accent);
-  animation:
-    motd-type 3.5s steps(76) 0.5s forwards,
-    motd-cursor 0.6s step-end infinite;
 }
 
-@keyframes motd-type {
+/* Line 1: type 34 chars, then hide cursor */
+.motd p:first-child {
+  border-right: 0.6em solid var(--accent);
+  animation:
+    motd-type-1 1.8s steps(34) 0.5s forwards,
+    motd-cursor 0.6s step-end infinite,
+    motd-cursor-hide 0.001s 2.3s forwards;
+}
+
+/* Line 2: type 40 chars, cursor stays */
+.motd p:last-child {
+  border-right: 0.6em solid transparent;
+  animation:
+    motd-type-2 2s steps(40) 2.5s forwards,
+    motd-cursor-show 0.001s 2.5s forwards,
+    motd-cursor 0.6s step-end 2.5s infinite;
+}
+
+@keyframes motd-type-1 {
   to {
-    max-width: 76ch;
+    max-width: 35ch;
+  }
+}
+
+@keyframes motd-type-2 {
+  to {
+    max-width: 41ch;
   }
 }
 
 @keyframes motd-cursor {
   50% {
     border-color: transparent;
+  }
+}
+
+@keyframes motd-cursor-hide {
+  to {
+    border-color: transparent;
+  }
+}
+
+@keyframes motd-cursor-show {
+  to {
+    border-color: var(--accent);
   }
 }
 
@@ -824,14 +856,6 @@ img {
     padding: 0.75rem 0;
   }
 
-  /* MOTD: disable animation, let text wrap naturally */
-  .motd p {
-    white-space: normal;
-    max-width: none;
-    border-right: none;
-    animation: none;
-    line-height: 1.7;
-  }
 
   /* Let diagrams render at native size and scroll horizontally */
   .mermaid-diagram svg {
