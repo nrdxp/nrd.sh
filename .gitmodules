@@ -1,5 +1,5 @@
 [submodule "themes/apollo"]
-	path = themes/apollo
+	path = deprecated/themes/apollo
 	url = https://github.com/not-matthias/apollo
 [submodule ".agent"]
 	path = .agent
