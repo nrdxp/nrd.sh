@@ -2,13 +2,13 @@
 title = "About"
 +++
 
-I'm Tim DeHerrera (nrdxp), an engineer at [IOG](https://iog.io) where I help develop interoperable blockchain infrastructure for the Cardano ecosystem.
+I'm Tim DeHerrera (nrdxp). I write software, design protocols, and think too much about [first principles](blog/axiosophy.html).
 
-As co-founder of the [Ekala Project](https://github.com/ekala-project), I'm building next-generation tooling for reproducible builds and declarative systems.
+I spent over a decade in free software, mostly in the Nix and Rust ecosystems. I co-founded the [Ekala Project](https://github.com/ekala-project) and still support it. I also watched the communities I believed in get hollowed out by corporate capture and political games. I still think free software is essential, but good intentions alone won't protect it.
 
-With a decade of experience in distributed systems, build infrastructure, and network optimization, I craft tools that emphasize reproducibility and determinism. My engineering approach leverages expressive type systems and functional programming paradigms, with current focus on the Rust and Nix ecosystems.
+That's what led me to found [Axiosophic Systems](https://axioso.ph). The work there is focused on content-addressed package distribution, self-sovereign identity protocols, and structured rulesets for agentic AI. Different problems, same conviction: things don't hold together by accident.
 
-If you're interested in working together, supporting open source, or just want to discuss something interesting, consider [collaborating](/collab) with me or reaching out through any of the social links above.
+The [blog](blog/index.html) is where I think out loud.
 
 ## Sigs
 

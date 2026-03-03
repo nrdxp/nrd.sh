@@ -5,7 +5,7 @@ date = 2025-06-29
 tags = ["personal"]
 +++
 
-### A Disclaimer to the Reader
+## A Disclaimer to the Reader
 
 This letter is for my children in case the worst should happen, or I am not be able to see them again. It is my sacred duty as a father to offer them guidance, and if the State will refuse to allow me to do that, then this is my only path to achieve it. Hopefully this will all be over soon, but just in case it is not I will leave this here. It is very raw, and intentionally so. Everything in here is gained from experience, it is a sincere attempt to encapsulate my imperfect wisdom for the sake of my progeny.
 

@@ -17,8 +17,6 @@ _Is there a single principle that explains why all of these failures look the sa
 
 There is. It is called **entropy**, the single most experimentally confirmed law in all of physics. And the framework that takes it seriously enough to build a formal ethics on top of it, to _derive_ morality from thermodynamics the way an engineer derives load limits from gravity, is called **Axiosophy**.
 
----
-
 ## Part I: Foundations
 
 ### Why Another Philosophy?
@@ -77,8 +75,6 @@ The ethical statement becomes a hypothetical imperative: _If_ you desire coheren
 This resolves Hume's guillotine. It does not leap from "is" to "ought." It says: given the brute fact of entropy and the stated goal of coherence, certain structural constraints _necessarily follow_. You can reject the goal. You cannot reject the physics.[^nat3]
 
 Societies that have ignored this constraint, treating entropy as irrelevant to governance, have a name. We call them _ruins_. Ethics is the discipline of _how_ a dissipative structure resists its own dissolution.
-
----
 
 ## Part II: Axiosophy — The Deductive Framework
 
@@ -169,8 +165,6 @@ This completes the deductive framework. Every concept traces back to entropy thr
 
 But logic alone is insufficient. We have the formal structure; now we need a way to _measure_ how well the real world conforms to it.
 
----
-
 ## Part III: Axiosophism — The Empirical Lens
 
 ### The Duality
@@ -235,8 +229,6 @@ This is not a matter of opinion. Under the axiosophic framework, Rhetorical Disp
 
 The imperative is clear: delve beyond rhetoric. Measure policy against structure. Defend the Sacred with evidence, not outrage.
 
----
-
 ## Part IV: The Spirit
 
 ### Will, Mastery, and Rebellion
@@ -260,8 +252,6 @@ The American founders synthesized all three. The Bill of Rights is Rebellion ins
 But Rebellion requires Spirit, and Spirit requires something worth defending. This brings us back to where we started in this section.
 
 Nietzsche's deeper error was dispensing with the Sacred itself. His proclamation of God's "death" was prophetic as diagnosis but fatal as prescription; it abandoned the Spirit along with the institution, neutering the very impulse that drives purposeful action.[^71] Axiosophy restores the Sacred on empirical rather than dogmatic grounds, and with it, restores the Spirit as the animating force of coherence and Rebellion as its structural expression.
-
----
 
 ## Part V: Applied Axiosophism
 
@@ -367,8 +357,6 @@ The practical path remains **neuro-symbolic fusion**: symbolic reasoning encodin
 
 AI is, perhaps, the newest Sacred institution, capable of cohering humanity through disciplined inquiry or destroying it through unchecked entropy. It demands the scrutiny and communal stewardship that the Sacred requires. And if we get the framework right, it may become the most powerful ally in entropy's ancient war.[^69]
 
----
-
 ## Part VI: The Dialectic
 
 ### Great Minds, Tested
@@ -390,8 +378,6 @@ No philosophy earns its name by avoiding confrontation. Let the framework face t
 **Rawls** designed fairness behind a "veil of ignorance" that assumes static conditions.[^23] Axiosophy introduces the missing variable: _time_. Entropy ensures that static fairness decays. Sustainable coherence requires ongoing, empirically tested resistance.[^25]
 
 And God? If the question is formally undecidable per Gödel, then the Spirit serves as practical bridge, testable through disciplined action, available to believer and skeptic alike.
-
----
 
 ## Part VII: The Call
 
@@ -431,8 +417,6 @@ Axiosophy demands swift Justice.
 
 **_Give me Justice or Give me Death![^ph] Viva Rebellion!_**
 
----
-
 ### Axiosophic Praxis
 
 1. **Scrutinize relentlessly.** Audit yourself and your institutions for signs of entropy. Cultivate Will. Foster personal Mastery. The unexamined life is not the only thing not worth living; the unexamined institution is not worth preserving.
@@ -447,9 +431,7 @@ Axiosophy demands swift Justice.
 
 6. **Defend unyieldingly.** Build and protect Sacred institutions: families, free code, ethical AI, courts that follow law rather than feeling. These are the battle-tested truths that have survived entropy's filter. They are ours to defend for generations to come.
 
----
-
-_References:_
+## _References_
 [^1]: [Socrates Quote from Plato's Apology](https://en.wikipedia.org/wiki/The_unexamined_life_is_not_worth_living).
 [^2]: [Gödel's Incompleteness Theorems](https://en.wikipedia.org/wiki/G%C3%B6del%27s_incompleteness_theorems).
 [^3]: [History shows that societies collapse when leaders undermine social contracts](https://phys.org/news/2020-10-history-societies-collapse-leaders-undermine.html).
