@@ -403,7 +403,7 @@ So the framework demands a question: does anyone actually _live_ this way? What 
 
 The answer requires what we might call **Proof of Work**: an empirical record demonstrating that the framework scales beyond the page.
 
-My own history is one such record. [Twelve years](../12-years) spent as a digital hermit, building, reasoning from first principles, defending principled disagreement against consensus-enforcing machinery in free software and beyond. A [letter to my children](../letter-to-my-children) that is not a grievance but an aspiration: proof of what it looks like when one person, armed with first principles and the courage to apply them, refuses to surrender coherence to entropy. The axiosophic framework was forged in this crucible, not in an armchair, but in direct confrontation with the structural patterns it describes.
+My own history is one such record. [Twelve years](./12-years) spent as a digital hermit, building, reasoning from first principles, defending principled disagreement against consensus-enforcing machinery in free software and beyond. A [letter to my children](./letter-to-my-children) that is not a grievance but an aspiration: proof of what it looks like when one person, armed with first principles and the courage to apply them, refuses to surrender coherence to entropy. The axiosophic framework was forged in this crucible, not in an armchair, but in direct confrontation with the structural patterns it describes.
 
 Axiosophy calibrates reform for maximum impact by identifying the Sacred, leverage points whose defense triggers cascading coherence. Family courts and free software are such points. One secures the foundational unit of biological order; the other secures the foundational unit of digital freedom.
 
