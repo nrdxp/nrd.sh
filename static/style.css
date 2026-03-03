@@ -11,15 +11,15 @@
 
 /* ── Palette ─────────────────────────────────────────────── */
 :root {
-  --bg: #0c0c0e;
-  --bg-raised: #111114;
-  --fg: #ddd9d4;
-  --fg-muted: #827e78;
-  --accent: #c4a882;
-  --accent-hover: #d9c4a8;
-  --rule: #1c1c20;
-  --rule-visible: #28282e;
-  --code-bg: #08080a;
+  --bg: #0d1117;
+  --bg-raised: #161b22;
+  --fg: #e6edf3;
+  --fg-muted: #9198a1;
+  --accent: #8cb4b0;
+  --accent-hover: #a8cdc9;
+  --rule: #1b2029;
+  --rule-visible: #2d333b;
+  --code-bg: #282a36;
   --mono:
     "SF Mono", "Cascadia Mono", "Fira Code", "Consolas", "Liberation Mono",
     monospace;
@@ -76,6 +76,7 @@ main {
   color: var(--fg);
   text-decoration: none;
   letter-spacing: 0.02em;
+  text-transform: lowercase;
   border-bottom: none;
 }
 
@@ -640,12 +641,37 @@ blockquote p {
 }
 
 /* ── Footnotes ───────────────────────────────────────────── */
-.footnote-definition {
+.footnote {
   font-size: 0.85rem;
   color: var(--fg-muted);
-  margin-bottom: 0.5rem;
-  padding-left: 1.5rem;
+  margin-bottom: 0.4rem;
+  padding-left: 2.5rem;
   position: relative;
+}
+
+.footnote-num {
+  position: absolute;
+  left: 0;
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.footnote p {
+  display: inline;
+  margin-bottom: 0;
+}
+
+.footnote-backref {
+  color: var(--fg-muted);
+  border-bottom: none;
+  font-size: 0.8em;
+  text-decoration: none;
+}
+
+.footnote-backref:hover {
+  color: var(--accent);
 }
 
 sup a {

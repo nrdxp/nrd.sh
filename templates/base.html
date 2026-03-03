@@ -16,7 +16,8 @@
 
 <body>
   <header class="site-header">
-    <a href="{{ prefix }}/index.html" class="site-title">{{ config.title }}</a>
+    <a href="{{ prefix }}/index.html" class="site-title">{{ config.title }}{% if title and title != config.title %} | {{
+      title }}{% endif %}</a>
     <nav>
       <a href="{{ prefix }}/blog/index.html" {% if page_path is starting_with("/blog") %}class="active" {% endif
         %}>blog</a>
