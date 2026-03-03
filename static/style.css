@@ -704,11 +704,12 @@ sup a {
   position: absolute;
   right: 100%;
   top: 0;
+  height: 100%;
   margin-right: 2rem;
   width: 14rem;
 }
 
-.listen>* {
+.listen-inner {
   position: sticky;
   top: 2rem;
 }
@@ -910,7 +911,7 @@ img {
     padding: 0.75rem 1rem;
   }
 
-  .listen>* {
+  .listen-inner {
     position: static;
   }
 

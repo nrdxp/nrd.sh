@@ -18,6 +18,7 @@ _Is there a single principle that explains why all of these failures look the sa
 There is. It is called **entropy**, the single most experimentally confirmed law in all of physics. And the framework that takes it seriously enough to build a formal ethics on top of it, to _derive_ morality from thermodynamics the way an engineer derives load limits from gravity, is called **Axiosophy**.
 
 <div class="listen">
+<div class="listen-inner">
 <span class="listen-label">deep dive</span>
 <span class="listen-sub">a dialectic introduction you can listen to</span>
 <audio controls preload="none" class="listen-native">
@@ -30,6 +31,7 @@ There is. It is called **entropy**, the single most experimentally confirmed law
   </div>
   <span class="listen-time">0:00</span>
   <a class="listen-dl" aria-label="Download" download>⤓</a>
+</div>
 </div>
 <script src="../player.js"></script>
 </div>
