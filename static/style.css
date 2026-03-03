@@ -754,22 +754,50 @@ img {
 /* ── Responsive ──────────────────────────────────────────── */
 @media (max-width: 1200px) {
 
-  /* Not enough room for displaced TOC — collapse inline */
+  /* Reflow: TOC above article */
+  .post-with-toc {
+    display: flex;
+    flex-direction: column;
+  }
+
   .toc-sidebar {
     position: static;
     width: auto;
     height: auto;
     margin-left: 0;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+    order: -1;
   }
 
   .toc-nav {
-    position: static;
+    position: sticky;
+    top: 3.5rem;
+    z-index: 50;
     border-left: none;
     border: 1px solid var(--rule-visible);
     border-radius: 4px;
     padding: 0.75rem 1rem;
     background: var(--bg-raised);
+  }
+
+  /* Invert toggle: checked=collapsed on narrow screens
+     (HTML has checked by default, so TOC starts collapsed) */
+  .toc-toggle:checked~.toc-list {
+    max-height: 0;
+    opacity: 0;
+  }
+
+  .toc-toggle:not(:checked)~.toc-list {
+    max-height: 80rem;
+    opacity: 1;
+  }
+
+  .toc-toggle:checked~.toc-label::before {
+    content: "▸ ";
+  }
+
+  .toc-toggle:not(:checked)~.toc-label::before {
+    content: "▾ ";
   }
 }
 
@@ -794,6 +822,15 @@ img {
 
   .post-list li {
     padding: 0.75rem 0;
+  }
+
+  /* MOTD: disable animation, let text wrap naturally */
+  .motd p {
+    white-space: normal;
+    max-width: none;
+    border-right: none;
+    animation: none;
+    line-height: 1.7;
   }
 
   /* Let diagrams render at native size and scroll horizontally */
