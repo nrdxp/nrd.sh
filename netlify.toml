@@ -1,0 +1,21 @@
+[build]
+command = "curl -sSfL https://sukr.io/release/x86_64-linux/sukr -o /tmp/sukr && chmod +x /tmp/sukr && /tmp/sukr"
+publish = "public"
+
+[[headers]]
+for = "/*"
+[headers.values]
+Content-Security-Policy = "default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; frame-ancestors 'none'"
+Permissions-Policy      = "camera=(), microphone=(), geolocation=()"
+Referrer-Policy         = "strict-origin-when-cross-origin"
+X-Content-Type-Options  = "nosniff"
+X-Frame-Options         = "DENY"
+
+# Workaround: sukr sets prefix="./" for 404 pages, which breaks
+# asset paths when served from sub-paths. A 302 redirect ensures
+# the browser resolves relative paths from /404.html correctly.
+[[redirects]]
+force  = false
+from   = "/*"
+status = 302
+to     = "/404.html"
