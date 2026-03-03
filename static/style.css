@@ -699,6 +699,111 @@ sup a {
   font-size: 0.7em;
 }
 
+/* ── Audio player ────────────────────────────────────────── */
+.listen {
+  position: absolute;
+  right: 100%;
+  top: 0;
+  margin-right: 2rem;
+  width: 14rem;
+}
+
+.listen>* {
+  position: sticky;
+  top: 2rem;
+}
+
+.listen-label {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.listen-sub {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  color: var(--fg-muted);
+  display: block;
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
+}
+
+.listen audio {
+  width: 100%;
+}
+
+/* Custom player (JS-enhanced) */
+.listen-player[hidden] {
+  display: none;
+}
+
+.listen-player:not([hidden]) {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.listen-play {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 0;
+  width: 1.2rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.listen-play:hover {
+  color: var(--fg);
+}
+
+.listen-track {
+  flex: 1;
+  height: 3px;
+  background: var(--bg-raised);
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.listen-progress {
+  height: 100%;
+  width: 0;
+  background: var(--accent);
+  border-radius: 2px;
+  transition: width 0.15s linear;
+}
+
+.listen-time {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  color: var(--fg-muted);
+  white-space: nowrap;
+  min-width: 5.5em;
+  text-align: right;
+}
+
+.listen-dl {
+  font-size: 0.85rem;
+  color: var(--fg-muted);
+  text-decoration: none;
+  cursor: pointer;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.listen-dl:hover {
+  color: var(--accent);
+}
+
 /* ── Images ──────────────────────────────────────────────── */
 img {
   max-width: 100%;
@@ -796,9 +901,26 @@ img {
     display: none;
   }
 
+  /* Collapse audio player inline */
+  .listen {
+    position: static;
+    width: auto;
+    margin: 0 0 2rem 0;
+    border-left: 3px solid var(--accent);
+    padding: 0.75rem 1rem;
+  }
+
+  .listen>* {
+    position: static;
+  }
+
   /* Show mobile TOC trigger — unpositioned so children reference header */
   .mobile-toc {
     display: contents;
+  }
+
+  .site-header nav:has(.mobile-toc) {
+    padding-right: 2.5rem;
   }
 
   /* Hamburger button — far right of header */
