@@ -10,7 +10,8 @@
         <ul class="toc-list">
             {% for anchor in anchors %}
             <li class="toc-level-{{ anchor.level }}">
-                <a href="#{{ anchor.id }}">{{ anchor.label | split(pat="(") | first | split(pat="—") | first | trim
+                <a href="#{{ anchor.id }}" onclick="document.getElementById('mobile-toc-toggle').checked=false">{{
+                    anchor.label | split(pat="(") | first | split(pat="—") | first | trim
                     }}</a>
             </li>
             {% endfor %}
