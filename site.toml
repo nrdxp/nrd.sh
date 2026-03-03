@@ -1,0 +1,13 @@
+title    = "nrdxp"
+author   = "Tim DeHerrera"
+base_url = "https://nrd.sh"
+
+[paths]
+content   = "content"
+output    = "public"
+static    = "static"
+templates = "templates"
+
+[nav]
+nested = false
+toc    = false

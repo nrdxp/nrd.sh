@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="tag-listing">
+    <h1>Posts tagged &ldquo;{{ tag }}&rdquo;</h1>
+    <ul class="post-list">
+        {% for item in items %}
+        <li>
+            <a href="{{ prefix }}{{ item.path }}" class="post-link">
+                <span class="post-title">{{ item.frontmatter.title }}</span>
+                {% if item.frontmatter.description %}
+                <span class="post-desc">{{ item.frontmatter.description }}</span>
+                {% endif %}
+            </a>
+            <time>{{ item.frontmatter.date }}</time>
+        </li>
+        {% endfor %}
+    </ul>
+</section>
+{% endblock content %}

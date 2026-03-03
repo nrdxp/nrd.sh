@@ -1,0 +1,550 @@
+@import "./themes/snazzy.css";
+
+/* ── Reset ───────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ── Palette ─────────────────────────────────────────────── */
+:root {
+  --bg: #0a0a0a;
+  --fg: #e8e6e3;
+  --fg-muted: #7a7870;
+  --accent: #b0a899;
+  --rule: #1e1e1e;
+  --rule-visible: #2a2a2a;
+  --mono:
+    "SF Mono", "Cascadia Mono", "Fira Code", "Consolas", "Liberation Mono",
+    monospace;
+  --sans:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif;
+}
+
+/* ── Body ────────────────────────────────────────────────── */
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--sans);
+  font-weight: 400;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Layout ──────────────────────────────────────────────── */
+main {
+  flex: 1;
+  max-width: 38em;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 8rem;
+  width: 100%;
+}
+
+/* ── Header ──────────────────────────────────────────────── */
+.site-header {
+  max-width: 38em;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 1.5rem;
+  border-bottom: 1px solid var(--rule);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.site-title {
+  font-family: var(--mono);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--fg);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+
+.site-title:hover {
+  color: var(--accent);
+}
+
+.site-header nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.site-header nav a {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--fg-muted);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  text-transform: lowercase;
+  border-bottom: 1px solid transparent;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.site-header nav a:hover,
+.site-header nav a.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+/* ── Headings ────────────────────────────────────────────── */
+h1 {
+  font-family: var(--mono);
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+h3 {
+  font-family: var(--mono);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--fg);
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+h4 {
+  font-family: var(--mono);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--fg);
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ── Heading Anchors ─────────────────────────────────────── */
+.heading-anchor {
+  opacity: 0;
+  text-decoration: none;
+  border-bottom: none;
+  margin-left: 0.3em;
+  color: var(--fg-muted);
+  font-weight: 400;
+  transition: opacity 0.15s;
+}
+
+h2:hover .heading-anchor,
+h3:hover .heading-anchor,
+h4:hover .heading-anchor {
+  opacity: 0.4;
+}
+
+/* ── Prose ────────────────────────────────────────────────── */
+p {
+  margin-bottom: 1.1em;
+}
+
+article ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+article ul li {
+  position: relative;
+  padding-left: 1.25em;
+  margin-bottom: 0.75em;
+  line-height: 1.6;
+}
+
+article ul li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--fg-muted);
+}
+
+article ol {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+article ol li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+strong {
+  font-weight: 700;
+  color: var(--fg);
+}
+
+em {
+  font-style: italic;
+}
+
+/* ── Links ───────────────────────────────────────────────── */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+  transition: color 0.15s, border-color 0.15s;
+}
+
+a:hover {
+  color: var(--fg);
+  border-bottom-color: var(--fg-muted);
+}
+
+/* ── Horizontal Rules ────────────────────────────────────── */
+hr {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 3rem 0;
+}
+
+/* ── Post Header ─────────────────────────────────────────── */
+.post-header {
+  margin-bottom: 2.5rem;
+}
+
+.post-description {
+  font-size: 1.05rem;
+  color: var(--fg-muted);
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+
+.post-meta {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--fg-muted);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.post-meta time {
+  color: var(--fg-muted);
+}
+
+.post-tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.post-tags a {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--fg-muted);
+  border: 1px solid var(--rule-visible);
+  border-radius: 3px;
+  padding: 0.1em 0.5em;
+  text-decoration: none;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.post-tags a:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* ── Inline Table of Contents ────────────────────────────── */
+.post-toc {
+  margin: 1.5rem 0 2.5rem;
+  border: 1px solid var(--rule-visible);
+  border-radius: 4px;
+  background: #050505;
+}
+
+.post-toc summary {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  cursor: pointer;
+  padding: 0.75rem 1rem;
+  user-select: none;
+}
+
+.post-toc summary:hover {
+  color: var(--accent);
+}
+
+.post-toc ul {
+  list-style: none;
+  padding: 0 1rem 0.75rem;
+  margin: 0;
+}
+
+.post-toc ul li {
+  padding-left: 0;
+  margin-bottom: 0.3em;
+}
+
+.post-toc ul li::before {
+  content: none;
+}
+
+.post-toc a {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--fg-muted);
+  border-bottom: none;
+  line-height: 1.8;
+}
+
+.post-toc a:hover {
+  color: var(--accent);
+}
+
+/* ── Blog Listing ────────────────────────────────────────── */
+.post-list {
+  list-style: none;
+  padding: 0;
+}
+
+.post-list li {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.post-list li:first-child {
+  padding-top: 0;
+}
+
+.post-list .post-link {
+  display: block;
+  border-bottom: none;
+}
+
+.post-list .post-link:hover {
+  border-bottom: none;
+}
+
+.post-list .post-title {
+  font-family: var(--mono);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--fg);
+  transition: color 0.15s;
+}
+
+.post-link:hover .post-title {
+  color: var(--accent);
+}
+
+.post-list .post-desc {
+  display: block;
+  font-size: 0.88rem;
+  color: var(--fg-muted);
+  margin-top: 0.25rem;
+  line-height: 1.5;
+}
+
+.post-list time {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  color: var(--fg-muted);
+  display: block;
+  margin-top: 0.35rem;
+}
+
+/* ── Section Items (projects, etc) ───────────────────────── */
+.section-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.section-link {
+  display: block;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--rule-visible);
+  border-radius: 4px;
+  transition: border-color 0.15s;
+}
+
+.section-link:hover {
+  border-color: var(--accent);
+}
+
+.section-link strong {
+  font-family: var(--mono);
+  font-size: 0.9rem;
+}
+
+.section-link span {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--fg-muted);
+  margin-top: 0.2rem;
+}
+
+/* ── Tag Listing ─────────────────────────────────────────── */
+.tag-listing .post-list {
+  margin-top: 1.5rem;
+}
+
+/* ── Code Blocks ─────────────────────────────────────────── */
+pre {
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  padding: 1.2em 1.4em;
+  background: #050505;
+  border: 1px solid var(--rule-visible);
+  border-radius: 3px;
+  overflow-x: auto;
+  margin: 1.5em 0;
+}
+
+code {
+  font-family: var(--mono);
+  font-size: 0.85em;
+  background: #141414;
+  padding: 0.15em 0.35em;
+  border-radius: 3px;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+  font-size: inherit;
+}
+
+/* ── Tables ──────────────────────────────────────────────── */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+}
+
+th,
+td {
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  border: 1px solid var(--rule-visible);
+}
+
+th {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--fg-muted);
+  background: #050505;
+}
+
+/* ── Blockquotes ─────────────────────────────────────────── */
+blockquote {
+  border-left: 3px solid var(--accent);
+  padding-left: 1.25rem;
+  margin: 1.5rem 0;
+  color: var(--fg-muted);
+  font-style: italic;
+}
+
+blockquote p {
+  margin-bottom: 0.5em;
+}
+
+/* ── Footnotes ───────────────────────────────────────────── */
+.footnote-definition {
+  font-size: 0.85rem;
+  color: var(--fg-muted);
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+sup {
+  font-size: 0.7em;
+}
+
+sup a {
+  border-bottom: none;
+  color: var(--accent);
+}
+
+/* ── Images ──────────────────────────────────────────────── */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin: 1rem 0;
+}
+
+/* ── Footer ──────────────────────────────────────────────── */
+.site-footer {
+  max-width: 38em;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 2rem;
+  border-top: 1px solid var(--rule);
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  color: var(--fg-muted);
+  text-align: center;
+  width: 100%;
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .site-header {
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 2rem 1.25rem 1.25rem;
+  }
+
+  .site-header nav {
+    gap: 1rem;
+  }
+
+  main {
+    padding: 1.5rem 1.25rem 5rem;
+  }
+
+  h1 {
+    font-size: 1.35rem;
+  }
+
+  .post-list li {
+    padding: 0.75rem 0;
+  }
+
+  .post-toc summary {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .site-header nav a {
+    font-size: 0.7rem;
+  }
+}

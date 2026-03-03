@@ -1,0 +1,332 @@
+/**
+ * Snazzy Theme for sukr
+ * Author: Timothy DeHerrera <tim@nrdxp.dev>
+ * Ported from Helix editor theme
+ */
+
+:root {
+  /* Snazzy Palette */
+  --hl-bg: #282a36;
+  --hl-bg-dark: #21222c;
+  --hl-fg: #eff0eb;
+  --hl-comment: #a39e9b;
+
+  /* Main colors */
+  --hl-blue: #57c7ff;
+  --hl-cyan: #9aedfe;
+  --hl-green: #5af78e;
+  --hl-magenta: #ff6ac1;
+  --hl-purple: #bd93f9;
+  --hl-red: #ff5c57;
+  --hl-yellow: #f3f99d;
+
+  /* Aux colors */
+  --hl-carnation: #f99fc6;
+  --hl-coral: #f97c7c;
+  --hl-lilac: #c9c5fb;
+  --hl-olive: #b6d37c;
+  --hl-opal: #b1d7c7;
+  --hl-sand: #ffab6f;
+}
+
+/* === Keywords === */
+.hl-keyword {
+  color: var(--hl-magenta);
+  font-weight: bold;
+}
+
+.hl-keyword-control {
+  color: var(--hl-carnation);
+  font-weight: bold;
+}
+
+.hl-keyword-control-exception {
+  color: var(--hl-red);
+  font-weight: bold;
+}
+
+.hl-keyword-control-conditional {
+  color: var(--hl-carnation);
+  font-weight: bold;
+}
+
+.hl-keyword-control-repeat {
+  color: var(--hl-carnation);
+  font-weight: bold;
+}
+
+.hl-keyword-control-import {
+  color: var(--hl-carnation);
+  font-weight: bold;
+}
+
+.hl-keyword-control-return {
+  color: var(--hl-carnation);
+  font-weight: bold;
+}
+
+.hl-keyword-function {
+  color: var(--hl-lilac);
+  font-weight: bold;
+}
+
+.hl-keyword-operator {
+  color: var(--hl-coral);
+  font-weight: bold;
+}
+
+.hl-keyword-storage {
+  color: var(--hl-coral);
+  font-weight: bold;
+}
+
+.hl-keyword-storage-type {
+  color: var(--hl-coral);
+  font-weight: bold;
+}
+
+.hl-keyword-storage-modifier {
+  color: var(--hl-coral);
+  font-weight: bold;
+}
+
+/* === Functions === */
+.hl-function {
+  color: var(--hl-green);
+}
+
+.hl-function-builtin {
+  color: var(--hl-sand);
+}
+
+.hl-function-method {
+  color: var(--hl-opal);
+}
+
+.hl-function-macro {
+  color: var(--hl-blue);
+}
+
+.hl-function-special {
+  color: var(--hl-blue);
+}
+
+/* === Types === */
+.hl-type {
+  color: var(--hl-opal);
+}
+
+.hl-type-builtin {
+  color: var(--hl-yellow);
+}
+
+.hl-type-enum-variant {
+  color: var(--hl-sand);
+}
+
+/* === Constants === */
+.hl-constant {
+  color: var(--hl-purple);
+}
+
+.hl-constant-builtin {
+  color: var(--hl-olive);
+}
+
+.hl-constant-builtin-boolean {
+  color: var(--hl-olive);
+}
+
+.hl-constant-character {
+  color: var(--hl-carnation);
+}
+
+.hl-constant-character-escape {
+  color: var(--hl-magenta);
+}
+
+.hl-constant-numeric {
+  color: var(--hl-cyan);
+}
+
+.hl-constant-numeric-integer {
+  color: var(--hl-cyan);
+}
+
+.hl-constant-numeric-float {
+  color: var(--hl-red);
+}
+
+/* === Strings === */
+.hl-string {
+  color: var(--hl-yellow);
+}
+
+.hl-string-regexp {
+  color: var(--hl-red);
+}
+
+.hl-string-special {
+  color: var(--hl-blue);
+}
+
+.hl-string-special-path {
+  color: var(--hl-blue);
+}
+
+.hl-string-special-url {
+  color: var(--hl-blue);
+}
+
+.hl-string-special-symbol {
+  color: var(--hl-blue);
+}
+
+/* === Variables === */
+.hl-variable {
+  color: var(--hl-cyan);
+}
+
+.hl-variable-builtin {
+  color: var(--hl-olive);
+}
+
+.hl-variable-parameter {
+  color: var(--hl-blue);
+  font-style: italic;
+}
+
+.hl-variable-other {
+  color: var(--hl-cyan);
+}
+
+.hl-variable-other-member {
+  color: var(--hl-lilac);
+}
+
+/* === Comments === */
+.hl-comment {
+  color: var(--hl-comment);
+}
+
+.hl-comment-line {
+  color: var(--hl-comment);
+}
+
+.hl-comment-block {
+  color: var(--hl-comment);
+}
+
+.hl-comment-block-documentation {
+  color: var(--hl-comment);
+}
+
+.hl-comment-line-documentation {
+  color: var(--hl-comment);
+}
+
+/* === Punctuation === */
+.hl-punctuation {
+  color: var(--hl-magenta);
+}
+
+.hl-punctuation-bracket {
+  color: var(--hl-fg);
+}
+
+.hl-punctuation-delimiter {
+  color: var(--hl-coral);
+}
+
+.hl-punctuation-special {
+  color: var(--hl-magenta);
+}
+
+/* === Operators === */
+.hl-operator {
+  color: var(--hl-coral);
+}
+
+/* === Other === */
+.hl-attribute {
+  color: var(--hl-opal);
+}
+
+.hl-label {
+  color: var(--hl-magenta);
+}
+
+.hl-namespace {
+  color: var(--hl-olive);
+}
+
+.hl-constructor {
+  color: var(--hl-sand);
+}
+
+.hl-special {
+  color: var(--hl-magenta);
+}
+
+.hl-tag {
+  color: var(--hl-carnation);
+}
+
+/* === Markup === */
+.hl-markup-heading {
+  color: var(--hl-purple);
+  font-weight: bold;
+}
+
+.hl-markup-bold {
+  color: var(--hl-blue);
+  font-weight: bold;
+}
+
+.hl-markup-italic {
+  color: var(--hl-yellow);
+  font-style: italic;
+}
+
+.hl-markup-strikethrough {
+  text-decoration: line-through;
+}
+
+.hl-markup-link-text {
+  color: var(--hl-magenta);
+}
+
+.hl-markup-link-url {
+  color: var(--hl-cyan);
+}
+
+.hl-markup-link-label {
+  color: var(--hl-blue);
+  font-style: italic;
+}
+
+.hl-markup-list {
+  color: var(--hl-cyan);
+}
+
+.hl-markup-quote {
+  color: var(--hl-yellow);
+  font-style: italic;
+}
+
+.hl-markup-raw {
+  color: var(--hl-fg);
+}
+
+/* === Diff === */
+.hl-diff-plus {
+  color: var(--hl-green);
+}
+
+.hl-diff-minus {
+  color: var(--hl-red);
+}
+
+.hl-diff-delta {
+  color: var(--hl-blue);
+}
