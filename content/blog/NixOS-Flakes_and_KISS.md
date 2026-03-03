@@ -5,6 +5,8 @@ date = 2020-12-19
 tags = ["nix"]
 +++
 
+> **Editor's note:** This post describes DevOS, a now-superseded project. For the current vision, see [From Nix to Eos](../nix-to-eos).
+
 ## Introduction
 
 This marks the first post of my very own developer blog, and it comes much later
@@ -18,7 +20,7 @@ you check it out before continuing with this post.
 Now, I'd like to introduce a project I've been slowly building up since
 flakes were introduced called [DevOS][DevOS].
 
-# So what is it anyway?
+## So what is it anyway?
 
 After years of working with NixOS, I strongly felt that the community as a whole
 could benefit from a standardized structure and format for NixOS configurations
@@ -46,7 +48,7 @@ adopters and I am really quite excited and humbled to see others engage the
 repository. If you have contributed to the project, thank you so much for your
 time and support!
 
-# An Arch KISS
+## An Arch KISS
 
 I moved over to NixOS after a decades long love affair with Arch Linux. I found
 their brand of KISS to be pragmatic and refreshing compared to alternatives
@@ -69,7 +71,7 @@ I then became aware of Nix and NixOS, and hoped that it would live up the
 promise of reproducible system deployment, and after a brief stint of
 procrastination, I dove head first.
 
-# Great but Not Perfect.
+## Great but Not Perfect.
 
 At first everything seemed almost perfect. NixOS felt like Ansible on steroids,
 and there was more than enough code available in nixpkgs to meet my immediate
@@ -116,7 +118,7 @@ the power that Nix enables. I especially don't want anyone turning away from
 our amazing ecosystem because their onboarding experience was too complex
 or overwhelming.
 
-# Everything is a profile!
+## Everything is a profile!
 
 At the heart of DevOS is the [profile][profiles]. Of course, these profiles
 are really nothing more than good ol' NixOS [modules][modules]. The only reason
@@ -160,7 +162,7 @@ of the show. It's really nothing revolutionary, and that's on purpose! By
 keeping things simple and organized we gain a level of control and granularity
 we wouldn't have otherwise without adding real complexity to speak of.
 
-# Really? Everything?
+## Really? Everything?
 
 Yes! Thanks to built in [home-manager][home-manager] integration, users are
 profiles, a preferred graphical environment is a profile. Anything that you
@@ -169,7 +171,7 @@ plenty of examples available in the "profiles" and "users" directories, and
 you can check out my personal "nrd" branch, if you want to see how I do things
 on my own machines.
 
-# Anything else I should know?
+## Anything else I should know?
 
 As mentioned briefly above, DevOS also has some convenience features to make
 life easier.
@@ -220,7 +222,7 @@ exports so you don't have to build them.
 That should just about do it for DevOS's current quality of life features, but
 there are more ideas brewing.
 
-# What's next?
+## What's next?
 I'm working on a system for seamlessly importing modules, packages and
 overlays from other flakes, which isn't too hard as it is, but it's messy
 because the current "flake.nix" has a lot of business logic that gets in the way.

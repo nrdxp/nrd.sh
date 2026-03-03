@@ -5,6 +5,8 @@ date = 2022-12-09
 tags = ["nix", "devops"]
 +++
 
+> **Editor's note:** This post describes Standard Action, a now-superseded project. For the current vision, see [From Nix to Eos](../nix-to-eos).
+
 ## CI Should be Simple
 
 As promised in the [last post](./std), I'd like to expand a bit more on what we've

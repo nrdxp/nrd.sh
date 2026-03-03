@@ -5,10 +5,12 @@ date = 2022-10-31
 tags = ["nix", "devops"]
 +++
 
+> **Editor's note:** This post describes Standard, a now-superseded project. For the current vision, see [From Nix to Eos](../nix-to-eos).
+
 ## Update: A Video is Worth 1000 Blogs
 
 For those who would rather watch than read, a colleague of mine has whipped up a great video series
-exploring Standard in depth, so drop by the [media secition](../media) for links.
+exploring Standard in depth.
 
 ## Two years later...
 

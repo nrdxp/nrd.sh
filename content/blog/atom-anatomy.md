@@ -19,7 +19,7 @@ And if this seems off-topic, forgive me, but I feel compelled to restate my posi
 
 To the point: with my philosophical footing now secure and my conscience clear, I’m ready to unpack the technical details unencumbered. I may have been overly optimistic about timelines at first, blindsided by one of the toughest years I’ve faced. Now though, with a clearer perspective, I’m aiming for a 6-to-12-month horizon for Atom as I recharge and press on. Since Atom is the foundational component of my overall vision within Ekala, let's begin this new technical blog series with a thorough exposition of it, shall we? Fair warning, this is a long one...
 
-# Atom: A Review
+## Atom: A Review
 
 If you’ve followed my previous writings or poked around in my code, you might already have a rough sense of the foundational format I’m championing: the Atom. To keep this piece standalone, though, let’s recap its high-level design and the driving force behind it before we go deep. The silver lining to the long gap between iterations? My ability to explain my designs after months of stewing has, hopefully, gotten a lot sharper.
 
@@ -59,7 +59,7 @@ So, we need a novel approach; one that doesn’t sacrifice what makes Nix powerf
 - Scales efficiently across repositories of any size, letting users organize their projects based on preference, not constraints.
 - Delivers only relevant, versioned code in a way that’s simple to understand and use.
 
-# Atomic Anatomy
+## Atomic Anatomy
 
 In the last section, I introduced the motivation behind atom—a foundational format to rethink how we package and distribute Nix expressions. Driven by the escalating complexity of nixpkgs and the Nix ecosystem’s scaling woes, I argued that a first-principles overhaul is critical to avoid a maintenance nightmare. While I respect efforts like snix and cab, I’ve identified a unique gap in the ecosystem that the atom aims to fill, complementing those projects with a format they could adopt in the future. Now, let’s unpack the technical anatomy of an atom and see how it tackles the problem head-on.
 
