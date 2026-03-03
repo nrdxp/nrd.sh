@@ -13,7 +13,7 @@ I offer a deliberate disclaimer because I'm well aware of the vipers who will co
 
 Regardless, this letter is surely representative of the experience of a lot of men going through similar situations. I just so happen to be a couple of years ahead of most of them, having gotten started early. Rest assured, this sort of thing will not stop happening until the West is utterly conquered, or we finally decide to wake the [f*@k up](https://x.com/nrdexp/status/1938600312035745890). Either way, this isn't for you, in the end. It is for my dearly beloved children.
 
-# A Letter to My Children
+## A Letter to My Children
 
 Hello kids. First of all I just want you to know how badly I miss you guys. I hope you are doing okay. I've seen how stressful it is in your situation too many times. I know how confused and frustrated you might be right now. I don't blame you if you blame me for this situation. Truly it is my fault, or at least my failing, for not being able to overcome this sad state of affairs much sooner. Still, I would compel you my children, as you get older, to follow my story, to sit and remember my endless struggle which you yourselves witnessed, and simply decide for yourselves if it was that I sufficiently fought for the right and honor to be your father; which has been no doubt or question, the greatest honor of my lifetime.
 
