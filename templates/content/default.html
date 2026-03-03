@@ -1,5 +1,43 @@
 {% extends "base.html" %}
 {% block content %}
+{% if anchors | length > 2 %}
+<div class="post-with-toc">
+    <article class="post">
+        <header class="post-header">
+            <h1>{{ page.title }}</h1>
+            {% if page.description %}
+            <p class="post-description">{{ page.description }}</p>
+            {% endif %}
+            {% if page.date or page.tags | length > 0 %}
+            <div class="post-meta">
+                {% if page.date %}<time>{{ page.date }}</time>{% endif %}
+                {% if page.tags | length > 0 %}
+                <div class="post-tags">
+                    {% for tag in page.tags %}
+                    <a href="{{ prefix }}/tags/{{ tag }}.html">{{ tag }}</a>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+            {% endif %}
+        </header>
+        {{ content | safe }}
+    </article>
+    <aside class="toc-sidebar">
+        <nav class="toc-nav">
+            <input type="checkbox" id="toc-toggle" class="toc-toggle" checked />
+            <label for="toc-toggle" class="toc-label">Contents</label>
+            <ul class="toc-list">
+                {% for anchor in anchors %}
+                <li class="toc-level-{{ anchor.level }}">
+                    <a href="#{{ anchor.id }}">{{ anchor.label }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </aside>
+</div>
+{% else %}
 <article class="post">
     <header class="post-header">
         <h1>{{ page.title }}</h1>
@@ -19,18 +57,7 @@
         </div>
         {% endif %}
     </header>
-    {% if anchors | length > 2 %}
-    <details class="post-toc" open>
-        <summary>Contents</summary>
-        <ul>
-            {% for anchor in anchors %}
-            <li style="margin-left: {{ (anchor.level - 2) * 1.2 }}rem">
-                <a href="#{{ anchor.id }}">{{ anchor.label }}</a>
-            </li>
-            {% endfor %}
-        </ul>
-    </details>
-    {% endif %}
     {{ content | safe }}
 </article>
+{% endif %}
 {% endblock content %}
