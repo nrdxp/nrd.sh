@@ -61,12 +61,16 @@ main {
 .site-header {
   max-width: 56rem;
   margin: 0 auto;
-  padding: 2.5rem 2rem 1.25rem;
+  padding: 1.25rem 2rem;
   border-bottom: 1px solid var(--rule);
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--bg);
 }
 
 .site-title {
@@ -170,7 +174,7 @@ h4:hover .heading-anchor {
 h2:target,
 h3:target,
 h4:target {
-  scroll-margin-top: 1rem;
+  scroll-margin-top: 5rem;
   padding-left: 0.5rem;
   border-left: 3px solid var(--accent);
 }
@@ -181,6 +185,11 @@ h3:target .heading-anchor,
 h4:target .heading-anchor {
   opacity: 1;
   color: var(--accent);
+}
+
+/* All anchored elements clear the sticky header */
+:target {
+  scroll-margin-top: 5rem;
 }
 
 /* ── Prose ────────────────────────────────────────────────── */
@@ -299,10 +308,15 @@ hr {
   list-style: none;
   padding: 0;
   margin: 0;
+  overflow: hidden;
+  max-height: 80rem;
+  opacity: 1;
+  transition: max-height 1s steps(20), opacity 0.3s ease;
 }
 
 .toc-toggle:not(:checked)~.toc-list {
-  display: none;
+  max-height: 0;
+  opacity: 0;
 }
 
 .toc-list li {
@@ -360,6 +374,11 @@ hr {
   margin-bottom: 2.5rem;
   padding-bottom: 1.5rem;
   border-bottom: 1px solid var(--rule);
+}
+
+.post-header+h2 {
+  border-bottom: none;
+  margin-top: 2rem;
 }
 
 .post-description {

@@ -12,12 +12,35 @@
   <link rel="stylesheet" href="{{ prefix }}/style.css" />
   <link rel="alternate" type="application/atom+xml" title="{{ config.title }} Feed" href="{{ prefix }}/feed.xml" />
   <link rel="icon" type="image/png" href="{{ prefix }}/icon/favicon.png" />
+  <!-- Scroll-driven typewriter: inlined to bypass lightningcss stripping animation-timeline -->
+  <style>
+    @keyframes typewrite {
+      from {
+        max-width: 0;
+      }
+
+      to {
+        max-width: 30ch;
+      }
+    }
+
+    .page-title {
+      display: inline-block;
+      overflow: hidden;
+      white-space: nowrap;
+      vertical-align: bottom;
+      max-width: 0;
+      animation: typewrite linear both;
+      animation-timeline: scroll();
+      animation-range: 0px 500px;
+    }
+  </style>
 </head>
 
 <body>
   <header class="site-header">
-    <a href="{{ prefix }}/index.html" class="site-title">{{ config.title }}{% if title and title != config.title %} | {{
-      title }}{% endif %}</a>
+    <a href="{{ prefix }}/index.html" class="site-title">{{ config.title }}{% if title and title != config.title %}<span
+        class="page-title">&nbsp;| {{ title }}</span>{% endif %}</a>
     <nav>
       <a href="{{ prefix }}/blog/index.html" {% if page_path is starting_with("/blog") %}class="active" {% endif
         %}>blog</a>
