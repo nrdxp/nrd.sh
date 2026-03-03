@@ -1,16 +1,9 @@
----
-title: Declaration of Rebellion
-description: Blocked on Slavery
-taxonomies:
-  tags:
-    - opensource
-    - politics
-    - civilization
-date: "2025-05-03"
-extra:
-  read_time: true
-  repo_view: true
----
++++
+title = "Declaration of Rebellion"
+description = "Blocked on Slavery"
+date = 2025-05-03
+tags = ["open-source", "politics", "civilization"]
++++
 
 Since my [last post](../closed-openness) on the erosion of open-source values, personal upheavals have forced me to pause and reflect. Longstanding unresolved tensions—within myself and in close relationships—have left me burnt out, wrestling with questions and conflicts that have shadowed much of my adult life; as some of my X followers may have noticed in some of my recent, admittedly unhinged, posts there.
 

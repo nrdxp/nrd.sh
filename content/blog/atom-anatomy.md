@@ -1,16 +1,9 @@
----
-title: Anatomy of an Atom
-description: A Solid & Natural Foundation
-taxonomies:
-  tags:
-    - opensource
-    - ekala
-    - nixos
-date: "2025-05-16"
-extra:
-  read_time: true
-  repo_view: true
----
++++
+title = "Anatomy of an Atom"
+description = "A Solid & Natural Foundation"
+date = 2025-05-16
+tags = ["open-source", "axios", "nix"]
++++
 
 At last, I’m diving into the technical nitty-gritty of my own contributions to the Ekala project, a vision I’ve long teased but, regrettably, delayed. I’ve already shared a [high-level overview](../nix-to-eos) of its ambitious vision, but to bring any grand idea to life, it must be broken down into manageable pieces. Ekala started as a thought experiment; an exploration of how an ideal architecture for a Nix-like build system might be structured. What emerged convinced me to pursue a path I feel compelled to follow, despite efforts to steer me otherwise.
 

@@ -1,22 +1,10 @@
----
-title: "No-Fault Tyranny: An Indictment of Title IV-D and the Assault Upon Family and Freedom"
-description: "Exposing the Lies Once and For All"
-taxonomies:
-   tags:
-      - law
-      - justice
-      - balance
-author: "Tim D"
-authorGithub: "nrdxp"
-authorImage: "https://avatars.githubusercontent.com/u/34083928?v=4"
-authorTwitter: "nrdexp"
-date: "2025-08-19"
-category: "legal"
-draft: true
-extra:
-  read_time: true
-  repo_view: true
----
++++
+title = "No-Fault Tyranny: An Indictment of Title IV-D and the Assault Upon Family and Freedom"
+description = "Exposing the Lies Once and For All"
+date = 2025-08-19
+tags = ["law"]
+draft = true
++++
 
 > ⚠️ You probably want to wait for the legalese-english translation of this in an upcoming post.
 

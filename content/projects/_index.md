@@ -1,5 +1,4 @@
 +++
 title = "Projects"
-sort_by = "weight"
-template = "cards.html"
+section_type = "projects"
 +++

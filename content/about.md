@@ -1,8 +1,5 @@
 +++
 title = "About"
-path = "about"
-[extra]
-repo_view = false
 +++
 
 I'm Tim DeHerrera (nrdxp), an engineer at [IOG](https://iog.io) where I help develop interoperable blockchain infrastructure for the Cardano ecosystem.

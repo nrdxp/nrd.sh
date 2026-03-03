@@ -1,23 +1,9 @@
----
-title: From Nix to Eos
-description: From Darkness to Dawn in Store-Based Systems
-taxonomies:
-  tags:
-    - nix
-    - ekala
-    - eos
-    - eka
-    - atom
-author: Tim D
-authorGithub: nrdxp
-authorImage: https://avatars.githubusercontent.com/u/34083928?v=4
-authorTwitter: nrdexp
-date: "2024-12-04"
-category: dev
-extra:
-  read_time: true
-  repo_view: true
----
++++
+title = "From Nix to Eos"
+description = "From Darkness to Dawn in Store-Based Systems"
+date = 2024-12-04
+tags = ["nix", "axios"]
++++
 
 This piece explores the evolution of store-based systems and our vision for their future. While I've aimed to make it accessible to those not intimately familiar with Nix, I assume some technical foundation—particularly an interest in software distribution at scale. If terms like "reproducible builds" or "supply chain security" don't pique your curiosity, what follows might feel rather academic. However, if you're intrigued by how we might tackle the growing complexity of software distribution while maintaining security and sanity, read on.
 

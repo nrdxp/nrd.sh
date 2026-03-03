@@ -1,21 +1,9 @@
----
-title: "Twelve Years as a Digital Hermit"
-description: "Why I left Social Media a Over a Decade Ago, and Why I Now Return"
-taxonomies:
-   tags:
-      - ramblings
-      - propaganda
-      - philosophy
-author: "Tim D"
-authorGithub: "nrdxp"
-authorImage: "https://avatars.githubusercontent.com/u/34083928?v=4"
-authorTwitter: "nrdexp"
-date: "2024-10-11"
-category: "personal"
-extra:
-  read_time: true
-  repo_view: true
----
++++
+title = "Twelve Years as a Digital Hermit"
+description = "Why I left Social Media a Over a Decade Ago, and Why I Now Return"
+date = 2024-10-11
+tags = ["philosophy"]
++++
 
 **Reader Advisory:** This post is sarcastic, and a bit raw. Those without a sense of humor, or an aversion to hard facts, venture no further. Also, these opinions are my own; subject to change, etc, etc.
 

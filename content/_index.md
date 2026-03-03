@@ -1,4 +1,4 @@
 +++
-[extra]
-section_path = "blog/_index.md"
+title = "nrdxp"
+description = "nrdxp's personal site & blog"
 +++

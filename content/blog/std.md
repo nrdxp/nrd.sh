@@ -1,21 +1,9 @@
----
-title: From DevOS to Standard
-description: Why we made Standard, and what it has done for us.
-taxonomies:
-  tags:
-    - std
-    - nix
-    - devops
-author: Tim D
-authorGithub: nrdxp
-authorImage: https://avatars.githubusercontent.com/u/34083928?v=4
-authorTwitter: nrdxp52262
-date: "2022-10-31"
-category: dev
-extra:
-  read_time: true
-  repo_view: true
----
++++
+title = "From DevOS to Standard"
+description = "Why we made Standard, and what it has done for us."
+date = 2022-10-31
+tags = ["nix", "devops"]
++++
 
 ## Update: A Video is Worth 1000 Blogs
 

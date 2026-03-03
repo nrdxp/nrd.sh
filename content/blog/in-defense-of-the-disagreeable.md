@@ -1,25 +1,9 @@
----
-title: In Defense of the Disagreeable
-description: A Call for Freedom
-taxonomies:
-  tags:
-    - psychology
-    - personality
-    - freedom
-    - nonconformity
-    - open-source
-    - philosophy
-    - critical-thinking
-author: Tim D
-authorGithub: nrdxp
-authorImage: https://avatars.githubusercontent.com/u/34083928?v=4
-authorTwitter: nrdexp
-date: "2024-12-25"
-category: personal
-extra:
-  read_time: true
-  repo_view: true
----
++++
+title = "In Defense of the Disagreeable"
+description = "A Call for Freedom"
+date = 2024-12-25
+tags = ["philosophy", "open-source"]
++++
 
 This blog typically focuses on technical matters - software architecture, deployment strategies, and the occasional deep dive into systems design. While I've shared personal musings before, I've never ventured quite this deep into the waters of self-reflection and social commentary.
 

@@ -1,15 +1,10 @@
----
-title: The Hill I Will Gladly Die On
-description: My, Now, Lifelong War
-taxonomies:
-  tags:
-    - personal
-date: "2025-06-25"
-draft: true
-extra:
-  read_time: true
-  repo_view: true
----
++++
+title = "The Hill I Will Gladly Die On"
+description = "My, Now, Lifelong War"
+date = 2025-06-25
+tags = ["personal"]
+draft = true
++++
 
 I am more exhausted right now in this moment, than at any time I can remember. Why? Well we'll try to get to the bottom of that here. Maybe this is a bad time to try and elaborate, but it seems like time is a bit of the essence here, and maybe the rawness is appropriate, all things considered. I don't plan on spending much time editing or revising, at least on first pass, so apologies in advance for any grammatical or spelling errors that will undoubtably ensue, but time is the most critical factor now, so it can't be helped.
 

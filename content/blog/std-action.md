@@ -1,22 +1,9 @@
----
-title: Standard Action
-description: Do it once, do it right.
-taxonomies:
-  tags:
-    - std
-    - nix
-    - devops
-    - github actions
-author: Tim D
-authorGithub: nrdxp
-authorImage: https://avatars.githubusercontent.com/u/34083928?v=4
-authorTwitter: nrdxp52262
-date: "2022-12-09"
-category: dev
-extra:
-  read_time: true
-  repo_view: true
----
++++
+title = "Standard Action"
+description = "Do it once, do it right."
+date = 2022-12-09
+tags = ["nix", "devops"]
++++
 
 ## CI Should be Simple
 

@@ -1,20 +1,9 @@
----
-title: The Closing of Open Source
-description: Against the Dying of the Light
-taxonomies:
-  tags:
-    - opensource
-    - tech
-    - programming
-    - reflection
-    - nixos
-    - ekala
-    - techculture
-date: "2025-01-20"
-extra:
-  read_time: true
-  repo_view: true
----
++++
+title = "The Closing of Open Source"
+description = "Against the Dying of the Light"
+date = 2025-01-20
+tags = ["open-source", "tech", "personal", "nix", "axios"]
++++
 
 > "The line separating good and evil passes not through states, nor between classes, nor between political parties either — but right through every human heart."
 >

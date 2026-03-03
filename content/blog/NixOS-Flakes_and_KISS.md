@@ -1,19 +1,9 @@
----
-title: NixOS, Flakes and KISS
-description: A simpler way to manage the OS Layer
-taxonomies:
-  tags:
-    - nix
-author: Tim D
-authorGithub: nrdxp
-authorImage: https://avatars.githubusercontent.com/u/34083928?v=4
-authorTwitter: nrdxp52262
-date: "2020-12-19"
-category: dev
-extra:
-  read_time: true
-  repo_view: true
----
++++
+title = "NixOS, Flakes and KISS"
+description = "A simpler way to manage the OS Layer"
+date = 2020-12-19
+tags = ["nix"]
++++
 
 ## Introduction
 

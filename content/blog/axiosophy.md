@@ -1,10 +1,7 @@
 +++
 title = "Axiosophy"
 description = "On the Structural Derivation of Ethics from Natural Constraint"
-date = "2026-02-26"
-draft = false
-
-[taxonomies]
+date = 2026-02-26
 tags = ["politics", "civilization", "philosophy"]
 +++
 

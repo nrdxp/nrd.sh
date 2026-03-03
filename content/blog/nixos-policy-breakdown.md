@@ -1,20 +1,9 @@
----
-title: "Political Bikeshedding: NixOS Edition"
-description: On Social Dynamics and Leadership
-taxonomies:
-   tags:
-     - nix
-     - politics
-author: Tim D
-authorGithub: nrdxp
-authorImage: https://avatars.githubusercontent.com/u/34083928?v=4
-authorTwitter: nrdxp52262
-date: "2024-07-02"
-category: politics
-extra:
-  read_time: true
-  repo_view: true
----
++++
+title = "Political Bikeshedding: NixOS Edition"
+description = "On Social Dynamics and Leadership"
+date = 2024-07-02
+tags = ["nix", "politics"]
++++
 
 This piece offers a perspective on recent NixOS project challenges from
 a long-term contributor. As one of the authors of [RFC 175][175], which

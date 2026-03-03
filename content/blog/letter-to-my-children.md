@@ -1,14 +1,9 @@
----
-title: A Letter to My Children
-description: The Struggles, Perils, and Beauty of Life
-taxonomies:
-  tags:
-    - personal
-date: "2025-06-29"
-extra:
-  read_time: true
-  repo_view: true
----
++++
+title = "A Letter to My Children"
+description = "The Struggles, Perils, and Beauty of Life"
+date = 2025-06-29
+tags = ["personal"]
++++
 
 ### A Disclaimer to the Reader
 
