@@ -9,7 +9,7 @@ tags = ["open-source", "tech", "personal", "nix", "axios"]
 >
 > — Aleksandr Solzhenitsyn
 
-What a year 2025 has been already... While I'd planned for my next post to be technical, plans rarely survive first contact with reality. In a [previous piece](../in-defense-of-the-disagreeable/#the-misunderstood-guardians), I promised to delve deeper into what I consider an existential threat to open source – a claim that might have seemed alarmist just weeks ago, before chaos became our new normal. On the eve of the US presidential inauguration, it feels fitting to explore this topic, as the incoming administration will inevitably reshape our digital landscape, for better or worse. If you can bear with me for one more politically charged post, I promise to follow up with a series focused on Ekala's progress and design. So without further ado, let's dive in.
+What a year 2025 has been already... While I'd planned for my next post to be technical, plans rarely survive first contact with reality. In a [previous piece](./in-defense-of-the-disagreeable/#the-misunderstood-guardians), I promised to delve deeper into what I consider an existential threat to open source – a claim that might have seemed alarmist just weeks ago, before chaos became our new normal. On the eve of the US presidential inauguration, it feels fitting to explore this topic, as the incoming administration will inevitably reshape our digital landscape, for better or worse. If you can bear with me for one more politically charged post, I promise to follow up with a series focused on Ekala's progress and design. So without further ado, let's dive in.
 
 ## The Personal is Political
 
@@ -17,7 +17,7 @@ If you've read any of my previous posts or know me personally, you know I've oft
 
 However, as I get older, I've been compelled to reassess this position, as I'm forced to reconsider virtually all of my internal assumptions as I make my way through life. Successful or no, I wish to make an earnest attempt to drive the conversation in a more reasoned, deliberate, and hopefully productive direction. Though I may be setting myself up for failure — after all, I'm just one nerd trying to navigate the treacherous waters of modern political discourse. By all means, decide for yourselves.
 
-But I digress, as part of coming to terms with how politics affects both my personal and professional life, you might remember from one of my [previous posts](../12-years) that I recently ended my decade-long exile from social media. I wanted to start this piece with a summary of my experience so far, to hopefully give the reader some context around my ramblings, we'll see if I succeed...
+But I digress, as part of coming to terms with how politics affects both my personal and professional life, you might remember from one of my [previous posts](./12-years) that I recently ended my decade-long exile from social media. I wanted to start this piece with a summary of my experience so far, to hopefully give the reader some context around my ramblings, we'll see if I succeed...
 
 ## 𝕏 Marks the Spot
 
@@ -37,7 +37,7 @@ Whatever the case, the real connections I've made are valuable, but my original 
 
 My experience on 𝕏 has highlighted a particularly troubling pattern: the replacement of meaningful discourse with performance. Where social media could be a powerful tool for knowledge sharing and mentorship, it instead rewards degredation into a arena of posturing and point-scoring. I've now watched countless opportunities for genuine learning transform into gladiatorial spectacles of utterly unfulfilling "dunks" & "ratios".
 
-While there is some real social utility in well placed [ridicule](../12-years/#the-forgotten-utility-of-ridicule), the majority of cases seem to boil down to crude gamification, sadly. But this isn't just about social media behavior — it's symptomatic of a deeper cultural shift in how we approach knowledge transfer and personal growth all together.
+While there is some real social utility in well placed [ridicule](./12-years/#the-forgotten-utility-of-ridicule), the majority of cases seem to boil down to crude gamification, sadly. But this isn't just about social media behavior — it's symptomatic of a deeper cultural shift in how we approach knowledge transfer and personal growth all together.
 
 ## From Mentor to Memelord & (Hopefully) Back Again
 
@@ -81,7 +81,7 @@ What followed was even more revealing. After nearly two weeks of forced silence 
 
 The final act came months later. Despite moving on to discussions about what would eventually become Ekala; limiting my involvement in NixOS to answering newcomers' questions on Discourse, I was quietly [banned](https://github.com/NixOS/moderation/blob/a1c292a453a93fc5d22dcc4738514d6d636d0d74/moderation-log.md?plain=1#L3-L7) for "regularly heated debates" after commenting on yet another weaponization of political rhetoric during the constitutional "election." They simultaneously banned my RFC co-author and another associate who hadn't even spoken out, using the same generic charge. The brazenness alone revealed how smug they'd become in their authority. This, after years of effectively challenging their rhetoric through nothing but logic and organic community support (I haven't even touched on RFC 111 from years back).
 
-I document these events not to settle scores, but to correct an increasingly doctored record. People often encounter fragments of these discussions — carefully edited by now — and accept the painted narrative of me as some radical agitator. The irony is profound: [in this context](../nixos-policy-breakdown/#marginalization-is-contextual-and-temporal), I represent exactly the marginalized voice they claim to defend. I had no coalition, no special interest group, no funding — just my voice, my now friends who've been similarly ostracized, and the occasional supporter willing to stand with me.
+I document these events not to settle scores, but to correct an increasingly doctored record. People often encounter fragments of these discussions — carefully edited by now — and accept the painted narrative of me as some radical agitator. The irony is profound: [in this context](./nixos-policy-breakdown/#marginalization-is-contextual-and-temporal), I represent exactly the marginalized voice they claim to defend. I had no coalition, no special interest group, no funding — just my voice, my now friends who've been similarly ostracized, and the occasional supporter willing to stand with me.
 
 This serves as a reminder that even a few people willing to resist tyranny can hold it at bay for quite some time. While I wasn't alone, I was perhaps one of the most persistent and tactical critics, for a time. My agenda was transparently simple: I wanted Nix to be the best it could be — the same motivation that now drives my work on Ekala.
 

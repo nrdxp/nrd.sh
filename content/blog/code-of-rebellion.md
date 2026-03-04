@@ -7,9 +7,9 @@ tags = ["open-source", "politics", "civilization"]
 
 ## A Note to the Reader
 
-This piece was first written in May 2025. The philosophical framework sketched here has since been developed into a formal system in [Axiosophy](../axiosophy). Consider this the origin document — raw, personal, and unapologetically so. Axiosophy is the architecture; this is the fire that demanded it.
+This piece was first written in May 2025. The philosophical framework sketched here has since been developed into a formal system in [Axiosophy](./axiosophy). Consider this the origin document — raw, personal, and unapologetically so. Axiosophy is the architecture; this is the fire that demanded it.
 
-Since my [last post](../closed-openness) on the erosion of open-source values, [personal upheavals](../letter-to-my-children) forced me to pause and reflect. Prolonged encounters with State Corruption, the kind that keeps a man running in circles for years, drove me to trace the philosophical roots of FOSS's decay from first principles. It turned out I had to drill all the way to the foundations of human institutions themselves, to an order which, to my knowledge, has not been previously articulated, though it seems to have been subconsciously expressed throughout time. What follows is a logically consistent framework which, if embraced, could restore the free software movement and, ultimately, safeguard human institutions from corruption in general.
+Since my [last post](./closed-openness) on the erosion of open-source values, [personal upheavals](./letter-to-my-children) forced me to pause and reflect. Prolonged encounters with State Corruption, the kind that keeps a man running in circles for years, drove me to trace the philosophical roots of FOSS's decay from first principles. It turned out I had to drill all the way to the foundations of human institutions themselves, to an order which, to my knowledge, has not been previously articulated, though it seems to have been subconsciously expressed throughout time. What follows is a logically consistent framework which, if embraced, could restore the free software movement and, ultimately, safeguard human institutions from corruption in general.
 
 ## What's All this Talk of "The State"?
 
@@ -23,7 +23,7 @@ What I'm attempting here is nothing less than a logically consistent philosophic
 
 By the end, we'll arrive at a conclusion that positions Free Software as a vital force in the functioning of such a State. In other words, not just a nice way to access source code, or an efficient way of managing development, but of absolutely crucial necessity as a pillar of Justice itself.
 
-[^ax]: The framework sketched in this section has since been formalized as a derivation chain in [Axiosophy](../axiosophy), Part II. What follows here is the original, less formal articulation.
+[^ax]: The framework sketched in this section has since been formalized as a derivation chain in [Axiosophy](./axiosophy), Part II. What follows here is the original, less formal articulation.
 
 #### An Axiomatic Foundation
 
@@ -53,7 +53,7 @@ A Just State recognizes the misapplication of Authority, inappropriate Law, or t
 
 While further distinctions could offer valuable insights into a healthy State's functioning, I'll reserve those for my upcoming manuscript. Here, we'll zero in on the mechanisms of Corruption and how a Just State confronts them.[^reb]
 
-[^reb]: The formal relationship between Rebellion, Spirit, and the defense of Justice is developed rigorously in [Axiosophy](../axiosophy), Part IV.
+[^reb]: The formal relationship between Rebellion, Spirit, and the defense of Justice is developed rigorously in [Axiosophy](./axiosophy), Part IV.
 
 Unjust or Corrupt States often ignore or remain apathetic to these mechanisms. Like a cancer cell abandoning its purpose within the body, such States grow unchecked, forsaking their Purpose of upholding Coherence in human affairs. A Just State, however, not only acknowledges Corruption's inevitability but codifies into Law mechanisms to combat it. These Laws, which outline how and where the State is most likely to experience Entropy, shall be called the Law of Rebellion. The Authority enforcing these Laws shall be known as the Spirit of Rebellion. Together, or separately, they may be referred to simply as Rebellion.
 
@@ -73,7 +73,7 @@ In other words, each Citizen of a Just State must retain the Authority to uphold
 
 Phew, that was heavy, wasn't it? We're nearly through the formal groundwork, but to be thorough, we need to define what a Citizen is and categorize them based on their Authority and Responsibility within the State. Then, we'll explore some general traits of each class.[^quad]
 
-[^quad]: [Axiosophy](../axiosophy) formalizes these three classes, plus a fourth (the Null Agent), as the "Quadrad": four structural positions defined entirely by their relationship to Authority and Responsibility.
+[^quad]: [Axiosophy](./axiosophy) formalizes these three classes, plus a fourth (the Null Agent), as the "Quadrad": four structural positions defined entirely by their relationship to Authority and Responsibility.
 
 I referenced these roles earlier in a link, but for clarity, let's define them here:
 
@@ -157,7 +157,7 @@ Those familiar with the early United States may recognize this as the "right to 
 
 The Spirit of Rebellion, as defined earlier, is in essence the Spirit of Liberty itself. To uphold one's Authority to Rebel, safeguarding Justice and cultivating Authority through the pursuit of Mastery, is the only sustainable path to maintaining Justice and keeping Entropy at bay over the long term. Take the United States as an example: the erosion of the Spirit to uphold the Bill of Rights has fueled much of its modern Corruption. Critics rightly point to the proliferation of unchecked Slavery, driven by an excess of Royal influence, as the root of this decay. While the Law of Rebellion remains on the books, often a hollow gesture to appease the masses, its Spirit has been thoroughly undermined in many non-trivial ways, leaving Citizens with little meaningful protection.
 
-[^lib]: The concept of Liberty as structurally derived from the necessity of Mastery is developed here but not yet formalized in [Axiosophy](../axiosophy), which focuses on the derivation chain from Entropy through the Quadrad. A future treatment may integrate Liberty formally into the hierarchy as a prerequisite for the Master–entropy-resistance relationship.
+[^lib]: The concept of Liberty as structurally derived from the necessity of Mastery is developed here but not yet formalized in [Axiosophy](./axiosophy), which focuses on the derivation chain from Entropy through the Quadrad. A future treatment may integrate Liberty formally into the hierarchy as a prerequisite for the Master–entropy-resistance relationship.
 
 ### Race Baiting 3.0
 
@@ -179,7 +179,7 @@ This reveals a core challenge, and a key reason Royals propagate the Slave class
 
 Royals undermine the Spirit of Rebellion while leaving its Law largely intact through a psychological tactic with ancient roots: decoherence.[^prism] This explains why the Master class must be heavily suppressed in a Corrupt State. Masters, far more autonomous than Slaves, possess not only greater resources but also an intimate understanding of Justice, both in theory and practice, cultivated through firsthand Mastery. They also have the courage to uphold it, making them a direct threat to Royal dominance.
 
-[^prism]: [Axiosophy](../axiosophy) formalizes this tactic through the "Axiosophic Prism": a three-layer model (Rhetorical → Legal → Moral) that diagnoses exactly how surface-level rhetoric colonizes deeper structural layers. What I describe here informally as "decoherence" maps to what Axiosophy calls "Rhetorical Displacement."
+[^prism]: [Axiosophy](./axiosophy) formalizes this tactic through the "Axiosophic Prism": a three-layer model (Rhetorical → Legal → Moral) that diagnoses exactly how surface-level rhetoric colonizes deeper structural layers. What I describe here informally as "decoherence" maps to what Axiosophy calls "Rhetorical Displacement."
 
 In politics, a reliable way to detect manipulative Royal rhetoric is to examine its internal consistency, or lack thereof. This is the philosophical root of the modern war on Coherence itself. Today, poison is peddled as both "food" and "medicine," sex slavery and genital mutilation are masked as "morality" and "liberation," and even the distinctions between men and women are rendered meaningless. Royals masquerading as Masters pervade every profession: law, science, medicine, technology. But a true Master is accountable to those they affect.
 

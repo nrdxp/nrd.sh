@@ -5,7 +5,7 @@ date = 2020-12-19
 tags = ["nix"]
 +++
 
-> **Editor's note:** This post describes DevOS, a now-superseded project. For the current vision, see [From Nix to Eos](../nix-to-eos).
+> **Editor's note:** This post describes DevOS, a now-superseded project. For the current vision, see [From Nix to Eos](./nix-to-eos).
 
 ## Introduction
 

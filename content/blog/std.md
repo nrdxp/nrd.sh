@@ -5,7 +5,7 @@ date = 2022-10-31
 tags = ["nix", "devops"]
 +++
 
-> **Editor's note:** This post describes Standard, a now-superseded project. For the current vision, see [From Nix to Eos](../nix-to-eos).
+> **Editor's note:** This post describes Standard, a now-superseded project. For the current vision, see [From Nix to Eos](./nix-to-eos).
 
 ## Update: A Video is Worth 1000 Blogs
 
