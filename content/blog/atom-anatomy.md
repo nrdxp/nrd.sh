@@ -5,19 +5,9 @@ date = 2025-05-16
 tags = ["open-source", "axios", "nix"]
 +++
 
-At last, I’m diving into the technical nitty-gritty of my own contributions to the Ekala project, a vision I’ve long teased but, regrettably, delayed. I’ve already shared a [high-level overview](../nix-to-eos) of its ambitious vision, but to bring any grand idea to life, it must be broken down into manageable pieces. Ekala started as a thought experiment; an exploration of how an ideal architecture for a Nix-like build system might be structured. What emerged convinced me to pursue a path I feel compelled to follow, despite efforts to steer me otherwise.
+This post is a deep technical walkthrough of the Atom format: a packaging API designed to fix how Nix code is distributed and scaled. If you want the political and philosophical backdrop, see my pieces on the [erosion of open-source values](./closed-openness) and the [broader vision](./nix-to-eos) driving this work. Here, we're all technical. Fair warning, this is a long one...
 
-In the spirit of honesty, I see the growing complexity in the Nix ecosystem, both technical and social, as a serious threat to its future. As a holistic thinker unafraid to cross boundaries others might avoid, I believe the community’s rising tensions (however well-masked) and the lack of clear technical leadership are deeply intertwined, not merely coincidental.
-
-Let me be clear: this isn’t an indictment of any specific person or faction caught up in the drama. I admire the resolve to chase one’s convictions, even if I find their foundations flimsier than my own.
-
-Still, by now I hope my readers see that I view the push for political alignment in open-source—however well-intentioned—as unhealthy and utterly at odds with its founding ideals. I’ve explored this [intimately](../closed-openness) and [technically](../code-of-rebellion) elsewhere, so I’ll keep it brief: I see the hijacking of community goodwill for extreme political agendas that undermine our technical goals—whether in Ekala, Nix, or open-source broadly—as a direct assault on our ethos.
-
-In all this, I’ve reached a difficult but reasoned conclusion: we must not support, let alone empower, individuals or institutions that promote or passively tolerate such agendas if open-source is to remain a vibrant force, not a hollow shell of its former self. If my firm stance feels unacceptable, dear reader, feel free to step away—I’ll think no less of you.
-
-And if this seems off-topic, forgive me, but I feel compelled to restate my position briefly given the current landscape. Curious why? My linked pieces and earlier writings justify my growing resolve. This clarity fuels my drive to continue building Atom—a technical rebellion against complexity. With that, I’m grateful for the patience of those who’ve stuck with me. Life has taught me that sometimes the only path forward is one you carve yourself. As I’ve noted, personal and social upheaval over the past year has pushed me down an unexpected road. Though my reserved nature makes me hesitant to share too many personal details, and despite the stress it’s caused, I’ve laid the groundwork for what lies ahead, and I’ll gladly walk this path—twists and all—as long as I’m able.
-
-To the point: with my philosophical footing now secure and my conscience clear, I’m ready to unpack the technical details unencumbered. I may have been overly optimistic about timelines at first, blindsided by one of the toughest years I’ve faced. Now though, with a clearer perspective, I’m aiming for a 6-to-12-month horizon for Atom as I recharge and press on. Since Atom is the foundational component of my overall vision within Ekala, let's begin this new technical blog series with a thorough exposition of it, shall we? Fair warning, this is a long one...
+> **A note on project evolution:** This piece captures the Atom design as of mid-2025, during the proof-of-concept phase. That phase was a success. Since then, some details (particularly the manifest sketch) have evolved considerably. We are now working on a formal specification to nail down semantics and address production concerns not covered in the prototype: key management, ownership, claim provenance, and more. Consider this a snapshot of the thinking that got us here, not the final word.
 
 ## Atom: A Review
 
@@ -77,7 +67,7 @@ To ground things, let’s dive into the Atom Nix frontend and Git storage backen
 
 ## Atomic Git
 
-As I’ve outlined earlier, Nix’s current code distribution mechanism has a glaring flaw. To reference a package at a specific version, you must first identify the nixpkgs checkout containing that version—a process that’s neither obvious nor trivial. Need another version? Find another nixpkgs checkout. Need both simultaneously? You’re stuck fetching all of nixpkgs’ unrelated code twice. Anyone who’s wrestled with a bloated `flake.lock` file has felt this pain, as I’ve [previously noted](../nix-to-eos#the-brick-wall), so I won’t belabor it here.
+As I’ve outlined earlier, Nix’s current code distribution mechanism has a glaring flaw. To reference a package at a specific version, you must first identify the nixpkgs checkout containing that version—a process that’s neither obvious nor trivial. Need another version? Find another nixpkgs checkout. Need both simultaneously? You’re stuck fetching all of nixpkgs’ unrelated code twice. Anyone who’s wrestled with a bloated `flake.lock` file has felt this pain, as I’ve [previously noted](./nix-to-eos#the-brick-wall), so I won’t belabor it here.
 
 If you’re familiar with Git’s internal object format, though, you might wonder why this is even necessary. Every file and directory in Git is a content-addressed object, which, in theory, should be independently referenceable and fetchable. The issue isn’t that Git can’t handle this—it’s that Git’s conventional linear history model obscures a more elegant solution.
 
@@ -141,7 +131,7 @@ So, how do we pull this off? We need to disambiguate atoms with the same Unicode
 
 From there, we derive the atom’s machine ID using a [keyed BLAKE3 hash](https://github.com/ekala-project/eka/blob/b3b62913ae04318bb34ed50d31004e8b9463ff0b/crates/atom/src/id/mod.rs#L93) over the repository’s initial commit hash, a constant for key derivation, and the atom’s Unicode ID. BLAKE3’s speed and vast collision space let us index trillions of atoms with negligible risk of collisions. This hash then becomes our bridge, linking the gritty world of derivations to the human world of versions, pulling software distribution idioms cleanly into Nix’s rigorous realm of closures.
 
-And what’s it good for? A ton. It can power optimizations like bulletproof evaluation and build caches. Picture a [backend](../nix-to-eos#a-new-dawn) that spots a user’s requested atom and version, verifies its pinned commit, and checks the organization’s work history. Been built before? Boom—it skips the work and hands over the artifact. That’s not just faster; it splits concerns cleanly. A user’s client doesn’t need to touch a Nix evaluator—just parse the atom API and ping the backend. If evaluation or building’s needed, the backend handles it quietly; if not, you get results instantly.
+And what’s it good for? A ton. It can power optimizations like bulletproof evaluation and build caches. Picture a [backend](./nix-to-eos#a-new-dawn) that spots a user’s requested atom and version, verifies its pinned commit, and checks the organization’s work history. Been built before? Boom—it skips the work and hands over the artifact. That’s not just faster; it splits concerns cleanly. A user’s client doesn’t need to touch a Nix evaluator—just parse the atom API and ping the backend. If evaluation or building’s needed, the backend handles it quietly; if not, you get results instantly.
 
 This opens up a lot of possibilities. Beyond speed, the machine ID boosts provenance tracking, record-keeping—everything a big outfit might need to manage its atoms or meet compliance standards. And it's important to note: the source identity (that initial commit hash) is an abstraction, so future storage backends can pick their own hash keys, keeping Atom flexible for the future.
 
@@ -212,7 +202,7 @@ Why? Nix code can reference anything, anywhere in a repository—or even outside
 
 [Atom Nix](https://github.com/ekala-project/atom/tree/master/atom-nix) is, at its core, a lean Nix library with a clean API for injecting values into a pure Nix evaluation in a type-safe way. That purity piece deserves its own deep dive, so we’ll save it for later and focus on the library’s heart: actual encapsulation.
 
-The meat of Atom Nix lives in a [single function](https://github.com/ekala-project/atom/blob/affbdc7be5ca615c27a54cd19e5e080de2cbb153/atom-nix/core/compose.nix) that delivers what Nix folks toss around loosely: a “module system.” But let’s be real—Nix’s so-called “module system” is a far cry from what that term means in any other language. As I’ve [ranted before](../nix-to-eos.md#unbounded-hell-reducing-complexity-in-order-to-ascend), the NixOS module system falls flat on delivering the containment and consistency you’d expect. Our `compose` function fixes that, offering true module boundaries with zero bloat, spitting in the face of Nix’s sprawling complexity.
+The meat of Atom Nix lives in a [single function](https://github.com/ekala-project/atom/blob/affbdc7be5ca615c27a54cd19e5e080de2cbb153/atom-nix/core/compose.nix) that delivers what Nix folks toss around loosely: a “module system.” But let’s be real—Nix’s so-called “module system” is a far cry from what that term means in any other language. As I’ve [ranted before](./nix-to-eos.md#unbounded-hell-reducing-complexity-in-order-to-ascend), the NixOS module system falls flat on delivering the containment and consistency you’d expect. Our `compose` function fixes that, offering true module boundaries with zero bloat, spitting in the face of Nix’s sprawling complexity.
 
 If you’re steeped in Nix’s quirks, you might be clutching your pearls, brainwashed by years of overengineered anti-patterns. No shame—Stockholm syndrome’s real. Newcomers, you’ve got the edge, unburdened by Nix’s baggage. To my friends who love those idioms: I get it. When you’re dying of thirst, even rancid water looks tempting. But Atom Nix isn’t here to coddle complexity—it’s the antidote, ruthlessly focused on delivering real boundaries and isolation, like any decent module system should. Fear not, though—beyond that, it stays out of your way, letting you revel in as much complexity as you like.
 
@@ -271,7 +261,7 @@ And there it is: flake-level purity, no VFS, no three-year wait. Using only the 
 
 Got any brains left? 😏
 
-I’ll cop to it: the last segment was dripping with sarcasm. I’ve [ranted before](../12-years#the-forgotten-utility-of-ridicule) about how a well-aimed jab can vaccinate against half-baked ideas—all in good fun, of course. Now, let’s wrap up our tour of the Atom Nix module system with the dead-simple file structure of a Nix atom.
+I’ll cop to it: the last segment was dripping with sarcasm. I’ve [ranted before](./12-years#the-forgotten-utility-of-ridicule) about how a well-aimed jab can vaccinate against half-baked ideas—all in good fun, of course. Now, let’s wrap up our tour of the Atom Nix module system with the dead-simple file structure of a Nix atom.
 
 The rules are straightforward: a top-level module is marked by a `mod.nix` file, and any directory with its own `mod.nix` is a submodule. For consistency, there’s no skipping layers—each module must be a direct child of its parent in the filesystem.
 
@@ -316,7 +306,7 @@ Easy enough, right? Now let’s dive into the pulsing _core_ of an atom—the ma
 
 ## Static Configuration: An Antidote to Complexity
 
-We’re wrapping up this piece by digging into the manifest format and lock file—the heart of atom’s design. Most of what we’ve covered so far (barring the explicitly future stuff) is already implemented or proto-typed, but I’ve deliberately held off on the manifest for months. Why? To avoid painting myself into a corner like flakes did. I’ve [ranted before](../nix-to-eos#the-proper-level-of-abstraction) about keeping crucial metadata static for better separation of concerns and performance, but this is the deep dive you’ve been waiting for—so let’s go all in.
+We’re wrapping up this piece by digging into the manifest format and lock file—the heart of atom’s design. Most of what we’ve covered so far (barring the explicitly future stuff) is already implemented or proto-typed, but I’ve deliberately held off on the manifest for months. Why? To avoid painting myself into a corner like flakes did. I’ve [ranted before](./nix-to-eos#the-proper-level-of-abstraction) about keeping crucial metadata static for better separation of concerns and performance, but this is the deep dive you’ve been waiting for—so let’s go all in.
 
 The manifest splits into three clear categories: **dependencies**, **configuration**, and **metadata**. Here are the high-level goals I’m chasing:
 
@@ -335,7 +325,7 @@ Hitting these goals unlocks a ton of goodness:
 
 See the theme? We want an _exhaustive_ high-level view of our package—systems, variants, metadata—without touching Nix evaluation. Clients can serve up package info fast, even without a local Nix install. Users get quicker feedback, fewer “why is this so slow?” moments, and a cleaner experience. It’s a smarter way to tame the chaos of package permutations in nixpkgs—like `pkgsCross` or `pkgsStatic`—which are neither obvious nor newbie-friendly. Plus, it beats the shotgun approach of generating every possible variant, whether it works or not. Let’s track what _actually_ builds and make it dead simple for users and CI to grok.
 
-The payoff? Less Nix code complexity, a snappier user-facing API, and smarter build scheduling. Who knew [searching the problem space](../closed-openness/#practical-resistance-the-ekala-way) before charging in could work so well?
+The payoff? Less Nix code complexity, a snappier user-facing API, and smarter build scheduling. Who knew [searching the problem space](./closed-openness/#practical-resistance-the-ekala-way) before charging in could work so well?
 
 I’m hammering out an [Ekala Enhancement Proposal](https://github.com/ekala-project/eeps) (EEP) to lock in a release candidate—check the rough draft at [ekala-project/atom#51](https://github.com/ekala-project/atom/issues/51). For completeness's sake, let's just take a quick peek at the TOML and lock format in the next segment.
 
@@ -445,6 +435,6 @@ The atom format is bold, aiming to be a long-term packaging API and a rock-solid
 
 Many Nix abstractions will stick around, atom or no atom—I’m sure of it. But their shape could shift dramatically. I respect the magic that’s carried Nix for 20 years, but we’ve mostly been tweaking old idioms. With two decades of global-scale lessons, we’ve got the perspective to ask, “What’s next?” Imagine a Nix ecosystem where builds are fast, configs are intuitive, and scale’s no issue—Atom just might be the spark to get us there.
 
-Look, if you’ve read this far, you clearly care about Nix and its innovation. You've also seen that I’ve got strong opinions—my [ramblings](../closed-openness) prove it—but they've been forged iteratively, over a long timespan, from questioning my own assumptions and ditching what doesn’t work. Atom’s not my pet project; it’s a community effort, and your ideas will shape its path. So, join us on [Discord](https://discord.gg/DgC9Snxmg7) and share your take. Be brutally honest or wildly supportive—just bring your real thoughts. Whatever comes next, thanks for diving deep into my ideas. Catch you soon! And...
+Look, if you’ve read this far, you clearly care about Nix and its innovation. You've also seen that I’ve got strong opinions—my [ramblings](./closed-openness) prove it—but they've been forged iteratively, over a long timespan, from questioning my own assumptions and ditching what doesn’t work. Atom’s not my pet project; it’s a community effort, and your ideas will shape its path. So, join us on [Discord](https://discord.gg/DgC9Snxmg7) and share your take. Be brutally honest or wildly supportive—just bring your real thoughts. Whatever comes next, thanks for diving deep into my ideas. Catch you soon! And...
 
-Viva [_Rebellion_](../code-of-rebellion)!
+Viva [_Rebellion_](./code-of-rebellion)!
