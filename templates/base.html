@@ -68,7 +68,11 @@
   </header>
   <main>{% block content %}{% endblock content %}</main>
   <footer class="site-footer">
-    <span>&copy; 2026 {{ config.author }}</span>
+    <span><span class="copyleft">🄯</span> nrdxp · built with <a href="https://sukr.io">sukr</a> and spite ·</span>
+    <nav class="footer-links">
+      <a href="{{ prefix }}/feed.xml" title="Atom Feed">⚛</a>
+      <a href="mailto:tim@nrd.sh" title="Email">✉</a>
+    </nav>
   </footer>
 </body>
 
