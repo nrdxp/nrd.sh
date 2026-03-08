@@ -175,6 +175,13 @@ I wanted to change the identity model, I had to audit the entire codebase
 to find out which assumptions were load-bearing. That's the exact failure
 mode that formal specifications exist to prevent.
 
+I'd also seen this movie before. Nix started as a research project with no
+ambition to become production infrastructure. When it turned into one
+anyway, the research-grade architecture came with it, and it's been
+maintenance hell ever since. I didn't want to ship a PoC, accumulate users,
+and then discover that rearchitecting under load is ten times harder than
+doing it now. Better to take the hit early.
+
 These problems motivated a ground-up rearchitecture.
 
 ## The Scope Change: From Nix Format to Generic Protocol
