@@ -463,10 +463,17 @@ Full history isn't required, just commit metadata and tree structure. The
 [atom transactions spec](https://github.com/axiosoph/axios/blob/master/docs/specs/atom-transactions.md)
 covers these verification steps in full.
 
+The underlying principle here is what I've started calling **surety of
+source**: an atom's authenticity rests entirely on its cryptographic chain
+back to the source repository, not on trust in whatever store or mirror
+delivered it. Stores are transport. The chain is proof. If the signatures
+check out and the hashes match, the atom is genuine regardless of where
+you got it.
+
 Compare this with the status quo: most package registries offer, at best,
 a checksum over a tarball produced by opaque infrastructure you cannot
-audit. The atom protocol gives you a cryptographic chain from genesis
-to content, verifiable without trusting anyone.
+audit. Surety of source inverts that model. You don't trust the registry;
+you verify the chain.
 
 ## The Trait Hierarchy: Protocol Abstractions
 
