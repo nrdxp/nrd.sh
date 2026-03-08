@@ -783,6 +783,29 @@ sup a {
   border-radius: 4px;
 }
 
+.media-sidebar iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+  border-radius: 4px;
+}
+
+.media-sidebar-fs {
+  background: none;
+  border: none;
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  color: var(--fg-muted);
+  cursor: pointer;
+  padding: 0.25rem 0;
+  display: block;
+  transition: color 0.15s;
+}
+
+.media-sidebar-fs:hover {
+  color: var(--accent);
+}
+
 /* Custom player (JS-enhanced) */
 .listen-player[hidden] {
   display: none;

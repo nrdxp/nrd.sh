@@ -7,7 +7,19 @@ tags = ["open-source", "axios", "nix"]
 
 This post is a deep technical walkthrough of the Atom format: a packaging API designed to fix how Nix code is distributed and scaled. If you want the political and philosophical backdrop, see my pieces on the [erosion of open-source values](./closed-openness) and the [broader vision](./nix-to-eos) driving this work. Here, we're all technical. Fair warning, this is a long one...
 
-> **A note on project evolution:** This piece captures the Atom design as of mid-2025, during the proof-of-concept phase. That phase was a success. Since then, some details (particularly the manifest sketch) have evolved considerably. We are now working on a formal specification to nail down semantics and address production concerns not covered in the prototype: key management, ownership, claim provenance, and more. Consider this a snapshot of the thinking that got us here, not the final word.
+> **A note on project evolution:** This piece captures the Atom design as of mid-2025, during the proof-of-concept phase. That phase was a success. Since then, some details (particularly the manifest sketch) have evolved considerably. We are now working on a formal specification to nail down semantics and address production concerns not covered in the prototype: key management, ownership, claim provenance, and more. Consider this a snapshot of the thinking that got us here, not the final word. For the latest, see [Atom: From Proof to Protocol](./atom-reforged).
+
+<div class="media-sidebar">
+<div class="media-sidebar-inner">
+<input type="checkbox" id="media-toggle" class="media-toggle" />
+<label for="media-toggle" class="media-sidebar-label">conference talk</label>
+<div class="media-sidebar-content">
+<span class="media-sidebar-sub">the original pitch, live</span>
+<iframe src="https://odysee.com/%24/embed/%40nrdxp%3A6%2FNix-Sucks-Everything-else-is-Worse%3A4?r=dKZibSSnzMGP3T5e5whD2QmoMj1AUijf" allowfullscreen></iframe>
+<button class="media-sidebar-fs" onclick="this.previousElementSibling.requestFullscreen()" aria-label="Fullscreen">⛶ fullscreen</button>
+</div>
+</div>
+</div>
 
 ## Atom: A Review
 
