@@ -914,6 +914,10 @@ img {
   color: var(--accent);
 }
 
+.footer-links a:last-child {
+  transform: translateY(-2px);
+}
+
 .site-footer span a {
   color: var(--fg-muted);
   transition: color 0.15s;
