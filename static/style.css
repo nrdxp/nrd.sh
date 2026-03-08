@@ -339,6 +339,11 @@ hr {
   text-overflow: ellipsis;
 }
 
+/* Override nav's lowercase for mobile ToC (higher specificity needed) */
+.mobile-toc-panel .toc-list a {
+  text-transform: none;
+}
+
 .toc-list a:hover {
   color: var(--accent);
   white-space: normal;
