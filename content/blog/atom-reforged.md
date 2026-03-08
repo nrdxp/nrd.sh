@@ -56,6 +56,19 @@ terms in place by the time the code is practically usable.
 For anyone curious about the personal backdrop, I've written about it
 elsewhere.[^personal] This post is about the protocol.
 
+<div class="media-sidebar">
+<div class="media-sidebar-inner">
+<input type="checkbox" id="media-toggle" class="media-toggle" />
+<label for="media-toggle" class="media-sidebar-label">video introduction</label>
+<div class="media-sidebar-content">
+<span class="media-sidebar-sub">the core ideas in under ten minutes</span>
+<video controls preload="none">
+  <source src="https://pod.nrd.sh/Architecting_a_Trustless_Package_Manager__The_Atom_Protocol.mp4" type="video/mp4" />
+</video>
+</div>
+</div>
+</div>
+
 ## Why This Matters
 
 Before the technical deep-dive, it's worth asking: _why should anyone

@@ -701,8 +701,8 @@ sup a {
   font-size: 0.7em;
 }
 
-/* ── Audio player ────────────────────────────────────────── */
-.listen {
+/* ── Media sidebar ───────────────────────────────────────── */
+.media-sidebar {
   position: absolute;
   right: 100%;
   top: 0;
@@ -711,12 +711,17 @@ sup a {
   width: 14rem;
 }
 
-.listen-inner {
+.media-sidebar-inner {
   position: sticky;
   top: 2rem;
 }
 
-.listen-label {
+/* Checkbox toggle — hidden, drives the collapse */
+.media-toggle {
+  display: none;
+}
+
+.media-sidebar-label {
   font-family: var(--mono);
   font-size: 0.72rem;
   letter-spacing: 0.1em;
@@ -725,9 +730,32 @@ sup a {
   font-weight: 700;
   display: block;
   margin-bottom: 0.25rem;
+  cursor: pointer;
+  user-select: none;
 }
 
-.listen-sub {
+.media-sidebar-label::before {
+  content: "▸ ";
+  font-size: 0.65rem;
+}
+
+.media-toggle:checked~.media-sidebar-label::before {
+  content: "▾ ";
+}
+
+.media-sidebar-content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.media-toggle:checked~.media-sidebar-content {
+  max-height: 600px;
+  opacity: 1;
+}
+
+.media-sidebar-sub {
   font-family: var(--mono);
   font-size: 0.68rem;
   color: var(--fg-muted);
@@ -736,8 +764,13 @@ sup a {
   margin-bottom: 0.75rem;
 }
 
-.listen audio {
+.media-sidebar audio {
   width: 100%;
+}
+
+.media-sidebar video {
+  width: 100%;
+  border-radius: 4px;
 }
 
 /* Custom player (JS-enhanced) */
@@ -926,9 +959,9 @@ img {
 }
 
 /* ── Responsive ──────────────────────────────────────────── */
-/* Collapse audio player inline on narrower screens */
+/* Collapse media sidebar inline on narrower screens */
 @media (max-width: 1400px) {
-  .listen {
+  .media-sidebar {
     position: static;
     width: auto;
     height: auto;
@@ -937,7 +970,7 @@ img {
     padding: 0.75rem 1rem;
   }
 
-  .listen-inner {
+  .media-sidebar-inner {
     position: static;
   }
 }
