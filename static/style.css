@@ -765,6 +765,10 @@ sup a {
   opacity: 1;
 }
 
+.media-sidebar-group + .media-sidebar-group {
+  margin-top: 1.25rem;
+}
+
 .media-sidebar-sub {
   font-family: var(--mono);
   font-size: 0.68rem;

@@ -8,6 +8,40 @@ tags = ["axiosophy", "law", "philosophy"]
 
 ## The Encounter
 
+<div class="media-sidebar">
+<div class="media-sidebar-inner">
+<div class="media-sidebar-group">
+<input type="checkbox" id="media-toggle-video" class="media-toggle" />
+<label for="media-toggle-video" class="media-sidebar-label">video introduction</label>
+<div class="media-sidebar-content">
+<span class="media-sidebar-sub">the architecture of inversion in under ten minutes</span>
+<video controls preload="none">
+  <source src="https://pod.nrd.sh/The_Architecture_of_Inversion__Constructive_Nullification.mp4" type="video/mp4" />
+</video>
+</div>
+</div>
+<div class="media-sidebar-group">
+<input type="checkbox" id="media-toggle-audio" class="media-toggle" />
+<label for="media-toggle-audio" class="media-sidebar-label">listen to this post</label>
+<div class="media-sidebar-content">
+<span class="media-sidebar-sub">full narration — approximately one hour</span>
+<audio controls preload="none" class="listen-native">
+  <source src="https://pod.nrd.sh/constructive_nullification.mp3" type="audio/mpeg" />
+</audio>
+<div class="listen-player" hidden>
+  <button class="listen-play" aria-label="Play">▶</button>
+  <div class="listen-track">
+    <div class="listen-progress"></div>
+  </div>
+  <span class="listen-time">0:00</span>
+  <a class="listen-dl" aria-label="Download" download>⤓</a>
+</div>
+</div>
+</div>
+</div>
+<script src="../player.js"></script>
+</div>
+
 You know this feeling.
 
 You are on the phone. It is 2:30 PM on a Tuesday. You are speaking to a functionally anonymous representative of the state: a clerk at the traffic court, a mid-level bureaucrat at a licensing agency, or perhaps a desk sergeant.
