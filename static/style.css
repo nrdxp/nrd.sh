@@ -711,6 +711,11 @@ sup a {
   font-size: 0.7em;
 }
 
+/* Render footnote number via CSS so it's invisible to TTS engines */
+.footnote-ref a::after {
+  content: attr(data-footnote);
+}
+
 /* ── Media sidebar ───────────────────────────────────────── */
 .media-sidebar {
   position: absolute;
