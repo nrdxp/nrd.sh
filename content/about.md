@@ -2,13 +2,17 @@
 title = "About"
 +++
 
-I'm Tim DeHerrera (nrdxp). I write software, design protocols, and think too much about [first principles](blog/axiosophy.html).
+I'm Tim DeHerrera (nrdxp). I design cryptographic protocols, build robust software, and map the structural mechanics of human systems.
 
-I spent over a decade in free software, mostly in the Nix and Rust ecosystems. I co-founded the [Ekala Project](https://github.com/ekala-project) and still support it. I also watched the communities I believed in get hollowed out by corporate capture and political games. I still think free software is essential, but good intentions alone won't protect it.
+I spent over a decade in free software, primarily in the Nix and Rust ecosystems. I watched the communities I once believed in get hollowed out by institutional rot and structural decay. Partially in response to that erosion, I co-founded the [Ekala Project](https://github.com/ekala-project) to build a resilient space where engineers could simply contribute freely. I learned the hard way that good intentions do not protect systems from thermodynamic erosion. Only reliable engineering and unforgiving mechanics do.
 
-That's what led me to found [Axiosophic Systems](https://axioso.ph). The work there is focused on content-addressed package distribution, self-sovereign identity protocols, and structured rulesets for agentic AI. Different problems, same conviction: things don't hold together by accident.
+Trying to understand why these systems fail eventually forced me to look at their underlying physics. Much of my writing now focuses on mapping the [thermodynamic constraints of ethics](blog/axiosophy.html), exploring strategies for [organizational resistance](blog/Constructive_Nullification.html), and diagnosing the ways that [institutions inevitably decay and capture their operators](blog/the-counterfeit.html).
 
-The [blog](blog/index.html) is where I think out loud.
+I've come to believe there is no meaningful distinction between moral philosophy and systems engineering. Things either hold together under pressure, or they collapse.
+
+That conviction is the foundation of [self-sovereign systems consulting](https://axioso.ph). From content-addressed distribution to cryptographic identity protocols and structured rulesets for agentic AI, every project is an exercise in engineering infrastructure designed to survive capture.
+
+The [blog](blog/index.html) is where I publish the blueprints.
 
 ## Sigs
 
