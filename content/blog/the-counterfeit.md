@@ -9,6 +9,30 @@ tags = ["axiosophy", "philosophy", "economics", "freedom"]
 > *"Every one is really responsible to all men for all men and for everything."*
 > — Fyodor Dostoevsky, *The Brothers Karamazov*
 
+<div class="media-sidebar">
+<div class="media-sidebar-inner">
+<div class="media-sidebar-group">
+<input type="checkbox" id="media-toggle-audio" class="media-toggle" checked />
+<label for="media-toggle-audio" class="media-sidebar-label">listen to this post</label>
+<div class="media-sidebar-content">
+<span class="media-sidebar-sub">full narration of the counterfeit</span>
+<audio controls preload="none" class="listen-native">
+  <source src="https://pod.nrd.sh/the-counterfeit-take-ii.mp3" type="audio/mpeg" />
+</audio>
+<div class="listen-player" hidden>
+  <button class="listen-play" aria-label="Play">▶</button>
+  <div class="listen-track">
+    <div class="listen-progress"></div>
+  </div>
+  <span class="listen-time">0:00</span>
+  <a class="listen-dl" aria-label="Download" download>⤓</a>
+</div>
+</div>
+</div>
+</div>
+<script src="../player.js"></script>
+</div>
+
 ## I. The Alchemist's Awakening
 
 In 1772, Antoine Lavoisier sealed a piece of tin in a glass vessel and heated it until it calcined, turned to ash. Then he did something no alchemist before him had thought to do. He weighed the vessel before and after. The total mass had not changed. But when he broke the seal and air rushed in, the vessel gained weight: exactly the weight the tin had gained in becoming ash.[^weight] The ash was heavier than the metal. The air was lighter than before. Something had been transferred, and it could be *measured*.
