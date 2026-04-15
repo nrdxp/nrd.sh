@@ -2,7 +2,7 @@
 // Finds all .media-sidebar containers with <audio> and replaces native controls with styled ones.
 // No-JS fallback: native player shown, custom controls stay hidden.
 (function () {
-    document.querySelectorAll('.media-sidebar').forEach(function (w) {
+    document.querySelectorAll('.media-sidebar-content').forEach(function (w) {
         var a = w.querySelector('audio');
         if (!a) return;
 

@@ -12,12 +12,40 @@ tags = ["axiosophy", "philosophy", "economics", "freedom"]
 <div class="media-sidebar">
 <div class="media-sidebar-inner">
 <div class="media-sidebar-group">
+<input type="checkbox" id="media-toggle-video" class="media-toggle" />
+<label for="media-toggle-video" class="media-sidebar-label">video introduction</label>
+<div class="media-sidebar-content">
+<span class="media-sidebar-sub">the automation of the counterfeit — a brief overview</span>
+<video controls preload="none">
+  <source src="https://pod.nrd.sh/The_Automation_of_the_Counterfeit.mp4" type="video/mp4" />
+</video>
+</div>
+</div>
+<div class="media-sidebar-group">
 <input type="checkbox" id="media-toggle-audio" class="media-toggle" checked />
 <label for="media-toggle-audio" class="media-sidebar-label">listen to this post</label>
 <div class="media-sidebar-content">
 <span class="media-sidebar-sub">full narration of the counterfeit</span>
 <audio controls preload="none" class="listen-native">
   <source src="https://pod.nrd.sh/the-counterfeit-take-ii.mp3" type="audio/mpeg" />
+</audio>
+<div class="listen-player" hidden>
+  <button class="listen-play" aria-label="Play">▶</button>
+  <div class="listen-track">
+    <div class="listen-progress"></div>
+  </div>
+  <span class="listen-time">0:00</span>
+  <a class="listen-dl" aria-label="Download" download>⤓</a>
+</div>
+</div>
+</div>
+<div class="media-sidebar-group">
+<input type="checkbox" id="media-toggle-podcast" class="media-toggle" />
+<label for="media-toggle-podcast" class="media-sidebar-label">deep dive</label>
+<div class="media-sidebar-content">
+<span class="media-sidebar-sub">why corrupt systems hide behind stupidity — a dialectic exploration</span>
+<audio controls preload="none" class="listen-native">
+  <source src="https://pod.nrd.sh/Why_corrupt_systems_hide_behind_stupidity.m4a" type="audio/mp4" />
 </audio>
 <div class="listen-player" hidden>
   <button class="listen-play" aria-label="Play">▶</button>
