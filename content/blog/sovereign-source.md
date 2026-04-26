@@ -218,7 +218,7 @@ AI validates what Ostrom and Mises saw more powerfully than perhaps anything els
 
 Mises's calculation problem and Ostrom's local knowledge principle, validated at civilizational scale by the most powerful information-processing infrastructure ever built.
 
-And yet this validation comes at the worst possible moment. The ideals behind open source are at their structural weakest in decades, undermined by extraction, hollowed by platform capture, and betrayed by the very institutions that claim to defend them. But their spirit has likely never been needed more. The AI revolution, whatever form it takes, will either be built on a sustainable commons or it will be built on a captured one. If we don't fix the foundations now, we're handing the most powerful technology in human history to the same extraction machines that broke the last one.[^stakes]
+And yet this validation comes at the worst possible moment. The ideals behind open source are at their structural weakest in decades, undermined by extraction, hollowed by platform capture, and betrayed by the very institutions that claim to defend them. But their spirit has likely never been needed more. The AI revolution, whatever form it takes, will either be built on a sustainable commons or it will be built on a captured one. If we don't fix the foundations now, we're handing the most powerful technology in human history to the same extraction machines that broke the commons.[^stakes]
 
 These are not abstractions.
 
