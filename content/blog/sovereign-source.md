@@ -14,7 +14,7 @@ The four freedoms of free software are intact. Every one of them.[^fsf] You can 
 
 And the commons they were built to protect is dying.
 
-Sixty percent of its maintainers are unpaid, have already quit, or are considering it. In 2024, a solo maintainer's exhaustion nearly let a state-level attacker backdoor the compression library embedded in virtually every Linux distribution on earth. The demand-side replacement value of this commons is estimated at $8.8 trillion. Its annual funding is a rounding error on a rounding error.
+Sixty percent of its maintainers are unpaid, have already quit, or are considering it.[^tidelift] In 2024, a solo maintainer's exhaustion nearly let a state-level attacker backdoor the compression library embedded in virtually every Linux distribution on earth.[^xz] The demand-side replacement value of this commons is estimated at $8.8 trillion.[^rival] Its annual funding is a rounding error on a rounding error.
 
 The freedoms guarantee that value flows _out_ of the commons. Anyone can take the code, deploy it, build on it, train a model with it. They provide no mechanism, none, to ensure that value flows back in. That gap is not a policy failure. It is a structural one, and this piece is the account of why — and of what it cost to see it clearly.
 
