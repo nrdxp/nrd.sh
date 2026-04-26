@@ -114,9 +114,9 @@ Every one of the four freedoms has undergone this process. Not by conspiracy. By
 
 ### The Freedom to Run
 
-A dissipative structure persists by deploying its components where they are needed, when they are needed. A society that cannot deploy its own tools for its own purposes has surrendered its adaptive capacity to whoever controls the deployment conditions. Restricted execution is restricted adaptation. Freedom 0 is the minimum condition for a complex system to respond to a changing environment.
+A complex system persists by deploying its components where they are needed, when they are needed. A society that cannot deploy its own tools for its own purposes has surrendered its adaptive capacity to whoever controls the deployment conditions. Restricted execution is restricted adaptation. Freedom 0 is the minimum condition for a complex system to respond to a changing environment.
 
-You can run the program as you wish, for any purpose. Nobody stops you.
+The formal guarantee: you can run the program as you wish, for any purpose. Nobody stops you.
 
 Here's what "running" a meaningful piece of software looks like in 2026: you need a cloud account, an API key, a container orchestration platform, a CDN, a monitoring stack, a CI pipeline, and a user base. You can "run" PostgreSQL on your laptop. You cannot run a competitive database service without the operational layer that AWS has folded into a managed offering behind a credit card form. You can "run" Mastodon on a VPS. You cannot run a social network that anyone actually uses, because the network is the product and you can't fork a network. You can "run" an LLM locally. You cannot run a competitive AI service without billions of dollars in compute that produced the weights you don't have access to.
 
@@ -128,7 +128,7 @@ And the cloud providers know this. They price data _ingress_ at zero (getting yo
 
 Self-correction requires error detection. Error detection requires inspection of internal state. In a previous piece, I derived a structural requirement for civilizational persistence: _any system that wishes to persist must maintain a structural path from Slavery to Mastery for its members_ (∀c ∈ Citizens: ∃path(c, Slavery → Mastery)).[^bedrock-link] Without the ability to inspect the systems that increasingly govern commerce, communication, infrastructure, and law, citizens cannot detect errors, identify capture, or distinguish a tool from a cage. The path to mastery is destroyed, and the system loses the self-correcting agents it needs to survive. Opacity is not a business strategy. It is entropy's most reliable accelerant.
 
-Source code is available. You can study how the program works and change it so it does your computing as you wish.
+The formal guarantee: source code is available. You can study how the program works and change it so it does your computing as you wish.
 
 Chromium is roughly 35 million lines of code. Even if you had the time and expertise to read all of it, and you don't, the complexity is not incidental. It is the product of an engineering culture that optimizes for velocity over comprehensibility, a corporate culture that benefits from the opacity of its own "open-source" contributions. Nadia Asparouhova documented this shift precisely: from the "bazaar" model of distributed peers to the "stadium" model, a solo maintenance performer watched by a massive, silent audience who files issues but never sends patches.[^stadium] Publication of the code satisfies Freedom 1. Comprehensibility of the code is nobody's problem.
 
@@ -138,7 +138,7 @@ But the more profound hollowing is happening in AI. The "open-source" AI archite
 
 Redundancy is the primary defense against catastrophic single-point failure. A commons that cannot replicate its critical components across independent actors is one compromised node from systemic collapse. The xz-utils backdoor is the proof: a critical compression library concentrated in a single, exhausted human being. Redistribution is not generosity. It is resilience.
 
-You can give copies to anyone. You can redistribute the code.
+The formal guarantee: you can give copies to anyone. You can redistribute the code.
 
 You cannot redistribute the network. You cannot redistribute the user base. You cannot redistribute the operational trust that enterprises have invested in the cloud provider's managed version. You cannot redistribute the institutional relationships, the support contracts, the compliance certifications.
 
