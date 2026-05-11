@@ -2,7 +2,6 @@
 title = "Sovereign Source"
 description = "The Captive Commons"
 date = 2026-04-05
-[taxonomies]
 tags = ["axiosophy", "open-source", "freedom", "economics", "commons", "sovereign-source"]
 +++
 

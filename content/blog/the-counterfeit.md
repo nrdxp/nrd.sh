@@ -2,7 +2,6 @@
 title = "The Counterfeit"
 description = "On the Architectural Forgery of Freedom"
 date = 2026-03-28
-[taxonomies]
 tags = ["axiosophy", "philosophy", "economics", "freedom"]
 +++
 

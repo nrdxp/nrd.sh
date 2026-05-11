@@ -2,7 +2,6 @@
 title = "Constructive Nullification"
 date = 2026-03-09
 description = "On the Procedural Subversion of Constitutional Rights"
-[taxonomies]
 tags = ["axiosophy", "law", "philosophy"]
 +++
 

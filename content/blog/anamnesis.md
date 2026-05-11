@@ -2,7 +2,6 @@
 title = "Anamnesis"
 description = "The Hacker's Ethic"
 date = 2026-05-09
-[taxonomies]
 tags = ["axiosophy", "open-source", "freedom", "ethics", "governance", "sovereign-source"]
 +++
 
