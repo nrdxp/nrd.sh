@@ -172,20 +172,20 @@ with.[^ostree] The scan-and-rewrite problem was never a property of
 content addressing. It was a property of putting the hash inside the
 artifact.
 
-(Network access? The same answer Nix already gives: fetching is separated
+Network access? The same answer Nix already gives: fetching is separated
 from building. A recording proxy content-addresses everything a build
 fetches on first run; forever after, the "network" is a replay of pinned
 bytes, and anything off-script fails closed. Most ecosystems have already
 converged on fetch/build separation anyway, through vendoring, offline
-flags, and lockfiles. We just enforce it at the boundary.)
+flags, and lockfiles. We just enforce it at the boundary.
 
-(Determinism? It was never the store path's doing. Build identity here is
+Determinism? It was never the store path's doing. Build identity here is
 input-addressed, keyed on the atom's closure and toolchain exactly as a
 Nix derivation is keyed on its inputs, so you get one cached, signed
 result per build intent whether or not upstream's build is bit-for-bit
 reproducible. Reproducibility is the sandbox's job, and the residual
 nondeterminism upstream ships is the same orthogonal problem Nix already
-faces.[^determinism])
+faces.[^determinism]
 
 ## Three Primitives
 
