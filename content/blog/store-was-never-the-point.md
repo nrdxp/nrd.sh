@@ -30,12 +30,12 @@ This post makes three claims:
    *impossible*. Not hard. Impossible.
 3. You can keep every guarantee that matters, drop the store entirely,
    build upstream software with **upstream's own unmodified build
-   process**, and nearly every piece required already exists in
-   production today.
+   process**,[^patching] and nearly every piece required already exists
+   in production today.
 
 If those claims hold, the conclusion writes itself: there is a system
-strictly simpler and strictly more capable than Nix sitting in plain
-sight, waiting for someone to assemble it. Let me take each in turn.
+strictly simpler and more capable than Nix sitting in plain sight,
+waiting for someone to assemble it. Let me take each in turn.
 
 ## Five Jobs, One Trench Coat
 
@@ -114,9 +114,11 @@ in artifacts, is precisely the thing that makes content addressing
 unreachable by any clean path.** `ca-derivations` doesn't disprove that;
 it demonstrates it. What its machinery addresses is not your artifact
 but a normalized shadow of it, self-references stripped out for hashing
-and stamped back in afterward, and seven years of experimental status is
-the running price of that substitution. Nix's most famous mechanism and
-Nix's most wanted feature are mutually exclusive. No amount of
+and stamped back in afterward. That is a coherent naming scheme, but it
+names the shadow, not the bytes you run, and half a decade of
+experimental status is the running price of the substitution. Nix's
+most famous mechanism and Nix's most wanted feature are mutually
+exclusive. No amount of
 engineering fixes a contradiction. It has to be dissolved.
 
 Now run the logic in reverse. An artifact that embeds only *names*,
@@ -127,10 +129,13 @@ separate object that maps names to hashes. The obstruction doesn't get
 solved. It *evaporates*.
 
 And this is a choice Nix made, not a law it obeys. Its own
-content-addressing effort accepts the obstruction and fights it; Spack
-sidesteps it entirely, hash-addressing every package while keeping the
-binaries relocatable by leaving the install path out of the
-hash.[^spack] The fusion Nix treats as fundamental is optional.
+content-addressing effort accepts the obstruction and fights it. Spack,
+input-addressed like Nix, never meets the fixed point at all, because
+the install-tree root never enters package identity. But it still
+embeds prefixes in its binaries, and it pays for that whenever a
+binary cache moves them: padded placeholder prefixes, RPATH rewriting.
+It escapes the naming trap but not the patching war.[^spack] The weld is not one thing: identity-to-location, and
+location-into-artifact, are separate choices, and each is optional.
 
 ## What Nix Actually Got Right
 
@@ -143,19 +148,34 @@ is this:
 
 A build is a pure function. Its inputs are named by hash, completely and
 exhaustively; the Nix model, Guix included, is the only *exhaustive*
-dependency manager there is. Its output is therefore trustworthy in a way no
+dependency manager there is. (Spack hashes the build spec but will
+happily bless a host compiler it never built; nothing outside a Nix
+closure exists at all.) Its output is therefore trustworthy in a way no
 `apt install` can ever be. The sandbox enforces the purity; the hashes
 make the closure unforgeable; composition of verified pieces yields a
 verified whole.
 
-*That* is the treasure. And notice: nothing in that sentence mentions
+This bundle of properties deserves a name, because the rest of the
+argument leans on it: **hermetic, transactional composition**, HTC from
+here on. *Hermetic*: the build sees nothing but its declared closure,
+and the kernel enforces it. *Transactional*: a closure is a value, so
+change is never mutation; you produce a new verified whole and switch to
+it atomically, the old root intact beside the new, which is everything
+people actually mean when they praise Nix's upgrades and rollbacks.
+*Composition*: the whole is assembled from verified parts, and the
+assembly is itself the object. Every Nix pitch you have ever heard,
+reproducibility, rollback, the end of dependency hell, is one of these
+three properties wearing a store-shaped costume.
+
+*That* is the treasure. And notice: nothing in any of it mentions
 `/nix/store`. The hermeticity was always the sandbox's doing,
 deny-by-default, only declared inputs visible. The store path contributed
 *binding*, not isolation. Which raises the question I kept circling: what
 if the sandbox showed the build a plain, boring, Filesystem Hierarchy
 Standard (FHS) world, the `/usr/lib`, `/usr/include` layout every
 upstream build system has expected since the dawn of Unix, but
-*synthesized that world, file by file, from content-addressed inputs?*
+*synthesized that world, file by file, from content-addressed
+inputs?*[^fhsenv]
 
 The guarantee is identical: the build can only read what the closure
 declares, and the kernel enforces it. But now `./configure && make` just
@@ -175,12 +195,14 @@ artifact.
 Network access? The same answer Nix already gives: fetching is separated
 from building. A recording proxy content-addresses everything a build
 fetches on first run; forever after, the "network" is a replay of pinned
-bytes, and anything off-script fails closed. Most ecosystems have already
+bytes, and anything off-script fails closed. (The first run is
+trust-on-first-use; so is the human transcribing a fixed-output hash
+into a Nix expression.) Most ecosystems have already
 converged on fetch/build separation anyway, through vendoring, offline
 flags, and lockfiles. We just enforce it at the boundary.
 
 Determinism? It was never the store path's doing. Build identity here is
-input-addressed, keyed on the atom's closure and toolchain exactly as a
+input-addressed, keyed on the declared closure and toolchain exactly as a
 Nix derivation is keyed on its inputs, so you get one cached, signed
 result per build intent whether or not upstream's build is bit-for-bit
 reproducible. Reproducibility is the sandbox's job, and the residual
@@ -229,7 +251,13 @@ system.
 
 That leaves jobs #4 and #5 from the trench coat. Co-installation (#5)
 falls out for free: conflicts can only exist *within* one composition,
-where they're real ABI questions, not filesystem accidents. And because
+where they're real ABI questions, not filesystem accidents. What Nix
+bought with divergent rpaths, two builds of one soname serving one
+process tree, doesn't vanish; it moves. Divergence lives *between*
+compositions, and an application that truly needs its own libssl
+becomes its own composition, mounted for it alone. Within a
+composition, a name collision is exactly the compatibility question
+someone should have been made to answer. And because
 every composition draws its files from the one content-addressed store,
 sharing is the rule, not the exception: two applications that pin the same
 openssl point at the same verified blob on disk, where a per-app container
@@ -239,8 +267,9 @@ replacement has existed in production for decades. RPM and Debian extract
 dependencies *structurally*, reading the actual `DT_NEEDED` entries, the
 actual undefined symbol tables, the actual soname records, rather than
 grepping for magic strings.[^structdeps] We take that lineage and upgrade
-it: hash the extracted interface itself. Which unlocks something Nix
-cannot do at any price.
+it: hash the extracted interface itself, and let the observed read set
+(more on that shortly) catch the dynamic loading that static structure
+misses. Which unlocks something Nix cannot do at any price.
 
 ## Lego, Not Marble
 
@@ -248,16 +277,16 @@ Look at how each tool names a dependency. A Docker image pins the whole
 filesystem: one opaque blob, take it or leave it. A Debian package pins a
 version range, "libssl3, version ≥ 3.0," and trust the maintainer. A Nix
 derivation pins exact bytes, built against *this* glibc, down to the
-commit. Three granularities, all of them wrong. One too coarse to share
-anything, one too loose to verify anything, one so tight that a single
-byte rebuilds the world. Each misses the thing a binary actually depends
+commit. Three granularities, all of them wrong. One so coarse that
+sharing is an accident of layer ordering, one too loose to verify
+anything, one so tight that a single byte rebuilds the world. Each misses the thing a binary actually depends
 on, which is none of the above: an *interface*. These symbols, these
 versions, this ABI surface.
 
 In the model I'm describing, every built artifact gets an **interface
 manifest**, mechanically extracted: what it *provides* (soname, exported
 symbols, hashed into an interface digest) and what it *requires* (needed
-symbols, per dependency name). The crucial property: the manifest is
+symbols, per dependency name). The property everything turns on: the manifest is
 **binding-free**. It names *no other artifact*. It's a pure fact about
 one tree of bytes.
 
@@ -265,7 +294,7 @@ Bindings live only in compositions. So when a security patch lands for
 OpenSSL: build the new one, check that its provided interface still covers
 what every consumer needs, a set-inclusion check that emits a storable
 proof, then swap the pointer in the composition, recompute the root, and
-re-sign. **Nothing rebuilds.** The new root hash is exactly as
+re-sign. **Nothing rebuilds.**[^static] The new root hash is exactly as
 unambiguous, exactly as verifiable, exactly as *sure* as a Nix
 world-rebuild, without paying the cascading rebuild cost that
 hash-tattooed binaries force. This is strict by default: an entry is an
@@ -303,7 +332,8 @@ dynamic behavior is caught by observation, because in this architecture
 builds read their inputs through a filesystem daemon we control. Every file a
 build or test actually touches is logged, for free. Declared closure
 enforced by the sandbox; observed closure measured by the daemon; the
-delta is bloat you can prune. Nix cannot tell you which of its closure
+delta is a list of pruning candidates exactly as good as the coverage
+that produced it. Nix cannot tell you which of its closure
 entries are actually used. This system knows.
 
 ## Every Environment Is a Composition
@@ -348,6 +378,76 @@ And an environment is just a composition of packages, so the thing the
 root commits to, the thing you address, is the composition. That is the
 name, and it says exactly what it is: content addressing, one level up,
 from blobs to whole environments.
+
+## A Commit, Not a Blob
+
+The composition has a second dimension the last section left implicit:
+time. The object just named, a signed tree of name-to-digest bindings
+under one root, is close enough to a git tree that the correspondence
+deserves running to the end: if an environment's state is a tree, then a *change* of
+environment is a commit, a signed transaction pointing from one root to
+the next, and a system's history is a Merkle DAG of those transactions.
+Nix gestures at this with profile generations, a numbered symlink per
+state; here the transition is a first-class object, carrying what
+changed, from what, signed by whom. The OpenSSL swap two sections ago
+was exactly one of these: new pointer, new root, one transaction
+appended to history. This is the transactional leg of HTC made concrete.
+An update either exists completely or not at all, rollback is a pointer
+move, and "what changed" is a tree diff you compute rather than a
+changelog you trust.
+
+The atomic unit of the model is the single coherent composition: one
+tree, every name bound exactly once, conflicts surfaced and resolved
+at compose time. You can still
+stack. Overlay a quick patch composition on top of your declared one to
+chase a bug, or to hotfix a library at three in the morning, and the
+executor will happily mount the pile. But the stack is scaffolding,
+working-tree state, and the transaction model never records it. To
+*commit* the fix is to merge it down: run the merge, let any name or
+interface conflict surface as the real question it is, and emit one new
+tree, one root, one transaction. Git users will recognize the shape
+because it is the same shape: the dirty working tree is where you live,
+a commit is one coherent tree, and nothing in between is history.
+
+Now hold that next to what the container world calls a layer. An OCI
+layer is a tarball of filesystem changes, applied in order, with
+deletions encoded as whiteout files; when two layers touch the same
+path, the later one silently wins.[^oci] The image is whatever the
+stack happens to overlay to. Coherence is the operator's hope, not the
+format's contract. And yet the *workflow* is right, base plus patches
+is exactly how people want to work, and the industry's entire delivery
+machinery is built around shipping it. The unit is what's wrong. Here
+the layer keeps the workflow and acquires a meaning: a layer is a
+composition, conflict-checked, signed, diffable to the file, and a
+committed image is by construction one coherent tree rather than a pile
+of diffs in a trench coat of its own.
+
+OSTree, which appeared earlier as an existence proof, deserves a second
+word, because it aimed squarely at this, "git for operating system
+binaries" is its own tagline, and landed half of it.[^bootc] The half
+it landed is real: content-addressed objects, whole-tree commits,
+atomic deploys. But its trees arrive from outside the model, assembled
+by rpm-ostree or by a container build, so the composition step, the
+part that says what is in the tree and why it coheres, is invisible to
+it. And as its ecosystem converges on shipping commits inside OCI
+images, the working unit degrades back into the opaque blob.
+Transactional without hermetic composition: half of HTC. Nix, digging
+from the other direction, spent twenty years on the other half.
+
+Which brings the argument to its widest frame. There are three worlds
+today, plain FHS distributions, OCI, and Nix, and they do not compose:
+committing to one means forfeiting the others' virtues. This model is
+native in all three at once. The world a build or a process sees is
+plain FHS, boring on purpose. The artifact ships and mounts with the
+container ecosystem's own machinery, and composefs is that ecosystem's
+own next move, not our imposition.[^composefs-oci] And the object
+underneath carries a formal closure equivalent in nature and intent to
+a Nix derivation's, at a fraction of the maintenance and storage cost.
+Nix's answer to the status quo has always been secession: a parallel
+world with its own paths, its own language, its own everything. The
+properties never required the secession. Extracted as HTC, they stop
+being a country you emigrate to and become the bridge between the
+worlds everyone already lives in.
 
 ## I Deleted the Derivation Without Noticing
 
@@ -399,6 +499,56 @@ design hangs on.[^eka] The milestone the earlier essays called upcoming
 is proven; the properly abstracted implementation is what's being built
 now.
 
+## CA or Bust
+
+There is one more constituency in this story: the reproducible-builds
+project, a decade of unglamorous work, one embedded timestamp at a
+time, toward builds any stranger can verify by rebuilding them bit for
+bit.[^rb]
+You might expect them to be Nix's natural allies, and many are. But
+some of the sharpest voices there are pointedly unpersuaded, and their
+complaint rewards a fair hearing, because it is the trust-shaped
+version of this piece's argument. Nix's pitch sounds like
+reproducibility; what it delivers is input-determinism, and the
+measured gap between the two is real: depending on the year, somewhere
+between a tenth and a third of nixpkgs does not rebuild
+bit-identically.[^rb] And when a build is not bit-for-bit, Nix's
+fallback is a flat signature: one cache key, trusted wholesale, pasted
+into a configuration file, with no per-artifact provenance, no
+key-distribution scheme, and no gradation between "verified" and
+"vouched for."[^nixtrust] Trustless binary sharing was the payoff
+content addressing was supposed to buy, and content addressing is the
+thing the store cannot reach. CA or bust, and bust is what ships.
+
+Here the boundary between the two regimes stops being an aspiration
+and becomes a field, attested in the atom's metadata. There are two
+statements the system can make about a blob, per artifact,
+programmatically. One: *this output is reproducible; expect exactly
+this hash for this source and this configuration, from anyone, and
+reject anything else.*[^ion-config] Two: *this output is not
+reproducible; it is signed by this key, and the key's provenance
+chains back to the origin repository.* Neither statement solves
+nondeterminism. What they dissolve is the confusion between the
+regimes: every byte in your closure sits
+under one or the other, you can query which, the strict regime is
+enforced wherever upstream's determinism has earned it, and everywhere
+else you stand on the strongest fallback there is, a key you chose, on
+a provenance chain you can walk.
+
+And nobody has to run the registry. Atom is a decentralized protocol:
+claim, publish, and verify all work offline, and a trust root is a
+key, not an institution. Institutions can still cooperate, and
+cheaply. Two organizations that trust each other publish a shared
+trust chain at the canonical source; two that don't stay strangers,
+and if you want web-of-trust semantics anyway, you fork the repo, add
+your key to the metadata, and point whoever trusts you at your mirror,
+where tampering is trivially provable, because it is git. Which turns
+the reproducible-builds endgame, many independent parties converging
+on one hash, from an entry fee into an additive attestation:
+independent rebuilders countersigning the same content address, each
+signature one more witness that the boundary sits exactly where the
+metadata says it does.[^trustix]
+
 ## Eos, Properly Introduced
 
 I've teased Eos as "the build engine" in prior posts and never given it
@@ -433,8 +583,7 @@ build system* do what it does, including its own internal parallelism,
 which is the part upstream actually optimized. Eos schedules the graph;
 `make -j` does the leaves. An entire layer of the architecture, the part
 I was least looking forward to building, deleted by a better model. The
-scheduling theory transfers untouched; it never cared what a node was,
-only that nodes are pure and the graph is a DAG.
+scheduling theory transfers untouched.
 
 ## The Snix Windfall
 
@@ -465,12 +614,13 @@ unbypassable point every read already flows through.
 castore also does content-defined chunking, deduplicating below the file
 level. In Nix, that kind of work is damage control: the store duplicates
 so aggressively, a fresh copy of the world every time a hash changes,
-that sub-file dedup is what keeps the cache from exploding. Here it isn't
+copies even hardlink dedup can't collapse because the tattooed paths
+make their bytes differ, that sub-file dedup is what keeps the cache
+from exploding. Here it isn't
 load-bearing. The composition model already keeps storage cheap, because
 swapping a pointer copies nothing downstream. So castore's dedup stops
-being a mitigation and becomes what it should have been all along: an
-additive saving on top of a baseline that was already small. Good
-engineering, finally allowed to be a bonus instead of a patch. And that
+being a mitigation. Good engineering, finally allowed to be a bonus
+instead of a patch. And that
 Snix treated a generic blob store as urgent enough to build is itself a
 tell: the storage cost of the current model is not a theoretical
 objection; it's a load the system is already bending under.
@@ -504,14 +654,18 @@ proposal: it's specified, formally modeled, demonstrated in a working
 proof of concept, and being built properly now.[^atom-reforged]
 
 The other column of the ledger is the things this model *deletes*: the
-Nix language (compositions are data, the only function is `build`, and
-even configuration composition needs nothing from it). nixpkgs and the
+Nix language (compositions are data, the only function is `build`;
+configuration still deserves a typed merge language, but an
+off-the-shelf one, owing nothing to the substrate). nixpkgs and the
 module-system meta-layer stacked on it (upstream's build process *is* the
 packaging; the composition *is* the configuration). The patching war
 (patchelf, wrappers, stdenv, gone).[^patching] The evaluation scheduler.
-The world-rebuild. The store-path grammar and its hash-modulo arcana. The
-NAR format. I have been asked what a "simple Nix" would look like for
-years, and I kept trying to answer by *subtracting from Nix*. Wrong
+The *forced* world-rebuild: a toolchain bump still changes build keys,
+but rebuilding downstream becomes policy you schedule, not a
+correctness debt the rpaths call in. The store-path grammar and its
+hash-modulo arcana. The NAR format. I have been asked what a "simple
+Nix" would look like for years, and I kept trying to answer by
+*subtracting from Nix*. Wrong
 direction. You get the simple system by keeping Nix's one true invariant,
 pure functions over a verified closure, and rebuilding outward from it
 with parts that each do one job.
@@ -532,11 +686,17 @@ It's the right question to ask, and the honest answer isn't that no one
 was clever enough. It's that the parts lived in different worlds that
 never met. Debian and rpm have extracted interfaces structurally for
 twenty-five years, but in a world with no cryptographic purity and no
-content addressing. Nix had both, and spent its cleverness in the other
-direction: it welded identity to the store path, then poured a decade
-into fighting the self-reference problem the weld created, RFC 62 and
-ca-derivations and grafts, instead of noticing the weld was the problem.
-Nobody stood at the intersection holding both halves at once.
+content addressing. The container world built planet-scale distribution
+and mounting for filesystem layers, but never gave the layer a meaning
+beyond "apply this tarball next." The reproducible-builds project built
+the verification discipline, hash-for-hash rebuilds, independent
+rebuilders, with no substrate willing to record where reproducibility
+ends and trust begins. Nix had the purity and the hashes,
+and spent its cleverness in the other direction: it welded identity to
+the store path, then poured a decade into fighting the self-reference
+problem the weld created, RFC 62 and ca-derivations and grafts, instead
+of noticing the weld was the problem. Nobody stood at the intersection
+holding all the pieces at once.
 
 And the cheap substrate that makes it practical barely existed until
 now. A generic content-addressed Merkle store you can lazily mount is
@@ -553,9 +713,8 @@ could not see until now is that it is *sufficient*, that it replaces the
 derivation outright. Seeing that required the one move the ecosystem
 couldn't make, which was to stop thinking in terms of the store. The gap
 was never in anyone's ability. It was a gap in architectural thinking:
-five jobs overloaded onto one path kept the whole ecosystem reasoning in
-the wrong layer, and we assumed the store was load-bearing because it
-was complex. Only in pulling it apart, job by job, do you find the
+we assumed the store was load-bearing because it was complex. Only in
+pulling it apart, job by job, do you find the
 pillar was never carrying the weight.
 
 ## What Happens Next
@@ -569,7 +728,7 @@ scheduler, the part most likely to be quietly unsound, had its
 discipline machine-checked and its performance bound mechanized before a
 line of production code was written.[^eos-proofs] The storage and
 execution layers I didn't have to build at all: castore and composefs
-already exist, already verified, sitting on the shelf. What remains is
+already exist, already verified. What remains is
 mostly connective tissue and one new but bounded piece, the interface
 analyzers, and none of it is research.
 
@@ -584,8 +743,9 @@ over a decade with a nagging sense that something in Nix was
 overcomplicated, and I could never name which part. I named it last
 night. So the truest answer to "what happens next" is that I am
 re-forming the architecture around this simpler model, and the re-forming
-is mostly subtraction. The design at the highest layers is, after years,
-essentially settled. What remains is to build it, in the open, in stages,
+is mostly subtraction. The design at the highest layers has been
+settling for years; last night it just got smaller. What remains is to
+build it, in the open, in stages,
 and I would rather not do that alone.
 
 The stages are deliberately un-heroic. Each one ships something usable on
@@ -620,7 +780,9 @@ away. The invariant was never the store. It was the composition. These are
 composition-addressed systems, and Nix proved the foundation they stand
 on: purely functional composition into a verified closure is the right
 model for trustworthy software. Then it spent twenty years paying a
-five-way tax on it. The tax is optional now. The pieces are on the table.
+five-way tax on it. The tax is optional now, and so is the isolation:
+carried as HTC, the guarantees stop seceding and become the bridge. The
+pieces are on the table.
 
 Time to compose them.
 
@@ -630,13 +792,15 @@ Time to compose them.
 
 [^hickey]: Rich Hickey, ["Simple Made Easy"](https://www.infoq.com/presentations/Simple-Made-Easy/) (Strange Loop, 2011). Hickey draws the distinction this whole piece turns on: to *complect* is to braid together so the strands can't move independently; to *compose* is to place beside, separably. The store path complects. The composition composes.
 
-[^refscan]: This is not a figure of speech. Nix scans each build output for the hash parts of its inputs' store paths; see [`src/libstore/references.cc`](https://github.com/NixOS/nix/blob/master/src/libstore/references.cc) and the [derivation docs](https://nix.dev/manual/nix/2.22/language/derivations). The scan is an over-approximation, which is a genuine virtue in one respect: it catches references structural analysis would miss, like a path assembled at runtime or reached through `dlopen`. It's also under-approximate the moment a reference is compressed or encoded. Structural extraction is more precise but not strictly superior; a serious system measures both. Farid Zakaria's [anatomy of a store path](https://fzakaria.com/2025/03/28/what-s-in-a-nix-store-path) walks through exactly what the hash parts are.
+[^refscan]: This is not a figure of speech. Nix scans each build output for the hash parts of its inputs' store paths; see [`src/libstore/references.cc`](https://github.com/NixOS/nix/blob/master/src/libstore/references.cc) and the [derivation docs](https://nix.dev/manual/nix/2.22/language/derivations). The scan is an over-approximation, which is a genuine virtue in one respect: it catches references structural analysis would miss, like a path assembled at runtime or reached through `dlopen`. It's also under-approximate the moment a reference is compressed or encoded. Structural extraction is more precise but not strictly superior; a serious system measures both. And the trade should be stated plainly for the model this piece proposes: with no embedded hashes to grep for, the net is structural extraction plus observed reads, and observation is coverage-bound, so a `dlopen` no run ever exercises can hide a runtime dependency. That swaps the grep's fail-closed overshoot for the fail-open tail every conventional distro has always lived with, now backstopped by measurement. A trade worth making, but a trade. Farid Zakaria's [anatomy of a store path](https://fzakaria.com/2025/03/28/what-s-in-a-nix-store-path) walks through exactly what the hash parts are.
 
 [^rfc62]: [RFC 62, "Content-addressed store paths,"](https://github.com/NixOS/rfcs/pull/62) was proposed in December 2019 and accepted in January 2022. As of the 2.34 manual (2025), [`ca-derivations`](https://nix.dev/manual/nix/2.34/development/experimental-features.html) remains an experimental, opt-in feature.
 
 [^intensional]: Naming an artifact by its inputs (extensional) versus by its content (intensional) is [Eelco Dolstra's distinction](https://edolstra.github.io/pubs/phd-thesis.pdf), from the thesis that introduced Nix. The self-reference problem and the hash-rewriting it forces are laid out in Tweag's [write-up on content-addressed self-references](https://www.tweag.io/blog/2020-11-18-nix-cas-self-references/), which calls the placeholder-substitution trick "obviously a hack." Farid Zakaria's [walk through the intensional model](https://fzakaria.com/2025/03/08/demystifying-nix-s-intensional-model) is the clearest recent tour of the same ground.
 
-[^spack]: [Spack](https://tgamblin.github.io/pubs/spack-sc15.pdf) hashes the full build spec into each package's identity but deliberately excludes the install prefix from the hash and rewrites RPATHs at install time, yielding relocatable binaries. It's the cleanest existing proof that content-addressing and install-location binding are separable, and that Nix fuses them by choice.
+[^spack]: [Spack](https://tgamblin.github.io/pubs/spack-sc15.pdf) hashes the full build spec into each package's identity but keeps the install-tree root out of that identity, and relocates cached binaries on install (padded placeholder prefixes, RPATH rewriting), yielding relocatable artifacts. It's the cleanest existing proof that hash-based identity and install-location binding are separable, and that Nix fuses them by choice.
+
+[^fhsenv]: Nix users will note that nixpkgs can already synthesize an FHS view over the store: [`buildFHSEnv`](https://nixos.org/manual/nixpkgs/stable/#sec-fhs-environments), the bubblewrap wrapper that makes Steam work on NixOS. It is a runtime compatibility shim, not a build substrate: it lives outside the sandbox and the derivation model, nothing signs or records what runs inside it, and you cannot build a derivation through it. "Cannot" in this piece means cannot *hermetically*, with a signed closure and an observed read set; that is the property everything downstream leans on.
 
 [^ostree]: [OSTree](https://ostreedev.github.io/ostree/introduction/) keeps files in a content-addressed object store and checks them out to ordinary FHS paths by hardlink. Because nothing it deploys embeds a content hash in its own references, it never patches an rpath or a shebang. Fuchsia's [blobfs](https://fuchsia.dev/fuchsia-src/concepts/filesystems/blobfs) makes the same move: blobs named by Merkle root, resolved through a manifest rather than baked into the artifact.
 
@@ -648,7 +812,9 @@ Time to compose them.
 
 [^structdeps]: RPM has extracted dependencies structurally for decades via [`find-requires`/`find-provides` and `elfdeps`](http://ftp.rpm.org/max-rpm/s1-rpm-depend-auto-depend.html), reading ELF `DT_NEEDED` and soname records; Debian does the equivalent with [`dpkg-shlibdeps`](https://manpages.debian.org/testing/dpkg-dev/dpkg-shlibdeps.1.en.html). (Interpreter and shebang dependencies on Debian are handled separately, by debhelper tools such as `dh_python3`, not by `dpkg-shlibdeps`.) None of it greps for magic strings.
 
-[^abi]: Symbol-and-version satisfaction, the consumer's needed symbols and versions being a subset of the provider's exported ones, is necessary but not sufficient: a change that keeps a symbol's name while altering the layout behind it slips past it. So strict mode (exact digest pins, the default) is the guarantee floor, identical to Nix; satisfaction-based substitution is opt-in per composition with a recorded proof; and deeper type-level comparison (the libabigail/DWARF lineage) is a known next tier behind the same interface, not a research problem. The claim is that the substrate can name and check the ABI surface at all, which Nix cannot, and can tighten the check without changing the model, not that matching symbols proves compatibility.
+[^static]: For dynamically linked consumers, which is what an FHS composition binds by name. A consumer that statically links or vendors OpenSSL carries the dependency in its own bytes and must rebuild here exactly as it must everywhere else, Nix and grafts included; no binding model can swap what the compiler already inlined. The comparison with Nix is unchanged, but the no-rebuild win is scoped to the dynamic case.
+
+[^abi]: Symbol-and-version satisfaction, the consumer's needed symbols and versions being a subset of the provider's exported ones, is necessary but not sufficient: a change that keeps a symbol's name while altering the layout behind it slips past it. So the default, an exact digest pin per entry, is the guarantee floor, identical to Nix; satisfaction-based substitution is opt-in per composition with a recorded proof; and deeper type-level comparison (the libabigail/DWARF lineage) is a known next tier behind the same interface, not a research problem. The claim is that the substrate can name and check the ABI surface at all, which Nix cannot, and can tighten the check without changing the model, not that matching symbols proves compatibility.
 
 [^grafts]: Guix documents grafting under [security updates](https://guix.gnu.org/manual/1.5.0/en/html_node/Security-Updates.html): the patched package is rebuilt, then its store-path hash is binary-rewritten into every dependent in place, which requires the replacement name to be exactly as long as the original and the libraries to remain ABI-compatible. Nixpkgs' equivalent is [`replaceDependencies`](https://github.com/NixOS/nixpkgs/blob/master/pkgs/build-support/replace-dependencies.nix). Grafts aren't deprecated; they're a conceded hack that content-addressing is meant to eventually obviate.
 
@@ -660,9 +826,23 @@ Time to compose them.
 
 [^nickel]: [Nickel](https://nickel-lang.org) is Tweag's configuration language, born from the Nix module-system experience: gradual typing, contracts, and merge semantics as language features rather than a library reimplemented inside a lazily evaluated DSL. Nothing here depends on Nickel specifically; the point is that configuration composition belongs in a language designed for it, decoupled from the build.
 
+[^oci]: The [OCI image specification](https://github.com/opencontainers/image-spec/blob/main/layer.md) defines a layer as a tar archive of filesystem changes, applied in sequence, with deletions encoded as whiteout files. Nothing in the format expresses what a layer provides, requires, or conflicts with; the final filesystem is defined operationally, by replaying the stack, and a path touched by two layers resolves to whichever was applied last. The layer is a diff, not a statement.
+
+[^bootc]: "[Git for operating system binaries](https://ostreedev.github.io/ostree/)" is OSTree's own self-description. The trees it commits are composed outside it, by [rpm-ostree](https://coreos.github.io/rpm-ostree/) or, increasingly, by a container build: the [bootc](https://github.com/bootc-dev/bootc) direction ships bootable systems as standard OCI images, which buys the registry ecosystem at the price of reinstating the opaque tarball layer as the unit of change. None of this retracts the credit given earlier: OSTree's storage layer remains the existence proof that content addressing needs no rpath rewriting. What it never had is composition semantics.
+
+[^composefs-oci]: [composefs](https://github.com/composefs/composefs)'s stated target use cases are OSTree-style deployments and OCI container storage, and [containers/storage](https://github.com/containers/storage), the layer beneath podman, already supports it as an image backend. Mounting a verified composition with container-native machinery is that ecosystem's own trajectory, not a detour this model asks it to take.
+
 [^patching]: One caveat: a package with no staged-install path (no `DESTDIR` or `--prefix` discipline) still needs a single conventional patch to add one. That is the only patching this model ever requires, and it is orders of magnitude less than the store-fighting patches, wrappers, and stdenv machinery it replaces.
 
 [^eka]: The proof of concept lives in [eka](https://github.com/ekala-project/eka). It is not a tool to adopt and not the intended surface; it is unstable, and it exists to prove the load-bearing result, that the atom lock, with full SAT resolution over isolated, versioned git objects, works end to end. That result is established; the real implementation is being built properly now.
+
+[^rb]: The [Reproducible Builds](https://reproducible-builds.org) project is the cross-distribution effort to make builds verifiable by independent rebuilding. The measured numbers for Nix come from Malka, Zacchiroli, and Zimmermann's large-scale study, ["Does Functional Package Management Enable Reproducible Builds at Scale? Yes"](https://arxiv.org/abs/2501.15919): rebuilding 709,816 historical nixpkgs packages (2017–2023) yielded bitwise reproducibility between 69% and 91%, trending upward, with rebuildability over 99%. The title's "yes" is earned, and so is the residue: input-determinism scales; bit-for-bit output identity is hostage to upstream's nondeterminism, and no store layout fixes that.
+
+[^nixtrust]: Nix's substitution trust is a signature on each `.narinfo`, checked against [`trusted-public-keys`](https://nix.dev/manual/nix/2.34/command-ref/conf-file#conf-trusted-public-keys); in practice most installations trust exactly one key, `cache.nixos.org-1`. The mechanism is real but flat: a path is either signed by a key you already trust or it isn't, with no delegation, no revocation story, and no distribution scheme for the keys themselves beyond pasting them into a configuration file.
+
+[^ion-config]: "This configuration" is not a comment; it is inside the hash. Any deviation from a package's default build configuration is normalized to a canonical form and hashed into the build's input identity, a job owned by ion, the frontend layer of the stack. The mechanism is deliberately boring, canonicalize and hash, and the consequence is that a hash expectation names source *and* configuration as one cryptographic statement: a package built with non-default flags is simply a different build intent, with its own identity and its own reproducibility claim.
+
+[^trustix]: The instinct is not new. [Trustix](https://github.com/nix-community/trustix) set out to bolt decentralized trust onto Nix: independent builders logging signed input-to-output hash pairs, with M-of-N agreement standing in for a trust root. Announced in 2020, it remains an early research demo, and the structural reason is the one this piece keeps finding: the store gives attestations nothing stable to attach to, an input hash names a recipe rather than a result, and where builds aren't reproducible the votes simply diverge, leaving policy where verification was promised. The right idea kept fighting the substrate. Here, the boundary it tried to compute after the fact is a fact the metadata carries from the start.
 
 [^eos-proofs]: The scheduling model, its fairness and starvation-freedom proofs (TLA+), the mechanized performance bound (Lean), and the simulation harness against real build traces live with the rest of the architecture at [github.com/axiosoph/axios](https://github.com/axiosoph/axios).
 
