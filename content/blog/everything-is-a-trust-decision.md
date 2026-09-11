@@ -5,61 +5,182 @@ date = 2026-09-11
 tags = ["trust", "supply-chain", "identity", "science", "nix", "systems"]
 +++
 
+*Second draft, revised 2026-09-11. The first draft went out earlier the
+same day and stays in the record at
+[commit ea08510](https://github.com/nrdxp/nrd.sh/commit/ea08510); the
+diff between the two is the honest account of what changed. The change
+in register is deliberate: we decided that the argument for the
+result's utility is load-bearing, so where the first draft was
+conservative about the science, this one is predictive along its
+consequences, each consequence stated with its bound and what would
+falsify it.*
+
 ## Far More General Than Packaging
 
 Last time I argued that Nix is right about everything except the store,
-and near the end I said something in passing: the line between what a
-system can *verify* and what it can only *vouch for* should be a field
-in the metadata, not a feeling.[^lastpost]
+and near the end I said in passing that the line between what a system
+can *verify* and what it can only *vouch for* should be a field in the
+metadata, not a feeling.[^lastpost]
 
-I undersold it. It is not a field. It is a theorem, and it is not about
-packaging. It is about anything that keeps a record and wants an answer
-from it to stay true: a package index, a transparency log, a chain of
-key events, the published scientific literature. This post is about
-that shape and what it asks of anyone who builds on a record. You are
-already making trust decisions all day. The shape says make them
-explicitly.
+I undersold it. The line is a theorem, and it is not about packaging.
+It applies to anything that keeps a record and wants an answer from it
+to stay true: package managers, transparency logs, signed commits,
+reproducible science, the key you rotate when your laptop is stolen.
+This post is about that shape. You already make trust decisions all day; the shape says make
+them explicitly.
 
-A few facts before the argument, because the argument depends on them.
-This is my first scientific contribution. My co-author Zach Collier and
-I asked one question in two forms. Everyone knows trust has boundaries;
-Thompson drew one forty years ago. What nobody had was a proof that the
-boundaries are exhaustive, that past a certain line there is nothing
-left to verify and every kind of trust that remains has been named. So:
-is there a provable upper bound on how much you can verify, and is what
-lies past it completely accounted for? The answers are in a paper
-titled *Factoring Trust: A Machine-Checked Calculus of Where
-Verification Must End*, under double-blind review at CSF 2027, the IEEE
-Computer Security Foundations Symposium, so the paper and the Lean 4
-development behind it stay private until a decision. I did most of the
-mechanization myself, with AI assistance, under a discipline I describe
-at the end. That has one consequence for how you should read this post.
-Every time I say the machine checks something, that is today my word,
-from a named person you can hold to it, and it becomes something you
-can run yourself when review ends. I grade it as a vouch here because
-that is what it is.
+Start with the largest record there is, because that is where the
+stakes are. This week a lab announced a solution to a Millennium Prize
+problem, and two researchers who had posted first asked in public how
+their work had been used.[^navier] I do not know who is right. What
+strikes me is that nobody can know from the record, because the record
+science keeps cannot answer the question. Who posted what, when, and
+what rests on it are claims about an append-only sequence of findings,
+and science settles every one of them by reading, argument, or
+reputation. Attribution is load-bearing for the whole enterprise, since
+otherwise we listen to whoever took the work instead of whoever did it,
+and no law enforces it: ideas are not property, and rightly so. The
+discipline falls on the commons, and the commons has no instrument for
+it but conduct.
+
+Science is not the only commons in this argument. Open source is the
+other, and I have argued twice in this series that a commons cannot be
+run as a business without ceasing to be one.[^sovereign][^anamnesis]
+The calculus gives the structural half of that in one line: nothing
+closes without a check you can re-run, so an input that is withheld
+from you closes never, or only under a hardness assumption, and every
+other route to it is someone's word. Both commons are on life support,
+open source in burned-out maintainers and captured governance, science in the reproducibility crisis, and they
+depend on each other: without science, civilization cannot scale or
+even sustain itself, and the science that runs on software runs on the
+open-source commons. Conduct does not scale for either. A record whose
+claims carry their grades does, and it is what both lack and both need.
+I have said before that something formal and distributable is what it
+takes to scale science past its current breaking point without giving
+up integrity; the discipline is the same for both.
+
+The deeper problem sits under attribution. A citation is what you do
+when you do not hold all the pieces yourself: you point at someone who
+does, and you trust the pointer. If you do hold the pieces, the result
+is verified whether or not any journal has said so. Verification is
+primary and citation secondary, and our pipeline has it backwards.
+Prestige sits in the citation rather than in whether the thing it
+points at is true, so true results get dismissed for want of a paper to
+cite and false ones get the look of truth by making it into the
+pipeline. That is a bottleneck on what anyone is willing to trust. It
+is also a technical problem, and technical problems can have technical
+solutions.
+
+Certificate Transparency shows what one looks like. It is the most
+widely deployed append-only record in the world, and it can prove
+exactly two things: that an entry is in the log, and that one version
+of the log is a prefix of another. Both proofs are the size of a path
+down a Merkle tree. Ask it anything about what the entries say, how
+many certificates it holds for your domain, whether any was issued by a
+CA you never authorized, and it has no proof to give you; someone reads
+the entries. That is no gap in its engineering. Its two proofs read the
+tree's shape and never its contents, and nobody had a theory of which
+claims about contents could have a proof like that.
+
+Now there is one. Whenever a claim over a record is a fold, meaning
+what it says about the whole combines from what it says about the
+pieces, a bounded checker can take it in at every size, on the shape of
+the claim alone, assuming nothing but the hash. Everything else that
+stays small buys it with a cryptographic hardness assumption. The
+paper's word for a record held that way is *eusynoptic*, Aristotle's
+word for a city small enough to survey at a glance, and the glance
+stays bounded no matter how large the record grows. Inclusion and
+consistency are two folds that happen to read structure. "This finding
+was in the record before that one" is another, and it reads the
+entries. So is "everything this paper cites was in the record before
+it," and so is "no package in this closure has been yanked as of entry
+*n*." "This result reproduces" is fixed by the record only when the
+record carries everything a stranger needs to run it, and where it does
+not, the theorem names what you are trusting instead: the authors'
+word, or a named replicator's.
+
+The realest expression of science in our time is a machine doing it,
+and the dispute this post opened with is, underneath, an argument about
+what machines did and in what order, which no record anyone keeps can
+say. Everyone says they care about AI safety, and almost nobody can
+state the question in a form a record could answer. Alignment in the
+large is hard, and I claim nothing about it. But there is a small
+version that is a yes-or-no claim: is this machine making progress
+toward the goal I set? Every step a machine takes toward a goal is
+itself a claim, and a claim can be graded by what it rests on: checked
+by machine, cited at source, the operator's word, or reasoning. The
+grade asks what the claim rests on, not who made it. That rule falls on
+me, on the machine that assisted me, and on you, because all three of
+us are fallible, and "who wrote it" is not a grade. Track every
+intermediate claim and grade it, and the whole has a grade. The model's
+output is probabilistic; the record of its claims is a deterministic
+spine through it. Now point the same discipline at the corpus instead
+of the session. Imagine the training set itself graded, every claim in
+every entry, against the three conditions the rest of this post lays
+out, so the model was built from a record where each claim carried what
+it rests on rather than from text taken as given. In practice there
+would be an error ratio; the point is the picture, not a promise. None
+of this is a theory of alignment, just one question about alignment
+that has an answer, and the session version is how this paper was
+built: the claims machines made on the way to it were recorded and
+graded, and the paper's own claims carry those grades onto the page.
+
+Nobody has felt this yet, because nobody has built a record whose
+claims come with proofs the size of a Merkle path: priority as a
+receipt instead of a dispute, a citation as a pointer you can check
+instead of one you trust, a result graded by what a stranger can rerun.
+Those are predictions the formalism makes, and you can hold it to them.
+They are stated falsifiable on purpose, because a prediction you cannot
+be proven wrong on is worth nothing to science, and I am asking to be
+proven wrong. We are building two such records, one for packages and
+one for identity, and both appear near the end, along with the rougher
+one that built this paper. The one science needs, nobody has built,
+and the finding says what it would have to be. You may want to see us succeed
+or you may want to see us fall. Either way, the argument is the thing
+to contend with.
+
+A few facts the argument depends on. This is my first scientific
+contribution. My co-author Zach Collier and I asked one question in two
+forms. Trust has boundaries; everyone knows that, and Thompson drew one
+forty years ago. What nobody had was a proof that the boundaries are
+exhaustive, that past a certain line there is nothing left to verify
+and every kind of trust that remains has been named. So: is there a
+provable upper bound on how much you can verify, and is what lies past
+it completely accounted for? The answers are in a paper titled
+*Factoring Trust: A Machine-Checked Calculus of Where Verification Must
+End*, under double-blind review at CSF 2027, the IEEE Computer Security
+Foundations Symposium, so the paper and the Lean 4 development behind
+it stay private until a decision. The mechanization is mostly mine,
+with AI assistance, done under a discipline I describe at the end; that
+is provenance, not a grade. The grade is this: every time I say the
+machine checks something, that is today my word, from a named person
+you can hold to it, and it becomes something you can run yourself when
+review ends. I grade it as a vouch here because that is what it is.
 
 Why post before review? Because I judged the finding too important to
-sit on a shelf for a year, and because this week made the case for me.
-A lab announced a solution to a Millennium Prize problem, two
-researchers who had posted first asked in public how their work had been
-used, and the argument is now about who gets to say what happened
-when.[^navier] I do not know who is right. I know that a dated public
-statement of what you found and how strongly you hold it is the cheapest
-insurance there is, and that it happens to be the discipline this post
-is about.
+sit on a shelf for a year, and because the dispute above is the
+argument for posting dated. A large firm can publish a result within
+days of finding it; an independent researcher waits that year for
+review, and many of the bottlenecks that make up that wait are exactly what a
+graded, verifiable record could automate away. The argument asks for it
+too: if verification is primary and citation secondary, the claim
+should go out with its grades on it and let the review follow. A public
+statement of what you found and how strongly you hold it is the
+cheapest insurance there is, and it is the discipline this post is
+about.
 
 ## The Question Thompson Opened
 
-This is an old question. Socrates was called the wisest man in Athens,
-and his own account of why was that he alone knew there was an end to
-what he knew. He could not say where it was. He could only show that
-everyone he examined was standing past it without noticing.[^apology]
-Twenty-four centuries later, Ken Thompson put the end inside the
-machine: you cannot trust code you did not totally create yourself, and
-no amount of source-level scrutiny will save you.[^thompson] He closed
-with a moral rather than a map. Verification must end somewhere. He did
-not say where, and he did not say what the far side looks like.
+The question is old. Socrates was called the wisest man in Athens, and
+his own account of why was that he alone knew there was an end to what
+he knew. He could not say where it was, only show that everyone he
+examined was standing past it without noticing.[^apology] Twenty-four
+centuries later, Ken Thompson put the end inside the machine: you
+cannot trust code you did not totally create yourself, and no amount of
+source-level scrutiny will save you, because the compiler that compiles
+your compiler could be lying.[^thompson] He closed with a moral rather
+than a map. Verification stops somewhere; he did not say where, and he
+was not trying to.
 
 For forty years the pieces needed to say it sat in different fields.
 Distributed-systems theory proved which states of knowledge a group of
@@ -70,18 +191,37 @@ Lampson's words, that what is inside it is "not easy to figure
 out."[^lampson] Some argued the limit is social and cannot be a theorem
 at all.[^demillo] And the people who build tamper-evident logs listed
 their trusted parties one system at a time, without asking whether the
-list was complete or why those parties and no others.[^crosby] Nobody,
-as far as we can find, asked whether the claims a bounded checker can
-settle over a growing record have an exact boundary, such that what
-lies past it is precisely what you must trust, and whether that
-boundary is a theorem rather than a policy. If you know a source that
-poses it that way, tell me. The claim carries its date.
+list was complete or why those parties and no others.[^crosby]
+Everyone since Thompson has agreed that verification stops. What
+nobody asked, as far as we can find, is whether the place it stops has
+a shape: over a record that only grows, take every claim you could
+make about it; is the set a bounded checker can settle exactly
+describable, with everything past it being exactly what you must
+trust, and is that line a theorem rather than a policy? The sentence
+falls the day someone produces the prior work, and I will say so when
+it does.
+
+Why did it go unasked for forty years with the pieces on the table?
+The honest answer is boring. They lived in different fields:
+cryptography had the tree, functional programming had the fold,
+databases had the time window, distributed systems had common
+knowledge, security logic had the trust statement, metascience had
+reproducibility. Each solved its own component, and nobody stood where
+they meet, because standing there is not a research position in any of
+them. We stood there because we were building a system that needed
+every piece at once and kept asking what they had in common. That is a
+vantage, not an insight the fields lacked.
 
 I am going to claim that this question is now closed. Not trust, which
-is enormous and mostly human. The question. By the end of this post you
-will have seen where verification ends over a record, what is left past
-that point, that it comes in three named kinds, and what each one
-costs.
+is enormous and mostly human; the question.
+
+Put more exactly: what we have in hand is a fundamental piece of
+epistemic machinery, not proposed but derived, for claims over a record
+above two named grants. Within that bound every part of it is forced:
+the three conditions with no fourth, the residues with none missing,
+the order of the climb, the shape of the certificate. Anyone who cares
+what that sentence claims will know exactly what it claims, and can
+check it when the development is public.
 
 ## Everything Is a Trust Decision
 
@@ -92,15 +232,18 @@ stopped thinking about. The transitive dependency your dependency pulled
 in, that you never opened, is nobody's word at all.
 
 Those are four different positions. Take any artifact you run and
-everything beneath it, transitively: its sources, its dependencies,
-their dependencies, the compiler, the keys. Call each of those a part.
-Every part is in exactly one of the four. Some you **closed**: a
-re-runnable check passed, on top of someone's vouch that the thing is
-what it claims to be. The rest is the *open surface*, and it splits
-three ways. Some of it you were **given** and chose to take as is: the
-seeds, meaning the compiler you run, the hash function, the root key.
-Some was **vouched** for by a principal you admit and not yet checked.
-And some is **anonymous**: nobody has vouched, nobody has checked.
+everything beneath it, transitively: sources, dependencies, their
+dependencies, the compiler, the keys. Call each a part. Every part is
+in exactly one of the four. Some you **closed**: a re-runnable check
+passed, on top of someone's vouch that the thing is what it claims to
+be. The rest is the *open surface*, and it splits three ways. Some of
+it you were **given** and chose to take as is: the seeds, meaning the
+compiler you run, the hash function, the root key. Some was **vouched**
+for by a principal you admit and not yet checked. And some is
+**anonymous**: nobody has vouched, nobody has checked. Run the opening
+examples through it. Your CA root is a seed. The signed commit is a
+vouch. The reproducible build you re-ran yourself is closed. The
+dependency nobody opened is anonymous.
 
 That is the first equation, and it belongs to the second of the paper's
 two calculi, the one about built things:
@@ -115,26 +258,26 @@ every part, and the classifier has no fifth verdict; the theorems come
 later, when the buckets start to move.
 
 The thesis of this post is under that equation. Trust is not the enemy
-of verification. It is what verification leaves behind, and it can be
-named, counted, and moved. The fourth bucket, what you chose to take as
-given, is not a failure. It is a decision. Zero trust does not exist.
-Named trust does.
+of verification but what verification leaves behind, and it can be
+named, counted, and moved. The given bucket, what you chose to take as
+is, is not a failure but a decision. Zero trust does not exist. Named
+trust does.
 
-The title is a deliberate play on "everything is a file." That slogan
-earned fifty years because it was literally true of the architecture,
-and you could hold Unix to it. I want the same bar here, and the same
-consequence: a discipline you can hold a system to. Everything is a
-trust decision, and an attestation is your signature on one. So write
-every one of them down, sign it, and put it where it can be counted.
-Not trustless. Trust less, and say exactly what is left.
+The title is a play on "everything is a file." That slogan earned fifty
+years because it was literally true of the architecture, and you could
+hold Unix to it. I want the same bar here and the same consequence: a
+discipline you can hold a system to. Everything is a trust decision,
+and an attestation is your signature on one. Write every one of them
+down, sign it, and put it where it can be counted. Not trustless: trust
+less, and say exactly what is left.
 
 ## What It Means for a Claim to Last
 
-Everything above is one snapshot. The real question is what happens
-when the record grows. You verified something yesterday. Overnight the
-log took ten thousand new entries. Do you check again?
+Everything above is a snapshot. The real question is what happens when
+the record grows. You verified something yesterday; overnight the log
+took ten thousand new entries. Do you check again?
 
-Three words carry the rest of this section, each in its plain sense:
+Three words carry the rest, each in its plain sense:
 
 - A **record** is an append-only sequence of entries. Git history if you
   never force-push. A transparency log. A package index that only adds.
@@ -143,30 +286,30 @@ Three words carry the rest of this section, each in its plain sense:
 - A claim is **enduring** when its certificate keeps working no matter
   what is appended.
 
-Plato had a word for an opinion that has been tied down by an account of
-why it is true: it becomes *monimos*, abiding.[^meno] A record in which
-tied-down claims abide is what the paper calls a *monimograph*, and the
-word will matter once, near the end, when we get to a record that is
-not one. The first of the paper's two calculi ranges over exactly this
-object, and its judgment is the one to remember:
+Plato had a word for an opinion tied down by an account of why it is
+true: it becomes *monimos*, abiding.[^meno] A record in which tied-down
+claims abide is what the paper calls a *monimograph*, and the word will
+matter once, near the end, for a record that is not one. The first of
+the paper's two calculi ranges over exactly this object, and its
+judgment is the one to remember:
 
 $$R \;\vdash^{+}\; c \;\triangleleft\; \pi$$
 
 Over the record $R$, the claim $c$ holds by the certificate $\pi$, and
-keeps holding over every extension of $R$. The plus is the point. Not
-"true now." True from here on. The law that makes the plus honest says
-that if the record grows from $R$ to $R'$ and $c$ endured at $R$, then
-$c$ holds at $R'$: the certificate was made at $R$, stays anchored
+keeps holding over every extension of $R$. The plus is the point: not
+"true now" but true from here on. The law that makes the plus honest
+says that if the record grows from $R$ to $R'$ and $c$ endured at $R$,
+then $c$ holds at $R'$: the certificate was made at $R$, stays anchored
 there, and you never need a new one. The machine checks that, on my
 word for now.
 
 ## Exactly Which Claims Can Last
 
-Take the claim every developer knows: "this commit is the latest."
-It is true right now. It is computable from the record. And the next
-push unmakes it. No certificate, of any kind, under any assumption, can
-make "latest" endure. That is not a limitation of Merkle trees or of
-signatures. It is what the claim is: a photo of a scoreboard mid-game,
+Take the claim every developer knows: "this commit is the latest." It
+is true right now, it is computable from the record, and the next push
+unmakes it. No certificate, of any kind, under any assumption, can make
+"latest" endure. That is not a limitation of Merkle trees or
+signatures; it is what the claim is, a photo of a scoreboard mid-game,
 true the instant you took it and meaningless a moment later.
 
 The central conjecture says which claims can last, and it is a
@@ -186,40 +329,40 @@ builds the verifier.
 
 Why three and not four? Because there are three things in the picture:
 the claim, the checker, and the record's growth. Each condition is one
-of them failing. There is no fourth part to fail. That is why the count
-is a theorem and not a taxonomy someone liked.
+of them failing, and there is no fourth part to fail. That is why the
+count is a theorem and not a taxonomy someone liked.
 
-"Latest" fails the third condition. That single fact is why every
+"Latest" fails the third condition, and that one fact is why every
 transparency log in production had to grow a liveness layer: gossip,
 witnesses, freshness checks. Certificate Transparency shipped inclusion
-proofs and consistency proofs and then found it needed gossip on
-top.[^ct] The field found that by getting burned; the calculus says it
-had to be so. Readers from distributed systems will recognize the third
-condition from the other side. CALM says a monotone specification needs
-no coordination, and our watcher is that coordination, bought per
-claim. What CALM has no analogue for is the checker leg, and what the
-calculus adds is that the three conditions are exhaustive.[^calm]
+and consistency proofs and then found it needed gossip on top.[^ct]
+The field found that by getting burned; the calculus says it had to be
+so. Distributed-systems people will recognize the third condition from
+the other side: CALM says a monotone specification needs no
+coordination, and our watcher is that coordination, bought per claim.
+CALM has no analogue for the checker leg, and what the calculus adds is
+that the three conditions are exhaustive.[^calm]
 
 The three conditions say nothing about your domain, and that is the
 design lever. The calculus does not know what an entry means, what a
 signature is, or what a build does. It fixes the procedure for knowing
 and leaves every one of those choices to you, which means they are
-yours to get right. Before you build, classify the claims your system
-will live or die on, because the classification tells you which of them
-can be checked once and which will have to be checked forever, and
-nothing you build afterward can move a claim across that line.
+yours to get right. So classify the claims your system will live or die
+on before you build, because the classification tells you which can be
+checked once and which will have to be checked forever, and nothing you
+build afterward can move a claim across that line.
 
-One honest note on where the checking stops. "A checker of the power
-you actually have" is a parameter, and the machine checks the
-biconditional at two settings of it: unlimited power, and merely
-computable. Polynomial time, the setting most developers care about, is
-future work in the paper. I do not think that weakens anything. At any
-power a checker either exists or it does not, so the count of three is
-the same theorem at every setting; what changes at polynomial time is
-the floor, because our proofs take the hash as absolutely binding and a
-polynomial version would have to take it as computationally binding,
-which makes it a theorem in cryptography with hardness assumptions and
-security parameters, on a trusted base that has no usable definition of
+One note on where the checking stops. "A checker of the power you
+actually have" is a parameter, and the machine checks the biconditional
+at two settings of it: unlimited power, and merely computable.
+Polynomial time, the setting most developers care about, is future work
+in the paper. I do not think that weakens anything. At any power a
+checker either exists or it does not, so the count of three is the same
+theorem at every setting. What changes at polynomial time is the floor:
+our proofs take the hash as absolutely binding, and a polynomial
+version would have to take it as computationally binding, which makes
+it a theorem in cryptography with hardness assumptions and security
+parameters, on a trusted base that has no usable definition of
 polynomial time yet. I expect it to follow with the partition
 untouched.
 
@@ -233,57 +376,53 @@ pieces of the record combines from the answers over each piece:
 
 $$h(x \,\text{++}\, y) \;=\; h(x) \oplus h(y)$$
 
-Assuming nothing but a binding hash, those claims and exactly those are
-the ones a bounded checker can take in whole at every size. Aristotle
-had a word for a city small enough to be surveyed at a glance,
-*eusynoptic*, and a record is eusynoptic for exactly the claims of this
-shape.[^politics] The machine checks that the enduring terms of the
+For those claims a bounded checker takes the whole record in at every
+size, and the bound comes from the shape alone, with nothing assumed
+but a binding hash; that is the eusynopsis from the top of the
+post.[^politics] The machine checks that the enduring terms of the
 calculus are exactly these functions, the list homomorphisms of Bird's
-theory of lists.[^bird] Succinct proof systems reach outside the class,
-and pay for it with a hardness assumption; inside it the bound is free.
+theory of lists.[^bird] Succinct proof systems reach outside the class
+and pay for it with a hardness assumption. Inside it the bound is free.
 
-This is where the tree comes from. Because $\oplus$ combines
-associatively, you may bracket the fold any way you like. The balanced
-bracketing is a tree. The certificate for one entry is one path down
-it. That is a Merkle tree, and its logarithmic proof is the shape the
-algebra produces. The tree is the associativity made visible, and it
-was the right instinct. It is also easy to say too much about, so here
-is exactly what is true: the tree is optimal for certificate *length*
-among constructions that assume nothing but a binding hash, a lower
-bound that is Tamassia and Triandopoulos's,[^tamassia] and constant-size
-alternatives exist, accumulators and vector commitments, which buy their
-constant with a hardness assumption.[^boneh]
+That is where the tree comes from. Because $\oplus$ is associative, you
+may bracket the fold any way you like. The balanced bracketing is a
+tree, and the certificate for one entry is one path down it. That is a
+Merkle tree, and its logarithmic proof is the shape the algebra
+produces: the associativity made visible. The instinct was right. It is
+easy to say too much about the tree, so here is exactly what is true:
+it is optimal for certificate *length* among constructions that assume
+nothing but a binding hash, a lower bound that is Tamassia and
+Triandopoulos's,[^tamassia] and constant-size alternatives exist,
+accumulators and vector commitments, which buy their constant with a
+hardness assumption.[^boneh]
 
-The single entry is the easy case, though, and not why the class
-matters. A claim in this class is a fold over every entry it touches,
-and the homomorphism is what lets a checker take that whole fold in
-from summaries, in bounded work, however many entries there are. A
+Inclusion is the single-entry case, and Certificate Transparency stops
+there. Read the entries instead and the same tree gives the same proof
+for any claim of this shape, a fold over every entry it touches. The
 claim can be stated after the entries it ranges over, or extended as
 the record grows, and as long as every piece it is built from endures,
 the whole endures and you can verify it at any time. Where a piece does
 not, the calculus names which one, and that is exactly where your
 checking stops.
 
-Here is the design lever in practice. The calculus hands you an
-interface with four parts: what you read out of each entry, how two
-readings combine, what you do with the total, and which stretch of the
-record you range over. Supply those and it tells you which cell your
-claim lands in and whether an enduring certificate can exist for it.
-Take "no package in this closure has been yanked." Read each entry as
-"is this a yank of one of mine," combine with or, finish by negating,
-range over the whole record so far. Determined, checkable from
-summaries, and not monotone: the next entry can be the yank. That claim
-is a phone call. Change one parameter, the range, to "as of entry
-1,204," and it is a receipt you can issue once. Nothing else about your
-system had to change.
+In practice the calculus hands you an interface with four parts: what
+you read out of each entry, how two readings combine, what you do with
+the total, and which stretch of the record you range over. Supply those
+and it tells you which cell your claim lands in and whether an enduring
+certificate can exist for it. Take "no package in this closure has been
+yanked." Read each entry as "is this a yank of one of mine," combine
+with or, finish by negating, range over the whole record so far.
+Determined, checkable from summaries, and not monotone: the next entry
+can be the yank. That claim is a phone call. Change one parameter, the
+range, to "as of entry 1,204," and it is a receipt you can issue once.
+Nothing else about your system had to change.
 
-The job of a designer, then, is not to pick a data structure. It is to commit to data and metadata such that the
-claims you care about come out as folds over the record, and where one
-cannot, to know it before you ship, because the calculus tells you
-which condition failed and what you now owe in its place. Get your
-load-bearing claims into the class and the bound comes free, at every
-size. Leave one outside it and you have not failed. You have a residue
-with a name, and a bill.
+That is the designer's job: not picking a data structure, but
+committing to data and metadata such that the claims you care about
+come out as folds over the record, and knowing before you ship which
+ones cannot and what you owe in their place. Leave a claim outside the
+class and you have not failed; you have a residue with a name, and a
+bill.
 
 ## Five Ways to Fail, Three Cures, One Price
 
@@ -312,7 +451,7 @@ shipped:
   you trust **someone still watching**. "This certificate has not been
   revoked." "This is the current key."
 
-Each of those has a cure, and each cure is a single edit to the claim:
+Each has a cure, and each cure is a single edit to the claim:
 
 1. **Restrict the window.** Stop saying "latest." Say "as of entry
    1,204." That claim endures.
@@ -323,30 +462,32 @@ Each of those has a cure, and each cure is a single edit to the claim:
    and when, a witness's entry in the record. The claim rests on the
    witness.
 
-Keeping the current-window claim alive by paying someone to keep
-watching is not a cure, and I want to be careful about the word. Gossip
-and heartbeats are a price, paid continuously, for as long as you insist
-on the claim. There is a shorter way to say the third failure, and it
-was the first theorem we found on the way here: a certificate can be
-eternal, it can be checked offline, or it can be about now, and you may
-have any two of the three.[^eon] Eternal and offline is a receipt. Now
-is a phone call.
+Paying someone to keep watching, so the current-window claim stays
+alive, is not a cure, and the word matters. Gossip and heartbeats are a
+price, paid continuously, for as long as you insist on the claim, and
+much of the confusion in this space comes from treating the price as a
+cure. The
+shorter way to say the third failure was the first theorem we found on
+the way here: a certificate can be eternal, it can be checked offline,
+or it can be about now, and you may have any two of the three.[^eon]
+Eternal and offline is a receipt. Now is a phone call.
 
-This reframes a cost intuition most of us carry. We assume trust cost
-scales with the record: bigger log, more to check. It does not. The cost
+That reframes a cost intuition most of us carry, and I held it for
+years: trust cost scales with the record, bigger log, more to check. It
+does not. The cost
 is per *claim*. A claim in the enduring class costs one certificate,
 forever, however large the record grows. A claim outside it costs a
 watcher, forever, however small the record is. Engineers have sorted
 claims into those two piles by trial and error for decades, and often
 got it backwards, building a vault where a receipt would do or handing
 out a receipt that silently expires. The calculus says which pile, in
-advance. That is also where transparency logs and blockchains part
-ways: not by size, but by which claims they insist on. A blockchain
-insists on one claim a log does not, that there is a single current
-tip and this is it, and that claim is not monotone. Consensus is its
-price. I am not calling anything broken. I am saying what the bill is
-for, and that the discipline is to pay it for the one claim that needs
-it, on purpose, and for nothing else.
+advance. It is also where transparency logs and blockchains part ways:
+not by size but by which claims they insist on. A blockchain insists on
+one claim a log does not, that there is a single current tip and this
+is it, and that claim is not monotone. Consensus is its price. I am not
+calling anything broken, only saying what the bill is for, and that the
+discipline is to pay it for the one claim that needs it, on purpose,
+and for nothing else.
 
 ## Where an Artifact Stands
 
@@ -390,8 +531,8 @@ re-runnable check and someone's vouch behind it, so you cannot reach
 the ceiling without passing the floor, and the order of the climb is a
 theorem, not a policy. And the distance can *rise* before the floor,
 because an anonymous part gaining a vouch is honest progress that looks
-like regress on the count; it falls only after the floor. So the
-dashboard was right and the intuition was wrong, and now you know why.
+like regress on the count; it falls only after the floor. The dashboard
+was right and the intuition was wrong.
 
 <figure>
 <img src="../fig-interval.svg" alt="The open surface of an eight-member closure, stepping down as evidence is admitted, with the provenance floor and the total ceiling marked" style="max-width: 28rem; margin: 1rem auto; display: block; background: #fff; padding: 1rem; box-sizing: border-box;">
@@ -399,18 +540,18 @@ dashboard was right and the intuition was wrong, and now you know why.
 </figure>
 
 The floor is the one piece of guidance I would hand any team tomorrow,
-and it is a good example of what knowing the shape buys you: you can
-see where good practice turns into bad. Nothing stops you from
-admitting an anonymous part. The calculus represents it fine. But an
+and it shows where good practice turns into bad. Nothing stops you from
+admitting an anonymous part; the calculus represents it fine. But an
 anonymous part is the one position in the partition that nobody
 decided, and with one anywhere beneath an artifact you cannot guarantee
 the provenance of anything above it. That is not an opinion about
-hygiene. It is what the partition says, and you can only say it because
+hygiene but what the partition says, and you can only say it because
 every term in it is exact. So treat anonymous trust as the smell, and
 make the floor your admission criterion: nothing enters that nobody has
 vouched for. Then close the vouches. Systems that skipped straight to
-closing, without a floor, left anonymous parts they could not see, and
-their dashboards said nothing because there was no count under them.
+closing, without a floor, left anonymous parts they could not see,
+because a part nobody has vouched for is on nobody's list, and their
+dashboards said nothing because there was no count under them.
 
 ## The Floor of Two Assumptions
 
@@ -418,10 +559,10 @@ Thompson said verification must end somewhere. Here is where.
 
 The result grants exactly two things and names them. First, that the
 hash binds: two different records never share a commitment. We state
-that as absolute, which is an idealization, and we own it; real hashes
-are computationally binding, and the paper says how far that is from
-absolute. Second, that the verifier you run is the one you think you
-run. That is Thompson's moral, read as a premise. You cannot check your
+that as absolute, which is an idealization, and we own it; real hash
+functions are collision-resistant against bounded adversaries, not
+collision-free, and the paper says how far that is from absolute. Second, that the verifier you run is the one you think you
+run. That is Thompson's moral read as a premise: you cannot check your
 ruler with the same ruler. Neither grant is an axiom of the
 mechanization. Inside the proof the axioms are Lean's own three and
 four of ours, which say only that entries and contexts are types, that
@@ -433,14 +574,14 @@ carry, and this is where the old question ends. Socrates knew there was
 an edge to knowing and could not say where. Thompson found it in the
 compiler and left it as a moral. Here is the edge, drawn: two grants
 beneath it, three named pieces of trust above it, and no fourth.
-Verification ends at the floor. Everything past it is named, counted,
+Verification ends at the floor; everything past it is named, counted,
 and priced, and nothing above the floor need be anonymous. That
 question is done.
 
 ## Three Instances
 
 If the shape is real it should show up where nobody was thinking about
-packaging. It shows up wherever anyone keeps a record of claims and
+packaging, and it does: wherever anyone keeps a record of claims and
 wants an answer to survive the record's growth, which is a much larger
 place than software. Version control and transparency logs, obviously.
 Ledgers and land registries. The rules of evidence, which already let a
@@ -449,33 +590,31 @@ fixing the answer has its own name. History, which is a record with
 witnesses and nothing else. Science. The justice system.[^fields] The
 class is abstract, so nobody will finish that list, and the paper does
 not try. Each domain brings its own entries, its own checks, and its
-own idea of what a vouch is; the calculus brings the three conditions
-and the count. What I can do here is walk through three of them, each
-further from software than the last.
+own idea of a vouch; the calculus brings the three conditions and the
+count. Here are three, each further from software than the last.
 
 **Packaging.** Nix got the first move right twenty years ago: compute
 the closure before the build, so every input has a name before anything
 runs.[^dolstra] I spent a decade inside that model and said last time
-what it costs. What I did not say is exactly where it stops, and now I
-can. A derivation exists before the build and is addressed by its own
-hash, but nothing binds a named principal to a claim about it until
-after the build, when a cache key signs the output. That is an
-attestation after the fact, and in the calculus an attestation after
-the fact is a citation, not a verification: a pointer at a history the
-record never fixed, graded as a witness's word. The closure is a map of
-the floor. Nobody in it has vouched, so the map is not the floor.
+what it costs. What I did not say is exactly where it stops. A
+derivation exists before the build and is addressed by its own hash,
+but nothing binds a named principal to a claim about it until after the
+build, when a cache key signs the output. That is an attestation after
+the fact, and in the calculus an attestation after the fact is a
+citation, not a verification: a pointer at a history the record never
+fixed, graded as a witness's word. The closure is a map of the floor,
+but nobody in it has vouched, so the map is not the floor.
 
-Signing derivations up front would not fix it, and the reason is
-precise. Nix in practice is a just-in-time attestation machine: this
-expression yields this derivation, which yields this output, decided
-at evaluation time, with no object anywhere that states the claim ahead
-of it. A derivation is a recipe, and a recipe is the wrong shape for a
-claim. It carries too much, every flag and every path, and it is
-coupled to the bytes on disk, which is what makes it rigid and what
-keeps real content addressing out of reach for the reasons the last
-post gave. The discipline here is old and plain: separate the concerns.
-Attestations belong in their own append-only record, not welded to the
-data they are about.
+Signing derivations up front would not fix it. Nix in practice is a
+just-in-time attestation machine: this expression yields this
+derivation, which yields this output, decided at evaluation time, with
+no object anywhere that states the claim ahead of it. A derivation is a
+recipe, and a recipe is the wrong shape for a claim. It carries too
+much, every flag and every path, and it is coupled to the bytes on
+disk, which is what makes it rigid and what keeps real content
+addressing out of reach for the reasons the last post gave. The
+discipline is old and plain: separate the concerns. Attestations belong
+in their own append-only record, not welded to the data they are about.
 
 That is what the atom is.[^atom] An atom is a minimal, signed,
 versioned statement of intent, sources plus manifest plus lock, entered
@@ -490,34 +629,35 @@ you stop walking. Nothing has been built yet, so nothing has to be
 thrown away. The atom is the claim to the recipe and to the content
 underneath it, and every vouch on every part is a signed fact in the
 same record. That is the field I said the metadata should carry. It
-turned out to be the floor, with the accounting above it. That is the
-whole of what I will say about the last post. It is finished.
+turned out to be the floor, with the accounting above it, and that is
+the whole of what I will say about the last post. It is finished.
 
-**Identity.** This is where the question was actually born, and I think
-it is more fundamental than packaging, because packaging depends on
-stable identity and, in my view, nothing deployed has solved it well.
-Zach leads Cyphr, our lab's self-sovereign identity protocol, and I
-work on it with him.[^cyphr] In Cyphr, who you are is a genesis
-commitment and an append-only chain of signed key events under it: this
-key added, that one rotated, this one revoked. Your whole identity, keys
-and history, is one digest. Of the claims the chain fixes and a checker
-can settle, every one endures except one. "This is their current state"
-is a tip claim. It cannot endure, and nothing you sign can make it.
-That is why key transparency needed gossip, why rotation needs a record
-rather than a replacement, and why Cyphr's design has a witness
-network: it is the watcher the calculus prices, bought for exactly one
-claim and nothing else.
+**Identity.** This is where the question was born, and I think it is
+more fundamental than packaging, because packaging depends on stable
+identity and, in my view, nothing deployed has solved it well. Zach
+leads Cyphr, our lab's self-sovereign identity protocol, and I work on
+it with him.[^cyphr] In Cyphr, who you are is a genesis commitment and
+an append-only chain of signed key events under it: this key added,
+that one rotated, this one revoked. Your whole identity, keys and
+history, is one digest. Of the claims the chain fixes and a checker can
+settle, every one endures except one, which is what eusynopsis looks
+like in one domain: every claim about the chain but one is a receipt.
+"This is their current state" is a tip claim. It cannot endure, and
+nothing you sign can make it. That is why key transparency needed
+gossip, why rotation needs a record rather than a replacement, and why
+Cyphr's design has a witness network: the watcher the calculus prices,
+bought for exactly one claim and nothing else.
 
 The attack we were designing against is the split view, where a server
 shows two people two different histories. Working through it in the
 calculus gave us a sentence I keep using: evidence of a lie endures,
-while evidence of honesty never does. Two conflicting signed heads are
-a monotone fact; append anything you like and they still conflict.
-"The log has been honest" is only ever true as of now. That asymmetry
-is why gossip works at all, and it fell out of the classification
-before we had a name for the classification. Zach's insight, which
-partly inspired the question, is the middle rung of a ladder of names:
-a content-addressed name fixes *what*; an *attestation-addressed* name,
+evidence of honesty never does. Two conflicting signed heads are a
+monotone fact; append anything you like and they still conflict. "The
+log has been honest" is only ever true as of now. That asymmetry is why
+gossip works at all, and it fell out of the classification before we
+had a name for the classification. Zach's insight, which partly
+inspired the question, is the middle rung of a ladder of names: a
+content-addressed name fixes *what*; an *attestation-addressed* name,
 the digest of content and attestation together, fixes what and *who
 attested*; a position in an append-only record fixes what, who, and
 *after what*.[^zach] The mechanization carries an identity instance
@@ -525,36 +665,49 @@ beside the packaging one, a hash chain of key events with the tip claim
 shown non-monotone, so a reviewer can watch the same core do both.
 
 **Science.** A reproducible result is a claim the published record
-fixes and a stranger with the stated materials can check. A citation
+fixes and a bounded checker, a lab with the equipment, can settle. A
+citation
 is a pointer at the record where the claim is to be verified. A result
 that cannot be reproduced from what is available is a vouch, the
-authors' word, and an honest literature would grade it as one. I will
-say one more thing and then stop, because the rest belongs to a book.
-Science has no monimograph: no shared append-only record that a finding
-is entered into under a commitment. So a finding's endurance is
-claimed, never judged. Draw your own line from there.
+authors' word, and an honest literature would grade it as one. One more
+thing, and the rest belongs to a book: science has no monimograph, no
+shared append-only record that a finding is entered into under a
+commitment, and retraction alone breaks monotonicity. So a finding's
+endurance is claimed, never judged. Draw
+your own line from there.
+
+One thread runs through all three, and I keep seeing it in science and
+open source alike. A result whose inputs are withheld is a vouch, the
+authors' word, and that is the reproducibility failure. A commons whose
+admission is keyed to who you are converts, for everyone it excludes,
+closures into vouches, and that is the open-source failure. Same
+bucket, reached by two routes, withholding and identity-keyed
+admission, and cured the same way: inputs in the record, and admission
+by a check anyone can re-run. That is not an analogy between two
+fields. It is one structure instantiated twice.
 
 ## Not Trustless. Trust Less.
 
 The industry's answer to every supply-chain incident of the last decade
-has been more of the same thing: more signatures, more scanners, more
-dashboards. Each of those hides a trust decision, and the decision is
-the part nobody writes down. A signature says who signed and nothing
-about what that is worth to you. A scanner reports what it found and
-nothing about what it could not have found. A dashboard counts what it
-was told to count, and without a floor under it the number means
-nothing, as the last section showed. None of it is wrong. All of it is
-anonymous trust, because the decision to rely on it lives in someone's
-head, and heads are not append-only.
+has been more of the same: more signatures, more scanners, more
+dashboards. Each hides a trust decision, and the decision is the part
+nobody writes down. A signature says who signed and nothing about what
+that is worth to you. A scanner reports what it found and nothing about
+what it could not have found. A dashboard counts what it was told to
+count, and without a floor under it the number means nothing. None of
+it is wrong, and all of it is anonymous trust, because the decision to
+rely on it lives in someone's head, and heads are not append-only.
 
 The discipline that replaces it is short enough to fit on a card, and
 every line of it is something the calculus says you can do, not
 something it says you should.
 
 Classify before you build. Decide which of your claims must be
-receipts, and shape your data and metadata so that they are folds over
-the record. Where a claim cannot be, know which condition it fails and
-name the residue you are carrying: a witness, a voucher, or a watcher.
+receipts, and shape your data and metadata so they come out as folds
+over the record, because those are the claims whose proof stays the
+size of a Merkle path however large the record grows. Where a claim
+cannot, know which condition it fails and name the residue you carry: a
+witness, a voucher, or a watcher.
 
 Weed out anonymous trust. Admit nothing that nobody has vouched for,
 so the floor is where you start rather than where you hope to end up.
@@ -568,10 +721,11 @@ can see it.
 
 Grade your own claims. Never state a status above your backing. Checked
 by machine, cited at source, vouched by a named party, or argued in
-prose: those are different things, and the reader who cannot tell
-which one you mean has no way to trust you correctly. This is the only
-part of the discipline anyone can check you against, and it is the
-part that makes the rest honest.
+prose: those are different things, and whether a person or a model made
+the claim is not one of them. A reader who cannot tell which you mean
+has no way to trust you correctly. It is the only part of the
+discipline anyone can check you against, and the part that makes the
+rest honest.
 
 Nothing forces any of this on you. The structure is a theorem; the
 practice is a choice. Everything is a trust decision either way. The
@@ -584,27 +738,27 @@ yours, the check now exists and it will be run.
 All of this is technical, and I suspect that is the other reason nobody
 gave the whole problem a structure: each piece was hard enough on its
 own, and holding all of them at once looked like a philosophy project.
-It is not, once the pieces are in hand. Three conditions, three
+It is not, once the pieces are in hand: three conditions, three
 residues, two marks, and a count. What takes discipline is keeping hold
 of what we are actually talking about, which is not trust in the
-abstract. It is truth, or at least the verifiable kind, and exactly
-where its edges are.
+abstract but truth, or at least the verifiable kind, and exactly where
+its edges are.
 
 Piece by piece, our contribution is small: an exhaustive bound, and two
 calculi for working with claims coherently, tying together things the
-fields already knew. That is how a field matures. People work for
-decades on partial understandings, each sound in its corner, and then
-someone puts the pieces in one place and the folklore turns out to have
-a shape. The shape is what closes the book, because a count is not a
-matter of taste. Since we found it, it has explained after the fact
-more than we have had time to write down, and it has shaped two
-protocols in advance, the atom's declare-first record and Cyphr's
-witness layer, both described above. Standard formulations, a machine
-proof, and a structure that explains what it did not predict and
-predicts what it has not yet explained: that is why we are confident,
-and it is the only reason.
+fields already knew. That is how a field matures: decades of partial
+understandings, each sound in its corner, until someone puts the pieces
+in one place and the folklore turns out to have a shape. The shape is
+what closes the book, because a count is not a matter of taste. Since
+we found it, it has explained after the fact more than we have had time
+to write down, and it has shaped two protocols in advance, the atom's
+declare-first record and Cyphr's witness layer. Standard formulations,
+a machine proof, and a structure that explains what it did not predict
+and predicts what it has not yet explained: that is why we are
+confident, and the only reason.
 
-For the record, the order things happened in. I found the trichotomy.
+The order things happened in, since it is the only credential I have.
+I found the trichotomy.
 Then I built a record system to keep long AI-assisted sessions honest:
 graded claims, signed entries, an append-only log, an open surface of
 unbacked claims and unanswered questions. It adheres to the trichotomy;
@@ -615,6 +769,22 @@ then built the paper, which carries a reviewer's guide, one row per
 claim with its grade and its backing: that system projected onto the
 page.
 
+The method has a name, and we claim it as ours: claim factoring. Two
+verbs. Factor: write every claim with what backs it, a check that ran,
+a named witness, a derivation from other claims, or nothing, so that a
+document has a visible open surface exactly as an artifact does.
+Contend: send each unbacked claim to up to *n* reviewers, human or
+machine, in contexts that cannot correlate, so none sees another's
+verdict until you decide; what survives is backed, cut, or left open by
+name. The first verb is the one nobody had, and it is why the second
+was always hard: without your claims sorted by what backs them, there
+is nothing to aim the cross-examination at. Its known limit is that
+when reviewers converge on a general claim whose narrow form is what
+each actually checked, more reviewers cannot break the tie, and the
+escalation is to someone holding a different model of the problem. The
+results above were reached under it, this post was written under it,
+and you can run it tomorrow.
+
 I have argued in this direction for years while most of the industry
 went the other way, and I have said elsewhere that if nobody wants to
 listen, I will be content not to take part. I meant it. What I will do
@@ -622,6 +792,19 @@ is point at a dated post, a paper under submission with its title on
 it, and a mechanization with seven axioms, and say: check it. That is
 the only kind of authority I want, and the only kind this result allows
 anyone.
+
+Thompson's moral was that you cannot trust code you did not create.
+The moral that follows from the model is its complement: you can trust
+exactly what you can re-run, from anyone. Closure is keyed to
+re-runnability, and who you are enters the model in one place only,
+the admission policy that says whose checks count. So a commons that
+refuses a re-runnable check on any axis orthogonal to whether it runs,
+whatever the axis, converts closures into vouches for everyone it
+excludes, exactly as a proprietary policy does. Identity-keyed
+admission is what makes a commons someone's business. "Show me the
+code" was always the right instinct. Its grown-up form is a policy:
+admit by corroboration, not by identity, and let the record say what
+stands.
 
 **We claim.** The open surface partitions exactly into given, vouched,
 and anonymous. A claim admits an enduring certificate exactly when it is
@@ -650,6 +833,10 @@ remains has three names.
 
 [^navier]: The dispute over credit for OpenAI's claimed Navier–Stokes result, September 2026. See [MIT Technology Review's account](https://www.technologyreview.com/2026/09/08/1143747/what-openais-latest-controversy-tells-us-about-the-future-of-math/) and [Axios's](https://www.axios.com/2026/09/08/openai-math-solution-navier-stokes-credit). I take no position on who is right; the point is that the argument is about what was posted when, and that a public record with dates is the instrument for settling it.
 
+[^sovereign]: [Sovereign Source](./sovereign-source), "The Captive Commons," earlier in this series. It argues that the open-source commons is dying; that the four freedoms guarantee value flows out of the commons and provide no mechanism for it to flow back; that the technological wonders attributed to capitalism are the product of that decaying commons; and that software stopped being an object you hold and became a commons whose quality depends on the behavior of its participants.
+
+[^anamnesis]: [Anamnesis](./anamnesis), "The Hacker's Ethic," also earlier in this series. It argues that the open-source commons has been captured from two directions, that a commons without an ethic is a commons without an immune system, and that such a commons will be captured by whatever force best understands how to exploit procedure.
+
 [^apology]: Plato, [*Apology* 21d](https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0170:text=Apol.:section=21d), Fowler's translation: "this man thinks he knows something when he does not, whereas I, as I do not know anything, do not think I do either." And [23a](https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0170:text=Apol.:section=23a): the wisest is the one who "has recognized that in truth he is worth nothing in respect to wisdom."
 
 [^thompson]: Ken Thompson, ["Reflections on Trusting Trust,"](https://doi.org/10.1145/358198.358210) Communications of the ACM 27(8), 1984. "The moral is obvious. You can't trust code that you did not totally create yourself."
@@ -670,7 +857,7 @@ remains has three names.
 
 [^calm]: Joseph Hellerstein, ["Complete CALM: A Coordination Criterion for Specifications,"](https://arxiv.org/abs/2602.09435) 2026, the current form of the CALM line: monotone specifications need no coordination. The correspondence with our third condition is exact over element inclusion and is stated in the paper as a correspondence, not a corollary; CALM ranges over programs and coordination, the calculus over claims and certificates, and CALM has no counterpart to the checker leg.
 
-[^eon]: We call it EON, for eternal, offline, now, and the mechanization carries it as a corollary of the trichotomy. It and its sibling EALM, which reads "endurance is logical monotonicity" and is the third condition on its own, were the intermediate results that sharpened the question before we found the full partition. Readers who know the CAP theorem will hear an echo. We hear it too, and we mark it as an analogy: the two are not mechanically tied, and we make no claim that one derives the other.
+[^eon]: We call it EON, for eternal, offline, now, and the mechanization carries it as a corollary of the trichotomy. It and its sibling EALM, which reads "endurance is logical monotonicity" and is the third condition on its own, were the intermediate results that sharpened the question before we found the full partition. Readers who know the CAP theorem will hear an echo. We hear it too, and mark it as an analogy: the two are not mechanically tied, and we make no claim that one derives the other.
 
 [^politics]: Aristotle, [*Politics* 1326b](http://data.perseus.org/texts/urn:cts:greekLit:tlg0086.tlg035.perseus-eng1): the best city is one that can be "easily taken in at a glance," *eusynoptos*.
 
