@@ -98,26 +98,6 @@ person's word, would let anyone look instead of asking whom to trust.
 That is a problem of how the record is built, and a problem of that
 kind can have an engineered solution.
 
-Science is not the only commons in this argument. Open source is the
-other, and I have argued twice in this series that a commons cannot be
-run as a business without ceasing to be one.[^sovereign][^anamnesis]
-The result in the paper, which I will call the calculus from here on,
-gives the structural half of that in one line: nothing counts as
-verified unless the check is one you can run again yourself, so an
-input that is kept from you can never be verified by you, or only by
-leaning on a cryptographic assumption, and every other route to it is
-someone's word. Both commons are on life support, open source in
-burned-out maintainers and captured governance, science in a
-reproducibility crisis of published results that will not rerun, and
-they depend on each other: without science, civilization cannot scale
-or even sustain itself, and the science that runs on software runs on
-the open-source commons. Good behavior does not scale for either. A
-record whose claims carry their grades does, and it is what both lack
-and both need. I have said before that something formal and
-distributable is what it takes to scale science past its current
-breaking point without giving up integrity; the discipline is the same
-for both.
-
 Certificate Transparency shows what one looks like. It is the public
 log of every security certificate issued for every website, the thing
 behind the padlock in your browser, and it is the most widely deployed
@@ -420,7 +400,9 @@ parameters, on a trusted base that has no usable definition of
 polynomial time yet. I expect it to follow with the partition
 untouched.
 
-The realest expression of science in our time is a machine doing it,
+With the three conditions on the table, there is one place they reach
+that most readers will not expect, and it is the one I most want to
+reach. The realest expression of science in our time is a machine doing it,
 and the dispute this post opened with is, underneath, an argument about
 what machines did and in what order, which no record anyone keeps can
 say. Everyone says they care about AI safety, and almost nobody can
@@ -780,6 +762,26 @@ by a check anyone can re-run. That is not an analogy between two
 fields. It is one structure instantiated twice.
 
 ## Not Trustless. Trust Less.
+
+Science is not the only commons in this argument. Open source is the
+other, and I have argued twice in this series that a commons cannot be
+run as a business without ceasing to be one.[^sovereign][^anamnesis]
+The result in the paper, which I will call the calculus from here on,
+gives the structural half of that in one line: nothing counts as
+verified unless the check is one you can run again yourself, so an
+input that is kept from you can never be verified by you, or only by
+leaning on a cryptographic assumption, and every other route to it is
+someone's word. Both commons are on life support, open source in
+burned-out maintainers and captured governance, science in a
+reproducibility crisis of published results that will not rerun, and
+they depend on each other: without science, civilization cannot scale
+or even sustain itself, and the science that runs on software runs on
+the open-source commons. Good behavior does not scale for either. A
+record whose claims carry their grades does, and it is what both lack
+and both need. I have said before that something formal and
+distributable is what it takes to scale science past its current
+breaking point without giving up integrity; the discipline is the same
+for both.
 
 The industry's answer to every supply-chain incident of the last decade
 has been more of the same: more signatures, more scanners, more
