@@ -5,11 +5,13 @@ date = 2026-09-11
 tags = ["trust", "supply-chain", "identity", "science", "nix", "systems"]
 +++
 
-*Third draft, revised 2026-09-11. The [first](https://github.com/nrdxp/nrd.sh/commit/ea08510)
-and [second](https://github.com/nrdxp/nrd.sh/commit/39e1018) drafts stay in
-the record. This one distills the rhetorical arguments to their essence,
-because a claim nobody understands is a claim nobody can falsify, and
-the claims themselves are unchanged.*
+*Revision log, kept in the open so the record shows what changed.*
+
+*First draft, 2026-09-11, [commit ea08510](https://github.com/nrdxp/nrd.sh/commit/ea08510).*
+
+*Second draft, revised 2026-09-11, [commit 39e1018](https://github.com/nrdxp/nrd.sh/commit/39e1018): cold-edited by a reader with no context, meshed with a parallel draft, and extended with the science, open-source, and AI threads; the register shifted from cautious to predictive because the argument for the result's use is itself load-bearing.*
+
+*Third draft, revised 2026-09-11: the rhetorical arguments distilled to their essence and the opener reordered, because a claim nobody understands is a claim nobody can falsify. The claims themselves are unchanged across all three.*
 
 ## Far More General Than Packaging
 
@@ -77,6 +79,25 @@ Self-correction is supposed to be what science does. This post is that
 mechanism running, from outside, dated, where anyone can hold it to
 account.
 
+Under the credit problem sits a deeper one. A footnote is a forwarding
+address. It says: the evidence is not here, go and ask them. Almost
+nobody goes. So a citation is a promise the reader takes on faith, and
+a result is not checked by being cited, however many times. If you hold
+the evidence in your own hands and can rerun it, the result is checked,
+whether or not a journal ever said so. The check is the thing; the
+pointer is a stand-in for it when the check is out of reach. Our
+institutions have that backwards. What gets believed is what the
+pipeline has stamped, and the stamp is on the envelope, not the
+contents: a true result with no stamp is waved away because there is
+nothing to cite, and a false result with the stamp travels for years
+looking like knowledge. The pipeline, not the evidence, decides who is
+believed, and everyone who wants to be believed has to queue for it. It
+does not have to work that way. A record in which every claim carries
+its grade, checked by machine, cited at source, or taken on a named
+person's word, would let anyone look instead of asking whom to trust.
+That is a problem of how the record is built, and a problem of that
+kind can have an engineered solution.
+
 Science is not the only commons in this argument. Open source is the
 other, and I have argued twice in this series that a commons cannot be
 run as a business without ceasing to be one.[^sovereign][^anamnesis]
@@ -96,25 +117,6 @@ and both need. I have said before that something formal and
 distributable is what it takes to scale science past its current
 breaking point without giving up integrity; the discipline is the same
 for both.
-
-Under the credit problem sits a deeper one. A footnote is a forwarding
-address. It says: the evidence is not here, go and ask them. Almost
-nobody goes. So a citation is a promise the reader takes on faith, and
-a result is not checked by being cited, however many times. If you hold
-the evidence in your own hands and can rerun it, the result is checked,
-whether or not a journal ever said so. The check is the thing; the
-pointer is a stand-in for it when the check is out of reach. Our
-institutions have that backwards. What gets believed is what the
-pipeline has stamped, and the stamp is on the envelope, not the
-contents: a true result with no stamp is waved away because there is
-nothing to cite, and a false result with the stamp travels for years
-looking like knowledge. The pipeline, not the evidence, decides who is
-believed, and everyone who wants to be believed has to queue for it. It
-does not have to work that way. A record in which every claim carries
-its grade, checked by machine, cited at source, or taken on a named
-person's word, would let anyone look instead of asking whom to trust.
-That is a problem of how the record is built, and a problem of that
-kind can have an engineered solution.
 
 Certificate Transparency shows what one looks like. It is the public
 log of every security certificate issued for every website, the thing
@@ -155,33 +157,6 @@ as of entry *n*." "This result reproduces" is fixed by the record only
 when the record carries everything a stranger needs to run it, and
 where it does not, the theorem names what you are trusting instead: the
 authors' word, or a named replicator's.
-
-The realest expression of science in our time is a machine doing it,
-and the dispute this post opened with is, underneath, an argument about
-what machines did and in what order, which no record anyone keeps can
-say. Everyone says they care about AI safety, and almost nobody can
-state the question in a form a record could answer. Alignment in the
-large is hard, and I claim nothing about it. But there is a small
-version that is a yes-or-no claim: is this machine making progress
-toward the goal I set? Every step a machine takes toward a goal is
-itself a claim, and a claim can be graded by what it rests on: checked
-by machine, cited at source, the operator's word, or reasoning. The
-grade asks what the claim rests on, not who made it. That rule falls on
-me, on the machine that assisted me, and on you, because all three of
-us are fallible, and "who wrote it" is not a grade. Track every
-intermediate claim and grade it, and the whole has a grade. The model's
-output is probabilistic, a roll of weighted dice; the record of its
-claims is deterministic, a fixed spine through it. Now point the same
-discipline at the training data instead of the working session.
-Imagine the training set itself graded, every claim in every entry,
-against the three conditions the rest of this post lays out, so the
-model was built from a record where each claim carried what it rests on
-rather than from text taken as given. In practice there would be an
-error ratio; the point is the picture, not a promise. None of this is a
-theory of alignment, just one question about alignment that has an
-answer, and the session version is how this paper was built: the claims
-machines made on the way to it were recorded and graded, and the
-paper's own claims carry those grades onto the page.
 
 Nobody has felt this yet, because nobody has built a record whose
 claims come with proofs the size of a Merkle path: priority as a
@@ -444,6 +419,32 @@ theorem in cryptography with hardness assumptions and security
 parameters, on a trusted base that has no usable definition of
 polynomial time yet. I expect it to follow with the partition
 untouched.
+
+The realest expression of science in our time is a machine doing it,
+and the dispute this post opened with is, underneath, an argument about
+what machines did and in what order, which no record anyone keeps can
+say. Everyone says they care about AI safety, and almost nobody can
+state the question in a form a record could answer. Alignment in the
+large is hard, and I claim nothing about it. But there is a small
+version that is a yes-or-no claim: is this machine making progress
+toward the goal I set? Every step a machine takes toward a goal is
+itself a claim, and a claim can be graded by what it rests on: checked
+by machine, cited at source, the operator's word, or reasoning. The
+grade asks what the claim rests on, not who made it. That rule falls on
+me, on the machine that assisted me, and on you, because all three of
+us are fallible, and "who wrote it" is not a grade. Track every
+intermediate claim and grade it, and the whole has a grade. The model's
+output is probabilistic, a roll of weighted dice; the record of its
+claims is deterministic, a fixed spine through it. Now point the same
+discipline at the training data instead of the working session.
+Imagine the training set itself graded, every claim in every entry,
+against the three conditions above, so the model was built from a record where each claim carried what it rests on
+rather than from text taken as given. In practice there would be an
+error ratio; the point is the picture, not a promise. None of this is a
+theory of alignment, just one question about alignment that has an
+answer, and the session version is how this paper was built: the claims
+machines made on the way to it were recorded and graded, and the
+paper's own claims carry those grades onto the page.
 
 ## What You Can Check Without Reading Everything
 
