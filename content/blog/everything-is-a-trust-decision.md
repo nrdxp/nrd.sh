@@ -9,7 +9,7 @@ tags = ["trust", "supply-chain", "identity", "science", "nix", "systems"]
 
 *First draft, 2026-09-11, [commit ea08510](https://github.com/nrdxp/nrd.sh/commit/ea08510).*
 
-*Second draft, revised 2026-09-11, [commit 39e1018](https://github.com/nrdxp/nrd.sh/commit/39e1018): cold-edited by a reader with no context, meshed with a parallel draft, and extended with the science, open-source, and AI threads; the register shifted from cautious to predictive because the argument for the result's use is itself load-bearing.*
+*Second draft, revised 2026-09-11, [commit 39e1018](https://github.com/nrdxp/nrd.sh/commit/39e1018). The diff between the two is the honest account of what changed. The change in register is deliberate: we decided that the argument for the result's utility is load-bearing, so where the first draft was conservative about the science, this one is predictive along its consequences, each consequence stated with its bound and what would falsify it.*
 
 *Third draft, revised 2026-09-11: the rhetorical arguments distilled to their essence and the opener reordered, because a claim nobody understands is a claim nobody can falsify. The claims themselves are unchanged across all three.*
 
