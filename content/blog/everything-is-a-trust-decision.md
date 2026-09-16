@@ -13,7 +13,7 @@ tags = ["trust", "supply-chain", "identity", "science", "nix", "systems"]
 
 *Third draft, revised 2026-09-11: the rhetorical arguments distilled to their essence and the opener reordered, because a claim nobody understands is a claim nobody can falsify. The claims themselves are unchanged across all three.*
 
-*Fourth draft, revised 2026-09-16: one prediction below has since been tested and held, and the post says so at the grade it has today; the AI paragraph is sharpened into a conjecture, dated; the account of how the finding was reached is told in specifics and in the order it happened; and one more pass was made at the prose, cutting every simile and flourish a reader could mistake for a machine's.*
+*Fourth draft, revised 2026-09-16: one prediction below has since been tested and held, and the post says so at the grade it has today. The AI paragraph is sharpened into a conjecture, dated, and the reason is the news: in the last few days the heads of the largest AI labs have jointly called for coordinated limits on the pace of frontier work, with evaluators embedded in the labs and governments asked to back it, in the name of safety.[^pace] We think that gets the problem backwards. Nobody has yet stated the alignment problem in a form a record could answer, and slowing a field is not a substitute for understanding it, so this draft makes the strongest conjecture it honestly can and asks to be argued with. Also: the account of how the finding was reached is told in specifics and in the order it happened; and one more pass was made at the prose, cutting every simile and flourish a reader could mistake for a machine's.*
 
 ## Far More General Than Packaging
 
@@ -985,6 +985,8 @@ remains has three names.
 ## _References_
 
 [^lastpost]: [Nix Is Right. Its Cost Is Not.](./store-was-never-the-point), the previous piece in this series. The passage in question is in the section "CA or Bust": the boundary between the reproducible regime and the signed regime "becomes a field in the atom's metadata."
+
+[^pace]: The joint call is reported by [The Register](https://www.theregister.com/ai-and-ml/2026/09/14/big-ai-sets-out-its-terms-for-regulatory-capture-and-calls-it-pace-the-frontier/5296067), 14 September 2026, and argued for in [The Washington Post](https://www.washingtonpost.com/opinions/2026/09/15/pacing-an-ai-frontier-does-not-require-government-labs-can-do-it/), 15 September 2026. The proposals, as reported: embedded evaluators inside the labs, common safety standards, and limits on the rate of progress with government support.
 
 [^navier]: The dispute over credit for OpenAI's claimed Navier–Stokes result, September 2026. See [MIT Technology Review's account](https://www.technologyreview.com/2026/09/08/1143747/what-openais-latest-controversy-tells-us-about-the-future-of-math/) and [Axios's](https://www.axios.com/2026/09/08/openai-math-solution-navier-stokes-credit). I take no position on who is right; the point is that the argument is about what was posted when, and that a public record with dates is the instrument for settling it.
 
