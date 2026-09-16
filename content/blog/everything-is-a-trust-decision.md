@@ -11,9 +11,9 @@ tags = ["trust", "supply-chain", "identity", "science", "nix", "systems"]
 
 *Second draft, revised 2026-09-11, [commit 39e1018](https://github.com/nrdxp/nrd.sh/commit/39e1018). The diff between the two is the honest account of what changed. The change in register is deliberate: we decided that the argument for the result's utility is load-bearing, so where the first draft was conservative about the science, this one is predictive along its consequences, each consequence stated with its bound and what would falsify it.*
 
-*Fourth draft, revised 2026-09-16: one prediction below has since been tested and held, and the post says so at the grade it has today; the AI paragraph is sharpened into a conjecture, dated; and one more pass was made at the prose, cutting every simile and flourish a reader could mistake for a machine's.*
-
 *Third draft, revised 2026-09-11: the rhetorical arguments distilled to their essence and the opener reordered, because a claim nobody understands is a claim nobody can falsify. The claims themselves are unchanged across all three.*
+
+*Fourth draft, revised 2026-09-16: one prediction below has since been tested and held, and the post says so at the grade it has today; the AI paragraph is sharpened into a conjecture, dated; and one more pass was made at the prose, cutting every simile and flourish a reader could mistake for a machine's.*
 
 ## Far More General Than Packaging
 
@@ -32,7 +32,7 @@ already make trust decisions all day. The shape says make them on
 purpose, and write them down.
 
 Start with the largest record there is, because that is where the
-stakes are. This week a lab announced a solution to a Millennium Prize
+stakes are. Last week a lab announced a solution to a Millennium Prize
 problem, one of the famous open questions in mathematics, and two
 researchers who had posted first asked in public how their work had
 been used.[^navier] I do not know who is right. What strikes me is that
