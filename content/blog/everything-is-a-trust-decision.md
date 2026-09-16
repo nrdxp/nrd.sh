@@ -55,14 +55,29 @@ nobody's property, and that is as it should be, but it means no law can
 put credit back where it belongs. Only people behaving well ever did,
 and a record cannot store good behavior.
 
-I did not set out to find any of this. I was trying to fix one problem
-in packaging, how a system can know what it was built from, and then a
-different problem in identity, how it can know who someone is once
-their keys have changed, and the two kept turning out to be the same
-problem. I followed that one problem to where it led, and where it led
-was out of both fields. A finding about what any record can and cannot
-answer will not fit in the vocabulary of package managers or key
-rotation; it has to be said at the level it actually lives at, which is
+I did not set out to find any of this. I spent a decade inside Nix,
+and this summer, after years of building the atom, I saw that it could
+replace Nix outright; that was the last post. At the same time I was
+working with Zach on identity, where I am the amateur, and his atomic
+actions, small self-contained records that are canonicalized, signed,
+and optionally named by their attestation, kept looking like the thing
+I was building for packages. In July we tried to model three systems
+formally, Nix, a software bill of materials, and the atom, once each
+had a record format under it, and only the atom turned out to be
+generative over signatures: the only one where you could keep deriving
+what to trust rather than being handed a list. That was the first real
+insight, and it let us ask a question I had not thought to ask in ten
+years: does this problem have a formal upper bound? It did. The bound
+kept showing properties about how long a claim stays true, which
+became two smaller results we thought were the whole story, until the
+question of whether there were exactly three ways to fail came up in
+the middle of them and was too interesting to leave. It had an answer.
+Then months of using that answer showed it was one piece of a
+calculus, and the calculus has since become an engine. Most of the
+years before this are experiments and false starts I never wrote down,
+and I was wrong for most of them. A finding about what any record can
+and cannot answer does not fit in the vocabulary of package managers
+or key rotation; it has to be said at the level it lives at, which is
 the level of anyone who keeps a record and asks it whom to believe.
 That is why this post exists, and why an engineer who was fixing two
 things is now writing to everyone.
