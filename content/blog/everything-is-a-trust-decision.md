@@ -13,7 +13,7 @@ tags = ["trust", "supply-chain", "identity", "science", "nix", "systems"]
 
 *Third draft, revised 2026-09-11: the rhetorical arguments distilled to their essence and the opener reordered, because a claim nobody understands is a claim nobody can falsify. The claims themselves are unchanged across all three.*
 
-*Fourth draft, revised 2026-09-16: one prediction below has since been tested and held, and the post says so at the grade it has today; the AI paragraph is sharpened into a conjecture, dated; and one more pass was made at the prose, cutting every simile and flourish a reader could mistake for a machine's.*
+*Fourth draft, revised 2026-09-16: one prediction below has since been tested and held, and the post says so at the grade it has today; the AI paragraph is sharpened into a conjecture, dated; the account of how the finding was reached is told in specifics and in the order it happened; and one more pass was made at the prose, cutting every simile and flourish a reader could mistake for a machine's.*
 
 ## Far More General Than Packaging
 
