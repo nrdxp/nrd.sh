@@ -11,6 +11,8 @@ tags = ["trust", "supply-chain", "identity", "science", "nix", "systems"]
 
 *Second draft, revised 2026-09-11, [commit 39e1018](https://github.com/nrdxp/nrd.sh/commit/39e1018). The diff between the two is the honest account of what changed. The change in register is deliberate: we decided that the argument for the result's utility is load-bearing, so where the first draft was conservative about the science, this one is predictive along its consequences, each consequence stated with its bound and what would falsify it.*
 
+*Fourth draft, revised 2026-09-16: one prediction below has since been tested and held, and the post says so at the grade it has today; the AI paragraph is sharpened into a conjecture, dated; and one more pass was made at the prose, cutting every simile and flourish a reader could mistake for a machine's.*
+
 *Third draft, revised 2026-09-11: the rhetorical arguments distilled to their essence and the opener reordered, because a claim nobody understands is a claim nobody can falsify. The claims themselves are unchanged across all three.*
 
 ## Far More General Than Packaging
@@ -38,8 +40,7 @@ nobody can know from the record, because the record science keeps
 cannot answer the question. Who posted what, when, and what was built
 on it are questions about a sequence of findings that only ever grows,
 and science settles every one of them by reading, argument, or
-reputation: the way a village with no deed office settles a boundary,
-by who remembers and who is respected.
+reputation.
 
 Here is why a fight over credit is not a small thing. Science is meant
 to be a self-correcting machine, and its correcting rule is short:
@@ -51,9 +52,8 @@ wrong, a field ends up taking its lead from whoever took the work
 instead of whoever did it, and everything built on that lead is built
 on the wrong foundation. There is no court to send it to. A truth is
 nobody's property, and that is as it should be, but it means no law can
-put credit back where it belongs. The only thing that ever did was
-people behaving well, and good behavior is the one thing a record
-cannot store.
+put credit back where it belongs. Only people behaving well ever did,
+and a record cannot store good behavior.
 
 I did not set out to find any of this. I was trying to fix one problem
 in packaging, how a system can know what it was built from, and then a
@@ -87,10 +87,10 @@ the evidence in your own hands and can rerun it, the result is checked,
 whether or not a journal ever said so. The check is the thing; the
 pointer is a stand-in for it when the check is out of reach. Our
 institutions have that backwards. What gets believed is what the
-pipeline has stamped, and the stamp is on the envelope, not the
-contents: a true result with no stamp is waved away because there is
-nothing to cite, and a false result with the stamp travels for years
-looking like knowledge. The pipeline, not the evidence, decides who is
+pipeline has approved, and the approval says nothing about the
+contents: a true result without it is waved away because there is
+nothing to cite, and a false result with it travels for years looking
+like knowledge. The pipeline, not the evidence, decides who is
 believed, and everyone who wants to be believed has to queue for it. It
 does not have to work that way. A record in which every claim carries
 its grade, checked by machine, cited at source, or taken on a named
@@ -145,12 +145,26 @@ instead of one you take on faith, a result graded by what a stranger
 can rerun. Those are predictions the formal result makes, and you can
 hold it to them. They are stated falsifiable on purpose, because a
 prediction you cannot be proven wrong on is worth nothing to science,
-and I am asking to be proven wrong. We are building two such records,
-one for packages and one for identity, and both appear near the end,
-along with the rougher one that built this paper. The one science
-needs, nobody has built, and the finding says what it would have to be.
-You may want to see us succeed or you may want to see us fall. Either
-way, the argument is the thing to contend with.
+and I am asking to be proven wrong.
+
+Since the first draft of this post, one of them has been tested. The
+prediction was that the small proof is not a property of Merkle trees
+but of any claim with the fold shape, over any domain, and that it
+holds at scale. We built an engine on the two calculi and ran it
+against randomly generated domains and randomly generated claims of
+that shape, each resting on many entries, over records of up to a
+million entries, under three random seeds. The work to check a claim
+stayed logarithmic in the record's size, in counted operations and in
+wall-clock time, and the part of the engine that opens a proof against
+the record's fingerprint is itself proved sound in Lean, with the hash
+assumed collision-free. The engine is not public yet, so today that is
+my word, graded as such, the same as the mechanization. When it is
+public you can run it. We are building two records on it, one for
+packages and one for identity, and both appear near the end, along with
+the rougher one that built this paper. The one science needs, nobody
+has built, and the finding says what it would have to be. You may want
+to see us succeed or you may want to see us fall. Either way, the
+argument is the thing to contend with.
 
 A few facts the argument depends on. This is my first scientific
 contribution. My co-author Zach Collier and I asked one question in two
@@ -422,9 +436,32 @@ discipline at the training data instead of the working session.
 Imagine the training set itself graded, every claim in every entry,
 against the three conditions above, so the model was built from a record where each claim carried what it rests on
 rather than from text taken as given. In practice there would be an
-error ratio; the point is the picture, not a promise. None of this is a
-theory of alignment, just one question about alignment that has an
-answer, and the session version is how this paper was built: the claims
+error ratio; the point is the picture, not a promise. It reaches
+further than it looks. A hallucination, in this vocabulary, is a claim
+in the output that rests on nothing in the record: anonymous, the same
+bucket the rest of this post says to weed out. With a graded corpus you
+could trace every output claim to what it rests on, or flag it as
+resting on nothing, without opening the model. In so far as alignment
+and hallucination are questions about trust, questions about what a
+claim rests on and whether it can be checked, they are bounded by the
+three conditions exactly, and I make that claim here, dated, as a
+prediction. What the record does not carry, intent and deception about
+intent, stays outside, in the witness residue, and I claim nothing
+about it.
+
+One step further, marked as a conjecture and nothing more. Alignment in
+the large may be reachable by setting the machine's goal to the record
+itself: emit claims at the grade they have and never above it, which is
+the one part of honesty a stranger can check. The condition is that the
+machine never sets its own goals. A goal the machine appended for
+itself has no signature and no backing, and from that moment "is it
+making progress toward the goal I set" has no answer the record can
+give; that is anonymous trust at the helm. Autonomous execution under
+a human-signed goal is fine. Autonomous goal-setting is the one state
+the record cannot follow, and if the field means what it says about
+alignment, that is the state to rule out, not the one to build toward.
+None of this is a theory of alignment. It is the trust-shaped part of
+one, and the session version is how this paper was built: the claims
 machines made on the way to it were recorded and graded, and the
 paper's own claims carry those grades onto the page.
 
@@ -638,8 +675,10 @@ Thompson's moral read as a premise: you cannot check your ruler with
 the same ruler. Neither grant is an axiom of the mechanization. Inside
 the proof the axioms are Lean's own three and four of ours, which say
 only that entries and contexts are types, that a context exists, and
-that a second one differs from it. The two grants sit beneath the
-model, where the mathematics meets the world.
+that a second one differs from it; the engine's fork of the
+development has since made those four parameters at no proof cost. The
+two grants sit beneath the model, where the mathematics meets the
+world.
 
 Everything above those two is a statement about what a record can
 carry, and this is where the old question ends. Socrates knew there was
@@ -806,6 +845,8 @@ name the residue you carry: a witness, a voucher, or a watcher.
 
 Weed out anonymous trust. Admit nothing that nobody has vouched for,
 so the floor is where you start rather than where you hope to end up.
+That includes goals: a machine's goal carries a human's signature or it
+does not enter the record.
 Then count the distance to the ceiling and climb it, vouch by vouch,
 at whatever pace you can afford.
 
@@ -915,6 +956,8 @@ between principals. Revocation dynamics. What the record does not carry:
 custody, authorship, intent. That any system is broken. That science is,
 formally, a monimograph; it is not, and that is the point of the book.
 That the polynomial-time checker is mechanized; it is conjecture.
+That alignment can be reached by aligning to the record; that is a
+conjecture of this post, not a claim of the paper.
 
 **The field found first.** The Merkle tree. The liveness layer under
 every deployed transparency log. Computing the closure before the build.
