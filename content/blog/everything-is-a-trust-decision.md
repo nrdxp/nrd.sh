@@ -74,8 +74,9 @@ looked, vaguely, like the old tradeoffs of distributed systems; they
 became two smaller results we thought were the whole story, until the
 question of whether there were exactly three ways to fail came up in
 the middle of them and was too interesting to leave. It had an answer.
-Months of using that answer showed it was one piece of a calculus, and
-the calculus, my name from here on for the result in the paper, has since become an engine. Most of the years before this
+Months of using that answer showed it was one piece of a calculus,
+which is my name from here on for the result in the paper, and the
+calculus has since become an engine. Most of the years before this
 are experiments and false starts I never wrote down, and I was wrong
 for most of them. A finding about what any record can and cannot
 answer does not fit in the vocabulary of package managers or key
