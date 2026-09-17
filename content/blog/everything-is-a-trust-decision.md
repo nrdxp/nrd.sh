@@ -15,7 +15,7 @@ tags = ["trust", "supply-chain", "identity", "science", "nix", "systems"]
 
 *Fourth draft, revised 2026-09-16: one prediction below has since been tested and held, and the post says so at the grade it has today. The AI paragraph is sharpened into a conjecture, dated, and the reason is the news: in the last few days the heads of the largest AI labs have jointly called for coordinated limits on the pace of frontier work, with evaluators embedded in the labs and governments asked to back it, in the name of safety.[^pace] We think that gets the problem backwards. Nobody has yet stated the alignment problem in a form a record could answer, and slowing a field is not a substitute for understanding it, so this draft makes the strongest conjecture it honestly can and asks to be argued with. Also: the account of how the finding was reached is told in specifics and in the order it happened; and one more pass was made at the prose.*
 
-*Fifth draft, revised 2026-09-16: the post was audited line by line against the paper's development and its ledger, and against its own prose. Several claims are restated at the strength the sources support, the axiom count is corrected, and the rhythm was flattened where it read as a machine's.*
+*Fifth draft, revised 2026-09-16: the paper and its development keep moving, and this draft brings the post up to date with them. Where a claim's backing has grown or its wording has been refined since the last draft, the post now says it the way the development does, and the prose was read once more for anything that sounded like a machine.*
 
 ## Far More General Than Packaging
 
