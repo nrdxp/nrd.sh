@@ -93,9 +93,7 @@ departure from the normal order, and I was led to it rather than
 choosing it to make a point. The argument itself supplies the reason: a
 process that cannot check its own record cannot correct itself from
 inside, not in time, and nobody inside it will want to hear that.
-Self-correction is supposed to be what science does. This post is that
-mechanism running, from outside, dated, where anyone can hold it to
-account.
+Self-correction is supposed to be what science does. This post is that correction, from outside, with a date on it.
 
 Under the credit problem sits a deeper one. A footnote is a forwarding
 address. It says: the evidence is not here, go and ask them. Almost
@@ -157,22 +155,16 @@ Nobody has felt this yet, because nobody has built a record whose
 claims come with proofs with as few pieces as a Merkle path: priority as a
 receipt instead of a dispute, a citation as a pointer you can check
 instead of one you take on faith, a result graded by what a stranger
-can rerun. Those are predictions the formal result makes, and you can
-hold it to them. They are stated falsifiable on purpose, because a
-prediction you cannot be proven wrong on is worth nothing to science,
-and I am asking to be proven wrong.
+can rerun. Those follow from the result, and each can be tested. If one fails, the result is wrong, and I would rather find that out than not.
 
-Since the first draft of this post, one of them has been tested. The
-prediction was that the small proof is not a property of Merkle trees
+Since the first draft, we tested one of them: that the small proof is not a property of Merkle trees
 but of any claim with the fold shape, over any domain, and that it
 holds at scale. We built an engine on the two calculi and ran it
 against randomly generated domains and randomly generated claims of
 that shape, each resting on many entries, over records of up to a
 million entries, under three seeds. The work to check a claim
 stayed logarithmic in the record's size, in counted operations and in
-wall-clock time, and the part of the engine that opens a proof against the record's fingerprint is proved sound in Lean, assuming an injective hash and stated at the simplest measure. The run itself uses a test hash that is not injective, so the run is evidence about the structure rather than about collision resistance, and the logarithmic bound on the number of openings is proved in the paper's development and tested, not proved, in the engine. The engine is not public yet, so today that is
-my word, graded as such, the same as the mechanization. When it is
-public you can run it. We are building two records on it, one for
+wall-clock time, and the part of the engine that opens a proof against the record's fingerprint is proved sound in Lean, assuming an injective hash and stated at the simplest measure. The run itself uses a test hash that is not injective, so the run is evidence about the structure rather than about collision resistance, and the logarithmic bound on the number of openings is proved in the paper's development and tested, not proved, in the engine. The engine is not public yet. Until it is, this is my report of what it did; when it is, you can run it. We are building two records on it, one for
 packages and one for identity, and both appear near the end, along with
 the rougher one that built this paper. The one science needs, nobody
 has built, and the finding says what it would have to be. You may want
@@ -189,11 +181,7 @@ provable upper bound on how much you can verify, and is what lies past
 it completely accounted for? The answers are in a paper we are still polishing for submission, so the paper and the Lean 4 development behind it stay private until it has been submitted and reviewed. Lean 4 is a proof assistant, a
 program that confirms every step of a proof and accepts nothing it
 cannot confirm; the development is the proof as written in it, which I
-will also call the mechanization. The mechanization is mostly mine, with
-AI assistance, done under a discipline I describe at the end; that is
-provenance, not a grade. The grade is this: every time I say the
-machine checks something, that is today my word, from a named person
-you can hold to it, and it becomes something you can run yourself when the development is public. I grade it as a vouch here because that is what it is.
+will also call the mechanization. The mechanization is mostly mine, with AI assistance, done under a discipline I describe at the end. Until the development is public, "the machine checks it" means I ran the check and am telling you the result. Once it is public, you can run it yourself.
 
 There are practical reasons as well. I judged the finding too important
 to sit on a shelf for a year, and the dispute above is the argument for
