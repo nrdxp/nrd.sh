@@ -134,12 +134,9 @@ level of anyone who keeps a record and asks it whom to believe. That
 is why this post exists, and why an engineer who was fixing two things
 is now writing to everyone.
 
-So I should say plainly what this post is and why it is out of order.
-It is a critique of the process by which science, and open source with
+This post is out of order, and deliberately. It is a critique of the process by which science, and open source with
 it, decides which claims to admit and whom to believe, and I am
-publishing it before that process has reviewed it. That is a deliberate
-departure from the normal order, and I was led to it rather than
-choosing it to make a point. The argument itself supplies the reason: a
+publishing it before that process has reviewed it. The argument itself supplies the reason: a
 process that cannot check its own record cannot correct itself from
 inside, not in time, and nobody inside it will want to hear that.
 Self-correction is supposed to be what science does. This post is that correction, from outside, with a date on it.
@@ -507,8 +504,7 @@ here, dated, as a prediction. What the record does not carry, intent
 and deception about intent, stays outside, in the witness residue with
 a watcher beside it, because what is wanted moves.
 
-One step further, and this is only a conjecture. Alignment in the
-large may be reachable by setting the machine's goal to the record
+One step further is a conjecture: alignment in the large may be reachable by setting the machine's goal to the record
 itself: emit claims at the grade they have and never above it, which is
 the one part of honesty a stranger can check. The condition is that the
 machine never sets its own goals. A goal is a directive; it has no
@@ -786,11 +782,9 @@ built yet, so nothing has to be thrown away. The atom is the claim to
 the recipe and to the content underneath it, and every vouch on every
 part is a signed fact in the same record. That is the field I said the
 metadata should carry. It turned out to be the floor, with the
-accounting above it, and that is the whole of what I will say about the last post.
+accounting above it.
 
-**Identity.** This is where the question was born, and I think it is
-more basic than packaging, because packaging depends on stable
-identity and, in my view, nothing deployed has solved it well. Zach
+**Identity.** This is where the question was born. Identity is more basic than packaging, because packaging depends on stable identity, and nothing deployed has solved it well. Zach
 leads Cyphr, our lab's self-sovereign identity protocol, and I work on
 it with him.[^cyphr] In Cyphr, who you are is a genesis commitment, a
 first signed entry that fixes your root, and an append-only chain of
@@ -954,8 +948,7 @@ it gathers evidence anyone can rerun and sinks when it is refuted, and
 every vouch has a name on it. Building that is an engineering project.
 The theorem was the part missing until now.
 
-I should say where I stand in this, since the record shows it anyway. I
-came to this through industry. I have worked professionally in this
+My own place in this is on the record. I came to it through industry. I have worked professionally in this
 field for years, most of them on a single hard problem, and that
 problem led here. I did it outside the academy, alongside people of
 that caliber, disagreeing with them often and applying something like
@@ -990,14 +983,11 @@ accept what it asks, it is a fixed point to steer by.
 
 ## What We Claim, What We Do Not, and What Comes Next
 
-All of this is technical, and I suspect that is the other reason nobody
-gave the whole problem a structure: each piece was hard enough on its
+All of this is technical, which is the other reason nobody gave the whole problem a structure: each piece was hard enough on its
 own, and holding all of them at once looked like a philosophy project.
 It is not, once the pieces are in hand: three conditions, three
 residues, two marks, and a count. What takes discipline is keeping hold
-of what we are actually talking about, which is not trust in the
-abstract but truth, or at least the verifiable kind, and exactly where
-its edges are.
+of what we are actually talking about, which is not trust in the abstract but verifiable truth, and where its edges are.
 
 Piece by piece, our contribution is small: an exhaustive bound, and two
 calculi for working with claims coherently, tying together things the
@@ -1008,7 +998,7 @@ what closes the book, because a count is not a matter of taste. Since
 we found it, it has explained after the fact more than we have had time
 to write down, and it has shaped two protocols in advance, the atom's
 declare-first record and Cyphr's witness layer. Standard formulations,
-a machine proof, and a structure that has explained things after the fact, in one case some twenty-four centuries after, and predicted at least one thing before, the scaling result above: that is why we are confident, and the only reason.
+a machine proof, and a structure that has explained things after the fact, in one case some twenty-four centuries after, and predicted one thing before, the scaling result above: that is why we are confident, and the only reason.
 
 The order things happened in, since it is the only credential I have.
 It starts where the opener did, with two problems that turned out to be
@@ -1040,7 +1030,7 @@ escalation is to someone holding a different model of the problem. The
 results above were reached under it, this post was written under it,
 and you can run it tomorrow.
 
-I have said elsewhere that if nobody wants to listen, I will be content not to take part, and I meant it. What I will do in the meantime is point at a dated post, a paper going to review this month, and a mechanization that adds no axiom of its own, and say: check it. That is
+I have said elsewhere that if nobody wants to listen, I will be content not to take part. Until then I will point at a dated post, a paper going to review this month, and a mechanization that adds no axiom of its own, and say: check it. That is
 the only kind of authority I want, and the only kind this result allows
 anyone.
 
