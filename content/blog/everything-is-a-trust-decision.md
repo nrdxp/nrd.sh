@@ -1033,25 +1033,58 @@ code" was always the right instinct. Its grown-up form is a policy:
 admit by corroboration, not by identity, and let the record say what
 stands.
 
-**We claim.** The open surface partitions exactly into given, vouched,
-and anonymous. A claim admits an enduring certificate exactly when it is
-determined, certifiable, and monotone, and trust is the complement with
-three named factors and no fourth. The provenance floor and the total
-ceiling, with the order of the climb a theorem and the distance a count.
-That among schemes which open ranges of a record and recombine them, the claims with bounded proofs are exactly the finalized positional folds. That the cost of trust is per claim, not per record.
+**We claim, checked by machine.** The open surface partitions exactly
+into given, vouched, and anonymous. A claim admits an enduring
+certificate exactly when it is determined, certifiable, and monotone,
+and trust is the complement with three named factors and no fourth. The
+provenance floor and the total ceiling, with the order of the climb a
+theorem and the distance a count. That among schemes which open ranges
+of a record and recombine them, the claims with bounded proofs are
+exactly the finalized positional folds. Until the development is
+public, these reach you as our report of a check. Once the paper is
+admitted, anyone can rerun them.
+
+**We contend, on our own word for now.** That the cost of trust is per
+claim, not per record, which follows from the theorem by argument
+rather than by machine. That the bound held at scale in our engine.
+That these results apply today and not only once a journal has said so:
+to the record science keeps, to the commons of open source, to the
+institutions that ask to be believed, and to the question of what a
+machine's claims rest on. That the standard they imply, an account
+wherever one can be given and a name wherever it cannot, binds anyone
+who keeps a record and asks for trust. Some of this becomes
+corroborable the moment the paper is admitted. That it holds now,
+before then, is our contention, and the burden of it is ours until
+then.
+
+**We conjecture.** That the polynomial-time form of the theorem follows
+with the partition untouched. That alignment in the large can be
+expressed by aligning a machine to the record under goals a human has
+signed; that one is a conjecture of this post, not a claim of the
+paper.
 
 **We do not claim.** Anything about *degree* of trust. Delegation
 between principals. Revocation dynamics. What the record does not carry:
-custody, authorship, intent. That science is,
-formally, a monimograph; it is not, and that is the point of the book.
-That the polynomial-time checker is mechanized; it is conjecture.
-That alignment can be reached by aligning to the record; that is a
-conjecture of this post, not a claim of the paper.
+custody, authorship, intent. That science is, formally, a monimograph;
+it is not, and that is the point of the book.
 
 **The field found first.** The Merkle tree. The liveness layer under
 every deployed transparency log. Computing the closure before the build.
 Attestations as vouches, which in-toto and SLSA built around this
 boundary without stating it.[^intoto]
+
+What all of this asks for is nuance, and nuance is where the contest is
+being lost. Confusion has the advantage of simple language: if we do
+not do this, that will happen. Answering it means asking what the claim
+rests on, precisely, and then asking the same of everything it depends
+on. No person can carry that unaided at the scale our institutions now
+run at, and no institution does, which is where they break down. It is
+also why the discipline has to be assisted by machines, the same kind
+that are making the problem worse. A record that grades its claims can
+carry the nuance people cannot, and hand each of us a question small
+enough to decide. The structure for building one now exists. Until the
+paper is published, part of that statement rests on our word, and that
+burden is ours.
 
 Verify all you can. Then decide what to trust of what remains. What
 remains has three names.
