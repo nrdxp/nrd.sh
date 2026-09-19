@@ -17,12 +17,14 @@ tags = ["trust", "supply-chain", "identity", "science", "nix", "systems"]
 
 *Fifth draft, revised 2026-09-19: a note to the reader now comes first. The post states the political position its result entails, and why it is published ahead of review. We did not choose that position. The model forces it. The technical content is unchanged.*
 
+*Sixth draft, revised 2026-09-19: a technical refinement. The class of claims with bounded proofs is wider than earlier drafts said. It was stated as the list homomorphisms. The development now characterizes it as the local positional homomorphisms, of which the list homomorphisms are the position-free case, and proves the converse for block-opening schemes. The section "What You Can Check Without Reading Everything" is updated to match.*
+
 ## Before You Read
 
 This post is unusual, and you should know how before you start. It is
 an exhaustive account of a claim, written to be complete rather than
 approachable. It is long, it is formal wherever a claim is being made,
-and it ends in a political position. More approachable writing is
+and it ends in a political position that follows directly from the result. More approachable writing is
 planned, and readers who want the conclusions without the full argument
 will be better served by that when it comes. This post is a formal
 statement of what we found, what we take it to mean, and what we intend
@@ -188,7 +190,7 @@ solve. The paper's word for a record held that way is *eusynoptic*,
 Aristotle's word for a city small enough to survey at a glance, and the
 glance stays the same size no matter how large the record grows.
 Certificate Transparency's two proofs, "this is in the log" and "this
-log extends that one," are two folds that happen to read structure.
+log extends that one," are both of this shape, and both read the structure of the log and never its entries.
 "This finding was in the record before that one" is another, and it
 reads the entries. So is "everything this paper cites was in the record
 before it," and so is "no package beneath this program has been pulled
@@ -527,16 +529,54 @@ carry those grades onto the page.
 Why does everyone reach for a Merkle tree? Is that the right instinct or
 a fashion?
 
-A claim you can check from summaries alone is one whose answer over two
-pieces of the record combines from the answers over each piece:
+A claim you can check from summaries alone is one whose answer over a
+stretch of the record combines from the answers over the pieces that
+tile it. The simplest form ignores where the pieces sit:
 
 $$h(x \,\text{++}\, y) \;=\; h(x) \oplus h(y)$$
 
-For those claims a checker takes the whole record in at every size with a bounded number of openings, and the bound comes from the shape alone, with nothing
-assumed but a binding hash, a fingerprint that cannot be forged; that
-is the glance, the eusynopsis, from the top of the post.[^politics] The machine checks that the calculus's terms denote exactly these functions, the list homomorphisms of Bird's theory of lists, every term a fold and every fold some term, and that the enduring ones among them are those read over a fixed window with a checker.[^bird] The compact proof systems of modern cryptography reach
-outside the class and pay for it with a hardness assumption. Inside it
-the bound is free.
+That is a list homomorphism, in the sense of Bird's theory of
+lists,[^bird] and earlier drafts of this post gave it as the whole
+class. It is too narrow. Certificate Transparency's consistency proof
+is not of that form, because its summary depends on where in the log a
+block sits, so the class as first stated excluded the best-known proof
+of its own kind. The development now types a summary by the window it
+covers:
+
+$$s_{[a,c)} \;=\; s_{[a,b)} \oplus s_{[b,c)}$$
+
+The summary of a window is the combination of the summaries of any two
+adjacent windows that make it up, and what kind of thing a summary is
+may depend on the window's endpoints. One condition is needed,
+locality: a window's summary reads only the entries inside that window.
+The machine checks that locality is exactly the condition. A summary is
+a fold over its window if and only if it is a local positional
+homomorphism, and the list homomorphisms are the case where the summary
+ignores its endpoints, recovered with nothing about them changed. The
+wider class is strictly wider: the development exhibits a summary that
+reads absolute position, which no position-free fold reproduces.
+Consistency is exhibited as a member, at the list of peaks and at the
+single root a verifier holds, with at most $\log_2 n + 1$ openings. It
+rests on the summary binding prefixes, which is collision resistance,
+and that is stated as a hypothesis and shown satisfiable, not proved.
+
+For claims in this class a checker takes the whole record in at every
+size with a bounded number of openings, at most $2\log_2(b-a)+1$ for a
+window $[a,b)$ and $\log_2 b + 1$ for a prefix, and the bound comes
+from the shape alone, with nothing assumed but a binding hash, a
+fingerprint that cannot be forged; that is the glance, the eusynopsis,
+from the top of the post.[^politics] The development also proves the
+converse for schemes of this kind. Any scheme that answers windows by
+opening ranges that tile them and recombining the results, and that is
+sound, complete, and reveals no more than it must, computes a
+positional fold. Among such schemes the class is therefore exact, and
+"no more" is a theorem. The compact proof systems of modern
+cryptography are not schemes of that kind; they reach outside the class
+and pay for it with a hardness assumption. The calculus's term language
+was widened to match. Its terms denote exactly the positional folds,
+every term a fold and every fold some term, with the earlier language
+embedded as the position-free case, and the enduring terms among them
+are those read over a fixed window with a checker.
 
 That is where the tree comes from. Because $\oplus$ is associative,
 meaning you can group the pieces however you like and get the same
@@ -552,8 +592,7 @@ Triandopoulos's,[^tamassia] and constant-size alternatives exist,
 accumulators and vector commitments, which buy their constant with a
 hardness assumption.[^boneh]
 
-Inclusion, "this entry is in the log," is the single-entry case, and
-Certificate Transparency stops there. Read the entries instead and the
+Inclusion, "this entry is in the log," is the single-entry case, and consistency, "this log extends that one," is a positional summary over the peaks of the tree. Certificate Transparency stops at those two, and both read only structure. Read the entries instead and the
 same tree gives the same proof for any claim of this shape, a fold over
 every entry it touches. The claim can be stated after the entries it
 ranges over, or extended as the record grows, and as long as every
@@ -1112,7 +1151,7 @@ remains has three names.
 
 [^politics]: Aristotle, [*Politics* 1326b](http://data.perseus.org/texts/urn:cts:greekLit:tlg0086.tlg035.perseus-eng1): the best city is one that can be "easily taken in at a glance," *eusynoptos*.
 
-[^bird]: Richard Bird, ["An Introduction to the Theory of Lists,"](https://doi.org/10.1007/978-3-642-87374-4_1) in *Logic of Programming and Calculi of Discrete Design*, 1987. The homomorphism lemma: a function on lists that respects concatenation factors into a map and a reduce. Our mechanization proves the calculus's terms denote exactly these.
+[^bird]: Richard Bird, ["An Introduction to the Theory of Lists,"](https://doi.org/10.1007/978-3-642-87374-4_1) in *Logic of Programming and Calculi of Discrete Design*, 1987. The homomorphism lemma: a function on lists that respects concatenation factors into a map and a reduce. Our mechanization proves it for records, and then its positional generalization: a local positional homomorphism is the positional fold of the per-entry measure it induces. That is an instance of a standard fact, that a functor out of a free category is determined by its values on the generating arrows, and Bird's lemma is the one-object case of it.
 
 [^tamassia]: Roberto Tamassia and Nikos Triandopoulos, ["Computational Bounds on Hierarchical Data Processing with Applications to Information Security,"](https://doi.org/10.1007/11523468_13) ICALP 2005. The logarithmic lower bound on hash-based authentication.
 
