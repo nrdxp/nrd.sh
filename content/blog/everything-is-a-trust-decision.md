@@ -285,7 +285,7 @@ them. We stood there because we were building a system that needed
 every piece at once and kept asking what they had in common. That is a
 vantage, not an insight the fields lacked.
 
-I am going to claim that the question is closed. Trust itself is enormous and mostly human, and I make no claim about that.
+I am going to claim that the question is closed, and the claim is about trust itself wherever trust concerns knowing: what is left to it has an exact structure, the same in every domain. Two things stay open, and the result says why. One is each domain's ontology, what its entries mean. The other is the decision, whether to rely on this named party for this named piece, which depends on things no record fixes. The result does not make that decision. It makes it a question a person can answer.
 
 What we have in hand is a fundamental piece of
 machinery for knowing, not proposed but derived, for claims over a
@@ -437,9 +437,7 @@ about most. Science in our time is increasingly done by machines, and
 the dispute this post opened with is, underneath, an argument about
 what machines did and in what order, which no record anyone keeps can
 say. Everyone says they care about AI safety, and almost nobody can
-state the question in a form a record could answer. Alignment in the
-large is hard, and I claim nothing about it. But there is a small
-version made of claims a record can hold. "The machine did X" can be a
+state the question in a form a record could answer. Alignment in the large is hard, and the theorem does not settle it. But there is a small version made of claims a record can hold. "The machine did X" can be a
 receipt. "X serves the goal I wrote down" can be one too. "The machine
 is making progress toward that goal" is a claim about a trajectory,
 and a trajectory is a phone call: you re-measure, you never certify.
@@ -642,9 +640,7 @@ insist on. A blockchain insists on one claim a log does not, that there
 is a single current tip, one true end of the record, and this is it,
 and that claim is not monotone.
 Consensus, every machine in the network stopping to agree, is its
-price. I am not calling anything broken, only saying what the bill is
-for, and that the discipline is to pay it for the one claim that needs
-it, on purpose, and for nothing else.
+price. That is what the bill is for, and the discipline is to pay it for the one claim that needs it, on purpose, and for nothing else.
 
 ## Where an Artifact Stands
 
@@ -886,10 +882,7 @@ has no way to trust you correctly. It is the only part of the
 discipline anyone can check you against, and the part that makes the
 rest honest.
 
-Nothing forces any of this on you. The theorem holds whether or not you do any of this. Everything is a trust decision either way. The
-only question is whether you make yours explicitly, and if you claim
-your system is verified, or your result reproducible, or your identity
-yours, the check now exists and it will be run.
+No law compels any of this, and the theorem holds whether or not anyone acts on it. But everything is a trust decision either way, and the only open question is whether you make yours explicitly. If you claim your system is verified, or your result reproducible, or your identity yours, the check now exists and it will be run.
 
 I did not fully realize, in the first drafts of this post, that its very title is a
 political statement. Yet it is one. There is a slogan in my field that all
@@ -1049,7 +1042,7 @@ That among schemes which open ranges of a record and recombine them, the claims 
 
 **We do not claim.** Anything about *degree* of trust. Delegation
 between principals. Revocation dynamics. What the record does not carry:
-custody, authorship, intent. That any system is broken. That science is,
+custody, authorship, intent. That science is,
 formally, a monimograph; it is not, and that is the point of the book.
 That the polynomial-time checker is mechanized; it is conjecture.
 That alignment can be reached by aligning to the record; that is a
