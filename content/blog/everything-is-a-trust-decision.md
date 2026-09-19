@@ -17,7 +17,7 @@ tags = ["trust", "supply-chain", "identity", "science", "nix", "systems"]
 
 *Fifth draft, revised 2026-09-19: a note to the reader now comes first. The post states the political position its result entails, and why it is published ahead of review. We did not choose that position. The model forces it. The technical content is unchanged.*
 
-*Sixth draft, revised 2026-09-19: a technical refinement. The class of claims with bounded proofs is wider than earlier drafts said. It was stated as the list homomorphisms. The development now characterizes it as the local positional homomorphisms, of which the list homomorphisms are the position-free case. It also proves the boundary from the other side: any query answered over arbitrary windows by a sound, complete, non-over-revealing scheme that recombines opened ranges is a finalized positional fold. With both directions proved, this is where the class ends for schemes of that kind, and it cannot be widened again without leaving them. The section "What You Can Check Without Reading Everything" is updated to match.*
+*Sixth draft, revised 2026-09-19: a technical refinement. The class of claims with bounded proofs is wider than earlier drafts said. It was stated as the list homomorphisms. The development now characterizes it as the local positional homomorphisms, of which the list homomorphisms are the position-free case. It also proves the boundary from the other side: any query answered over arbitrary windows by a sound, complete, non-over-revealing scheme that recombines opened ranges is a finalized positional fold. With both directions proved, this is where the class ends for schemes of that kind, and it cannot be widened again without leaving them. The section "What You Can Check Without Reading Everything" is updated to match, and the text was edited throughout for consistency between drafts.*
 
 ## Before You Read
 
@@ -77,36 +77,97 @@ metadata, not a feeling.[^lastpost]
 
 I undersold it. The line is a theorem, and it is not about packaging.
 It applies to anything that keeps a record that only grows and wants an
-answer from it to stay true: package managers, the public logs that
-stand behind the padlock in your browser, code changes with a
-signature on them, science that can be rerun, and the key you replace
-the day your laptop is stolen. This post is about that shape. You
-already make trust decisions all day. The shape says make them on
-purpose, and write them down.
+answer from it to stay true: package managers, transparency logs,
+signed commits, reproducible science, the key you rotate the day your
+laptop is stolen. You already make trust decisions all day. The result
+says to make them on purpose, and write them down.
 
-Start with the largest record there is, because that is where the
-stakes are. Last week a lab announced a solution to a Millennium Prize
-problem, one of the famous open questions in mathematics, and two
-researchers who had posted first asked in public how their work had
-been used.[^navier] I do not know who is right. What strikes me is that
-nobody can know from the record, because the record science keeps
-cannot answer the question. Who posted what, when, and what was built
-on it are questions about a sequence of findings that only ever grows,
-and science settles every one of them by reading, argument, or
-reputation.
+The largest such record is the scientific one. Last week a lab
+announced a solution to a Millennium Prize problem, and two researchers
+who had posted first asked in public how their work had been
+used.[^navier] I do not know who is right. Nobody can know from the
+record, because the record science keeps cannot answer the question.
+Who posted what, when, and what was built on it are questions about a
+sequence of findings that only ever grows, and science settles every
+one of them by reading, argument, or reputation.
 
-Here is why a fight over credit is not a small thing. Science is meant
-to be a self-correcting machine, and its correcting rule is short:
-check the result, then rerun it. Point that rule at the machine itself
-and it seizes. "Who found this first" and "what does this rest on"
-cannot be checked or rerun by anyone, because the record was built to
-hold findings, not the answers to those questions. So when credit goes
-wrong, a field ends up taking its lead from whoever took the work
-instead of whoever did it, and everything built on that lead is built
-on the wrong foundation. There is no court to send it to. A truth is
-nobody's property, and that is as it should be, but it means no law can
-put credit back where it belongs. Only people behaving well ever did,
-and a record cannot store good behavior.
+A dispute over credit is not a small thing. Science is meant to correct
+itself, and its correcting rule is short: check the result, then rerun
+it. Applied to science's own record, the rule fails. "Who found this
+first" and "what does this rest on" cannot be checked or rerun by
+anyone, because the record was built to hold findings, not the answers
+to those questions. When credit goes wrong, a field takes its lead from
+whoever took the work instead of whoever did it, and everything built
+on that lead is built on the wrong foundation. There is no court to
+send it to. A truth is nobody's property, and that is as it should be,
+but it means no law can put credit back where it belongs. Only conduct
+ever did, and a record cannot store conduct.
+
+Under the credit problem sits a deeper one. A citation tells the reader
+that the evidence is elsewhere and who holds it. Almost nobody follows
+it. So a citation is taken on faith, and a result is not checked by
+being cited, however many times. If you hold the evidence yourself and
+can rerun it, the result is checked, whether or not a journal ever said
+so. The citation stands in for a check the reader cannot run. Our
+institutions have the order backwards. What gets believed is what the
+pipeline has approved, and the approval says nothing about the
+contents: a true result without it is waved away because there is
+nothing to cite, and a false result with it travels for years looking
+like knowledge. The pipeline decides who is believed, and everyone who
+wants to be believed has to queue for it. A record in which every claim
+carries its grade, checked by machine, cited at source, taken on a
+named person's word, or argued from other claims, would let anyone look
+instead of asking whom to trust. That is a problem of how the record is
+built, and a problem of that kind can have an engineered solution.
+
+Certificate Transparency shows what one looks like. It is the public log of every TLS certificate issued, and the most widely deployed append-only record in the world.
+It can prove exactly two things. That an entry is in the log. And that
+a newer version of the log is the old one with more entries on the end,
+nothing erased or rewritten. Both proofs are small. The log is a Merkle tree, a tree of hashes, which I will also call fingerprints, and a proof is one path down it, logarithmic in the size of the log. Ask it
+anything about what the entries *say*, how many certificates it holds
+for your domain, whether one was issued by an authority you never
+authorized, and it has no proof to give you; someone reads the entries.
+That is no gap in its engineering. Its two proofs read the shape of the
+tree and never its contents, and nobody had a theory of which claims
+about contents could have a proof like that.
+
+Some claims about a record have a special shape: what
+they say about the whole is assembled from what they say about the
+pieces, as a total is assembled from its parts. The paper calls a claim of that shape a *fold*. Whenever a claim over a record is a fold, a checker can settle it at every size the record ever reaches with a number of openings that grows only with the logarithm of the record, from the shape of the claim alone,
+assuming nothing but that fingerprints cannot be forged. Every other
+claim that keeps its proof small pays for it with a cryptographic hardness assumption. The paper's word for a record held that way is *eusynoptic*,
+Aristotle's word for a city small enough to survey at a glance, and the
+glance stays the same size no matter how large the record grows.
+Certificate Transparency's two proofs, "this is in the log" and "this
+log extends that one," are both of this shape, and both read the structure of the log and never its entries.
+"This finding was in the record before that one" is another, and it
+reads the entries. So is "everything this paper cites was in the record
+before it," and so is "no package beneath this program has been pulled
+as of entry *n*." "This result reproduces" is fixed by the record only
+when the record carries everything a stranger needs to run it, and
+where it does not, the theorem names what you are trusting instead: the
+authors' word, or a named replicator's.
+
+Nobody has felt this yet, because nobody has built a record whose
+claims come with proofs with as few pieces as a Merkle path: priority
+as a receipt instead of a dispute, a citation as a pointer you can
+check instead of one you take on faith, a result graded by what a
+stranger can rerun. Those follow from the result, and each can be
+tested. If one fails, the result is wrong.
+
+Since the first draft, we tested one of them: that the small proof is not a property of Merkle trees
+but of any claim with the fold shape, over any domain, and that it
+holds at scale. We built an engine on the paper's two calculi and ran it
+against randomly generated domains and randomly generated claims of
+that shape, each resting on many entries, over records of up to a
+million entries, under three seeds. The work to check a claim
+stayed logarithmic in the record's size, in counted operations and in
+wall-clock time, and the part of the engine that opens a proof against the record's fingerprint is proved sound in Lean, assuming an injective hash and stated at the simplest measure. The run itself uses a test hash that is not injective, so the run is evidence about the structure rather than about collision resistance, and the logarithmic bound on the number of openings is proved in the paper's development and tested, not proved, in the engine. The engine is not public yet. Until it is, this is my report of what it did; when it is, you can run it. We are building two records on it, one for
+packages and one for identity, and both appear near the end, along with
+the rougher one that built this paper. The one science needs, nobody
+has built, and the finding says what it would have to be. You may want
+to see us succeed or you may want to see us fall. Either way, the
+argument is the thing to contend with.
 
 I did not set out to find any of this. I spent a decade inside Nix,
 and this summer, after years of building the atom, I saw that it could
@@ -136,89 +197,6 @@ level of anyone who keeps a record and asks it whom to believe. That
 is why this post exists, and why an engineer who was fixing two things
 is now writing to everyone.
 
-This post is out of order, and deliberately. It is a critique of the process by which science, and open source with
-it, decides which claims to admit and whom to believe, and I am
-publishing it before that process has reviewed it. The argument itself supplies the reason: a
-process that cannot check its own record cannot correct itself from
-inside, not in time, and nobody inside it will want to hear that.
-Self-correction is supposed to be what science does. This post is that correction, from outside, with a date on it.
-
-Under the credit problem sits a deeper one. A footnote is a forwarding
-address. It says: the evidence is not here, go and ask them. Almost
-nobody goes. So a citation is a promise the reader takes on faith, and
-a result is not checked by being cited, however many times. If you hold
-the evidence in your own hands and can rerun it, the result is checked,
-whether or not a journal ever said so. The check is the thing; the
-pointer is a stand-in for it when the check is out of reach. Our
-institutions have that backwards. What gets believed is what the
-pipeline has approved, and the approval says nothing about the
-contents: a true result without it is waved away because there is
-nothing to cite, and a false result with it travels for years looking
-like knowledge. The pipeline, not the evidence, decides who is
-believed, and everyone who wants to be believed has to queue for it. It
-does not have to work that way. A record in which every claim carries
-its grade, checked by machine, cited at source, taken on a named person's word, or argued from other claims, would let anyone look instead of asking whom to trust.
-That is a problem of how the record is built, and a problem of that
-kind can have an engineered solution.
-
-Certificate Transparency shows what one looks like. It is the public
-log of every security certificate issued for every website, the thing
-behind the padlock in your browser, and it is the most widely deployed
-record of its kind in the world: entries are added and never removed.
-It can prove exactly two things. That an entry is in the log. And that
-a newer version of the log is the old one with more entries on the end,
-nothing erased or rewritten. Both proofs are tiny. The log is stored as
-a tree of fingerprints, where a fingerprint, a hash, is a short string
-computed from a thing such that any change to the thing changes the
-string; the tree is a Merkle tree, and a proof is one path down it, a
-short chain of fingerprints that barely grows as the log grows. Ask it
-anything about what the entries *say*, how many certificates it holds
-for your domain, whether one was issued by an authority you never
-authorized, and it has no proof to give you; someone reads the entries.
-That is no gap in its engineering. Its two proofs read the shape of the
-tree and never its contents, and nobody had a theory of which claims
-about contents could have a proof like that.
-
-Some claims about a record have a special shape: what
-they say about the whole is assembled from what they say about the
-pieces, the way a total is assembled from the lines of a receipt. The
-paper calls a claim of that shape a *fold*. Whenever a claim over a record is a fold, a checker can settle it at every size the record ever reaches with a number of openings that grows only with the logarithm of the record, from the shape of the claim alone,
-assuming nothing but that fingerprints cannot be forged. Every other
-claim that keeps its proof small pays for it with a hardness
-assumption, a bet from cryptography that some problem is too hard to
-solve. The paper's word for a record held that way is *eusynoptic*,
-Aristotle's word for a city small enough to survey at a glance, and the
-glance stays the same size no matter how large the record grows.
-Certificate Transparency's two proofs, "this is in the log" and "this
-log extends that one," are both of this shape, and both read the structure of the log and never its entries.
-"This finding was in the record before that one" is another, and it
-reads the entries. So is "everything this paper cites was in the record
-before it," and so is "no package beneath this program has been pulled
-as of entry *n*." "This result reproduces" is fixed by the record only
-when the record carries everything a stranger needs to run it, and
-where it does not, the theorem names what you are trusting instead: the
-authors' word, or a named replicator's.
-
-Nobody has felt this yet, because nobody has built a record whose
-claims come with proofs with as few pieces as a Merkle path: priority as a
-receipt instead of a dispute, a citation as a pointer you can check
-instead of one you take on faith, a result graded by what a stranger
-can rerun. Those follow from the result, and each can be tested. If one fails, the result is wrong.
-
-Since the first draft, we tested one of them: that the small proof is not a property of Merkle trees
-but of any claim with the fold shape, over any domain, and that it
-holds at scale. We built an engine on the two calculi and ran it
-against randomly generated domains and randomly generated claims of
-that shape, each resting on many entries, over records of up to a
-million entries, under three seeds. The work to check a claim
-stayed logarithmic in the record's size, in counted operations and in
-wall-clock time, and the part of the engine that opens a proof against the record's fingerprint is proved sound in Lean, assuming an injective hash and stated at the simplest measure. The run itself uses a test hash that is not injective, so the run is evidence about the structure rather than about collision resistance, and the logarithmic bound on the number of openings is proved in the paper's development and tested, not proved, in the engine. The engine is not public yet. Until it is, this is my report of what it did; when it is, you can run it. We are building two records on it, one for
-packages and one for identity, and both appear near the end, along with
-the rougher one that built this paper. The one science needs, nobody
-has built, and the finding says what it would have to be. You may want
-to see us succeed or you may want to see us fall. Either way, the
-argument is the thing to contend with.
-
 A few facts the argument depends on. This is my first scientific
 contribution. My co-author Zach Collier and I asked one question in two
 forms. Trust has boundaries; everyone knows that, and Thompson drew one
@@ -226,38 +204,43 @@ forty years ago. What nobody had was a proof that the boundaries are
 exhaustive: that past a certain line there is nothing left to verify,
 and every kind of trust that remains has been named. So: is there a
 provable upper bound on how much you can verify, and is what lies past
-it completely accounted for? The answers are in a paper that will be submitted within the month, and the paper and the Lean 4 development behind it stay private until it has been reviewed. Lean 4 is a proof assistant, a
-program that confirms every step of a proof and accepts nothing it
-cannot confirm; the development is the proof as written in it, which I
-will also call the mechanization. The mechanization is mostly mine, with AI assistance, done under a discipline I describe at the end. Until the development is public, "the machine checks it" means I ran the check and am telling you the result. Once it is public, you can run it yourself.
+it completely accounted for? The answers are in the paper, which stays
+private with the Lean 4 development behind it until it has been
+reviewed. Lean 4 is a proof assistant, a program that confirms every
+step of a proof and accepts nothing it cannot confirm; the development
+is the proof as written in it, which I will also call the
+mechanization. The mechanization is mostly mine, with AI assistance,
+done under a discipline I describe at the end. Until the development is
+public, "the machine checks it" means I ran the check and am telling
+you the result. Once it is public, you can run it yourself.
 
-None of this is contempt for the process I am stepping around. Peer
-review, standard formulations, citation at source, proof a stranger can
-rerun: that discipline is the only reason a result like this could
-exist, and the paper will go through it. But the result makes a demand
-of its own, and it binds the people who found it before anyone else. A
-check you could have finished and did not finish is not trust; the name
-for it is sloth. The mathematics can be presented now, at the register
-it needs, where it can be challenged. Declining to present it would be
+This post is out of order, and deliberately. It is a critique of the
+process by which science, and open source with it, decides which claims
+to admit and whom to believe, and it is published before that process
+has reviewed it. None of that is contempt for the process. Peer review,
+standard formulations, citation at source, proof a stranger can rerun:
+that discipline is the only reason a result like this could exist, and
+the paper will go through it. But a process that cannot check its own
+record cannot correct itself from inside in time, and the result makes
+a demand that binds the people who found it before anyone else. A check
+you could have finished and did not finish is not trust; the name for
+it is sloth. The mathematics can be presented now, at the register it
+needs, where it can be challenged, and declining to present it would be
 the failure the result names. So the paper goes to review and this
-account goes out today, and if the two ever disagree, the review wins
-and this post will be corrected. The dilemma was not chosen. The result
-forces it, given the state of things. The institutions that keep
-society's records are being asked, right now, to absorb machines that
-produce claims faster than anyone can check them, and a year is a long
-time to hold back a result about what checking can and cannot do.
+account goes out today. If the two ever disagree, the review wins and
+this post will be corrected. The dilemma was not chosen. The result
+forces it, given the state of things.
 
-There are practical reasons as well. I judged the finding too important
-to sit on a shelf for a year, and the dispute above is the argument for
-posting dated. A large firm can publish a result within
-days of finding it; an independent researcher waits that year for
-review, and many of the bottlenecks that make up that wait are exactly
-what a graded, verifiable record could automate away. The argument asks
-for it too: if the check comes first and the citation second, the claim
-should go out with its grades on it and let the review follow. A public
+The timing matters as well. The institutions that keep society's
+records are being asked, right now, to absorb machines that produce
+claims faster than anyone can check them, and a year is a long time to
+hold back a result about what checking can and cannot do. A large firm
+can publish a result within days of finding it; an independent
+researcher waits a year for review, and many of the bottlenecks in that
+wait are what a graded, verifiable record could automate away. The
+dispute above is also the plain argument for posting dated: a public
 statement of what you found and how strongly you hold it is the
-cheapest insurance there is, and it is the discipline this post is
-about.
+cheapest insurance there is.
 
 ## The Question Thompson Opened
 
@@ -267,15 +250,12 @@ he knew. He could not say where it was, only show that everyone he
 examined was standing past it without noticing.[^apology] Twenty-four
 centuries later, Ken Thompson put the end inside the machine: you
 cannot trust code you did not totally create yourself, and no amount of
-reading the source will save you, because the compiler, the program
-that turns source into something a machine can run, was itself built by
-a compiler, and that one could be lying.[^thompson] He closed with a
+reading the source will save you, because the compiler was itself built by a compiler, and that one could be lying.[^thompson] He closed with a
 moral rather than a map. Verification stops somewhere; he did not say
 where, and he was not trying to.
 
 For forty years the pieces needed to say it sat in different fields.
-Distributed-systems theory, the study of many machines working
-together, proved which states of knowledge a group of machines can
+Distributed-systems theory proved which states of knowledge a group of machines can
 reach.[^halpern] Cryptography proved exactly which sets of corrupt
 players a protocol can survive.[^hirt] Security engineering drew a
 perimeter around the trusted computing base, the part of a system you
@@ -318,18 +298,9 @@ and can check it when the development is public.
 
 ## Everything Is a Trust Decision
 
-Start with what you already do. A lockfile, the list that pins the
-exact version of everything a program depends on, records *what* you
-depend on, not *who* stands behind it. A signed commit, a change to the
-code with its author's cryptographic signature on it, is someone's
-word. The CA root in your trust store, one of the handful of
-certificate authorities your browser came out of the box believing, is
-something you decided to believe, once, and stopped thinking about. The
-transitive dependency, the piece your dependency pulled in that you
-never opened, is nobody's word at all.
+Start with what you already do. A lockfile pins *what* you depend on, not *who* stands behind it. A signed commit is someone's word. The CA root in your trust store is something you decided to believe, once, and stopped thinking about. The transitive dependency your dependency pulled in, that you never opened, is nobody's word at all.
 
-Those are four different positions. Take any artifact you run, any
-built piece of software, and everything beneath it, all the way down:
+Those are four different positions. Take any artifact you run and everything beneath it, transitively:
 sources, dependencies, their dependencies, the compiler, the keys. Call
 each a part, and call the whole set its closure. Every part is in
 exactly one of the four. Some you **closed**: a check you can rerun
@@ -379,8 +350,7 @@ took ten thousand new entries. Do you check again?
 Three words carry the rest, each in its plain sense:
 
 - A **record** is an append-only sequence of entries: things are added
-  at the end and nothing is ever changed or removed. Git history if you
-  never force-push, meaning never rewrite it. A transparency log. A
+  at the end and nothing is ever changed or removed. Git history if you never force-push. A transparency log. A
   package index that only adds.
 - A **certificate** is the thing you check instead of re-reading the
   record: a Merkle path, a signature, a proof.
@@ -412,9 +382,7 @@ unmakes it. No certificate, of any kind, under any assumption, can make
 signatures; it is what the claim is, a photo of a scoreboard mid-game,
 true the instant you took it and meaningless a moment later.
 
-The central conjecture says which claims can last, and it is a
-biconditional, an if-and-only-if: the three conditions together are
-enough, and a claim missing any one of them cannot last:
+The central theorem says which claims can last, and it is a biconditional:
 
 $$\exists\, \text{enduring scheme for } c
 \quad\Longleftrightarrow\quad
@@ -454,11 +422,7 @@ build afterward can move a claim across that line.
 
 One note on where the checking stops. "A checker of the power you
 actually have" is a dial, and the machine checks the biconditional at
-two settings of it: unlimited power, and merely computable, meaning
-anything a program could settle given all the time in the world.
-Polynomial time, the setting most developers care about, meaning a
-checker held to a practical amount of work, is future work in the
-paper. I do not think that weakens anything. At any power a checker
+two settings of it: unlimited power, and merely computable. Polynomial time, the setting most developers care about, is future work in the paper. I do not think that weakens anything. At any power a checker
 either exists or it does not, so the count of three is the same theorem
 at every setting. What changes at polynomial time is the floor: our
 proofs take the hash as absolutely binding, and a polynomial version
@@ -487,8 +451,9 @@ from other claims. The grade asks what the claim rests on, not who
 made it. That rule falls on me, on the machine that assisted me, and
 on you, because all three of us are fallible, and "who wrote it" is not
 a grade. Track every intermediate claim and grade it, and the whole has
-a grade. Now point the same discipline at the training data instead of
-the working session. Imagine the training set itself graded, every
+a grade.
+
+Now point the same discipline at the training data instead of the working session. Imagine the training set itself graded, every
 claim in every entry, so the model was built from a record where each
 claim carried what it rests on rather than from text taken as given. In
 practice there would be an error ratio; the point is the picture, not a
@@ -714,9 +679,7 @@ The floor is where nobody anonymous remains under the artifact. The
 ceiling is where only what you chose to trust remains. The distance is
 how many vouches still await a check.
 
-Here the machine starts checking things that are not true by
-construction, and in this post's voice they are still conjecture. Both
-marks are genuine biconditionals: they fail in one direction under a
+From here the machine-checked results are no longer true by construction. Both marks are genuine biconditionals: they fail in one direction under a
 classifier that mistakes an undeclared leaf for a seed, a part nobody
 declared taken for one you chose to accept, and we know because ours
 did until it was fixed. Nothing closes without both a re-runnable check
@@ -853,12 +816,7 @@ fixes and a checker of bounded means, a lab with the equipment, can
 settle. A
 citation is a pointer at the record where the claim is to be verified.
 A result that cannot be reproduced from what is available is a vouch,
-the authors' word, and an honest literature would grade it as one. One
-more thing, and the rest belongs to a book: science has no
-monimograph, no shared append-only record that a finding is entered
-into under a commitment, and a retraction that deletes rather than appends breaks the chain. So a
-finding's endurance is claimed, never judged. Draw your own line from
-there.
+the authors' word, and an honest literature would grade it as one. Science has no monimograph: no shared append-only record that a finding is entered into under a commitment, and a retraction that deletes rather than appends breaks the chain. So a finding's endurance is claimed, never judged. The opening of this post said what that costs, and the closing sections say what would have to change. The full argument is the book's.
 
 One thread runs through all three, and I keep seeing it in science and
 open source alike. A result whose inputs are withheld is a vouch, the
@@ -1039,11 +997,7 @@ to write down, and it has shaped two protocols in advance, the atom's
 declare-first record and Cyphr's witness layer. Standard formulations,
 a machine proof, and a structure that has explained things after the fact, in one case some twenty-four centuries after, and predicted one thing before, the scaling result above: that is why we are confident, and the only reason.
 
-The order things happened in, since it is the only credential I have.
-It starts where the opener did, with two problems that turned out to be
-one. I found the trichotomy, the three-way split of what is left to
-trust.
-Then I built a record system to keep long AI-assisted sessions honest:
+The order things happened in, for the record. The opener told the first half: two problems that turned out to be one, and then the trichotomy, the three-way split of what is left to trust. After that I built a record system to keep long AI-assisted sessions honest:
 graded claims, signed entries, an append-only log, an open surface of
 unbacked claims and unanswered questions. It adheres to the trichotomy;
 I do not claim it is formally sound against the calculus. Using it
@@ -1091,7 +1045,7 @@ and anonymous. A claim admits an enduring certificate exactly when it is
 determined, certifiable, and monotone, and trust is the complement with
 three named factors and no fourth. The provenance floor and the total
 ceiling, with the order of the climb a theorem and the distance a count.
-That the cost of trust is per claim, not per record.
+That among schemes which open ranges of a record and recombine them, the claims with bounded proofs are exactly the finalized positional folds. That the cost of trust is per claim, not per record.
 
 **We do not claim.** Anything about *degree* of trust. Delegation
 between principals. Revocation dynamics. What the record does not carry:
