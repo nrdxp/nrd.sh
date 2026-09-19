@@ -15,6 +15,34 @@ tags = ["trust", "supply-chain", "identity", "science", "nix", "systems"]
 
 *Fourth draft, revised 2026-09-16: one prediction below has since been tested and held, and the post says so at the grade it has today. The AI paragraph is sharpened into a conjecture, dated, and the reason is the news: in the last few days the heads of the largest AI labs have jointly called for coordinated limits on the pace of frontier work, with evaluators embedded in the labs and governments asked to back it, in the name of safety.[^pace] We think that gets the problem backwards. Nobody has yet stated the alignment problem in a form a record could answer, and slowing a field is not a substitute for understanding it, so this draft makes the strongest conjecture it honestly can and asks to be argued with. The account of how the finding was reached is told in specifics and in the order it happened. And because the paper and its development keep moving, where a claim's backing has grown or its wording has been refined since the last draft, the post now says it the way the development does.*
 
+*Fifth draft, revised 2026-09-19: a note to the reader now comes first, because the post ends somewhere its first drafts did not expect to, in a political position the result demands. This draft says so plainly, says why the paper still goes through review while this account goes out now, and makes the argument for the position near the end. The technical content is unchanged.*
+
+## Before You Read
+
+This is a long post, argued with care, and it ends in a political
+position. You should know that going in. The first drafts presented a
+mathematical result and its engineering uses and stopped there. I have
+since had to accept that the result does not stop there. It says what
+any record can and cannot bear, and the institutions we live under,
+science, law, money, are records that ask to be believed. A finding
+about the first is a finding about the second whether I like it or not,
+and for a while I did not.
+
+So what follows is a demonstration and then a demand. The demonstration
+is the theorem, stated formally in the few places where a claim is
+being made and as plainly as I can manage everywhere else. The demand
+is what the theorem asks of anyone who keeps a record and wants to be
+trusted: give the account wherever an account can be given, and name
+who is being relied on wherever it cannot. That is a standard, and it
+takes no side. It names no party and no institution, and it cuts the
+same way in every direction, mine included.
+
+It will take you most of an hour. If you only want the engineering,
+the sections from "Everything Is a Trust Decision" through "Three
+Instances" stand on their own. If you read all of it, I am not asking
+you to agree with me. I am asking you to check it, and I care more
+about who will than about who approves.
+
 ## Far More General Than Packaging
 
 Last time I argued that Nix is right about everything except the store,
@@ -180,6 +208,21 @@ it completely accounted for? The answers are in a paper we are still polishing f
 program that confirms every step of a proof and accepts nothing it
 cannot confirm; the development is the proof as written in it, which I
 will also call the mechanization. The mechanization is mostly mine, with AI assistance, done under a discipline I describe at the end. Until the development is public, "the machine checks it" means I ran the check and am telling you the result. Once it is public, you can run it yourself.
+
+None of this is contempt for the process I am stepping around. Peer
+review, standard formulations, citation at source, proof a stranger can
+rerun: that discipline is the only reason a result like this could
+exist, and the paper is going through it, as it should. But the result
+makes a demand of its own, and I cannot hold everyone else to it and
+exempt myself. It says that where an account can be given, withholding
+it while asking to be believed is the very failure it names. I can give
+the account now. So the paper goes to review and the account goes out
+today, and if the two ever disagree, the review wins and this post will
+say so. In a slower decade I might have waited the year. This is not
+one. The institutions that keep society's records are being asked,
+right now, to absorb machines that produce claims faster than anyone
+can check them, and a year is a long time to sit on a result about what
+checking can and cannot do.
 
 There are practical reasons as well. I judged the finding too important
 to sit on a shelf for a year, and the dispute above is the argument for
@@ -832,6 +875,36 @@ Nothing forces any of this on you. The theorem holds whether or not you do any o
 only question is whether you make yours explicitly, and if you claim
 your system is verified, or your result reproducible, or your identity
 yours, the check now exists and it will be run.
+
+I did not see, in the first drafts of this post, that its title is a
+political statement. It is one. There is a slogan in my field that all
+software is political, and it is half right. The consequences of widely
+used software are political, inevitably, because people have to live
+under them. What the slogan gets wrong is the step from there to
+treating the record itself as a matter of opinion. What a record can
+bear has three sides and a floor, and that stays true whoever is asking
+and whatever they would like it to say.
+
+Science rests on its literature and its data, law on its evidence and
+its precedents, finance on its ledgers, and each of those is a record
+that is supposed to grow and never be quietly rewritten. For a long
+time "as sound as we can make it" ended the conversation about any of
+them, because nobody could say what was possible. Now it can be said.
+Where a check can be finished, leaving it unfinished and asking for
+trust in its place is work left undone, with someone else carrying the
+risk. How much of that anyone may be excused depends on their office.
+Nobody expects a citizen to audit the grain stores. The official in
+charge of them has no such excuse.
+
+That is the whole of my politics here, and it is a politics against
+confusion, the kind that is eating our institutions from the inside:
+keep the record honest, and keep the commons whole, which is the
+argument I made about open source in [Anamnesis](./anamnesis) and now
+think holds for every institution that keeps a record and asks to be
+believed. It takes no side in any quarrel you care about. On the
+question of how we know what we know, though, we are leaving the realm
+of opinion, and anyone who prefers it murky is going to have to say so
+out loud.
 
 ## What We Claim, What We Do Not, and What Comes Next
 
