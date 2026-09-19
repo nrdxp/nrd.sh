@@ -15,7 +15,7 @@ tags = ["trust", "supply-chain", "identity", "science", "nix", "systems"]
 
 *Fourth draft, revised 2026-09-16: one prediction below has since been tested and held, and the post says so at the grade it has today. The AI paragraph is sharpened into a conjecture, dated, and the reason is the news: in the last few days the heads of the largest AI labs have jointly called for coordinated limits on the pace of frontier work, with evaluators embedded in the labs and governments asked to back it, in the name of safety.[^pace] We think that gets the problem backwards. Nobody has yet stated the alignment problem in a form a record could answer, and slowing a field is not a substitute for understanding it, so this draft makes the strongest conjecture it honestly can and asks to be argued with. The account of how the finding was reached is told in specifics and in the order it happened. And because the paper and its development keep moving, where a claim's backing has grown or its wording has been refined since the last draft, the post now says it the way the development does.*
 
-*Fifth draft, revised 2026-09-19: a note to the reader now comes first, because the post ends somewhere its first drafts did not expect to, in a political position the result demands. This draft says so plainly, says why the paper still goes through review while this account goes out now, and makes the argument for the position near the end. The technical content is unchanged.*
+*Fifth draft, revised 2026-09-19: a note to the reader now comes first. The post states the political position its result entails, and why it is published ahead of review. We did not choose that position. The model forces it. The technical content is unchanged.*
 
 ## Before You Read
 
@@ -33,9 +33,26 @@ is the theorem, stated formally in the few places where a claim is
 being made and as plainly as I can manage everywhere else. The demand
 is what the theorem asks of anyone who keeps a record and wants to be
 trusted: give the account wherever an account can be given, and name
-who is being relied on wherever it cannot. That is a standard, and it
-takes no side. It names no party and no institution, and it cuts the
-same way in every direction, mine included.
+who is being relied on wherever it cannot. That standard cuts the same
+way in every direction, mine included.
+
+A claim this strong needs evidence to match, so here is what it stands
+on. A machine-checked proof, now being readied for review, which cannot
+be hurried and should not be. A run of retrodictions: findings that
+half a dozen fields of computer science reached separately and could
+not explain, which the theorem explains with one reason, and one more
+that reaches back to Athens, which I come to near the end. And a
+prediction: the theorem named a class of proofs no field had named and
+said what they would cost, and when we built an engine and ran it at
+scale, that is what they cost. Any one of those could be luck. Together
+they are hard to get around, and I have tried.
+
+None of it is a claim to know everything. A method for knowing says
+nothing about what there is to know. Every domain keeps its own hard
+questions about what its entries mean and what exists in its world, and
+the theorem leaves all of them open. What it gives is narrower and, as
+far as we can find, new: one structure for keeping knowledge honest,
+the same in every domain, derived rather than intuited.
 
 It will take you most of an hour. If you only want the engineering,
 the sections from "Everything Is a Trust Decision" through "Three
@@ -212,17 +229,20 @@ will also call the mechanization. The mechanization is mostly mine, with AI assi
 None of this is contempt for the process I am stepping around. Peer
 review, standard formulations, citation at source, proof a stranger can
 rerun: that discipline is the only reason a result like this could
-exist, and the paper is going through it, as it should. But the result
-makes a demand of its own, and I cannot hold everyone else to it and
-exempt myself. It says that where an account can be given, withholding
-it while asking to be believed is the very failure it names. I can give
-the account now. So the paper goes to review and the account goes out
-today, and if the two ever disagree, the review wins and this post will
-say so. In a slower decade I might have waited the year. This is not
-one. The institutions that keep society's records are being asked,
-right now, to absorb machines that produce claims faster than anyone
-can check them, and a year is a long time to sit on a result about what
-checking can and cannot do.
+exist, and the paper is going through it at the pace it requires. But
+the result makes a demand of its own, and I cannot hold everyone else
+to it and exempt myself. It says that a check you could have finished
+and did not finish is not trust. It is sloth. I can present the
+mathematics now, at the register it needs, where it can be challenged.
+Declining to would be the exact failure the result names, committed by
+the person who found it. So the paper goes to review and the account
+goes out today, and if the two ever disagree, the review wins and this
+post will say so. I did not choose that dilemma. The result forces it,
+given the state of things. In a slower decade I might have waited the
+year, but we do not live in one. The institutions that keep society's
+records are being asked, right now, to absorb machines that produce
+claims faster than anyone can check them, and a year is a long time to
+sit on a result about what checking can and cannot do.
 
 There are practical reasons as well. I judged the finding too important
 to sit on a shelf for a year, and the dispute above is the argument for
@@ -876,8 +896,8 @@ only question is whether you make yours explicitly, and if you claim
 your system is verified, or your result reproducible, or your identity
 yours, the check now exists and it will be run.
 
-I did not see, in the first drafts of this post, that its title is a
-political statement. It is one. There is a slogan in my field that all
+I did not fully realize, in the first drafts of this post, that its very title is a
+political statement. Yet it is one. There is a slogan in my field that all
 software is political, and it is half right. The consequences of widely
 used software are political, inevitably, because people have to live
 under them. What the slogan gets wrong is the step from there to
@@ -889,22 +909,78 @@ Science rests on its literature and its data, law on its evidence and
 its precedents, finance on its ledgers, and each of those is a record
 that is supposed to grow and never be quietly rewritten. For a long
 time "as sound as we can make it" ended the conversation about any of
-them, because nobody could say what was possible. Now it can be said.
-Where a check can be finished, leaving it unfinished and asking for
+them, because nobody could say what was possible. Now that the possible has a shape, the excuse is gone. Where a check can be finished, leaving it unfinished and asking for
 trust in its place is work left undone, with someone else carrying the
 risk. How much of that anyone may be excused depends on their office.
 Nobody expects a citizen to audit the grain stores. The official in
 charge of them has no such excuse.
+
+That last point is older than it sounds, and it is the retrodiction I
+promised at the top. The theorem says no institution can eliminate what
+is left to trust; the best it can do is name who holds each piece and
+keep them answerable. Athens ran on exactly that. A man was examined
+before he took office, the *dokimasia*, and when he left it he rendered
+his accounts to a board of auditors, the *euthyna*, and until he had,
+he could not leave the country, dedicate his property, or make a
+will.[^athens] "In this city, so ancient and so great," Aeschines told
+a jury, "no man is free from the audit who has held any public trust."
+What makes this more than a resemblance is that the same city asked the
+same thing of anyone who claimed to know something, and in the same
+words: when Socrates demands that a man give an account of what he says
+he knows, the phrase is the one the auditors used. They had the
+practice and the reason for it. What they lacked was the proof that
+what they were auditing has three shapes and no more, and that took the
+computational sciences to supply. Keeping accounts is older than
+Athens. Athens is the earliest place I know of where the audit of
+office and the theory behind it are both on the record.
+
+The arrangement deserves a name, and the honest one is theirs. I will
+call it the euthynic politic. It has a record that grows and erases
+nothing. It has a gate: nothing enters the record as settled unless a
+check settled it, or a named person vouched for it where no check was
+possible. And it has an audit: whoever holds any part of what is left
+can be called to account for it, and no office is exempt. In plainer
+words it is receipt accounting, applied to everything that asks to be
+believed. If that still sounds abstract, picture one thing built on it:
+a social platform whose ranking rewards what holds up over what
+spreads, where a claim rises as it gathers evidence anyone can rerun
+and sinks when it is refuted, and every vouch has a name on it. That is
+an engineering project, and the theorem is the part that was missing.
+
+I should say where I stand in this, since the record shows it anyway. I
+have no credentials. I got here from outside the academy, working for
+years beside people who had them, disagreeing with them often, and
+applying something like this method before I could have named it. In
+hindsight that was no accident. Readers of this blog know I have argued
+for a grounded politics before, and nothing here depends on whether you
+agreed with any of it;[^priors] the claims in this post stand or fall on
+their own evidence. Much of the pressure that holds the status quo in
+place is ordinary and forgivable: deadlines, payroll, engineers trying
+to ship and eat. Some of it is not. I was pushed out of professional
+spaces, NixOS among them, for challenging people whose standing
+depended on things staying unclear, and there are now whole profit
+centers built on a murky foundation for what counts as known. The
+largest are the AI firms, which as I read this month's news are selling
+fear to buy regulation that would lock in their lead. Those are more
+powerful adversaries than I ever expected to have, and I am not
+equipped the way they are. So this position is a defense of myself as
+much as of the work. Staying quiet would not have spared me it. Once
+you have seen that what is left to trust has a shape, you cannot work
+honestly while pretending it does not, and I would rather state it
+plainly and be argued with.
 
 That is the whole of my politics here, and it is a politics against
 confusion, the kind that is eating our institutions from the inside:
 keep the record honest, and keep the commons whole, which is the
 argument I made about open source in [Anamnesis](./anamnesis) and now
 think holds for every institution that keeps a record and asks to be
-believed. It takes no side in any quarrel you care about. On the
-question of how we know what we know, though, we are leaving the realm
-of opinion, and anyone who prefers it murky is going to have to say so
-out loud.
+believed. It belongs to no party. It cuts at anyone, on any side, who
+asks for trust where an account could be given, and I have just named
+the places it has cut against me. On the question of how we know what
+we know, we are leaving the realm of opinion, and anyone who prefers it
+murky is going to have to say so out loud. For the few willing to
+accept what it asks, it is a fixed point to steer by, and this decade
+has not offered many.
 
 ## What We Claim, What We Do Not, and What Comes Next
 
@@ -926,7 +1002,7 @@ what closes the book, because a count is not a matter of taste. Since
 we found it, it has explained after the fact more than we have had time
 to write down, and it has shaped two protocols in advance, the atom's
 declare-first record and Cyphr's witness layer. Standard formulations,
-a machine proof, and a structure that has explained things after the fact and predicted at least one thing before, the scaling result above: that is why we are confident, and the only reason.
+a machine proof, and a structure that has explained things after the fact, in one case some twenty-four centuries after, and predicted at least one thing before, the scaling result above: that is why we are confident, and the only reason.
 
 The order things happened in, since it is the only credential I have.
 It starts where the opener did, with two problems that turned out to be
@@ -958,10 +1034,7 @@ escalation is to someone holding a different model of the problem. The
 results above were reached under it, this post was written under it,
 and you can run it tomorrow.
 
-I have argued in this direction for years while most of the industry
-went the other way, and I have said elsewhere that if nobody wants to
-listen, I will be content not to take part. I meant it. What I will do
-is point at a dated post, a paper in preparation, and a mechanization that adds no axiom of its own, and say: check it. That is
+I have said elsewhere that if nobody wants to listen, I will be content not to take part, and I meant it. What I will do in the meantime is point at a dated post, a paper in preparation, and a mechanization that adds no axiom of its own, and say: check it. That is
 the only kind of authority I want, and the only kind this result allows
 anyone.
 
@@ -1008,6 +1081,10 @@ remains has three names.
 [^pace]: The joint call is reported by [The Register](https://www.theregister.com/ai-and-ml/2026/09/14/big-ai-sets-out-its-terms-for-regulatory-capture-and-calls-it-pace-the-frontier/5296067), 14 September 2026, and argued for in [The Washington Post](https://www.washingtonpost.com/opinions/2026/09/15/pacing-an-ai-frontier-does-not-require-government-labs-can-do-it/), 15 September 2026. The proposals, as reported: embedded evaluators inside the labs, common safety standards, and limits on the rate of progress with government support.
 
 [^repro]: The 2015 Reproducibility Project in psychology replicated 100 published studies and found significant results in about a third of them, with effects smaller than the originals: Open Science Collaboration, ["Estimating the Reproducibility of Psychological Science,"](https://doi.org/10.1126/science.aac4716) *Science* 349, 2015. I do not think anyone needs the study. Nobody knows whom to trust anymore, and that is not what an intact science looks like.
+
+[^athens]: Aeschines, *Against Ctesiphon* [3.17](https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0002:speech=3:section=17) for the quotation, and [3.21](https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0002:speech=3:section=21) for what an official could not do before his accounts were in: "shall not leave the country," nor "consecrate his property," nor "dispose of his property by will." Aristotle, *Athenian Constitution* [54.2](https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0046:chapter=54) on the ten auditors "to whom all retiring officials have to render account," and [55](https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0046:chapter=55) on the examination before office. The point about the shared phrase, *logon didonai*, to give an account, is a commonplace of the scholarship and is argued properly in the book.
+
+[^priors]: [Political Bikeshedding: NixOS Edition](./nixos-policy-breakdown), [The Closing of Open Source](./closed-openness), and [Twelve Years as a Digital Hermit](./12-years), among others.
 
 [^navier]: The dispute over credit for OpenAI's claimed Navier–Stokes result, September 2026. See [MIT Technology Review's account](https://www.technologyreview.com/2026/09/08/1143747/what-openais-latest-controversy-tells-us-about-the-future-of-math/) and [Axios's](https://www.axios.com/2026/09/08/openai-math-solution-navier-stokes-credit). I take no position on who is right; the point is that the argument is about what was posted when, and that a public record with dates is the instrument for settling it.
 
