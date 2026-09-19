@@ -17,7 +17,7 @@ tags = ["trust", "supply-chain", "identity", "science", "nix", "systems"]
 
 *Fifth draft, revised 2026-09-19: a note to the reader now comes first. The post states the political position its result entails, and why it is published ahead of review. We did not choose that position. The model forces it. The technical content is unchanged.*
 
-*Sixth draft, revised 2026-09-19: a technical refinement. The class of claims with bounded proofs is wider than earlier drafts said. It was stated as the list homomorphisms. The development now characterizes it as the local positional homomorphisms, of which the list homomorphisms are the position-free case, and proves the converse for block-opening schemes. The section "What You Can Check Without Reading Everything" is updated to match.*
+*Sixth draft, revised 2026-09-19: a technical refinement. The class of claims with bounded proofs is wider than earlier drafts said. It was stated as the list homomorphisms. The development now characterizes it as the local positional homomorphisms, of which the list homomorphisms are the position-free case. It also proves the boundary from the other side: any query answered over arbitrary windows by a sound, complete, non-over-revealing scheme that recombines opened ranges is a finalized positional fold. With both directions proved, this is where the class ends for schemes of that kind, and it cannot be widened again without leaving them. The section "What You Can Check Without Reading Everything" is updated to match.*
 
 ## Before You Read
 
