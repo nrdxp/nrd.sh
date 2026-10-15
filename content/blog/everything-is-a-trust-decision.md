@@ -2,6 +2,7 @@
 title = "Everything Is a Trust Decision"
 description = "Make them explicitly, count them, and know what each one costs."
 date = 2026-09-11
+draft = true
 tags = ["trust", "supply-chain", "identity", "science", "nix", "systems"]
 +++
 
